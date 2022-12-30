@@ -1,0 +1,117 @@
+---
+title : <span style="color:#034a94"> **Conceptos básicos**</span>
+author: "Métodos y Simulación Estadística"
+css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+```
+
+
+Para constuir el concepto de probabilidad requerimos definir los siguientes términos:
+
+<br/><br/>
+
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+
+**Experimento aleatorio** 
+
+Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no se conoce por anticipado.
+
+</div>
+
++ $E_{1}$: Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras superiores 
+
++ $E_{2}$: Lanzar dos dados y observar la suma de los resultados superiores 
+
++ $E_{3}$: Realizar un examen de estadística y observar el resultado obtenido  
+
++ $E_{4}$: En una salida de campo, observo si se cumple o no, totalmente el objetivo planteado 
+
++ $E_{5}$: Observo el número total de ensayos de laboratorio exitosos en  20 intentos realizados.
+
+<br/><br/>
+
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+
+**Espacio muestral** 
+
+Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra conuna letra mayuscula $S$ o tambien con **$\Omega$**
+</div>
+
++ $S_{1}$= $\{ (cc), (cs), (sc), (ss) \}$  
+<br/>
+
+:::: {style="display: flex;"}
+
+::: {}
+
++ $\begin{equation*}
+	S_{2}=\left\{
+	\begin{array}{cccccc}
+	&(1,1),(1,2),(1,3),(1,4),(1,5),(1,6)&\\
+	&(2,1),(2,2),(2,3),(2,4),(2,5),(2,6)&\\
+	&(3,1),(3,2),(3,3),(3,4),(3,5),(3,6)&\\
+	&(4,1),(4,2),(4,3),(4,4),(4,5),(4,6)&\\
+	&(5,1),(5,2),(5,3),(5,4),(5,5),(5,6)&\\
+	&(6,1),(6,2),(6,3),(6,4),(6,5),(6,6)&
+	\end{array}
+	\right\}
+	\end{equation*}$ 
+
+:::
+
+::: {}
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/dados.png")
+```
+:::
+
+::::
+
+<br/>
+
++ $S_{3}$= $\{ x \in \mathbb{R} | 0 \leq x \leq 5   \}$ 
+
+<br/>
+
++ $S_{4}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 1 \}$ 
+
+<br/>
+
++ $S_{5}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 20 \}$
+
+<br/><br/><br/>
+
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+
+**Evento aleatorio** 
+
+Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto se nombra con una letra mayúscula por lo general las primeras letras del alfabeto
+
+</div>
+
+|           |                                       |                      |
+|:----------|:--------------------------------------|:---------------------|
+|$A_{1}$    | Obtener solo caras                    | $A_{1}=\{ (c,c)\}$
+| $A_{2}$   | Sacar un resultados es inferior a 4   | $A_{2}=\{(1,1),(1,2)(2,1)\}$
+| $A_{3}$   | Ganar el examen                       | $A_{3}=\{ x \in \mathbb{R} | 3.0 \leq x \leq 5.0 \}$
+| $A_{4}$   | Cumplir el objetivo de la salida      | $A_{4} =\{ 1 \}$
+| $A_{5}$   | Obtener más de 5 ensayos éxitos       | $A_{5}$= $\{ x \in \mathbb{N}| 6 \leq x \leq 20 \}$
+
+<br/><br/>
+
+
+Resumiendo:
+
+|Experimento aleatorio| Espacio muestral | Evento aleatorio |
+|:--------------------|:-----------------|:-----------------|
+|Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras superiores| $S_{1}$= $\{ (cc), (cs), (sc), (ss) \}$ | Obtiener solo caras |
+|Lanzar dos dados y observar la suma de los resultados superiores| $S_{2}$= $\{(1,1),(1,2), \dots, (6,6) \}$ | Sacar un resultados es inferior a 6 |
+|Realizar un examen de estadística y observar el resultado obtenido|  $S_{3}$= $\{ x \in \mathbb{R} | 0 \leq x \leq 5 \}$| Ganar el examen|
+|En una salida de campo, observo si se cumple o no, totalmente el objetivo planteado| $S_{4}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 1 \}$| Cumplir el objetivo de la salida |
+|Observo el número total de ensayos de laboratorio exitosos en  20 intentos realizados| $S_{5}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 20 \}$| Obtener más de 5 ensayos éxitos |
+
+<br/><br/><br/>

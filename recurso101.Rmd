@@ -1,0 +1,19 @@
+---
+title : <span style="color:#034a94"> **Probabilidad**</span>
+author: "Métodos y Simulación Estadística"
+css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+```
+
+Muchos relacionamos el concepto de probabilidad con los dados, pues forma parte de su origen y de su desarrollo inicial a través de preguntas y situaciones imaginarias que  de alguna forma la moldearon desde la matemáticas. Pero este concepto va mucho más alla como lo veremos en esta unidad.
+
+La probabilidad es un concepto que se empieza a trabajar en 1654 cuando, caballero de Mered solicita a B. Pascal le ayude a resolver un problema relacionado con juegos de mesa. En particular este caballero manifestaba que las Matemáticas presentaban un vacio, pues sus cálculos no coincidían con lo que pasaba en la realidad y como consecuencia de ellos perdía dinero en las apuestas que se presentaban en el juego. 
+
+Encomendado Pascal de esta tarea empieza a compartir su trabajo con Fermat, matemático y de la correspondencia de estos dos brillantes matemáticos nace los principios y fundamentos de  lo que hoy conocemos como probabilidad
+
+
+En esta unidad revisan los principales conceptos de probabilidad y de variable alatoria, para finalizar en la inferencia estadística
+

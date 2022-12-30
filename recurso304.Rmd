@@ -1,0 +1,129 @@
+---
+title: "Métodos de estimación"
+author: "Métodos y Simulación estadística"
+date: "2022-12-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## **Métodos de estimación**
+
+<br/><br/>
+
+### **Método de momentos**
+
+<br/>
+
+El método de momentos fue propuesto por Karl Pearson al rededor de 1895, pensado en sus inicios en contexto descriptivo, analizando las distribuciones de probabilidad y aproximándolas al sistema de curvas que llevan su nombre. Posteriormente este concepto fue modificado por R.A. Fisher en 1920. El método consiste en estimar un parámetro de una distribución igualando sus momentos teóricos o poblacionales, si existen, con los correspondientes momentos muestrales.
+
+Para mostrar este método es necesario definir el concepto de momento.
+
+<br/>
+
+| **Momento Poblacional**                                                | **Momentos muestrales**                         |
+|:-----------------------------------------------------------------------|:------------------------------------------------|
+|  caso variable discreta                                                |                                                 |
+|$$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$$                        | $$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$  |
+|  caso variable continua                                                |                                                 |
+|$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$       |                                                 |
+
+<br/>
+
+El método de momentos supone que los momentos tanto poblacionales como muestrales son conocidos, y por lo tanto tambien la función de probabilidad. 
+
+A continuación se relacionan algunos de estos momentos poblacionales:
+
+<br/>
+
+| Distribución | $E[X]$               | $V[X]=E[X^{2}]-E[X]^{2}$        |
+|:-------------|:---------------------|:--------------------------------|
+| bernoulli    | $p$                  | $pq$                            |
+| geométrica   | $\displaystyle\frac{1}{p}$ | $\displaystyle\frac{q}{p^{2}}$  |
+| binomial     | $np$                 | $npq$                           |
+| Poisson      | $\lambda$            | $\lambda$                       | 
+| gamma        | $\alpha\beta$        | $\alpha\beta^{2}$               |
+| exponencial  | $\beta$              | $\beta^{2}$                     | 
+| uniforme     | $\displaystyle\frac{a+b}{2}$| $\displaystyle\frac{(b-a)^{2}}{12}$ |
+| normal       | $\mu$                |$\sigma^{2}$                     |
+
+
+<br/>
+
+Nota: Existe una relación entre las distribuciones Poisson y exponencia.Se podrían dar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
+
+<br/><br/>
+
+**Ejemplo**
+
+<br/>
+
+Encuentre los estimadores de los parámetros de la distribución normal a través del método de momentos.
+Previamente sabemos que los parámetros de una variable con distribución normal son $E[X]=\mu$ y $V[X]=\sigma^{2}$ y que $V[X]=E[X^{2}]-E[X]^{2}$. Dada esta información el estimador de momentos se construye de la siguiente manera: 
+
+$$M^{1}=m^{1}$$
+
+$$M^{2}=m^{2}$$
+
+Aplicando el método:
+
+<br/>
+
+|                                                    |
+|:---------------------------------------------------|
+|$$M^{1}= m^{1}$$ |
+|$$\mu  =  \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}$$|
+|$$\widehat{\mu} = \displaystyle\frac{1}{n}\sum_{i=1}^{n} x_{i}=\bar{x}$$|
+
+
+<br/>
+
+Para estimar $\sigma^{2}$, se realiza el siguiente procedimiento, usando $\mu^{1}=m^{1}$  y $\mu^{2}=m^{2}$.
+
+$$V[X]=E[X^{2}]-E[X]^{2} = \mu^{2}-(\mu^{1})^{2}$$
+
+entonces igualamos estos dos momentos poblacionales con sus respectivos momentos muestrales quedando la igualdad
+
+$$\begin{eqnarray*}
+V[X]&=& \mu^{2}-(\mu^{1})^{2}\\
+      &=&m^{2}-(m^{1})^{2}\\
+      &=&\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}
+\end{eqnarray*}$$
+
+podemos representar la varianza por $\sigma^{2}$ y obtenemos
+
+$$\widehat{\sigma^{2}}=\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}$$
+
+y obtenemos el estimador de la varianza:
+
+<br/>
+
+|                       |                                                                                                   |
+|---------------------:|:--------------------------------------------------------------------------------------------------|
+|$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}$                                   |
+|$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}-\bar{x}^{2}+\bar{x}^{2}$           |
+|                       | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-2\bar{x}^{2}+\bar{x}^{2}$                      |
+|                       | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\displaystyle\frac{2\bar{x}\sum x_{i}}{n}+\displaystyle\frac{n \bar{x}^{2}}{n}$ |
+|                       | $= \displaystyle\frac{1}{n}\Big(\sum_{i=1}^{n} x_{i}^{2}-2\bar{x}\sum_{i=1}^{n} x_{i}+\bar{x}^{2}\Big)$ |
+|                       | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}\Big(x_i-\bar{x}\Big)^{2}$        |
+
+<br/><br/>
+
+En resumen los estimadores de momentos para los parámetros de la distribución normal son:
+
+
+$$\widehat{\mu} = \displaystyle\frac{1}{n}\sum_{i=1}^{n} x_{i}=\bar{x}$$
+
+$$\widehat{\sigma^{2}} = \displaystyle\frac{1}{n}\sum_{i=1}^{n}\Big(x-\bar{x}\Big)^{2}$$ 
+
+
+A partir de ellos y mediante la obtención de una muestra aleatoria por ejemplo :630, 650, 710, 750, 790, 820, 860 y 910 se pueden estimar los parámetros por método de momentos con los siguientes resultados:
+
+$$\widehat{\mu}=765$$  
+
+$$\widehat{\sigma^{2}}=8550$$
+
+<br/><br/><br/><br/>

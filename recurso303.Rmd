@@ -1,0 +1,72 @@
+---
+title : <span style="color:#034a94"> **Propiedades de los estimadores**</span>
+author: "Métodos y Simulación Estadística"
+css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **Propiedades de los estimadores**
+
+<br/>
+
+Dentro de las principales propiedeades de los estimadores están:
+
+<br/><br/>
+
+### **Insesgadez**
+
+<br/>
+
+Un estimador $\widehat{\theta}$ se considera insesgado si $E[\widehat{\theta}] = \theta$
+
+<br/><br/>
+
+### **Eficiente**
+
+<br/>
+
+Un estimador  $\widehat{\theta_{1}}$ se considera más eficiente que  $\widehat{\theta_{2}}$ cuando:
+
+$$V[\widehat{\theta_{1}}] < V[\widehat{\theta_{2}}]$$
+
+<br/><br/>
+
+### **Consistente**
+
+<br/>
+
+Cuando un estimador siendo sesgado, se convierte en un estimador sesgado cuando se aumenta el tamaño de la muestra se dice que este estimador es consistente
+
+<br/><br/>
+
+Con la siguiente figura se representa de manera figurativa lo que pueden ser las diferentes propiedades de los estimadores. En ella las figuras 3 y 4 representan estimadores insesgados , mientras que los gráficos 1 y 2 representan estimadores sesgados, pues se encuentran lejos del verdadero objetivo que es pegarle al centro de la diana, en este caso que representa al valor del parámetro. 
+
+Por otro lado la gráfica 3 representa el estimador con las mejores condiciones, sesgado y de menor varianza, lo cual representa un estimador insesgado y eficiente.
+
+![](img/estimador.png){width=50%}
+
+<br/><br/>
+
+**Ejemplo**
+
+<br/>
+
+Para una muestra obtenida de una población exponencial con parámetro $\beta$ ( $E[X]=\beta$, $V[X]=\beta^{2}$). Examinar los siguientes estimadores para una muestra de $n=4$ ($X_{1}$, $X_{2}$, $X_{3}$, $X_{4}$)
+
++ $\widehat{\theta}_{1} = \dfrac{1}{6}(X_{1}+X_{2}) \dfrac{1}{3}(X_{3}+X_{4})$
+
+<br/>
+
++ $\widehat{\theta}_{2} = \dfrac{1}{10}(X_{1}+2X_{2} + 3X_{3} + 4X_{4})$
+
+<br/>
+
++ $\widehat{\theta}_{3} = \dfrac{1}{4}(X_{1} + X_{2} + X_{3} + X_{4})$
+
+
+Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente
+
+<br/><br/><br/><br/>

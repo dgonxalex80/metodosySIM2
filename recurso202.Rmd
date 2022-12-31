@@ -55,7 +55,7 @@ En el caso continuo y similarmente para el caso discreto.
 
 # **Varianza**
 
-Otra caracteristica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de momento de una variable aleatoria
+Otra caracteristica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de **momento** de una variable aleatoria
 
 <br/><br/>
 
@@ -118,22 +118,15 @@ $$f_{_{X}}(x) = \left \{
 				$$
 
 
+$E(X)=\displaystyle\sum\limits_{x=0}^{20}x_{i} 	\displaystyle\binom{20}{x_{i}}(0.7)^{x_{i}}(0.3)^{20-x_{i}} = 14$ 
 
-
-```{r, echo=FALSE}
-x=0:20
-fx=round(choose(20,x)*0.70^x*0.30^(20-x),6)
-Ex=sum(x*fx)
-Ex2=sum(x^2*fx)
-cat("E[X] =",Ex, "\n")
-cat("V[X] = ", Ex2-Ex^2)
-```
+Se puede verificar que $V[X] = E[X^2] - E[X]^2 = 4.199829$
 
 Este resultado nos indica que en promedio asisten al restaurante 14 personas de las veinte reservas aceptadas, con una varianza de 4.2 de la cual podemos obtener la desviación estándar y el coeficiente de variación
 
 <br/><br/>
 
-## **Ejemplo **
+## **Ejemplo**
 
 Para el caso continuo retomamos la función: 
 
@@ -146,15 +139,10 @@ $$f_{_{X}}(x) = \left \{
 				$$
 Que define la variable tiempo de duración de un electrodoméstico si realizar alguna reparación
 
-```{r, echo=FALSE}
-fy=function(y){1/4*exp(-y/4)}
-fEy=function(y){1/4*exp(-y/4)*y}
-fEy2=function(y){1/4*exp(-y/4)*y^2}
-Ey=integrate(fEy, lower=0,upper=Inf)
-Ey2=integrate(fEy2, lower=0,upper=Inf)
-cat("E[X] = ", Ey$value,"\n")
-cat("V[X] = ", Ey2$value-Ey$value^2)
-```
+
+$E(X)=\displaystyle\int\limits_{-\infty}^{+\infty } \dfrac{x}{4} e^{-x/4}  \:dx  = 4$
+ 
+Se puede verificar que $V[X] = 16$
 
 Esto nos indica que el valor esperado correspondiente al tiempo en que una lavadora requiere una reparación mayor es de 4 años.  Para la interpretación de la varianza podemos utilizar el concepto de desviación estandar o de coeficiente de variación.
 

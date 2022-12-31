@@ -22,12 +22,18 @@ Para mostrar este método es necesario definir el concepto de momento.
 
 <br/>
 
-| **Momento Poblacional**                                                | **Momentos muestrales**                         |
-|:-----------------------------------------------------------------------|:------------------------------------------------|
-|  caso variable discreta                                                |                                                 |
-|$$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$$                        | $$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$  |
-|  caso variable continua                                                |                                                 |
-|$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$       |                                                 |
+### **Momento Poblacional** 
+
+| Caso discreto                           |Caso continuo                          |
+|:---------------------------------------:|:-------------------------------------:|
+|$$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$$ |$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$ |
+
+
+###  **Momentos muestrales** 
+
+En ambos casos 
+
+$$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$ 
 
 <br/>
 
@@ -100,7 +106,7 @@ y obtenemos el estimador de la varianza:
 <br/>
 
 |                       |                                                                                                   |
-|---------------------:|:--------------------------------------------------------------------------------------------------|
+|----------------------:|:--------------------------------------------------------------------------------------------------|
 |$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}$                                   |
 |$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}-\bar{x}^{2}+\bar{x}^{2}$           |
 |                       | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-2\bar{x}^{2}+\bar{x}^{2}$                      |
@@ -171,9 +177,9 @@ $$f(x)=\frac{1}{2^{(v/2)}\Gamma(v/2)}x^{(v/2)-1}\exp\{-x/2\} ,\hspace{.3cm} x>0$
 <br/><br/>
 
 ```{r, echo=FALSE}
- curve(dchisq(x, df=7), lwd=3, las=1,xlim = c(0,30), ylim=c(0,.13), ylab='Densidad', col="red",axes = FALSE)
-curve(dchisq(x, df=9), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="blue")
-curve(dchisq(x, df=11), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="green")
+ curve(dchisq(x, df=7), lwd=3, las=1,xlim = c(0,30), ylim=c(0,.13), ylab='Densidad', col="#FF7F00",axes = FALSE)
+curve(dchisq(x, df=9), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="#034A94")
+curve(dchisq(x, df=11), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="686868")
 abline(h=0)
 grid()
 ```
@@ -199,9 +205,9 @@ La función de probabilidad de distribución t-student y su represntación gráf
 $$f(x)=\frac{\Gamma[(v+1)/2]}{\Gamma[v/2]\sqrt{\pi v}}\Bigg(1+\frac{x^{2}}{v} \Bigg)^{-(v+1)/2}, \hspace{.3cm} -\infty< x<\infty $$
 
 ```{r, echo=FALSE}
- curve(dt(x, df=1), lwd=3, las=1,xlim = c(-4,4), ylim=c(0,0.4), ylab='Densidad', col="red",axes = FALSE)
-curve(dt(x, df=5), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="blue")
-curve(dt(x, df=20), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="green")
+ curve(dt(x, df=1), lwd=3, las=1,xlim = c(-4,4), ylim=c(0,0.4), ylab='Densidad', col="#FF7F00",axes = FALSE)
+curve(dt(x, df=5), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="#034A94")
+curve(dt(x, df=20), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="#686868")
 abline(h=0)
 grid()
 ```
@@ -240,7 +246,7 @@ $$f(x)=\displaystyle\frac{\Gamma \Bigg[\displaystyle\frac{v_{1}+v_{2}}{2}\Bigg]\
 
 
 ```{r, echo=FALSE}
- curve(df(x, df1=5, df2=10), lwd=3, las=1,xlim = c(0,5), ylim=c(0,1), ylab='Densidad', col="red",axes = FALSE)
+ curve(df(x, df1=5, df2=10), lwd=3, las=1,xlim = c(0,5), ylim=c(0,1), ylab='Densidad', col="#FF7F00",axes = FALSE)
 curve(df(x, df1=10, df2=25), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="blue")
 curve(df(x, df=20, df2=20), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="green")
 abline(h=0)

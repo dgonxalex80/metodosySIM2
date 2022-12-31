@@ -8,8 +8,6 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
-# **Modelos continuos**
-
 <br/><br/>
 
 ## **Algunos modelos continuos**

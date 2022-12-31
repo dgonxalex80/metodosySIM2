@@ -557,7 +557,7 @@ siguientes propiedades:</p>
 <p>Por lo general este tipo de variables proceden del conteo y empiezan
 por <strong>número de….</strong></p>
 <p><br/></p>
-<p><strong>Ejemplo 2</strong></p>
+<p><strong>Ejemplo</strong></p>
 <p>Las siguientes variables se clasifican como <strong>variables
 aleatorias discretas</strong> :</p>
 <ul>
@@ -591,7 +591,7 @@ como:</p>
 x}f(t)\]</span></p>
 </div>
 <p><br/><br/></p>
-<p><strong>Ejemplo 4</strong></p>
+<p><strong>Ejemplo</strong></p>
 <p>El restaurante “Asados y algo más” solo da servicio mediante
 reservas. De acuerdo con los registros diarios en los últimos diez años
 se sabe que el treinta por ciento de las personas que reservan no llegan
@@ -620,10 +620,11 @@ Fx=cumsum(fx)</code></pre>
 <br/></p>
 <p><img src="recurso201_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/></p>
-<pre><code>$P(X=0)  = $ 0 </code></pre>
-<pre><code>P(X=15) =  0.178863 </code></pre>
-<pre><code>P(X&lt;15) = P(X&lt;=14) =  0.5836 </code></pre>
-<pre><code>P(X &gt;15) = 1 - P(X&lt;=14) = 0.4164</code></pre>
+<p><span class="math inline">\(P(X=0) = 0\)</span> <span
+class="math inline">\(P(X=15) = 0.178863\)</span> <span
+class="math inline">\(P(X&lt;15) = P(X \leq 14) = 0.5836\)</span> <span
+class="math inline">\(P(X &gt; 15) = 1 - P(X \leq 14) =
+0.4164\)</span></p>
 <p><br/><br/><br/><br/></p>
 </div>
 <div id="variables-continuas" class="section level1">
@@ -638,7 +639,8 @@ densidad a partir de una muestra de ellos. A esta función se le llama
 función de densidad de probabilidad</p>
 <p><strong>Ejemplo 5</strong></p>
 <p>En el caso de las <strong>variables aleatorias continuas</strong> por
-lo general proceden de una medición como por ejemplo:</p>
+lo general proceden de una <strong>medición</strong> como por
+ejemplo:</p>
 <ul>
 <li><p>T: Tiempo que tarda un estudiante en responder un examen</p></li>
 <li><p>P: Peso de un bebe recien nacido</p></li>
@@ -679,7 +681,7 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 x)\)</span></p>
 </div>
 <p><br/><br/></p>
-<p><strong>Ejemplo 6</strong></p>
+<p><strong>Ejemplo</strong></p>
 <p>Con base en información histórica una compañía que fabrica lavadoras
 determinó que el tiempo <span class="math inline">\(Y\)</span> (en años)
 para que el electrodoméstico requiera una reparación mayor se obtiene
@@ -700,7 +702,9 @@ puede ser una función de densidad de probabilidad se debe verificar</p>
 \dfrac{1}{4} e^{-x/4} \:dx =1\)</span></p>
 <pre><code>1 with absolute error &lt; 2.7e-05</code></pre>
 <p><br/></p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="recurso201_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>integrate(fx, 0, Inf)</code></pre>
+<pre><code>1 with absolute error &lt; 2.7e-05</code></pre>
 </div>
 
 

@@ -132,7 +132,7 @@ Por lo general este tipo de variables proceden del conteo y empiezan por **núme
 
 <br/>
 
-**Ejemplo 2**
+**Ejemplo**
 
 Las siguientes variables se clasifican como **variables aleatorias discretas** :
 
@@ -169,7 +169,7 @@ $$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$$
 
 <br/><br/>
 
-**Ejemplo 4**
+**Ejemplo**
 
 El restaurante "Asados y algo más"  solo da servicio mediante reservas. De acuerdo con los registros diarios en los últimos diez años se sabe que el treinta por ciento de las personas que reservan no llegan al restaurante. El restaurante tiene veinte  puestos y acepta cuarenta reservas. La función de distribución probabilidad que modela el número de personas que llegan al restaurante es $f$, dada por: 
 
@@ -218,20 +218,12 @@ grid()
 
 <br/>
 
-
-```{r, echo=FALSE}
-x=0:20
-fx=round(choose(20,x)*0.70^x*0.30^(20-x),6)  
-Fx=round(cumsum(fx),4)
-
-cat("$P(X=0)  = $",fx[1], "\n")
-cat("P(X=15) = ", fx[16], "\n")
-cat("P(X<15) = P(X<=14) = ", Fx[15], "\n")
-cat("P(X >15) = 1 - P(X<=14) =", 1-Fx[15])
-```
+$P(X=0)  =  0$ 
+$P(X=15) =  0.178863$ 
+$P(X<15) = P(X \leq 14) =  0.5836$ 
+$P(X > 15) = 1 - P(X \leq 14) = 0.4164$
 
 <br/><br/><br/><br/>
-
 
 # **Variables continuas**
 
@@ -242,7 +234,7 @@ Para este caso la probabilidad se puede modelar a través de una función contin
 
 **Ejemplo 5**
 
-En el caso de las **variables aleatorias continuas** por lo general proceden de una medición como por ejemplo:
+En el caso de las **variables aleatorias continuas** por lo general proceden de una **medición** como por ejemplo:
 
 + T: Tiempo que tarda un estudiante en responder un examen
 
@@ -293,7 +285,7 @@ $F(x) = P(X \leq x) = P(X < x)$
 
 <br/><br/>
 
-**Ejemplo 6**
+**Ejemplo**
 
 Con base en información histórica una compañía que fabrica lavadoras determinó que el tiempo $Y$ (en años) para que el electrodoméstico requiera una reparación mayor se obtiene mediante la siguiente función de densidad de probabilidad: 
 
@@ -336,6 +328,9 @@ f1=fx(x1)
 polygon(c(0,x1,20),c(0,f1,0),col="#DFF4F9")
 ```
 
+```{r}
+integrate(fx, 0, Inf)
+```
 
 
 

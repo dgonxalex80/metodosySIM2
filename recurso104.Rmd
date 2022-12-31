@@ -10,19 +10,64 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-En la guía 2.1 se habló de los conceptos básicos (Experimento aleatorio, Espacio muestral y Evento aleatorio), de los diferentes enfoque de probabilidad ( Clásico, Frecuentista y Subjetivo) y de los tipos de probabilidad simple o marginal ($P(A)$) y probabilidad conjunta $P(A \cap B)$.
 
-En esta guía se hará en énfasis en otro tipo de probabilidad llamada **probabilidad condicional**
+## **Tipos de probabilidad**
 
+
+Las probabilidade puede definirse para eventos simples ($A$, $B$,...) o compuestos ($A \cup B$, $A \cap B$, $B|A$ ) que inclugen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
+
+<br/><br/>
+
+:::: {style="display: flex;"}
+::: {}
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/tabla1_22.png")
+```
+  
+:::
+::: {}
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/diagrama5_22.png")
+```
+:::
+  
+::::
+
+<br/><br/>
+
+### **Probabilidad simple o marginal**
+
+
++ $P(A)$ : probabilidad de que ocurra A 
+
++ $P(A')$ : probabilidad de que NO ocurra A 
+
++ $P(B)$ : probabilidad de que ocurra B 
+
++ $P(B')$ : probabilidad de que NO ocurra B 
+			
 <br/><br/><br/>
 
+### **Probabilidad conjunta** 
+			
++ $P(A \cap B)$ : probabilidad de que ocurra A y B 
+			
++ $P(A' \cap B)$ : probabilidad de que NO ocurra A y ocurra B 
 
-##  <span style="color:#a391c4">**Probabilidad condicional**</span> 
++ $P(A \cap B')$ : probabilidad de que ocurra A y NO ocurra B 
+
++ $P(A' \cap B')$ : probabilidad de que NO ocurra A ni B 
+
+<br/><br/>
 
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+## **Probabilidad condicional**
 
-**Definición : Probabilidad condicional**
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+
+**Definición**
 
 La probabilidad condicional de $B$, dado $A$, se denota como $P(B|A)$, se define como:
 
@@ -51,19 +96,9 @@ $P(A \cap B)$ con la probabilidad de $A$
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 1**</span> 
+## **Ejemplo**
 
-Supongamos que se tiene la siguiente información escrita en una tabla de doble entrada o tabla cruzada que contiene dos eventos $A$ y $B$ :
-
-```{r}
-x=c(460,140,40,260)
-m=matrix(x,nrow = 2) 
-rownames(m) = c("B", "B*")
-colnames(m) = c("A", "A*")
-m
-```
-
-En la siguiente tabla se representan los tres tipos de probabilidad :
+Supongamos que se tiene la siguiente información escrita en una tabla de doble entrada o tabla cruzada que contiene dos eventos $A$ y $B$.  En la siguiente tabla se representan los tres tipos de probabilidad :
 <br/>
 
 :::: {style="display: flex;"}
@@ -83,8 +118,30 @@ knitr::include_graphics("img/tabla4_22.png")
   
 ::::
 
+**Probabilidades simples o marginales**
 
-<br/><br/><br/>
+* $P(A) =\dfrac{600}{900} = 0.6667$
+
++ $P(A') = A- P(A) = 1- \dfrac{600}{900} = 1 - 0.6667 = 0.3333$  
+
++ $P(B) = \dfrac{500}{900} = 0.5556$ 
+
++ $P(B' = \dfrac{400}{900}) = 0.4444$ 
+
+<br/>
+
+### **Probabilidad conjunta** 
+			
++ $P(A \cap B) = \dfrac{460}{900} = 0.51111$ 
+			
++ $P(A' \cap B) = \dfrac{40}{900} = 0.0444$ 
+
++ $P(A \cap B') = \dfrac{140}{900} = 0.1556$ 
+
++ $P(A' \cap B') = \dfrac{260}{900} = 2889$ 
+
+
+<br/><br/>
 
 
 
@@ -114,7 +171,7 @@ Por despeje se pueden obtener la llanada regla de la multiplicación :
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 **Definición: Regla de la multiplicación de eventos**
 
@@ -131,13 +188,13 @@ $$P(A \cap B) = P(A) P(B)$$
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Eventos independientes**</span> 
+##  **Eventos independientes**
 
 En el caso que se requiera evaluar si dos eventos son independientes o no, partiendo de la definición de probabilidad condicional se podría obtener la siguiente regla al despejar $P(A \cap B$ de la ecuación para obtener : $P(A \cap B) = P(A) * P(B|A)$. En caso de que la ocurrencia del evento $A$ previamente al evento $B$, no cambie su probabilidad, se podría escribir que $P(B|A)= P(B)$ y en este caso la regla indica que la probablidad conjunta de los eventos A y B es igual a la probabilidad de sus probabilidades marginales :
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 **Definición: Independencia de eventos**
 
@@ -149,10 +206,10 @@ $P(A \cap B) = P(A) P(B)$ o  $P(B|A)=P(B)$
 
 <br/><br/><br/>
 
+Para determinar si los eventos A y B son eventos independientes se debe cumplir que :
+
 :::: {style="display: flex;"}
 ::: {}
-
-Para determinar si los eventos A y B son eventos independientes se debe cumplir que :
 
 $$P(A \cap B) = P(A) P(B)$$ 
 $$P(A \cap B') = P(A) P(B')$$ 
@@ -162,7 +219,7 @@ $$P(A' \cap B') = P(A') P(B')$$
 :::
 :::{} 
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/tabla1_22.png")
 ```
 
@@ -179,7 +236,7 @@ Una aplicación de este concepto se ilustra con los siguientes ejemplos:
 
 <br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 2**</span> 
+##  **Ejemplo**
 
 Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con probabilidad de funcionamiento $P(A_{1}) = 0.90$  y $P(A_{2}) = 0.95$ . Determinar la probabilidad de que el componente funcione.
 
@@ -203,7 +260,7 @@ $$P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2}) = 0.90 \times  0.95 = 0.855$$
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 3**</span> 
+##  **Ejemplo**
 
 Ahora supongamos que el circuito anterior está conectado en paralelo. Determinar la probabilidad de que el circuito funciones
 
@@ -227,7 +284,7 @@ $$1-0.005 = 0.995$$
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 4**</span> 
+##  **Ejemplo**
 
 El departamento de crédito de la universidad, informa que el 30% de los pagos realizados en la universidad se efectúan en efectivo, un 40% con tarjeta de crédito y el resto con tarjeta débito. En todos los casos estos pagos solo son recibidos en la caja ubicada en la oficina de Registro Académico de la universidad.
 
@@ -280,7 +337,7 @@ knitr::include_graphics("img/diagrama6_22.png")
 <br/><br/><br/>
 
 
-##  <span style="color:#a391c4">**Probabilidad Total**</span> 
+##  **Probabilidad Total**
 
 
 Ahora supongamos que el espacio muestral esta formado por un conjunto de eventos lo podemos representar como una partición del conjunto $S$ así :
@@ -292,7 +349,7 @@ knitr::include_graphics("img/particion1_22.png")
 <br/><br/>
 
 
-##  <span style="color:#a391c4">**Nota**</span> 
+##  **Nota**
 
  Una partición de un conjunto de $S$ está formada por subconjuntos $A_{1}$, $A_{2}$, $\dots$ , $A_{n}$, que deben cumplir las siguiente propiedades :
 
@@ -342,7 +399,7 @@ En general :
    
 <br/><br/><br/>  
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 **Definición: Regla de la probabilidad total**
 
@@ -355,7 +412,7 @@ $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k}
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 5**</span> 
+**Ejemplo**
 
 En el caso que en el ejemplo anterior se requiere calcular la probabilidad $P(+5)$ utilizamos la regla de la probabilidad total:
 
@@ -370,7 +427,7 @@ $P(+5) = 0.06 + 0.28 +0.24 = 0.58$
 
 <br/><br/><br/> 
 
-##  <span style="color:#a391c4">**Teorema de Bayes**</span> 
+##  **Teorema de Bayes**
 
 <br/><br/>
 
@@ -385,15 +442,14 @@ knitr::include_graphics("img/Thomas_Bayes.gif")
 
 <br/><br/> 
 
-El teorema de Bayes, que lleva el nombre del matemático británico del siglo XVIII **Thomas Bayes**, es una fórmula matemática para determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El teorema de Bayes proporciona una forma de revisar las predicciones o teorías existentes (actualizar las probabilidades) dada la evidencia nueva o adicional. En finanzas, el teorema de Bayes se puede utilizar para calificar el riesgo de prestar dinero a posibles prestatarios.
-
-Tomado de  : https://www.investopedia.com/terms/b/bayes-theorem.asp <br/> 
-Lectura recomendada : https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/
+>El teorema de Bayes, que lleva el nombre del matemático británico del siglo XVIII **Thomas Bayes**, es una fórmula matemática para determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El teorema de Bayes proporciona una forma de revisar las predicciones o teorías existentes (actualizar las probabilidades) dada la evidencia nueva o adicional. En finanzas, el teorema de Bayes se puede utilizar para calificar el riesgo de prestar dinero a posibles prestatarios.
+>Tomado de  :[investopedia](https://www.investopedia.com/terms/b/bayes-theorem.asp) <br/> 
+>[Lectura recomendada](https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/)
 
 
 <br/><br/><br/> 
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 ### **Definición: Teorema de Bayes **
 
@@ -405,7 +461,7 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/><br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 6**</span> 
+## **Ejemplo**
 
 <br/>
 
@@ -418,7 +474,7 @@ $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \
 
 <br/><br/>
 
-##  <span style="color:#a391c4">**Ejemplo 7**</span>  
+##  **Ejemplo** 
 
 En una fábrica de artı́culos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada
 artı́culo al final de la lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no
@@ -432,34 +488,25 @@ Información
 
 | Juan              | Luis                     |  Maria                     |  Santiago                     |
 |:------------------|:-------------------------|:---------------------------|:------------------------------|
-|$P(J) =  0.40$     | $P(L) =0.30$              | $P(M)=0.15$                | $P(S)=0.15$                   |
-|                   |                          |                            |                               |
+|$P(J) =  0.40$     | $P(L) =0.30$              | $P(M)=0.15$                | $P(S)=0.15$                  |
 |$P(N|J)=1/200$     |$P(N|L) = 1/100$          |$P(N|M)=1/90$               |$P(N|S)=1/200$                 |
 
+<br/><br/>
 
-|                   |                                |
-|------------------:|:-------------------------------------------|
-|N = (J \cap N) \cup (L \cap N) \cup (M \cap N) \cup (S \cap N) $$
+$$N = (J \cap N) \cup (L \cap N) \cup (M \cap N) \cup (S \cap N) $$
 $$P(N) = P(J \cap N) + P(L \cap N) + P(M \cap N) + P(S \cap N) $$
 $$P(N) = P(J)P(N|J) + P(L)P(N|L) + P(M)P(N|M) + P(S)P(N|S)$$
 $$P(N) = 0.40 \dfrac{1}{200} + 0.30 \dfrac{1}{100} + 0.15 \dfrac{1}{90} + 0.15 \dfrac{1}{200}$$
 
-
-```{r}
-x=c(0.4,0.3,0.15,0.15)
-y=c(1/200,1/100,1/90,1/200)
-
-
-(x*y)/sum(x*y)
-```
+$$P(N) =  0.0020 +  0.0030+  0.0017 + 0.0008 =  0.0075$$ 
 
 
 <br/><br/><br/>
 
 
-Aplicaciones :
+## **Aplicaciones**
 
-**Árboles de decisión**
+### **Árboles de decisión**
 
 <br/>
 
@@ -528,14 +575,6 @@ t        # tabla de probabilidades
 ```
 
 
-
-<br/>
-
-**Referencias sobre árboles de decisión **
-
-+ https://rpubs.com/jboscomendoza/arboles_decision_clasificacion
-
-+ https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html
 
 <br/><br/><br/>
 

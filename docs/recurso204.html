@@ -407,63 +407,34 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="img/banner3.png" /></p>
 <p><br/><br/><br/></p>
 <div id="modelos-especiales" class="section level1">
 <h1><strong>Modelos especiales</strong></h1>
 <p><br/><br/></p>
-<p>A continuación se presentan los principales conceptos teóricos de
-esta unidad, acompañados de ejemplos resueltos.</p>
+<p>A continuación se presentan los principales modelos discretos,
+acompañados de ejemplos resueltos.</p>
 <div id="introducción" class="section level2">
 <h2><strong>Introducción</strong></h2>
 <p><br/><br/></p>
-<p>En las unidades abordadas previamente a esta se han trabajado las
-características de variables aleatorias tanto discretas como continuas
-dentro de las cuales están: la función de distribución de probabilidad
-<span class="math inline">\(f(x)\)</span> , para el caso discreto y la
-función de densidad de probabilidad para las variables continuas. En
-ambos casos la función de probabilidad acumulada <span
+<p>Toda variable aleatoria se puede caracterizar por su función de
+distribución de probabilidad <span class="math inline">\(f(x)\)</span> ,
+la función de probabilidad acumulada <span
 class="math inline">\(F(x)\)</span> que representa <span
 class="math inline">\(P(X \leq x)\)</span>, el valor esperado <span
 class="math inline">\(E[X]\)</span>, la varianza <span
 class="math inline">\(V[X]\)</span>, y en el caso de las variables
-conjuntas la función de distribución conjunta y la función de densidad
-conjunta para los casos discreto-discreto y continuo-continuo,
-respectivamente <span class="math inline">\(f_{_{XY}}(x,y)\)</span>.
-También característica de ellas como son: el valor esperado conjunto
-<span class="math inline">\(E[XY]\)</span> , la covarianza <span
+conjuntas la función de distribución conjunta <span
+class="math inline">\(f_{_{XY}}(x,y)\)</span>. También característica de
+ellas como son: el valor esperado conjunto <span
+class="math inline">\(E[XY]\)</span> , la covarianza <span
 class="math inline">\(Cov[XY]\)</span> y el coeficiente de correlación
 <span class="math inline">\(\rho_{_{XY}}\)</span> para las variables
 <span class="math inline">\(X\)</span> y <span
 class="math inline">\(Y\)</span>.</p>
-<p><br/><br/> Ahora, el siguiente modelo :</p>
-<p><span class="math display">\[f(x)= \frac{1}{50}e^{-(\frac{x}{50})}
-\]</span></p>
 <p><br/><br/></p>
-<p>Llamado exponencial, puede ser estudiado y asociado a sucesos que
-ocurren diariamente a nuestro alrededor.</p>
-<p>Tener una variable cuyo comportamiento se puede caracterizar tiene la
-ventaja de conocer fácilmente el recorrido teórico en la construcción
-del modelo, las propiedades, tendencias, valor esperado, varianza,
-función de distribución, estimadores de sus parámetros, alternativas que
-facilitan el cálculo de probabilidades, su afinidad con otras variables,
-entre otras, características que facilitan actividades como la
-simulación.</p>
-<p>El siguiente diagrama presenta los principales modelo de probabilidad
-y sus diferentes relaciones</p>
+<p>A continuación se presentan los modelos más comunes con sus
+principales características:</p>
 <p><br/><br/></p>
-<p><img src="img/poster.png" /> Fuente: construcción propia. basado en
-Univariate Distribution Relationships (<a
-href="http://www.math.wm.edu/~leemis/2008amstat.pdf">Lawrence M. LEEMIS
-and Jacquelyn T. MCQUESTON</a>)</p>
-<p><br/><br/></p>
-</div>
-</div>
-<div id="modelos-discretos" class="section level1">
-<h1><strong>Modelos discretos</strong></h1>
-<p><br/><br/></p>
-<div id="algunos-modelos-discretos" class="section level2">
-<h2><strong>Algunos modelos discretos</strong></h2>
 <p><br/></p>
 <table style="width:100%;">
 <colgroup>
@@ -493,8 +464,6 @@ and Jacquelyn T. MCQUESTON</a>)</p>
 </tr>
 </tbody>
 </table>
-<p>A continuación se presentan los modelos más comunes con sus
-principales características:</p>
 <p><br/><br/></p>
 <p>Hemos clasificado como variables discretas aquellas cuyo rango <span
 class="math inline">\(R_{X}\)</span>, corresponde a un conjunto de
@@ -541,22 +510,11 @@ de distribución de probabilidad $</p>
 <p><span class="math display">\[V[X]= pq\]</span></p>
 </div>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej1.png" /></td>
-<td align="left">Un biólogo realiza una salida de campo para estudiar el
+<p><strong>Ejemplo</strong></p>
+<p>Un biólogo realiza una salida de campo para estudiar el
 comportamiento del cucarachero común. Se considera éxito si puede filmar
 al animal y fracaso si no puede hacerlo. Por información suministrada en
-artículos científicos la probabilidad de lograrlo se estima en
-0.20.</td>
-</tr>
-</tbody>
-</table>
+artículos científicos la probabilidad de lograrlo se estima en 0.20.</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
 <p>Se requiere examinar si dentro de este contexto existe una variable
@@ -640,21 +598,11 @@ x=0,1,2, \ldots, n   \\
 </div>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej2.png" /></td>
-<td align="left">Un sistema de seguridad para casas está diseñado para
-tener una confiabilidad del 90% . Suponga que nueve casas equipadas con
-este dispositivo sufrieron tentativa de robo. Se requiere calcular la
-probabilidad de que en siete de las nueve, la alarma se activará.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Un sistema de seguridad para casas está diseñado para tener una
+confiabilidad del 90% . Suponga que nueve casas equipadas con este
+dispositivo sufrieron tentativa de robo. Se requiere calcular la
+probabilidad de que en siete de las nueve, la alarma se activará.</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
 <p>En este caso la variable <span class="math inline">\(X\)</span> se
@@ -742,20 +690,10 @@ variable de Poisson con media 2.</p>
 class="math inline">\(\lambda=2\)</span>)</strong></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej3.png" /></td>
-<td align="left">Se estima que en el cruce más importante de la cuidad,
-ocurren 2 accidentes por día y se desea valorar la probabilidad de que
-en un día cualquiera no ocurra ningún accidente en dicho cruce.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Se estima que en el cruce más importante de la cuidad, ocurren 2
+accidentes por día y se desea valorar la probabilidad de que en un día
+cualquiera no ocurra ningún accidente en dicho cruce.</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
 <p>El número de accidentes que pueden ocurrir en este cruce, para un dia
@@ -809,25 +747,14 @@ class="math inline">\(m=95, n=5, k=10\)</span>)</strong></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><br/><br/></p>
 <p><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej4.png" /></td>
-<td align="left">Las tarjetas de circuito impreso se someten a una
-prueba de funcionamiento antes de ser ensambladas en un dispositivo de
-seguridad, después de ser rellenado con chips semiconductores. Un lote
-de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente
-20 sin reemplazo para realizar una prueba de control de calidad
-internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad
-de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.
-Mongomery)</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Las tarjetas de circuito impreso se someten a una prueba de
+funcionamiento antes de ser ensambladas en un dispositivo de seguridad,
+después de ser rellenado con chips semiconductores. Un lote de estas
+tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin
+reemplazo para realizar una prueba de control de calidad internacional.
+Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos
+1 tarjeta defectuosa aparezca en la muestra? (3-92. Mongomery)</p>
 <p><strong>Solución</strong></p>
 <p><span class="math inline">\(\begin{eqnarray*}  P(X\geq
 1)=1-P(X=0)  &amp;=&amp; 1 -
@@ -922,23 +849,13 @@ necesarios para obtener el primer exito</strong> <br/><br/></p>
 class="math inline">\(p=0.5\)</span>)</strong></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej5.png" /></td>
-<td align="left">En un estudio realizado en peces, los animales son
-sometidos a pruebas para determinar si poseen o no un gen que aumenta el
-riesgo de una enfermedad mortal. la probabilidad de que una animal de la
-especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3
-o más animales deban ser sometidos a pruebas antes de detectar el primer
-pez con el gen objeto de estudio?</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>En un estudio realizado en peces, los animales son sometidos a
+pruebas para determinar si poseen o no un gen que aumenta el riesgo de
+una enfermedad mortal. la probabilidad de que una animal de la especie
+en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más
+animales deban ser sometidos a pruebas antes de detectar el primer pez
+con el gen objeto de estudio?</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
 <p><span class="math display">\[\begin{eqnarray*}
@@ -988,25 +905,15 @@ class="math inline">\(p\)</span>.</p>
 class="math inline">\(k=2, p=0.50\)</span>)</strong></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej6.png" /></td>
-<td align="left">Un sitio Web está soportado por tres servidores
-idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los
-otros dos son de repuesto, los cuales se activan en caso de que el
-sistema principal falle. La probabilidad de falla en el sistema
-principal (o cualquier otro sistema de repuesto activado) ante una
-solicitud de servicio es 0,0005. Suponiendo que cada solicitud
-representa un juicio independiente, cuál es el número medio de
-solicitudes que se espera hasta el fracaso de los tres servidores?</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Un sitio Web está soportado por tres servidores idénticos. Sólo uno
+de ellos se utiliza para operar el sitio, y los otros dos son de
+repuesto, los cuales se activan en caso de que el sistema principal
+falle. La probabilidad de falla en el sistema principal (o cualquier
+otro sistema de repuesto activado) ante una solicitud de servicio es
+0,0005. Suponiendo que cada solicitud representa un juicio
+independiente, cuál es el número medio de solicitudes que se espera
+hasta el fracaso de los tres servidores?</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
 <p><span class="math display">\[E[X]=\dfrac{3}{0.0005}= 6000 \]</span>

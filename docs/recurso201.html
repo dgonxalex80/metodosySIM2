@@ -33,14 +33,6 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.26/datatables.js"></script>
-<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -418,18 +410,18 @@ $(document).ready(function () {
 <p><br/><br/></p>
 <div id="introducción" class="section level1">
 <h1><strong>Introducción</strong></h1>
-<p>El concepto de variable aleatoria constituye uno de los conceptos
-principales de la probabilidad y estadística. A este concepto se pueden
+<p>El concepto de variable aleatoria constituye uno de los principales
+pilares de la probabilidad y estadística. A este concepto se pueden
 asociar dos paradigmas de evolución histórica segun J.A. Alberth &amp;
 B. Ruiz (2013) , El primero basada en el resultado de fenómenos
 aleatorios y por otro lado el proceso que relaciona los conjuntos de
 espacio muestral y sus respectivas probabilidades, para definir el
 concepto de variable aleatória como función de números reales y el
 espacio para el sustento matemático.</p>
-<p>Ahora, se puede relacionar el concepto de variable aleatoria a
-diferentes contextos donde se requiere dar respuesta a preguntas
-relacionadas con la ocurrencia o no de fenómenos aleatorios que
-eventualmente se presentarán en el futuro, como por ejemplo:</p>
+<p>Este concepto está relacionado a diferentes contextos donde se
+requiere dar respuesta a preguntas relacionadas con la ocurrencia o no
+de fenómenos aleatorios que eventualmente se presentarán en el futuro,
+como por ejemplo:</p>
 <ul>
 <li><p>¿Cuánto tiempo se tarda un estudiante en ir de su casa a la
 universidad?</p></li>
@@ -457,25 +449,26 @@ continuo,con sus principales características, conceptos relacionados con
 los vistos en el modulo anterior.</p>
 <p><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Definición Variable aleatoria</strong></p>
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> es una
 función que asigna a cada valor de un espacio muestral <span
-class="math inline">\(S\)</span> un numero . El conjunto formado por
+class="math inline">\(S\)</span> un número . El conjunto formado por
 estos números conforman un subconjunto de los reales llamado rango de la
-variable X, (<span class="math inline">\(R_{_{X}}\)</span>)</p>
+variable <span class="math inline">\(X\)</span>, (<span
+class="math inline">\(R_{_{X}}\)</span>)</p>
 </div>
 <p><br/><br/></p>
 <p>Las variables aleatorias se clasifican teniendo en cuenta las
-características de su rango en discretas, continuas. La distribución de
-una variable aleatoria será univariada si se estudia el comportamiento
-de una sola variable y serán multivariadas si se considera el
+características de su rango en <strong>discretas</strong>,
+<strong>continuas</strong>. La distribución de una variable aleatoria
+será *univariada<strong> si se estudia el comportamiento de una sola
+variable y serán </strong>multivariadas** si se considera el
 comportamiento conjunto de varias variables definidas sobre el mismo
-espacio muestral.Este ultimo caso sera tratado en la <strong>Unidad
-3.2</strong></p>
+espacio muestral.</p>
 <p><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Tipos de variables</strong></p>
 <ul>
 <li><p>Una variable <span class="math inline">\(X\)</span> se considera
@@ -546,7 +539,7 @@ enteros.</p>
 probabilidad que modela la asignación de las probabilidades</p>
 <p><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Función de distribución de probabilidad</strong></p>
 <p>Para <span class="math inline">\(X\)</span> un variable aleatoria
 discreta, su función de distribución de probabilidad estará dada por
@@ -587,7 +580,7 @@ rangos de valores se define la función de distribución acumulada <span
 class="math inline">\(F(x)\)</span></p>
 <p><br/><br/></p>
 <div id="función-de-probabilidad-acumulada" class="section level3"
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <h3><strong>Función de probabilidad acumulada</strong></h3>
 <p>Sea <span class="math inline">\(X\)</span> una variable aleatoria
 continua con función de densidad <span
@@ -597,70 +590,6 @@ como:</p>
 <p><span class="math display">\[F(x)=P(X\leq x)=\sum _{t \leq
 x}f(t)\]</span></p>
 </div>
-<p><br/><br/></p>
-<p><strong>Ejemplo 3</strong></p>
-<p>Para la variable definida como <span
-class="math inline">\(X\)</span>: número de puntos obtenidos al lanzar
-un dado tenemos que :</p>
-<table>
-<colgroup>
-<col width="10%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"><span class="math inline">\(x_{i}\)</span></th>
-<th align="center">1</th>
-<th align="center">2</th>
-<th align="center">3</th>
-<th align="center">4</th>
-<th align="center">5</th>
-<th align="center">6</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\(f(x)\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-<td align="center"><span
-class="math inline">\(\dfrac{1}{6}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<p>Esta asignación la podemos resumir en la función:</p>
-<p><span class="math inline">\(f(x) = \left \{ \begin{matrix}
-\dfrac{1}{6} &amp; \mbox{si }\mbox{ x=1,2,3,4,5,6} \\ \\ 0 &amp; \mbox{
-en cualquier otro caso}\end{matrix}\right.\)</span></p>
-<p><br/><br/></p>
-<p>Tambien podemos representar esta función de manera gráfica</p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p><br/></p>
-<p>Para la construcción de la función de distribución acumulada se
-acumulan los valores correspondientes a las probabilidades puntuales de
-manera creciente</p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre><code>  x       fx     Fx
-1 1 0.166667 0.1667
-2 2 0.166667 0.3333
-3 3 0.166667 0.5000
-4 4 0.166667 0.6667
-5 5 0.166667 0.8333
-6 6 0.166667 1.0000</code></pre>
 <p><br/><br/></p>
 <p><strong>Ejemplo 4</strong></p>
 <p>El restaurante “Asados y algo más” solo da servicio mediante
@@ -681,22 +610,17 @@ class="math inline">\(f\)</span>, dada por:</p>
                 \]</span></p>
 <p><br/></p>
 <p>En este caso se utiliza la función combinatoria y el operador de
-sumatoria vista en la <strong>Guía 0.2</strong></p>
+sumatoria</p>
 <p>Representada de manera gráfica:</p>
 <p><br/></p>
 <pre class="r"><code>x=0:20
 fx=choose(20,x)*0.70^x*0.30^(20-x)  
-Fx=cumsum(fx)
-
-tabla=data.frame(x, fx, Fx)
-DT::datatable(head(tabla, 21),fillContainer = FALSE, options = list(pageLength = 12))</code></pre>
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d3c1b52be01dd253ef6d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d3c1b52be01dd253ef6d">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21"],[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],[3.486784401e-11,1.6271660538e-09,3.60688475259e-08,5.049638653626e-07,5.00755833151245e-06,3.73897688752929e-05,0.000218106985105875,0.00101783259716075,0.00385928193090118,0.012006654896137,0.030817080900085,0.0653695655456349,0.114396739704861,0.164261985217236,0.191638982753442,0.17886305056988,0.130420974373871,0.0716036722052622,0.0278458725242686,0.00683933711122388,0.000797922662976119],[3.486784401e-11,1.66203389781e-09,3.773088142371e-08,5.4269474678631e-07,5.55025307829876e-06,4.29400219535917e-05,0.000261047007059467,0.00127887960422022,0.0051381615351214,0.0171448164312584,0.0479618973313434,0.113331462876978,0.227728202581839,0.391990187799076,0.583629170552518,0.762492221122398,0.892913195496268,0.96451686770153,0.992362740225799,0.999202077337023,0.999999999999999]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>fx<\/th>\n      <th>Fx<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+Fx=cumsum(fx)</code></pre>
+<p><img src="recurso201_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 <br/></p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="recurso201_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/></p>
-<pre><code>P(X=0)  =  0 </code></pre>
+<pre><code>$P(X=0)  = $ 0 </code></pre>
 <pre><code>P(X=15) =  0.178863 </code></pre>
 <pre><code>P(X&lt;15) = P(X&lt;=14) =  0.5836 </code></pre>
 <pre><code>P(X &gt;15) = 1 - P(X&lt;=14) = 0.4164</code></pre>
@@ -728,7 +652,7 @@ acero</p></li>
 </ul>
 <p><br/><br/></p>
 <div id="función-de-densidad-de-probabilidad" class="section level3"
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <h3><strong>Función de densidad de probabilidad</strong></h3>
 <p>La función de densidad de probablidad se define como <span
 class="math inline">\(f(x)\)</span>, tal que cumpla las siguientes
@@ -747,7 +671,7 @@ b)=\displaystyle\int\limits_{a}^{b}f(x)\:dx\)</span></p></li>
 corresponde a una integral</p>
 <p><br/></p>
 <div id="función-de-probabilidad-acumulada-1" class="section level3"
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #DFF4F9 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <h3><strong>Función de probabilidad acumulada</strong></h3>
 <p><span class="math inline">\(F_{_X}(x)=P(X \leq x)=\displaystyle\int
 \limits_{-\infty}^{x}f_{_X}(t)\:dt\)</span></p>
@@ -776,7 +700,7 @@ puede ser una función de densidad de probabilidad se debe verificar</p>
 \dfrac{1}{4} e^{-x/4} \:dx =1\)</span></p>
 <pre><code>1 with absolute error &lt; 2.7e-05</code></pre>
 <p><br/></p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="recurso201_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 
 

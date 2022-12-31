@@ -46,7 +46,10 @@ Con la siguiente figura se representa de manera figurativa lo que pueden ser las
 
 Por otro lado la gráfica 3 representa el estimador con las mejores condiciones, sesgado y de menor varianza, lo cual representa un estimador insesgado y eficiente.
 
-![](img/estimador.png){width=50%}
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/estimador.png")
+```
+
 
 <br/><br/>
 

@@ -8,21 +8,16 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
-![](img/banner4.png)
+
 <br/><br/>
 
 ## **Introducción**
 
-
-![](img/valiente3.gif)
-
-Tomado de : Valiente Disney Channel
-
-<br/><br/>
+<br/>
 
 La inferencia estadística permite generalizar lo hallado en una muestra a toda la población. Para realizar este proceso contamos con dos opciones: Estimación y las Pruebas de hipótesis. El fundamento de estos procesos está relacioando con varios conceptos como:
 
-<br/><br/>
+<br/>
 
 |               |                 |                    |                    |                      |
 |:--------------|:----------------|:-------------------|:-------------------|:---------------------| 
@@ -31,11 +26,7 @@ La inferencia estadística permite generalizar lo hallado en una muestra a toda 
 |muestreo por juicio    | muestreo por conveniciencia|muestreo bola de nieve    |estimador puntual               |estimador insesgado       | 
 |estimador consistente  | estimador eficiente        |estimación por intervalos de confianza|pruebas de hipótesis |  |
 
-[Tablero 300MAE005 A 2020-2](https://padlet.com/dgonzalez80/lijxz9p7nvz5mm2q) <br/>
-[Tablero 300MAE005 B 2020-2](https://padlet.com/dgonzalez80/ivy0h9vyhtiq9l1d) <br/>
-[Tablero 300MAE005 F 2020-2](https://padlet.com/dgonzalez80/ivy0h9vyhtiq9l1d) <br/>
- 
- 
+
 <br/><br/>
 
 ### **Población** 
@@ -223,7 +214,10 @@ En caso de poder realizar una prueba piloto (observación de una muestra, digamo
 
 ## **Tipos de muestreo** 
 
-![](img/muestreo.png)
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+knitr::include_graphics("img/muestreos.png")
+```
+
 
 <br/>
 

@@ -10,47 +10,25 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 ```
 
-![](img/banner3.png)
-
 <br/><br/><br/>
 
 # **Modelos especiales**
 
 <br/><br/>
 
-A continuación se presentan los principales conceptos teóricos de esta unidad, acompañados de ejemplos resueltos. 
+A continuación se presentan los principales modelos discretos, acompañados de ejemplos resueltos. 
 
 ## **Introducción**
 
 <br/><br/>
 
-En las unidades abordadas previamente a esta se han trabajado las características de variables aleatorias tanto discretas como continuas dentro de  las cuales están: la función de distribución de probabilidad $f(x)$ , para el caso discreto y la función de densidad de probabilidad para las variables continuas. En ambos casos la función de probabilidad acumulada $F(x)$ que representa $P(X \leq x)$, el valor esperado $E[X]$, la varianza $V[X]$, y en el caso de las variables conjuntas la función de distribución conjunta y la función de densidad conjunta para los casos discreto-discreto y continuo-continuo, respectivamente $f_{_{XY}}(x,y)$. También característica de ellas como son: el valor esperado conjunto $E[XY]$ , la covarianza $Cov[XY]$ y el coeficiente de correlación  $\rho_{_{XY}}$ para las variables $X$ y $Y$. 
-
-<br/><br/>
-Ahora, el siguiente modelo :
-
-$$f(x)= \frac{1}{50}e^{-(\frac{x}{50})} $$ 
+Toda variable aleatoria se puede caracterizar por su función de distribución de probabilidad $f(x)$ , la función de probabilidad acumulada $F(x)$ que representa $P(X \leq x)$, el valor esperado $E[X]$, la varianza $V[X]$, y en el caso de las variables conjuntas la función de distribución conjunta $f_{_{XY}}(x,y)$. También característica de ellas como son: el valor esperado conjunto $E[XY]$ , la covarianza $Cov[XY]$ y el coeficiente de correlación  $\rho_{_{XY}}$ para las variables $X$ y $Y$. 
 
 <br/><br/>
 
-Llamado exponencial, puede ser estudiado y asociado a sucesos que ocurren diariamente a nuestro alrededor.
-
-Tener una variable cuyo comportamiento se puede caracterizar tiene la ventaja de conocer fácilmente el recorrido teórico en la construcción del modelo, las propiedades, tendencias, valor esperado, varianza, función de distribución, estimadores de sus parámetros, alternativas que facilitan el cálculo de probabilidades, su afinidad con otras variables, entre otras, características que facilitan actividades como la simulación. 
-
-El siguiente diagrama presenta los principales modelo de probabilidad y sus diferentes relaciones
+A continuación se presentan los modelos más comunes con sus principales características:
 
 <br/><br/>
-
-![](img/poster.png)
-Fuente: construcción propia. basado en Univariate Distribution Relationships  ([Lawrence M. LEEMIS and Jacquelyn T. MCQUESTON](http://www.math.wm.edu/~leemis/2008amstat.pdf))
-
-<br/><br/>
-
-# **Modelos discretos**
-
-<br/><br/>
-
-## **Algunos modelos discretos**	
 
 <br/>
 
@@ -58,9 +36,6 @@ Fuente: construcción propia. basado en Univariate Distribution Relationships  (
 |:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
 | Bernoulli       | Binomial        | Poisson         | Hipergeométrico | Geométrico o de Pascal | Binomial negativo|
 |                 |                 |                 |                 |                 |                 | 
-
-
-A continuación se presentan los modelos más comunes con sus principales características:
 
 <br/><br/>
 
@@ -112,9 +87,9 @@ $$V[X]= pq$$
 
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej1.png)| Un biólogo realiza una salida de campo para estudiar el comportamiento del cucarachero común. Se considera éxito si puede filmar al animal y fracaso si no puede hacerlo. Por información suministrada en artículos científicos la probabilidad de lograrlo se estima en 0.20. |
+**Ejemplo**  
+
+Un biólogo realiza una salida de campo para estudiar el comportamiento del cucarachero común. Se considera éxito si puede filmar al animal y fracaso si no puede hacerlo. Por información suministrada en artículos científicos la probabilidad de lograrlo se estima en 0.20. 
 
 <br/><br/>
 
@@ -208,9 +183,9 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
 <br/><br/>
 
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej2.png)| Un sistema de seguridad para casas está diseñado para tener una confiabilidad del 90% . Suponga que nueve casas equipadas con este dispositivo sufrieron tentativa de robo. Se requiere calcular la probabilidad de que en siete de las nueve, la alarma se activará. |
+**Ejemplo**
+
+Un sistema de seguridad para casas está diseñado para tener una confiabilidad del 90% . Suponga que nueve casas equipadas con este dispositivo sufrieron tentativa de robo. Se requiere calcular la probabilidad de que en siete de las nueve, la alarma se activará. 
 
 <br/><br/>
 
@@ -312,9 +287,9 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
 <br/><br/>
 
 	
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej3.png)| Se estima que en el cruce más importante de la cuidad, ocurren 2 accidentes por día y se desea valorar la probabilidad de que en un día cualquiera no ocurra ningún accidente en dicho cruce. |
+**Ejemplo**
+
+Se estima que en el cruce más importante de la cuidad, ocurren 2 accidentes por día y se desea valorar la probabilidad de que en un día cualquiera no ocurra ningún accidente en dicho cruce. 
 
 <br/><br/>
 
@@ -383,9 +358,9 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
 
 <br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej4.png)| Las tarjetas de circuito impreso se someten a una prueba de funcionamiento antes de ser ensambladas en un dispositivo de seguridad, después de ser rellenado con chips semiconductores. Un lote de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin reemplazo para realizar una prueba de control de calidad internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.  Mongomery) |
+**Ejemplo**
+
+Las tarjetas de circuito impreso se someten a una prueba de funcionamiento antes de ser ensambladas en un dispositivo de seguridad, después de ser rellenado con chips semiconductores. Un lote de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin reemplazo para realizar una prueba de control de calidad internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.  Mongomery) 
 
 **Solución** 
 
@@ -471,9 +446,9 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
  
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej5.png)| En un estudio realizado en peces, los animales son sometidos a pruebas para determinar si poseen o no un gen que aumenta el riesgo de una enfermedad mortal. la probabilidad de que una animal de la especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más animales deban ser sometidos a pruebas antes de detectar el primer pez con el gen objeto de estudio? |
+**Ejemplo**
+
+En un estudio realizado en peces, los animales son sometidos a pruebas para determinar si poseen o no un gen que aumenta el riesgo de una enfermedad mortal. la probabilidad de que una animal de la especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más animales deban ser sometidos a pruebas antes de detectar el primer pez con el gen objeto de estudio? 
 
 <br/><br/>
 
@@ -548,9 +523,9 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 3) +
 	
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej6.png)| Un sitio Web está soportado por tres servidores idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los otros dos son de repuesto, los  cuales se activan en caso de que el sistema principal falle. La probabilidad de falla en el sistema principal (o cualquier otro sistema de repuesto activado) ante una solicitud de servicio es 0,0005. Suponiendo que cada solicitud representa un juicio independiente, cuál es el número medio de solicitudes que se espera hasta el fracaso de los tres servidores? |
+**Ejemplo**
+
+Un sitio Web está soportado por tres servidores idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los otros dos son de repuesto, los  cuales se activan en caso de que el sistema principal falle. La probabilidad de falla en el sistema principal (o cualquier otro sistema de repuesto activado) ante una solicitud de servicio es 0,0005. Suponiendo que cada solicitud representa un juicio independiente, cuál es el número medio de solicitudes que se espera hasta el fracaso de los tres servidores? 
  
 <br/><br/>
 

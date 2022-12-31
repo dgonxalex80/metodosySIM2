@@ -9,9 +9,27 @@ css: style.css
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 library(summarytools)
+
+c1 ="#FF7F00"  # naranja - color primario 
+c2 ="#034A94"  # azul oscuro - color secundario
+c3 ="#0EB0C6"  # azul claro - color terciario
+c4 ="#686868"  # gris - color texto
 ```
 
 
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/banner_presentacion.png")
+```
+
+</br></br>
+
+El concepto de probabilidad constituye uno de los pilares de la estadística que permiten la construcción de conceptos posteriores como el de variable aleatoria. Ambos permiten abordar de manera apropiada la Inferencia estadística. 
+
+</br>
+
+Las etapas de la  Metodología Estadística nos permiten ubicar los temas abordados en esta unidad. Aunque la Probabilidad y Variable Aleatoria no forman parte explicita de la metodología, son conceptos necesario para su abordaje.
+
+</br></br>
 
 ##### 1. **Definición del problema**
 ##### 2. **Definición de los objetivos**
@@ -25,4 +43,14 @@ library(summarytools)
 ##### 8. <span style="color:#FF7F00">**Inferencia estadística**</span>
 ##### 9. **Conclusiones y recomendaciones**
 
+</br>
+
+En esta unidad se tratarán los principales conceptos de:
+
+* Probabilidad,
+* Variable aleatoria e
+* Inferencia estadística
+  + Estimación : puntual y por intervalos de confianza
+  + Pruebas de hipótesis, paramétricas y no paramétricas
+  
 

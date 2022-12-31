@@ -132,7 +132,7 @@ $$\widehat{\sigma^{2}}=8550$$
 
 <br/>
 
-#### Principales distribuciones muestrales: 
+### **Principales distribuciones muestrales*: 
 
 + normal
 + Chi-cuadrado, 

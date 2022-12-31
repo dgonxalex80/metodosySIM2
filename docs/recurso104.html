@@ -408,21 +408,59 @@ de probabilidad</strong></span></h1>
 
 
 <p><br/><br/></p>
-<p>En la guía 2.1 se habló de los conceptos básicos (Experimento
-aleatorio, Espacio muestral y Evento aleatorio), de los diferentes
-enfoque de probabilidad ( Clásico, Frecuentista y Subjetivo) y de los
-tipos de probabilidad simple o marginal (<span
-class="math inline">\(P(A)\)</span>) y probabilidad conjunta <span
-class="math inline">\(P(A \cap B)\)</span>.</p>
-<p>En esta guía se hará en énfasis en otro tipo de probabilidad llamada
-<strong>probabilidad condicional</strong></p>
+<div id="tipos-de-probabilidad" class="section level2">
+<h2><strong>Tipos de probabilidad</strong></h2>
+<p>Las probabilidade puede definirse para eventos simples (<span
+class="math inline">\(A\)</span>, <span
+class="math inline">\(B\)</span>,…) o compuestos (<span
+class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A
+\cap B\)</span>, <span class="math inline">\(B|A\)</span> ) que inclugen
+varios eventos. Dependiendo el tipo de evento puede tomar los siguientes
+nombres:</p>
+<p><br/><br/></p>
+<div style="display: flex;">
+<div>
+<p><img src="img/tabla1_22.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div>
+<p><img src="img/diagrama5_22.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<p><br/><br/></p>
+<div id="probabilidad-simple-o-marginal" class="section level3">
+<h3><strong>Probabilidad simple o marginal</strong></h3>
+<ul>
+<li><p><span class="math inline">\(P(A)\)</span> : probabilidad de que
+ocurra A</p></li>
+<li><p><span class="math inline">\(P(A&#39;)\)</span> : probabilidad de
+que NO ocurra A</p></li>
+<li><p><span class="math inline">\(P(B)\)</span> : probabilidad de que
+ocurra B</p></li>
+<li><p><span class="math inline">\(P(B&#39;)\)</span> : probabilidad de
+que NO ocurra B</p></li>
+</ul>
 <p><br/><br/><br/></p>
+</div>
+<div id="probabilidad-conjunta" class="section level3">
+<h3><strong>Probabilidad conjunta</strong></h3>
+<ul>
+<li><p><span class="math inline">\(P(A \cap B)\)</span> : probabilidad
+de que ocurra A y B</p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B)\)</span> :
+probabilidad de que NO ocurra A y ocurra B</p></li>
+<li><p><span class="math inline">\(P(A \cap B&#39;)\)</span> :
+probabilidad de que ocurra A y NO ocurra B</p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B&#39;)\)</span> :
+probabilidad de que NO ocurra A ni B</p></li>
+</ul>
+<p><br/><br/></p>
+</div>
+</div>
 <div id="probabilidad-condicional" class="section level2">
-<h2><span style="color:#a391c4"><strong>Probabilidad
-condicional</strong></span></h2>
+<h2><strong>Probabilidad condicional</strong></h2>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
-<p><strong>Definición : Probabilidad condicional</strong></p>
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<p><strong>Definición</strong></p>
 <p>La probabilidad condicional de <span
 class="math inline">\(B\)</span>, dado <span
 class="math inline">\(A\)</span>, se denota como <span
@@ -456,22 +494,13 @@ probabilidad conjunta <span class="math inline">\(P(A \cap B)\)</span>
 con la probabilidad de <span class="math inline">\(A\)</span></p>
 <p><br/><br/><br/></p>
 </div>
-<div id="ejemplo-1" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 1</strong></span></h2>
+<div id="ejemplo" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p>Supongamos que se tiene la siguiente información escrita en una tabla
 de doble entrada o tabla cruzada que contiene dos eventos <span
 class="math inline">\(A\)</span> y <span
-class="math inline">\(B\)</span> :</p>
-<pre class="r"><code>x=c(460,140,40,260)
-m=matrix(x,nrow = 2) 
-rownames(m) = c(&quot;B&quot;, &quot;B*&quot;)
-colnames(m) = c(&quot;A&quot;, &quot;A*&quot;)
-m</code></pre>
-<pre><code>     A  A*
-B  460  40
-B* 140 260</code></pre>
-<p>En la siguiente tabla se representan los tres tipos de probabilidad :
-<br/></p>
+class="math inline">\(B\)</span>. En la siguiente tabla se representan
+los tres tipos de probabilidad : <br/></p>
 <div style="display: flex;">
 <div>
 <p><img src="img/tabla2_22.png" width="80%" style="display: block; margin: auto;" /></p>
@@ -480,7 +509,31 @@ B* 140 260</code></pre>
 <p><img src="img/tabla4_22.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<p><br/><br/><br/></p>
+<p><strong>Probabilidades simples o marginales</strong></p>
+<ul>
+<li><p><span class="math inline">\(P(A) =\dfrac{600}{900} =
+0.6667\)</span></p></li>
+<li><p><span class="math inline">\(P(A&#39;) = A- P(A) = 1-
+\dfrac{600}{900} = 1 - 0.6667 = 0.3333\)</span></p></li>
+<li><p><span class="math inline">\(P(B) = \dfrac{500}{900} =
+0.5556\)</span></p></li>
+<li><p><span class="math inline">\(P(B&#39; = \dfrac{400}{900}) =
+0.4444\)</span></p></li>
+</ul>
+<p><br/></p>
+<div id="probabilidad-conjunta-1" class="section level3">
+<h3><strong>Probabilidad conjunta</strong></h3>
+<ul>
+<li><p><span class="math inline">\(P(A \cap B) = \dfrac{460}{900} =
+0.51111\)</span></p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B) = \dfrac{40}{900} =
+0.0444\)</span></p></li>
+<li><p><span class="math inline">\(P(A \cap B&#39;) = \dfrac{140}{900} =
+0.1556\)</span></p></li>
+<li><p><span class="math inline">\(P(A&#39; \cap B&#39;) =
+\dfrac{260}{900} = 2889\)</span></p></li>
+</ul>
+<p><br/><br/></p>
 <p>Esta información tambien se puede representar como un diagrama de
 árbol</p>
 <p><br/></p>
@@ -494,7 +547,7 @@ B* 140 260</code></pre>
 :</p>
 <p><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Definición: Regla de la multiplicación de
 eventos</strong></p>
 <p>La probabilidad de que ocurra A y B asociados a un experimento
@@ -506,9 +559,9 @@ aleatorio es :</p>
 </div>
 <p><br/><br/><br/></p>
 </div>
+</div>
 <div id="eventos-independientes" class="section level2">
-<h2><span style="color:#a391c4"><strong>Eventos
-independientes</strong></span></h2>
+<h2><strong>Eventos independientes</strong></h2>
 <p>En el caso que se requiera evaluar si dos eventos son independientes
 o no, partiendo de la definición de probabilidad condicional se podría
 obtener la siguiente regla al despejar <span class="math inline">\(P(A
@@ -522,7 +575,7 @@ indica que la probablidad conjunta de los eventos A y B es igual a la
 probabilidad de sus probabilidades marginales :</p>
 <p><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Definición: Independencia de eventos</strong></p>
 <p>Dos eventos A y B son independientes si y solo si la probabiliad del
 evento B no es afectada por la ocurrencia del evento A o viceversa.</p>
@@ -530,10 +583,10 @@ evento B no es afectada por la ocurrencia del evento A o viceversa.</p>
 class="math inline">\(P(B|A)=P(B)\)</span></p>
 </div>
 <p><br/><br/><br/></p>
-<div style="display: flex;">
-<div>
 <p>Para determinar si los eventos A y B son eventos independientes se
 debe cumplir que :</p>
+<div style="display: flex;">
+<div>
 <p><span class="math display">\[P(A \cap B) = P(A) P(B)\]</span> <span
 class="math display">\[P(A \cap B&#39;) = P(A) P(B&#39;)\]</span> <span
 class="math display">\[P(A&#39; \cap B) = P(A&#39;) P(B)\]</span> <span
@@ -541,7 +594,7 @@ class="math display">\[P(A&#39; \cap B&#39;) = P(A&#39;)
 P(B&#39;)\]</span></p>
 </div>
 <div>
-<p><img src="img/tabla1_22.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="img/tabla1_22.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <p>En el caso que se cumplan todas las condiciones, diremos que los
@@ -552,8 +605,8 @@ independientes</p>
 ejemplos:</p>
 <p><br/><br/></p>
 </div>
-<div id="ejemplo-2" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 2</strong></span></h2>
+<div id="ejemplo-1" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p>Se tiene un circuito formado por dos componentes <span
 class="math inline">\(A_{1}\)</span> y <span
 class="math inline">\(A_{2}\)</span> cada uno con probabilidad de
@@ -576,8 +629,8 @@ independencia tenemos que:</p>
 = 0.90 \times  0.95 = 0.855\]</span></p>
 <p><br/><br/><br/></p>
 </div>
-<div id="ejemplo-3" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 3</strong></span></h2>
+<div id="ejemplo-2" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p>Ahora supongamos que el circuito anterior está conectado en paralelo.
 Determinar la probabilidad de que el circuito funciones</p>
 <p><img src="img/circuito2.png" width="40%" style="display: block; margin: auto;" /></p>
@@ -597,8 +650,8 @@ class="math inline">\(P(A&#39;)=1-P(A)\)</span></p>
 <p><span class="math display">\[1-0.005 = 0.995\]</span></p>
 <p><br/><br/><br/></p>
 </div>
-<div id="ejemplo-4" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 4</strong></span></h2>
+<div id="ejemplo-3" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p>El departamento de crédito de la universidad, informa que el 30% de
 los pagos realizados en la universidad se efectúan en efectivo, un 40%
 con tarjeta de crédito y el resto con tarjeta débito. En todos los casos
@@ -703,8 +756,7 @@ mil pesos</li>
 <p><br/><br/><br/></p>
 </div>
 <div id="probabilidad-total" class="section level2">
-<h2><span style="color:#a391c4"><strong>Probabilidad
-Total</strong></span></h2>
+<h2><strong>Probabilidad Total</strong></h2>
 <p>Ahora supongamos que el espacio muestral esta formado por un conjunto
 de eventos lo podemos representar como una partición del conjunto <span
 class="math inline">\(S\)</span> así :</p>
@@ -712,7 +764,7 @@ class="math inline">\(S\)</span> así :</p>
 <p><br/><br/></p>
 </div>
 <div id="nota" class="section level2">
-<h2><span style="color:#a391c4"><strong>Nota</strong></span></h2>
+<h2><strong>Nota</strong></h2>
 <p>Una partición de un conjunto de <span
 class="math inline">\(S\)</span> está formada por subconjuntos <span
 class="math inline">\(A_{1}\)</span>, <span
@@ -754,7 +806,7 @@ P(A_{5})P(B|A_{5})\)</span></p>
 <p>En general :</p>
 <p><br/><br/><br/></p>
 <div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Definición: Regla de la probabilidad total</strong></p>
 <p>Dado una serie de eventos que conforman una partición <span
 class="math inline">\(E_{1}\)</span>, <span
@@ -769,9 +821,7 @@ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots
 P(E_{k})P(A|E_{k})\]</span></p>
 </div>
 <p><br/><br/><br/></p>
-</div>
-<div id="ejemplo-5" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 5</strong></span></h2>
+<p><strong>Ejemplo</strong></p>
 <p>En el caso que en el ejemplo anterior se requiere calcular la
 probabilidad <span class="math inline">\(P(+5)\)</span> utilizamos la
 regla de la probabilidad total:</p>
@@ -786,8 +836,7 @@ regla de la probabilidad total:</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="teorema-de-bayes" class="section level2">
-<h2><span style="color:#a391c4"><strong>Teorema de
-Bayes</strong></span></h2>
+<h2><strong>Teorema de Bayes</strong></h2>
 <p><br/><br/></p>
 <p><img src="img/Thomas_Bayes.gif" width="40%" style="display: block; margin: auto;" /></p>
 <p><br/></p>
@@ -795,6 +844,7 @@ Bayes</strong></span></h2>
 Wells, 1761) fue un matemático británico y ministro presbiteriano. Su
 obra más conocida es el Teorema de Bayes.</p>
 <p><br/><br/></p>
+<blockquote>
 <p>El teorema de Bayes, que lleva el nombre del matemático británico del
 siglo XVIII <strong>Thomas Bayes</strong>, es una fórmula matemática
 para determinar la probabilidad condicional . La probabilidad
@@ -803,16 +853,15 @@ resultado previo. El teorema de Bayes proporciona una forma de revisar
 las predicciones o teorías existentes (actualizar las probabilidades)
 dada la evidencia nueva o adicional. En finanzas, el teorema de Bayes se
 puede utilizar para calificar el riesgo de prestar dinero a posibles
-prestatarios.</p>
-<p>Tomado de : <a
-href="https://www.investopedia.com/terms/b/bayes-theorem.asp"
-class="uri">https://www.investopedia.com/terms/b/bayes-theorem.asp</a>
-<br/> Lectura recomendada : <a
-href="https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/"
-class="uri">https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/</a></p>
+prestatarios. Tomado de :<a
+href="https://www.investopedia.com/terms/b/bayes-theorem.asp">investopedia</a>
+<br/> <a
+href="https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/">Lectura
+recomendada</a></p>
+</blockquote>
 <p><br/><br/><br/></p>
 <div id="definición-teorema-de-bayes" class="section level3"
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #dbd4e8 ; border-color: #000000;">
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <h3><strong>Definición: Teorema de Bayes </strong></h3>
 <p>Dado una serie de eventos que conforma una partición <span
 class="math inline">\(E_{1}\)</span>, <span
@@ -835,8 +884,8 @@ P(E_{j})P(A|E_{j})} \]</span></p>
 </div>
 <p><br/><br/><br/></p>
 </div>
-<div id="ejemplo-6" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 6</strong></span></h2>
+<div id="ejemplo-4" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p><br/></p>
 <p>Continuando con el ejemplo anterior puede ser necesario calcular la
 probabilidad : <span class="math inline">\(P(E|+5)\)</span> para lo cual
@@ -849,8 +898,8 @@ utilizamos el Teorema de Bayes</p>
 = 0.1034\)</span></p>
 <p><br/><br/></p>
 </div>
-<div id="ejemplo-7" class="section level2">
-<h2><span style="color:#a391c4"><strong>Ejemplo 7</strong></span></h2>
+<div id="ejemplo-5" class="section level2">
+<h2><strong>Ejemplo</strong></h2>
 <p>En una fábrica de artı́culos para protección biodegradables, cuatro
 operarios colocan etiquetas de caducidad en cada artı́culo al final de la
 lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 %
@@ -886,12 +935,6 @@ es el más probable culpable de esta omisión?</p>
 <td align="left"><span class="math inline">\(P(S)=0.15\)</span></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
 <td align="left"><span class="math inline">\(P(N|J)=1/200\)</span></td>
 <td align="left"><span class="math inline">\(P(N|L) =
 1/100\)</span></td>
@@ -900,31 +943,22 @@ es el más probable culpable de esta omisión?</p>
 </tr>
 </tbody>
 </table>
-<table>
-<colgroup>
-<col width="30%" />
-<col width="69%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="right">N = (J N) (L N) (M N) (S N) <span
-class="math display">\[
-\]</span>P(N) = P(J N) + P(L N) + P(M N) + P(S N) <span
-class="math display">\[
-\]</span>P(N) = P(J)P(N</td>
-<td align="left">J) + P(L)P(N</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>x=c(0.4,0.3,0.15,0.15)
-y=c(1/200,1/100,1/90,1/200)
-
-
-(x*y)/sum(x*y)</code></pre>
-<pre><code>[1] 0.2696629 0.4044944 0.2247191 0.1011236</code></pre>
+<p><br/><br/></p>
+<p><span class="math display">\[N = (J \cap N) \cup (L \cap N) \cup (M
+\cap N) \cup (S \cap N) \]</span> <span class="math display">\[P(N) =
+P(J \cap N) + P(L \cap N) + P(M \cap N) + P(S \cap N) \]</span> <span
+class="math display">\[P(N) = P(J)P(N|J) + P(L)P(N|L) + P(M)P(N|M) +
+P(S)P(N|S)\]</span> <span class="math display">\[P(N) = 0.40
+\dfrac{1}{200} + 0.30 \dfrac{1}{100} + 0.15 \dfrac{1}{90} + 0.15
+\dfrac{1}{200}\]</span></p>
+<p><span class="math display">\[P(N) =  0.0020 +  0.0030+  0.0017 +
+0.0008 =  0.0075\]</span></p>
 <p><br/><br/><br/></p>
-<p>Aplicaciones :</p>
-<p><strong>Árboles de decisión</strong></p>
+</div>
+<div id="aplicaciones" class="section level2">
+<h2><strong>Aplicaciones</strong></h2>
+<div id="árboles-de-decisión" class="section level3">
+<h3><strong>Árboles de decisión</strong></h3>
 <p><br/></p>
 <pre class="r"><code>#  install.packages(&quot;titanic&quot;)  # instalar paquete titatic
 library(titanic) #  cargar paquete
@@ -986,17 +1020,8 @@ t        # tabla de probabilidades</code></pre>
   Died     0.0909 0.5253 0.6162
   Survived 0.2615 0.1223 0.3838
   Sum      0.3524 0.6476 1.0000</code></pre>
-<p><br/></p>
-<p><strong>Referencias sobre árboles de decisión </strong></p>
-<ul>
-<li><p><a
-href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion"
-class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p></li>
-<li><p><a
-href="https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html"
-class="uri">https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html</a></p></li>
-</ul>
 <p><br/><br/><br/></p>
+</div>
 </div>
 
 

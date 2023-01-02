@@ -12,7 +12,7 @@
 <meta name="author" content="Métodos y Simulación Estadística" />
 
 
-<title> Conceptos básicos</title>
+<title> Pruebas de hipótesis para una población</title>
 
 <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -401,38 +401,295 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
-<strong>Conceptos básicos</strong></span></h1>
+<strong>Pruebas de hipótesis para una población</strong></span></h1>
 <h4 class="author">Métodos y Simulación Estadística</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p><br/><br/></p>
+<p>Se llaman pruebas paramétricas las que están soportadas en supuestos
+que por lo general corresponden a la distribución de la variable que
+trabajamos</p>
+<div id="pruebas-de-hipótesis-sobre-una-media" class="section level3">
+<h3><strong>Pruebas de hipótesis sobre una media</strong></h3>
+<p>Dependiendo de las condiciones podemos optar por tres diferentes EdeP
+para la realización de la prueba para una media, aunque tenemos una
+cuarta posibilidad en el caso de realizarla mediante un método no
+paramétrico:</p>
+<p><br/><br/></p>
+<p>Parámetro <span class="math inline">\(\mu\)</span></p>
+<p><strong>Hipótesis</strong></p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="33%" />
+<col width="36%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(Ho : \mu =
+\mu_{o}\)</span></td>
+<td align="center"><span class="math inline">\(Ho : \mu \geq
+\mu_{o}\)</span></td>
+<td align="center"><span class="math inline">\(Ho : \mu \leq
+\mu_{o}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(Ho : \mu \neq
+\mu_{o}\)</span></td>
+<td align="center"><span class="math inline">\(Ho : \mu &lt;
+\mu_{o}\)</span></td>
+<td align="center"><span class="math inline">\(Ho : \mu &gt;
+\mu_{o}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Estadísticos de prueba</strong></p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="33%" />
+<col width="36%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(Z_{o} =
+\dfrac{\bar{x}-\mu_{o}}{\sigma / \sqrt{n}} \sim N(0,1\)</span></td>
+<td align="center"><span class="math inline">\(T_{o} =
+\dfrac{\bar{x}-\mu_{o}}{s / \sqrt{n}} \sim t_{v: n-1}\)</span></td>
+<td align="center"><span class="math inline">\(Z_{o} =
+\dfrac{\bar{x}-\mu_{o}}{s / \sqrt{n}} \sim N(0,1)\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Supuestos:</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(X\)</span> es normal y la
+varianza es conocida</td>
+<td align="center"><span class="math inline">\(X\)</span> es normal y la
+varianza es desconocida</td>
+<td align="center"><span class="math inline">\(n &gt;&gt;\)</span> el
+tamaño de muestra es grande y por el TLC <span
+class="math inline">\(\bar{X}\)</span> se aproxima a una distribución
+normal</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p>Para una muestra de <span class="math inline">\(n=50\)</span> de la
+edad de los participantes de la Carrera La Luz inicalmente se verifica
+si su distribución es normal con el fin de determinar que prueba
+utilizar. Cumplido este supuesto y al no tener conocimiento del valor de
+la varianza utilizaremos una <strong>prueba t</strong> para una
+media</p>
+<pre class="r"><code># x=sample(CarreraLuz22_c2$edad, 50)  # muestra de tamaño n=50
+x=c(37, 36, 36, 27, 21, 24, 31, 29, 29, 29, 31, 26, 34, 39, 33, 27, 30, 29, 28, 34, 39, 36, 34, 27, 38, 32, 27, 27, 32, 38, 27, 31, 38, 36, 33, 18, 25, 26, 33, 34, 35, 35, 33, 34, 30, 39, 27, 35, 31, 36)
+shapiro.test(x)  # prueba de normalidad</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  x
+W = 0.96305, p-value = 0.1194</code></pre>
+<pre class="r"><code>t.test(x,                         #  
+       alternative = &quot;two.sided&quot;, # tipo de prueba
+       mu = 31,                  # valor a contrastar
+       conf.level = 0.90)         # nivel de confianza</code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  x
+t = 0.76215, df = 49, p-value = 0.4496
+alternative hypothesis: true mean is not equal to 31
+90 percent confidence interval:
+ 30.37613 32.66387
+sample estimates:
+mean of x 
+    31.52 </code></pre>
+<p><br/></p>
+<p>Para tomar una decisión sobre las hipótesis de acuerdo con los
+resultados podemos utilizar tres reglas:</p>
+<p><br/><br/></p>
+<p><strong>Regla 1</strong> : Si el <strong>EdeP</strong> cae en la
+<strong>RdeR</strong>, entonce se rechaza la <span
+class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span> como verdadera. Si por el contrario
+el <strong>EdeP</strong> NO cae en la <strong>RdeR</strong>, entonces NO
+se rechaza <span class="math inline">\(H_{0}\)</span>, no existe
+suficiente evidencia para rechazarla, <strong>asumimos</strong> que
+<span class="math inline">\(H_{0}\)</span> es verdad.</p>
+<p>En este caso es necesario determinar la región de rechazo (<span
+class="math inline">\(RdeR\)</span>) de acuerdo al tipo de hipótesis y a
+la distribución del estadistico de prueba. En esta caso estamos
+realizando una prueba de dos colas, para un estadistico de prueba con
+distribución t-Student con 99 grados de libertad.</p>
+<p><br/><br/></p>
+<p><strong>Región de Rechazo</strong></p>
+<p>Para determinar la <span class="math inline">\(RdeR\)</span>, a a
+prtir del nivel de significancia asumido, se buscan los percentiles
+<span class="math inline">\(t_{0.025; v=59}\)</span> y <span
+class="math inline">\(t_{0.975;v=59}\)</span> para la distribución
+t-Student.</p>
+<pre class="r"><code># t = 0.76215, df = 49, p-value = 0.4496    # resultado 
+qt(c(0.025,0.975),99)</code></pre>
+<pre><code>[1] -1.984217  1.984217</code></pre>
+<p><br/></p>
+<pre class="r"><code># remotes::install_github(&quot;iamamutt/ggdistribute&quot;)
+library(ggdistribute)
+p=ggdistribution(dt, seq(-3, +3, 0.1), df = 99, colour = &quot;blue&quot;)
+p=ggdistribution(dt, seq(-3, qt(0.025,99), 0.1), df = 99, colour = &#39;blue&#39;, fill=&quot;red&quot;, p=p)   
+p=ggdistribution(dt, seq(qt(0.975,99),+3, 0.1), df = 99, colour = &#39;blue&#39;, fill=&quot;red&quot;, p=p)+ 
+     ggtitle(&quot;Región de rechazo : (-Inf, -1.984217)  (1.984217, +Inf)&quot;)
+p</code></pre>
+<p><br/></p>
+<p><strong>Conclusión</strong>: Como el <strong>EdeP</strong>
+(<code>t = 0.76215</code>) NO cae en la <strong>RdeR</strong>, entonces
+NO rechazamos <span class="math inline">\(Ho\)</span>, asuminos <span
+class="math inline">\(Ho\)</span> es verdadera, es decir ASUMIMOS que
+<span class="math inline">\(\mu\)</span> de las edades es igual a 31
+años.</p>
+<p><br/><br/></p>
+<p><strong>Regla 2</strong>: Si <span class="math inline">\(\alpha
+&gt;\)</span> <strong>valor-p</strong> entonces rechazamos <span
+class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span> como verdadera. Si por el contrario
+$&lt; $ <strong>valor-p</strong>, no rechazamos <span
+class="math inline">\(H_{0}\)</span>, <strong>asumimos</strong> que
+<span class="math inline">\(H_{0}\)</span> es verdad.</p>
+<p><br/><br/><br/></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso502_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="valor-p" class="section level3">
+<h3><strong>Valor-p</strong></h3>
+<p>El <strong>valor-p</strong> corresponde al área delimitada por el
+<span class="math inline">\(EdeP\)</span> en el sentido que indica la
+<span class="math inline">\(RdeR\)</span> de la prueba a contrastar. Es
+decir que corresponde a la probilidad máxima de cometer error tipo
+I.</p>
+<p><a href="https://www.redalyc.org/pdf/806/80634308.pdf">Gil, Jacky F.;
+Castañeda, Javier A (2005)</a> lo definen como :</p>
+<p><em>El resultado de la prueba de hipótesis se basa principalmente en
+el cálculo, en términos de probabilidad, de la fuerza de los hallazgos a
+favor de la hipótesis nula. Esta probabilidad recibe el nombre de
+valor-p, y se define como la probabilidad de cometer un falso positivo
+por efecto del azar, cuando la hipótesis nula es verdadera.</em></p>
+<p><br/></p>
+<p><strong>Conclusión</strong> : Como el valor de <span
+class="math inline">\(\alpha &gt; valor-p\)</span> (<span
+class="math inline">\(0.05 &gt; p-value = 0.4496\)</span> ) entonces No
+se rechaza <span class="math inline">\(Ho\)</span>, se
+<strong>asume</strong> que <span class="math inline">\(Ho\)</span> es
+verdad. ASUMIMOS que <span class="math inline">\(\mu\)</span> de las
+edades es igual a 31 años.</p>
+<p><br/><br/></p>
+<p><strong>Regla 3</strong> : El valor-p se interpreta como el error que
+puedo cometer al rechazar <span class="math inline">\(Ho\)</span>,
+siendo esta verdadera (cometer error tipo I). Si este valor es
+considerado como pequeño, rechazo <span
+class="math inline">\(Ho\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(Ha\)</span>. Si por el contrario se considera este
+valor grande, entonce no rechazo <span
+class="math inline">\(Ho\)</span>, asumo que <span
+class="math inline">\(Ho\)</span> es verdad.</p>
+<p><br/></p>
+<p><strong>Conclusión</strong> : En este caso valoramos si el valor-p
+(p-value = 0.4496) si es grande o pequeño. En esta caso se puede
+considerar que su valor es muy grande y por lo tanto no nos atrevemos a
+rechazar <span class="math inline">\(Ho\)</span>, asumimos que <span
+class="math inline">\(Ho\)</span> es verdadera, ASUMIMOS que <span
+class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
+<p><strong>Nota</strong>:</p>
+<p>Al aplicar las últimas dos reglas (2 y 3) no se requiere la
+construcción de una <span class="math inline">\(RdeR\)</span> para tomar
+la decisión. Solo con revisar el valor-p entregado por la prueba y
+aplicar la regla se toma la decisión. En adelante utilizaremos las
+reglas 2 y 3 dado que al ejecutar las funciones en R nos sumunistran
+información sobre valor-p.|</p>
+<p><br/><br/></p>
+</div>
+<div id="pruebas-de-hipótesis-sobre-una-proporción"
+class="section level3">
+<h3><strong>Pruebas de hipótesis sobre una proporción</strong></h3>
+<p>En este caso debemos tener en cuenta que la muestra sea mayor a 30
+con el fin de tener estimaciones mas robustas para estimar la proporción
+poblacional.</p>
+<p><br/><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p>Una empresa al seleccionar su personal, lo somete a un curso de
+entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes
+aprueban el curso. Durante el último proceso, los encargados efectúan
+cambios al programa de entrenamiento, con el fin de realizar una
+selección más exigente. Para esta versión se inscriben 40 aspirantes de
+los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios
+realizados en el programa de entrenamiento reducen la selección? |</p>
+<p>Debemos realizar una prueba de cola inferior debido al sentido que
+tienen la afirmación que queremos verificar <em>los cambios realizados
+en el programa de entrenamiento reducen la selección</em>.</p>
+<p>Ho: <span class="math inline">\(p \geq 0.76\)</span> <br/><br />
+Ha :<span class="math inline">\(p &lt; 0.76\)</span> <br/>
+<br/><br/></p>
+<pre class="r"><code>prop.test(24, 40, p = 0.76,
+          alternative = &quot;less&quot;,
+          conf.level = 0.95)</code></pre>
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  24 out of 40, null probability 0.76
+X-squared = 4.7711, df = 1, p-value = 0.01447
+alternative hypothesis: true p is less than 0.76
+95 percent confidence interval:
+ 0.0000000 0.7282033
+sample estimates:
+  p 
+0.6 </code></pre>
+<p><br/><br/></p>
+<p><strong>Conclusión</strong></p>
+<p>Como el valor-p (p-value = 0.01447) es menor que el nivel de
+significancia (<span class="math inline">\(\alpha=0.05\)</span>),
+rechazamos la hipótesis nula, aceptamos la hipótesis alterna. Podemos
+afirmar que <span class="math inline">\(p&lt;0.76\)</span> . Tienen
+razón al afirmar que los cambios realizados en el proceso de selección
+provocaron una disminución significativa en la proporción de
+aprobación.</p>
+<p><br/><br/></p>
+</div>
+<div id="pruebas-de-hipótesis-sobre-una-varianza"
+class="section level3">
+<h3><strong>Pruebas de hipótesis sobre una varianza</strong></h3>
+<p><br/><br/></p>
+<p><strong>Ejemplo</strong></p>
+<p>Un fabricante de baterías para celulares afirma que el tiempo de
+duración de sus baterías se distribuyen aproximadamente normal con una
+desviación estándar de 9 horas. Un comprador antes de realizar un pedido
+de este producto solicita al fabricante una muestra de 10 baterías para
+verificar la información que le esta dando. Con este propósito son
+enviadas al laboratorio y se obtienen los siguientes datos Es cierta la
+información suministrada por el fabricante? (información: 11.1, 15.6,
+11.1, 7.5, 7.9, 14.7, 6.3, 8.5, 8.0 , 7.6)</p>
+<p><br/></p>
+<pre class="r"><code>library(ggdistribute)
+pRdeR=qchisq(c(0.025,0.975),9)
+p=ggdistribution(dchisq, seq(0, 30, 0.1), df = 9, colour = &#39;blue&#39;)
+p=ggdistribution(dchisq, seq(0, pRdeR[1], 0.1), df = 9, colour = &#39;blue&#39;, fill=&quot;blue&quot;, p=p)
+p=ggdistribution(dchisq, seq(pRdeR[2], 30, 0.1), df = 9, colour = &#39;blue&#39;, fill=&quot;blue&quot;, p=p)+
+       ggtitle(&quot;Región de rechazo:  (0; 2.70) (19.0, Inf) &quot;)
+p
+pRdeR</code></pre>
+<pre class="r"><code>t=c(11.1, 15.6, 11.1, 7.5, 7.9, 14.7, 6.3, 8.5, 8.0 , 7.6)
+varx=var(t)
+EdeP=(length(t)-1)*varx/81
+EdeP</code></pre>
+<pre><code>[1] 1.135074</code></pre>
+<p><br/><br/></p>
+<p><strong>Conclusión</strong></p>
+<p>Como el <span class="math inline">\(EdeP\)</span> (1.135074) caen en
+la <span class="math inline">\(RdeR\)</span>, entonces rechazamos la
+hipótesis nula, aceptamos la hipótesis alterna como verdadera.</p>
+<p>Podemos entonce concluir que <span class="math inline">\(\sigma^{2}
+\neq 81\)</span></p>
+<p><br/><br/><br/></p>
 </div>
 
 

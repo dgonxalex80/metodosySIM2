@@ -4,6 +4,12 @@ author: "Métodos y Simulación Estadística"
 css: style.css
 ---
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+```
+
+
 <br/><br/>
 
 ## **Teorema central del límite**: 

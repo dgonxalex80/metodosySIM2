@@ -5,25 +5,143 @@ css: style.css
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+
+# install.packages('gtools')
+# install.packages("TeachingSampling")
+
+#load library
+library(gtools)
+library(TeachingSampling)
+library(readr)
+library(paqueteMET)
+
+c1="#FF7F00"
+c2="#034A94"
+c3="#0EB0C6"
+c4="#686868"
+
+data("CarreraLuz22")
+data("evaluacion")
+
 ```
 
-## R Markdown
+<br/><br/>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## **Introducción**
 
-```{r cars}
-summary(cars)
+El origen de los estudios, relacionados con las pruebas de hipótesis estadísticas, se sitúa alrededor de 1738, cuando en un ensayo escrito por Daniel Bernoulli(1) aparece el cálculo una estadística de prueba para ensayar su hipótesis en el campo de la astronomía. Entre 1915 y 1933 se desarrolla esta formulación gracias a los estudios realizados por tres grandes autores: Ronald Fisher(2), Jerzy Neyman(3) y Egon Pearson(4). Hoy en día predomina la teoría de Neyman-Pearson (lema de Neyman-Pearson).
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+# knitr::include_graphics("img/prueba.jpg")
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+Una hipótesis estadística es una afirmación o conjetura acerca de los parámetros de la distribución de probabilidades de una población. Si la hipótesis estadística especifica completamente la distribución, entonces ella se llama **Hipótesis Simple**, de otra manera se llama Hipótesis Compuesta. 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+Desde el punto de vista clásico, todas las pruebas de hipótesis trabajan en base a ciertos principios que consideran:
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
++ Hipótesis nula (**Ho**)
++ Hipótesis alterna (**Ha**)
++ Estadístico de Prueba (**EdeP**)
++ Región de Rechazo (**RdeR**)
++ Regla de Decisión(**RD**)
+
+<br/><br/>
+
+## **Conceptos básicos** 
+
+<br/><br/>
+
+### **Hipótesis Nula (Ho)** 
+
+Es la hipótesis a probar, ésta NO se rechaza si de la muestra no se obtiene suficiente evidencia para rechazarla.
+
+<br/><br/>
+
+### **Hipótesis Alterna (Ha)** 
+
+La hipótesis $Ho$ se contrasta con la hipótesis Ha, y ésta última corresponde a valores alternativos del parámetro planteados en la hipótesis nula. La hipótesis $Ha$ se considera cierta si existe suficiente evidencia para rechazar la hipótesis nula.
+
+<br/><br/>
+
+### **Estadístico de Prueba**  
+
+Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es tambien una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
+
+Para una muestra determinada se obtiene un valor del estadístico de prueba, a partir del cálculo y se determina el rechazo o no, de la hipótesis nula.
+
+<br/><br/>
+
+### **Región de Rechazo (RdeR)**  
+
+También llamada región crítica (RC), define los valores del estadístico de prueba para los cuales la información muestral contradice la hipótesis nula. Estos valores nos permitirán adoptar una regla de decisión consistente. Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
+su rechazo. 
+
+Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
+su rechazo. 
+
+<br/><br/>
+
+### **Regla de Decisión (RD)**  
+
+De esta manera, como una regla de decisión, si para una muestra particular el estadístico de prueba (valor calculado) cae dentro de la región crítica, rechazaremos la hipótesis nula $H_{o}$ en favor de la hipótesis alternativa $H_{a}$. En cambio, si el valor calculado no cae dentro de la RC, no podremos rechazar la hipótesis nula y por tanto decimos que la información contenida en la muestra no ofrece suficiente evidencia estadística que nos permita rechazar $Ho$, ASUMIMOS que la hipótesis nula es cierta. 
+
+<br/><br/>
+
+### **Errores asociados**
+
+Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones descritas en la siguiente tabla:
+
+
+|                   |  **Estado de la naturaleza**    |                                 |
+|:------------------|:--------------------------------|:--------------------------------|
+| **Decisión sobre la hipótesis**|                    |                                 |
+|Rechazar $Ho$      | **Error tipo I**                | **Decisión correcta**           |
+|                   | P(Error tipo I) = $\alpha$      | $1-\beta$ : Potencia            |
+|No rechazar $Ho$   | **Decisión correcta**           | **Error tipo II**               |
+|                   |                                 | P(Eror tipo II) =$\beta$        |
+|                   |                                 |                                 |
+
+Existen dos situaciones en las que se comenten errores después de tomar una decisión:
+
+<br/><br/>
+
+**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como simil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
+$$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
+
+
+**Ejemplo**
+
+Para ilustrar el error tipo I, podeos acudir aun evento ocurrido a una estudiante que después de realizar una donación de sangre fue requerida por la clinica benefactora, pues el examen que le habían practicado a la sangre donada, presentaba signos de estar infectada por hepatitis c. Esto prendió las alarmas en la casa y fue llevada por la familia a que se le realizaran otros exámenes para confirmar el diagnostico inicial. Las segundas pruebas evidenciaron que se trataba de un error. Este caso constituye un caso de falso positivo (Se diagnostica como enferan, cuando en verdad esta sana) 
+
+
+<br/><br/>
+
+**Error Tipo II**: Cuando no se rechaza una hipótesis nula que en realidad es falsa. Utilizando el ejemplo del médico, diríamos que cuando el medico indica que el paciente esta sano, cuando esta realmente enfermo, incurre en un error frecuente cuando algunos pacientes son asintomáticos y aunque tienen la enfermedad, sus exámenes médicos salen negativos. En este caso la probabilidad se representa como:
+
+$$P(\text{No rechazar} Ho | Ho \text{ es falsa}) $$
+
+
+**Ejemolo**
+
+Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadunidence Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de dopin, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practivados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo. 
+
+<br/><br/>
+
+### **Nivel de significancia ($\alpha$)**  
+
+No es posible minimizar simultáneamente, las probabilidades de los errores tipo I y II, ya que en la medida que uno disminuye el otro aumenta, como se muestra en la figura siguiente, en la que claramente se ve que la reducción del área $\alpha$ (probabilidad de error tipo I), implica el aumento del área $\beta$ (probabilidad de error tipo II).
+
+<br/><br/>
+
+### **Tipos de pruebas de hipótesis**
+
+|                   |                                                                 |
+|:------------------|:----------------------------------------------------------------|
+|Dos colas          |$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$  |
+|Cola superior      |$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$  |
+|Cola inferior      |$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$  |
+
+<br/><br/>

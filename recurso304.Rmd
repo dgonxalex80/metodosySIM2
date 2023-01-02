@@ -1,8 +1,7 @@
 ---
-title: "Métodos de estimación"
+title : <span style="color:#034a94"> **Métodos de estimación**</span>
 author: "Métodos y Simulación estadística"
-date: "2022-12-29"
-output: html_document
+css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -10,9 +9,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## **Métodos de estimación**
+La construcción de estimadores de parámetros tiene un soporte mátematico que está basado en  el valor esperado y las funciones de probabilidad revisadas enteriormente. Tambien supone que las puestras son tomadas aleatoriamente y que valores obtenidos son independiente unos de otros. 
 
-<br/><br/>
+A continuación se presentan el método de Momentos y el método de Máxima Verosimiulitud:
+
 
 ### **Método de momentos**
 
@@ -24,14 +24,19 @@ Para mostrar este método es necesario definir el concepto de momento.
 
 <br/>
 
-| **Momento Poblacional**                                                | **Momentos muestrales**                         |
-|:-----------------------------------------------------------------------|:------------------------------------------------|
-|  caso variable discreta                                                |                                                 |
-|$$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$$                        | $$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$  |
-|  caso variable continua                                                |                                                 |
-|$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$       |                                                 |
+**Momento Poblacional** 
 
+
+|  caso variable discreta                         |caso variable continua  |
+|:------------------------------------------------|:------------------------------------------------|
+|$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$ |$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)\:dx $|                                                 
 <br/>
+
+**Momentos muestrales**    
+
+En ambos casos
+
+$$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$  
 
 El método de momentos supone que los momentos tanto poblacionales como muestrales son conocidos, y por lo tanto tambien la función de probabilidad. 
 
@@ -53,7 +58,7 @@ A continuación se relacionan algunos de estos momentos poblacionales:
 
 <br/>
 
-Nota: Existe una relación entre las distribuciones Poisson y exponencia.Se podrían dar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
+**Nota**: Existe una relación entre las distribuciones `Poisson` y `exponencial`. Su valores esperados son inversos y e podrían denotar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
 
 <br/><br/>
 
@@ -102,7 +107,7 @@ y obtenemos el estimador de la varianza:
 <br/>
 
 |                       |                                                                                                   |
-|---------------------:|:--------------------------------------------------------------------------------------------------|
+|----------------------:|:--------------------------------------------------------------------------------------------------|
 |$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}$                                   |
 |$\widehat{\sigma^{2}}$ | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}-\bar{x}^{2}+\bar{x}^{2}$           |
 |                       | $= \displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-2\bar{x}^{2}+\bar{x}^{2}$                      |

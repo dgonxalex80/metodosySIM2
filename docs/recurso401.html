@@ -12,7 +12,7 @@
 <meta name="author" content="Métodos y Simulación Estadística" />
 
 
-<title> Intervalos de confianza</title>
+<title> Estimación</title>
 
 <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -401,38 +401,73 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
-<strong>Intervalos de confianza</strong></span></h1>
+<strong>Estimación</strong></span></h1>
 <h4 class="author">Métodos y Simulación Estadística</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="estimación-por-ic" class="section level2">
+<h2><strong>Estimación por IC</strong></h2>
+<p>Un estimador por intervalo de confianza (IC) es una regla que
+especifica como usar las mediciones obtenidas en una muestra para
+calcular dos números que forman los extremos del intervalo que confiamos
+contenga al parámetro de interés <span
+class="math inline">\(\theta\)</span>. Dependiendo del parámetro se
+utiliza en la construcción del IC las distribuciones muestrales: <span
+class="math inline">\(normal\)</span> <span
+class="math inline">\(estándar\)</span> (<span
+class="math inline">\(Z\)</span>), <span
+class="math inline">\(t-Student\)</span>, <span
+class="math inline">\(\chi^{2}\)</span> o <span
+class="math inline">\(F-Fisher\)</span></p>
+<p><br/><br/><br/><br/></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso401_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="una-población" class="section level2">
+<h2><strong>Una población</strong></h2>
+<p><br/><br/><br/></p>
+<div id="intervalos-de-confianza-para-la-media-con-varianza-conocida"
+class="section level3">
+<h3><strong>Intervalos de confianza para la media, con varianza
+conocida</strong></h3>
+<p>Partimos de dos valores que contiene el parámetro <span
+class="math inline">\(\theta\)</span></p>
+<p><span class="math display">\[L_{I} \leq \theta \leq L_{S}
+\]</span></p>
+<p>bajo el supuesto de que</p>
+<p><span class="math display">\[Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}
+\sim N(0,1)\]</span></p>
+<p>podemos construir el siguiente intervalo</p>
+<p><span class="math display">\[P(L_{IC} \leq Z \leq L_{SC})=1-\alpha
+\]</span></p>
+<p>donde <span class="math inline">\((1-\alpha)\)</span> conforma el
+concepto de confianza, el cual difiere del concepto de probabilidad, en
+cuanto la confianza representa la proporción de intervalos que contienen
+el parámetro. Lo que significa que de 100 intervalos construidos a
+partir muestras aleatorias, <span
+class="math inline">\((1-\alpha)\)</span>% o más contendrán el
+parámetro.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+        P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&amp;=&amp;1-\alpha \\
+        P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}
+\leq z_{\alpha/2}\Bigg)&amp;=&amp;1-\alpha\\
+        P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq
+\bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&amp;=&amp;1-\alpha \\
+    \end{eqnarray*}\]</span></p>
+<p>el intervalo de confianza para la media poblacional queda determinado
+por:</p>
+<div
+style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000  ; background-color: #f9f9ec ; border-color: #000000;">
+<p><span class="math display">\[IC_{\mu}: \bar{x} \pm z_{\alpha/2}
+\hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} \]</span></p>
+<p>Supuestos:</p>
+<ul>
+<li><span class="math inline">\(X\sim N(\mu,\sigma^{2})\)</span></li>
+<li>varianza conocida</li>
+</ul>
+</div>
+<p><br/><br/><br/></p>
+</div>
 </div>
 
 

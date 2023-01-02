@@ -407,6 +407,7 @@ $(document).ready(function () {
 </div>
 
 
+<p><br/><br/></p>
 <div id="teorema-central-del-límite" class="section level2">
 <h2><strong>Teorema central del límite</strong>:</h2>
 <p><br/></p>
@@ -414,91 +415,25 @@ $(document).ready(function () {
 muestra de tamaño <span class="math inline">\(n\)</span> tomada una
 población con media <span class="math inline">\(\mu\)</span> y varianza
 <span class="math inline">\(\sigma^{2}\)</span>, entonces la forma
-límite de la distribución de : <span
+límite de la distribución de <span class="math inline">\(z =(\bar{X} -
+\mu)/(\sigma/\sqrt{n})\)</span> se aproxima a una distribución normal
+estandar.</p>
+<p><span
 class="math display">\[Z=\dfrac{\bar{X}-\mu}{\Big(\sigma/\sqrt{n}\Big)}
 \sim N(0,1) \]</span></p>
-<p>conforme <span class="math inline">\(n\rightarrow \infty\)</span>,
+<p>Conforme <span class="math inline">\(n\rightarrow \infty\)</span>,
 esta aproximación es cada vez más próxima a la normal. Este teorema es
-aplicable tambien a la variable total de sumatoria de los valores de la
-muestra <span
+aplicable tambien a la variable <strong>total</strong> de sumatoria de
+los valores de la muestra <span
 class="math inline">\(T_{n}=X_{1}+X_{2}+...+X_{n}\)</span></p>
-<p><img src="img/tlc.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="img/TLC.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Como se muestra en las gráficas, sin importar la distribución de los
+datos (n=1), la distribución de la media se va transformando en una
+distribución simetrica, hasta convertirse en una normal</p>
 <p>El potencial de este teorema esta en que no importa la distribución
 de la variable X, la distribución de la media provemiente de la muestra
-tomada de esta población se distribuye aproximadamente normal. Al final
-de la guía se encuentra practica computacional que nos ayuda a
-comprender el alcance de este teorema.</p>
+tomada de esta población se distribuye aproximadamente normal.</p>
 <p><br/><br/></p>
-<div id="verificación-del-teorema-central-del-límite"
-class="section level3">
-<h3><strong>Verificación del Teorema central del límite </strong></h3>
-<p><br/></p>
-<pre class="r"><code>par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(3,2), mai = c(.5, .5, .5, .5))
-# Teorema Central del Límite-----------------------------
-n=1000   #  numero de columnas (tamaño máximo de muestra)
-m=1000*n
-# Caso --------------------------------------------------
-# distribución exponencial-------------------------------
-X=matrix(rexp(m,1),ncol=n)
-
-# generación de muestras-------------
-X1=X[ ,1]            # n=1
-X2=X[ ,1:2]          # n=2
-X20=X[ ,1:20]        # n=20
-X30=X[ ,1:30]        # n=30
-X50=X[ ,1:50]        # n=50
-X100=X[ ,1:100]      # n=100
-X1000=X[ ,1:1000]    # n=1000
-
-# generacion de medias---------------
-Mx2=apply(X2,1,mean)        # medias de muestras de tamaño n=2
-Mx20=apply(X20,1,mean)      # medias de muestras de tamaño n=20
-Mx30=apply(X30,1,mean)      # medias de muestras de tamaño n=30
-Mx50=apply(X50,1,mean)      # medias de muestras de tamaño n=50
-Mx100=apply(X100,1,mean)    # medias de muestras de tamaño n=100
-Mx1000=apply(X1000,1,mean)  # medias de muestras de tamaño n=1000
-
-# generación de densidad empírica --
-d=density(X1)
-d2=density(Mx2)
-#d20=density(Mx20)
-d30=density(Mx30)
-d50=density(Mx50)
-d100=density(Mx100)
-d1000=density(Mx1000)
-
-# Gráficos de densidad -------------------------------
-# histogramas  de comparacion-------------------------
-plot(d, main=&quot; &quot;, xlab = &quot;n=1&quot;)
-plot(d2,main=&quot; &quot;, xlab = &quot;n=2&quot;)
-#plot(d20, main=&quot;&quot;, xlab = &quot;n=20&quot;)
-plot(d30, main=&quot; &quot;, xlab = &quot;n=30&quot;)
-plot(d50, main=&quot; &quot;, xlab = &quot;n=50&quot;)
-plot(d100, main=&quot; &quot;, xlab = &quot;n=100&quot;)
-plot(d1000,main=&quot; &quot;, xlab=&quot;n=1000&quot;)</code></pre>
-<p><img src="recurso305_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion--------------------------
-hist(X1,  main = &quot;n=1&quot;, freq=FALSE)
-hist(Mx2, main =&quot;n=2&quot;, freq=FALSE) 
-# hist(Mx20, main = &quot;n=20&quot;,freq=FALSE)
-hist(Mx30, main = &quot;n=30&quot;,freq=FALSE) 
-hist(Mx50, main = &quot;n=50&quot;,freq=FALSE) 
-hist(Mx100, main = &quot;n=100&quot;, freq=FALSE) 
-hist(Mx1000, main = &quot;n=1000&quot;, freq = FALSE) </code></pre>
-<p><img src="recurso305_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion--------------------------
-qqnorm(X1) ; qqline(X1, col=&quot;red&quot;)
-qqnorm(Mx2) ; qqline(Mx2, col=&quot;red&quot;)
-# qqnorm(Mx20) ; qqline(Mx20, col=&quot;red&quot;)
-qqnorm(Mx30) ; qqline(Mx30, col=&quot;red&quot;)
-qqnorm(Mx50) ; qqline(Mx50, col=&quot;red&quot;)
-qqnorm(Mx100) ; qqline(Mx100, col=&quot;red&quot;)
-qqnorm(Mx1000) ; qqline(Mx1000, col=&quot;red&quot;)</code></pre>
-<p><img src="recurso305_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
-<p>Se puede notar la transformación de la distribución de la media a una
-distribución normal a medida que el tamaño de muestra aumenta</p>
-<p><br/><br/><br/><br/> ```</p>
-</div>
 </div>
 
 

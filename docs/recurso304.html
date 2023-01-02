@@ -11,9 +11,8 @@
 
 <meta name="author" content="Métodos y Simulación estadística" />
 
-<meta name="date" content="2022-12-29" />
 
-<title>Métodos de estimación</title>
+<title> Métodos de estimación</title>
 
 <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -401,16 +400,20 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Métodos de estimación</h1>
+<h1 class="title toc-ignore"><span style="color:#034a94">
+<strong>Métodos de estimación</strong></span></h1>
 <h4 class="author">Métodos y Simulación estadística</h4>
-<h4 class="date">2022-12-29</h4>
 
 </div>
 
 
-<div id="métodos-de-estimación" class="section level2">
-<h2><strong>Métodos de estimación</strong></h2>
-<p><br/><br/></p>
+<p>La construcción de estimadores de parámetros tiene un soporte
+mátematico que está basado en el valor esperado y las funciones de
+probabilidad revisadas enteriormente. Tambien supone que las puestras
+son tomadas aleatoriamente y que valores obtenidos son independiente
+unos de otros.</p>
+<p>A continuación se presentan el método de Momentos y el método de
+Máxima Verosimiulitud:</p>
 <div id="método-de-momentos" class="section level3">
 <h3><strong>Método de momentos</strong></h3>
 <p><br/></p>
@@ -424,43 +427,32 @@ existen, con los correspondientes momentos muestrales.</p>
 <p>Para mostrar este método es necesario definir el concepto de
 momento.</p>
 <p><br/></p>
+<p><strong>Momento Poblacional</strong></p>
 <table>
 <colgroup>
-<col width="59%" />
-<col width="40%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Momento Poblacional</strong></th>
-<th align="left"><strong>Momentos muestrales</strong></th>
+<th align="left">caso variable discreta</th>
+<th align="left">caso variable continua</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">caso variable discreta</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left"><span
-class="math display">\[\mu^{k}=E\big[X^{k}\big]=\sum_{Rx}
-x^{k}p(x)\]</span></td>
-<td align="left"><span
-class="math display">\[m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k}
-\]</span></td>
-</tr>
-<tr class="odd">
-<td align="left">caso variable continua</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><span
-class="math display">\[\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)
-dx \]</span></td>
-<td align="left"></td>
+class="math inline">\(\mu^{k}=E\big[X^{k}\big]=\sum_{Rx}
+x^{k}p(x)\)</span></td>
+<td align="left">$^{k}=E=_{-}<sup>{}x</sup>{k}f(x):dx $</td>
 </tr>
 </tbody>
 </table>
 <p><br/></p>
+<p><strong>Momentos muestrales</strong></p>
+<p>En ambos casos</p>
+<p><span class="math display">\[m^{k}=\frac{1}{n}\sum_{i=1}^{n}
+x_{i}^{k} \]</span></p>
 <p>El método de momentos supone que los momentos tanto poblacionales
 como muestrales son conocidos, y por lo tanto tambien la función de
 probabilidad.</p>
@@ -530,8 +522,9 @@ class="math inline">\(\displaystyle\frac{(b-a)^{2}}{12}\)</span></td>
 </tbody>
 </table>
 <p><br/></p>
-<p>Nota: Existe una relación entre las distribuciones Poisson y
-exponencia.Se podrían dar en función de <span
+<p><strong>Nota</strong>: Existe una relación entre las distribuciones
+<code>Poisson</code> y <code>exponencial</code>. Su valores esperados
+son inversos y e podrían denotar en función de <span
 class="math inline">\(\lambda\)</span>, haciendo <span
 class="math inline">\(\beta=\dfrac{1}{\lambda}\)</span></p>
 <p><br/><br/></p>
@@ -642,7 +635,6 @@ los parámetros por método de momentos con los siguientes resultados:</p>
 <p><span class="math display">\[\widehat{\mu}=765\]</span></p>
 <p><span class="math display">\[\widehat{\sigma^{2}}=8550\]</span></p>
 <p><br/><br/><br/><br/></p>
-</div>
 </div>
 
 

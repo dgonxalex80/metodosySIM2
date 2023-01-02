@@ -1,5 +1,5 @@
 ---
-title : <span style="color:#034a94"> **Intervalos de confianza**</span>
+title : <span style="color:#034a94"> **Estimación**</span>
 author: "Métodos y Simulación Estadística"
 css: style.css
 ---
@@ -8,22 +8,61 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+## **Estimación por IC**
+
+
+```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+# knitr::include_graphics("img/gic.png")
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Un estimador por intervalo de confianza (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales:  $normal$ $estándar$ ($Z$), $t-Student$, $\chi^{2}$ o $F-Fisher$
+
+
+<br/><br/><br/><br/>
+
+## **Una población**
+
+<br/><br/><br/>
+
+### **Intervalos de confianza para la media, con varianza conocida** 
+
+Partimos de dos valores que contiene el parámetro $\theta$
+
+$$L_{I} \leq \theta \leq L_{S} $$
+
+bajo el supuesto de que
+
+$$Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)$$
+
+podemos construir el siguiente intervalo
+
+$$P(L_{IC} \leq Z \leq L_{SC})=1-\alpha $$
+
+donde $(1-\alpha)$ conforma el concepto de confianza, el cual difiere del concepto de probabilidad, en cuanto la confianza representa la proporción de intervalos que contienen el parámetro. Lo que significa que de 100 intervalos construidos a partir muestras aleatorias, $(1-\alpha)$% o más contendrán el parámetro. 
+
+$$\begin{eqnarray*}
+		P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&=&1-\alpha \\
+		P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leq z_{\alpha/2}\Bigg)&=&1-\alpha\\
+		P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&=&1-\alpha \\
+	\end{eqnarray*}$$
+	
+el intervalo de confianza para la media poblacional queda determinado por:
+
+ <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000  ; background-color: #f9f9ec ; border-color: #000000;">
+
+$$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} $$
+
+Supuestos:
+
+* $X\sim N(\mu,\sigma^{2})$
+*	varianza conocida
+
+</div>
+			
+<br/><br/><br/>

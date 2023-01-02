@@ -8,13 +8,15 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
-## **Métodos de estimación**
+<br/><br/>
+
+La estimación se realiza cuando no conocemos el valor de un parámetro poblacional y lo podemos realizar de manera puntual (un solo valor) o mediante un intervalo de confianza.
+
+
+# **Métodos de estimación**
 
 <br/><br/>
 
-### **Método de momentos**
-
-<br/>
 
 El método de momentos fue propuesto por Karl Pearson al rededor de 1895, pensado en sus inicios en contexto descriptivo, analizando las distribuciones de probabilidad y aproximándolas al sistema de curvas que llevan su nombre. Posteriormente este concepto fue modificado por R.A. Fisher en 1920. El método consiste en estimar un parámetro de una distribución igualando sus momentos teóricos o poblacionales, si existen, con los correspondientes momentos muestrales.
 
@@ -22,7 +24,7 @@ Para mostrar este método es necesario definir el concepto de momento.
 
 <br/>
 
-### **Momento Poblacional** 
+## **Momento Poblacional** 
 
 | Caso discreto                           |Caso continuo                          |
 |:---------------------------------------:|:-------------------------------------:|
@@ -130,15 +132,62 @@ $$\widehat{\mu}=765$$
 
 $$\widehat{\sigma^{2}}=8550$$
 
-<br/><br/><br/><br/>
 
+## **Método de Máxima Verosimilitud**
+
+Uno de los mejores métodos para obtener un estimador puntual de un parámetro es el método de **Máxima Verosimilitud** o de máxima probabilidad. Esta técnica fue desarrollada en 1920 por el estadístico britanico Sir R.A. Fisher, afirmando que el estimador será el valor del parámetro que maximice la función de verosimilitud $L(\theta)$. \\ \\
+
+La función de verosimilitud $L(\theta)$ corresponde a la funcion de distribución conjunta de variables aleatorias independientes con igual función de distribución. Estas variables aleatorias corresponden a las variables que conforman la muestra.
+%
+$$L(\theta)=f(x_{1},\theta).f(x_{2},\theta).f(x_{3},\theta)....f(x_{n}),\theta)$$
+El objetivo del método será encontrar el valor del parámetro que maximice la probabilidad conjunta, suponiendo el conocimiento de la función de distribución de probabilidad de la variable en estudio. 
+
+**Ejemplo**
+  
+Para el caso de la distribución normal cuya función de distribución de probabilidad esta dada por :
+
+  $$f(x_{i})=\frac{1}{\sqrt{2\pi}\sigma^{2}} \exp{\Bigg(-\frac{1}{2\sigma^{2}}\big(x_{i}-\mu\big)^{2}\Bigg)}$$
+La función de verosimulitud estará dada por:
+  
+$$L(x_{1},x_{2},..,x_{n};\mu,\sigma^{2})=f(x_{1};\mu,\sigma^{2})....f(x_{n};\mu,\sigma^{2})$$
+
+Esta función se puede escribir como :
+
+$$L(x_{1},\cdots,x_{n};\mu,\sigma^{2})=\displaystyle\prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^{2}}}\exp{\Bigg(-\frac{1}{2\sigma^{2}}\big(x_{i}-\mu\big)^{2}\Bigg)} $$
+  
+$$L=\displaystyle\Big(\frac{1}{2\pi \sigma^{2}}\Big)^{n/2} \exp \Bigg(\sum_{i=1}^{n}\frac{-1}{2\sigma^{2}}(x_{i}-\mu)^{2}\Bigg) $$
+  
+$$L=\displaystyle\Big(2\pi \sigma^{2}\Big)^{-n/2} \exp \Bigg(\frac{-1}{2\sigma^{2}}\sum_{i=1}^{n}(x_{i}-\mu)^{2}\Bigg) $$
+  
+El método consiste en encontrar el valor del parámetro que maximice esta función para lo cual procedemos a derivar $L$ parcialmente con respecto al parámetro objetivo, por ejemplo $\mu$.
+
+Este proceso presenta algunas dificultades de cálculo que son atenuadas mediante la premisa de que el *máximo de la función $L$ corresponde a los mismos máximos de la funcion $\ln(L)$*, la cual es más sencilla de derivar. Este procedimiento es posible debido a que la función $L$ es creciente.
+
+Convertimos $L$ en $ln(L)$
+
+$$\ln(L)= -\displaystyle\frac{n}{2} \ln(2\pi) - \displaystyle\frac{n}{2} \ln(\sigma^{2}) -\displaystyle\frac{1}{2\sigma^{2}}\displaystyle\sum_{i=1}^{n}(x_{i}-\mu)^{2}$$
+Al derivar parcialmente $\ln(L)$ con respecto a $\mu$ tenemos:
+  
+$$\displaystyle\frac{\partial \ln(L)}{\partial \mu}= \displaystyle\frac{2}{2\sigma^{2}}  \displaystyle\sum_{i=1}^{n} (x_{i}-\mu) =0$$
+  
+De esta igualdad se despeja el parámetro de interés
+
+$$\sigma^{2} \hspace{.2cm} \frac{1}{\sigma^{2}}\sum_{i=1}^{n} (x_{i}-\mu) =0 \hspace{.2cm}  \sigma^{2} $$
+  $$\sum_{i=1}^{n} x_{i} - n \mu =0$$
+  
+  $$\widehat{\mu}=\frac{1}{n}\sum_{i=1}^{n} x_{i} = \bar{x}$$
+  
+En el caso de la estimación de $\sigma^{2}$, se deriva $\ln(L)$ parcialmente con respecto a $\sigma^{2}$, se iguala a cero el resultado obtenido y por último se despeja $\sigma^{2}$. Verifique que el estimador de máxima verosimilitud para la varianza es igual a:
+  
+  $$\widehat{\sigma^{2}}=\frac{1}{n}\sum_{i=1}^{n} \big(x_{i}-\mu \big)^{2} $$
+<br/><br/><br/>
 
 
 ## **Distribuciones muestrales**
 
 <br/>
 
-### **Principales distribuciones muestrales*: 
+### **Principales distribuciones muestrales**: 
 
 + normal
 + Chi-cuadrado, 
@@ -154,7 +203,12 @@ Existe una relación importante entre ellas con la Distribución normal, las cua
 
 <br/>
 
-![](img/distribucionesm.png){width=70%}
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/Distribuciones.png")
+```
+
+</br></br>
 
 Si una variable **X** se distribuye **normal** con parámetros $\mu$ y $\sigma^{2}$, entonces a partir de su transformación se puede obtener una variable **Z** que tenga distribución **normal estándar** $N(0,1)$, que tiene media cero y varianza uno. Varias normales estándar al cuadrado conforman una variable con distribución **chi-cuadrado** y a su vez esta variable tiene la propiedad tal que la suma de $n$ variables aleatorias $\chi^{2}$ con $n-1$ grados de libertad. La razón de una variable con distribución normal estándar y la raiz cuadrada de una variable chi-cuadrado, dividida por sus grados de libertad originan una variable con distribución **t-student**. Por último la razón de dos variables con distribución chi-cuadrado, divididas cada una por sus respectivos grados de libertad, generan una variable con distribución  **F-Fisher**. 
 
@@ -256,7 +310,7 @@ grid()
 
 <br/><br/>
 
-## **La media muestral**
+## **Media muestral**
 
 <br/>
 
@@ -267,8 +321,12 @@ Al hablar de distribución de probabilidad de la media muestral, implicitamente 
 Para verificar las propiedades de este estimador podemos hacer uso de las propiedades del valor esperado de la siguiente manera:
 
 $$\begin{eqnarray*}
-E[\bar{X}] &=& E\Bigg[ \frac{1}{n} = \frac{1}{n} E\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\\
-&=&\frac{1}{n} [\mu + \mu \cdots + \mu ] = \frac{1}{n} n\mu = \mu\\
+E\big[\bar{X}\big] &=& E\Bigg[ \frac{1}{n}\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\Bigg]\\  
+&=& \frac{1}{n} E\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\\
+&& \frac{1}{n} \Bigg[E\big[X_{1}\big]+E\big[X_{2}\big]+\cdots + E\big[X_{n}\big]\Bigg]\\
+&=&\frac{1}{n} \big[\mu + \mu \cdots + \mu \big] \\
+&=& \frac{1}{n} n\mu \\
+&=& \mu
 \end{eqnarray*}$$
 
 por tanto:
@@ -290,41 +348,10 @@ V[\bar{X}]&=&V\Bigg[\frac{1}{n} \sum_{i=1}^{n} x_{i}\Bigg] \\
 Se concluye que:
 
 $$V[\bar{X}] = \dfrac{\sigma^{2}}{n}$$
+<div>
 
-Obtenemos así que la varianza de la media muestral es igual a la varianza de la variable. \\
+Obtenemos así que la varianza de la media muestral es igual a la varianza de la variable. 
 
-
-Para verificar estas caracteristicas, vamos a suponer que tenemos una población de N=5, conformada por los elementos: $10,20,30,40,50$. Para esta población podemos calcular sus parametros $\mu$ y $\sigma^{2}$.
-
-$$\begin{eqnarray*}
-\mu_{_{X}}&=&\dfrac{1}{5}\sum_{i=1}^{5}x_{i} =\dfrac{(10+20+30+40+50)}{5}=30 \\
-\sigma^{2}_{_{X}}&=&\sum_{i=1}^{5}\dfrac{1}{5}\big(x_{i}-30 \big)^{2} =\dfrac{1}{5}\Big[ \big(10-30\big)^{2} + ...\\
-& &\big(20-30 \big)^{2}+ ....\big(50-30 \big)^{2} \Big]=\dfrac{1000}{5}=200
-\end{eqnarray*}$$
-
-Ahora estudiaremos la población de muestras que se pueden obtener de esta población de tamaño $n=2$ tomadas con reemplazo (probabilidad constante)
-
-En la practica el muestreo se realiza sin remplazo y debido a que el tamaño de la población es grande o es considerado como infinito, hace que la probabilidad de seleccionar un objeto de la población se pueda considerar como constante .
-
-<br/><br/>
-
-
-|  muestra |  $\bar{x}$ |  muestra | $\bar{x}$ |  muestra |  $\bar{x}$ |  muestra | $\bar{x}$ | muestra  | $\bar{x}$ |
-|:--------:|:----------:|:--------:|:---------:|:--------:|:----------:|:--------:|:---------:|:--------:|:---------:|
-| (10,10)  |  10        | (20,10)  | 15        | (30,10)  |  20        | (40,10)  |  25       |  (50,10) |  30       |  
-| (10,20)  |  15        | (20,20)  | 20        | (30,20)  |  25        | (40,20)  |  30       |  (50,20) |  35       |
-| (10,30)  |  20        | (20,30)  | 25        | (30,30)  |  30        | (40,30)  |  35       |  (50,30) |  40       |    
-| (10,40)  |  25        | (20,40)  | 30        | (30,40)  |  35        | (40,40)  |  40       |  (50,40) |  45       |
-| (10,50)  |  30        | (20,50)  | 35        | (30,50)  |  40        | (40,50)  |  45       |  (50,50) |  50       |
-
-<br/><br/>
-
-Estos valores conforman la población de muestras de tamaño n=2 que se pueden obtener sin reemplazo de la población inicial, En este caso podemos calcular la media y la varianza poblacional de $\bar{X}$
-
-$$\begin{eqnarray*}
-\mu_{_{\bar{X}}}&=& \dfrac{1}{25}(10+15+20+...50) = 30 \\
-\sigma^{2}_{_{\bar{X}}}&=& \dfrac{1}{25} \Big[\big(10-30\big)^{2} +...+\big(50-30\big)^{2} \Big]=100
-\end{eqnarray*}$$
 
 De estos resultados podemos concluir que:
 
@@ -335,16 +362,7 @@ $$\mu_{_{X}} = \mu_{_{\bar{X}}}$$
 * La varianza poblacional de $\bar{X}$ es igual la varianza de $X$ dividido por el tamaño de la muestra
 
 $$\sigma^{2}_{_{\bar{X}}} = \dfrac{\sigma^{2}_{_{X}}}{n}$$
-
-
-Si el muestreo se realiza sin reemplazo la población de muestras de tamaño n=2, estaria conformado por:
-
-<br/><br/>
-
-|  muestra |  $\bar{x}$ |  muestra | $\bar{x}$ |  muestra |  $\bar{x}$ |  muestra | $\bar{x}$ | muestra  | $\bar{x}$ |
-|:--------:|:----------:|:--------:|:---------:|:--------:|:----------:|:--------:|:---------:|:--------:|:---------:|
-|(10,20)   | 15         | (10,40)  | 25        | (20,30)  |   25       | (20,50)  | 35        |  (30,50) | 40        |
-|(10,30)   | 20         | (10,50)  | 30        | (20,40)  |   30       | (30,40)  | 35        |  (40,50) | 45        |
+</div>
 
 <br/><br/>
 
@@ -358,7 +376,7 @@ La diferencia presentada en la varianza, se debe a que se trata de una muestra g
 
 $$\sigma^{2}_{_{\bar{X}}} \times \dfrac{(N-n)}{(N-1)} =100 \times \dfrac{(5-2)}{(5-1)}=75$$
 
-$$\text{fcpf:} \dfrac{(N-n)}{(N-1)}$$
+$$\text{factor por corrección por población finita : fcpf = } \dfrac{(N-n)}{(N-1)}$$
 
 <br/><br/>
 
@@ -366,7 +384,7 @@ $$\text{fcpf:} \dfrac{(N-n)}{(N-1)}$$
 
 <br/>
 
-Cierto tipo de batería para automóviles dura un promedio de 1110 días con una desviación estandar de 80 días. Si se eligen n=400 de estas baterías de manera aleatoria, encuentre la probabilidad de que el promedio sea mayor a 1120 días y halle el percentil 80 para esta distribución.
+Cierto tipo de batería para automóviles dura un promedio de 1110 días con una desviación estandar de 80 días. Si se eligen n=400 de estas baterías de manera aleatoria, encuentre la probabilidad de que el **promedio del tiempo de duración** sea mayor a 1120 días.
 Como $X \sim N(\mu=1110, \sigma^{2}=80^{2})$, utilizando las propiedades verificadas anteriormente podemos afirmar que: $\bar{X} \sim N(\mu=1110, \sigma_{\bar{X}}=80/\sqrt{400})$
 
 $$\begin{eqnarray*}
@@ -377,39 +395,16 @@ P(\bar{x} > 1120) &=& P\Bigg(\dfrac{\bar{x}-\mu}{\sigma/\sqrt{n}} > \dfrac{1120-
 &=& 0.0068
 \end{eqnarray*}$$
 
+
+
 <br/><br/><br/><br/>
 
-## **La proporción muestral**
+## **Proporción muestral**
 
 <br/>
 
-Al igual que en la media podemos realizar la verificación con la proporción, mediante la utilización de la siguiente población. Supongamos que en una población compuesta por 5 personas ($N=5$) tres de ellas son profesonales y queremos estudiar $p$ la proporción de profesionales en la muestra. En términos de variable seria: $S_{1}, N_{2}, N_{3}, S_{4}, S_{5}$, con el fin de distinguir las personas colocaremos un subindice. Con esta información podemos calcular los valores poblacionales:
+Al igual que en la media podemos realizar la verificación las caracteristicas de la proporción
 
-$$p=\dfrac{3}{5}=0.6$$
-
-$$pq=p(1-p)=0.6 \times 0.4 = 0.24$$
-
-Podemos obtener la población de proporciones muestrales ($\widehat{p}$) de tamaño $n=2$
-
-<br/><br/>
-
-|muestra |$\widehat{p}$ |  muestra|$\widehat{p}$|muestra|$\widehat{p}$|muestra|$\widehat{p}$ | muestra|$\widehat{p}$ |
-|:-------------:|:-----:|:-------------:|:----:|:-------------:|:----:|:-------------:|:----:|:-------------:|------:|
-|$(S_{1},S_{1})$|$1.0$  |$(N_{3},S_{4})$|$0.5$ |$(S_{1},N_{2})$|$0.5$ |$(N_{3},S_{5})$|$0.5$ |$(S_{1},N_{3})$|$0.5$  |
-|$(S_{4},S_{1})$|$1.0$  |$(S_{1},S_{4})$|$1.0$ |$(S_{4},N_{2})$|$0.5$ |$(S_{1},S_{5})$|$1.0$ |$(S_{4},N_{3})$|$0.5$  | 
-|$(N_{2},S_{1})$|$0.5$  |$(S_{4},S_{4})$|$1.0$ |$(N_{2},N_{2})$|$0.0$ |$(S_{4},S_{5})$|$1.0$ |$(N_{2},N_{3})$|$0.0$  |
-|$(S_{5},S_{1})$|$1.0$  |$(N_{2},S_{4})$|$0.5$ |$(S_{5},N_{2})$|$0.5$ |$(N_{2},S_{5})$|$0.5$ |$(S_{5},N_{3})$|$0.5$  | 
-|$(N_{3},S_{1})$|$0.5$  |$(S_{5},S_{4})$|$1.0$ |$(N_{3},N_{2})$|$0.0$ |$(S_{5},S_{5})$|$1.0$ |$(N_{3},N_{3})$|$0.0$  |
-
-<br/><br/>
-
-De esta población tenemos que:
-
-$$\mu_{\widehat{p}}=\dfrac{15}{25}=0.6$$
-
-$$V[\hspace{.1cm}\widehat{p}\hspace{.1cm}]=\frac{3}{25}=0.12$$
-
-Con este resultado estamo verificando que se cumple que:
 
 $$E[\hspace{.1cm}\widehat{p}\hspace{.1cm}]= p$$
 
@@ -433,17 +428,18 @@ P(\widehat{p}>0.82) &=& P\Bigg(\dfrac{\widehat{p}-p}{(p(1-p)/\sqrt{n}} > \dfrac{
 
 <br/><br/>
 
-## **La varianza muestral**.
+## **Varianza muestral**.
 
 <br/>
 
 Ahora tenemos interes en estudiar el comportamiento de $S^{2}$ llamada cuasivarianza por algunos y definida por:
+
 $$\widehat{\sigma^{2}}=S^{2}=\dfrac{1}{(n-1)}\sum_{i=1}^{n}\big(x_{i}-\bar{x}\big)^{2}$$
 
 
 Se puede demostrar que:
 
-$$E[S^{2}] = \sigma^{2}$$
+$$E\big[S^{2}\big] = \sigma^{2}$$
 
 
 $$V[S^{2}] = \dfrac{2\sigma^{4}}{(n-1)}$$
@@ -455,12 +451,7 @@ $$\dfrac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}_{(v=n-1)} $$
 
 Revisar : Canavos(1988) pp.231
 
-<br/><br/>
-
-[**Practica 005**](https://javerianacaliedu-my.sharepoint.com/:x:/g/personal/dgonzalez_javerianacali_edu_co/EeC4j33wrR9LsMF3CDlgsVwBqFaMB2mJJHKNpyW3JcNowQ?e=lAfCEI)
-
-
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 ## **Algunos estimadores**
 

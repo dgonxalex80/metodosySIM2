@@ -330,10 +330,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="recurso401.html">Intervalos de confianza</a>
+      <a href="recurso401.html">Intervalos una población</a>
     </li>
     <li>
-      <a href="recurso402.html">Estimación paramétrica</a>
+      <a href="recurso402.html">Intervalos dos poblaciones</a>
     </li>
     <li>
       <a href="recurso403.html">Estimación no paramétrica</a>
@@ -414,13 +414,9 @@ especifica como usar las mediciones obtenidas en una muestra para
 calcular dos números que forman los extremos del intervalo que confiamos
 contenga al parámetro de interés <span
 class="math inline">\(\theta\)</span>. Dependiendo del parámetro se
-utiliza en la construcción del IC las distribuciones muestrales: <span
-class="math inline">\(normal\)</span> <span
-class="math inline">\(estándar\)</span> (<span
-class="math inline">\(Z\)</span>), <span
-class="math inline">\(t-Student\)</span>, <span
-class="math inline">\(\chi^{2}\)</span> o <span
-class="math inline">\(F-Fisher\)</span></p>
+utiliza en la construcción del IC las distribuciones muestrales:
+<code>normal estándar</code> , <code>t-Student</code>,
+<code>chi-cuadrado</code> o <code>F-Fisher</code></p>
 <table>
 <colgroup>
 <col width="11%" />
@@ -480,18 +476,18 @@ z_{\frac{\alpha}{2}}
 <p>Inicialmente se revisan los conceptos de <strong>confianza</strong> y
 <strong>grados de libertad</strong> :</p>
 <p><br/><br/></p>
-<div id="confianza" class="section level3">
-<h3><strong>Confianza</strong></h3>
+<div id="confianza" class="section level2">
+<h2><strong>Confianza</strong></h2>
 <p>Para explicar el concepto de confianza se simula 100 intervalos para
 la estimación de una media con valor de <span
 class="math inline">\(\mu=100\)</span>, como se ve en la gráfica no
 todos los intervalos (representados por una línea) contienen el valor
 del parámetro, solo de color negro lo contiene.</p>
-<p>Al contarlos se encuentra que 35 no lo contienen (de color rojo),
-mientras que 65 lo contiene, por tanto este procedimiento tiene una
-confianza del 65% de contener el valor de <span
-class="math inline">\(\mu=100\)</span></p>
-<p><img src="img/RplotConfianza.png" width="60%" style="display: block; margin: auto;" />
+<p>Al contarlos se encuentra que 2 no lo contienen (de color naranja),
+mientras que 98 lo contiene, por tanto este procedimiento tiene una
+confianza del 98% de contener el valor de <span
+class="math inline">\(\mu\)</span>.</p>
+<p><img src="img/RplotConfianza.png" width="100%" style="display: block; margin: auto;" />
 Este valor se integra al concepto de intervalo de confianza mediante el
 término <span class="math inline">\(1-\alpha\)</span>, por defecto los
 programas utilizan un nivel de confianza del 95% ( <span
@@ -499,8 +495,8 @@ class="math inline">\(1-\alpha =0.95\)</span>) y se de nota por : <span
 class="math inline">\(IC_{\mu; 1-\alpha=0.95}\)</span></p>
 <p><br/><br/><br/></p>
 </div>
-<div id="grados-de-libertad" class="section level3">
-<h3><strong>Grados de libertad</strong></h3>
+<div id="grados-de-libertad" class="section level2">
+<h2><strong>Grados de libertad</strong></h2>
 <p>Una definicion de grados de libertad encontrada: <a
 href="https://psicologiaexperimental.files.wordpress.com/2010/04/grados-de-libertad.pdf">¿Qué
 son los llamados “grados de libertad”?</a> escrito por : Roberto Behar y
@@ -537,18 +533,16 @@ asignar 4 de los valores de la muestra, dado que el último estaría
 determinado por el valor de la media.</p>
 <p><br/><br/><br/><br/></p>
 </div>
-<div id="intervalos-de-confianza-para-una-población"
-class="section level2">
-<h2><strong>Intervalos de confianza para una población</strong></h2>
+<div id="para-una-población" class="section level2">
+<h2><strong>Para una población</strong></h2>
 <p>Para una población puede ser de interes estimar el intervalo de
 confianza para su media (<span class="math inline">\(\mu\)</span>),
 proporción (<span class="math inline">\(p\)</span>) o su varianza (<span
 class="math inline">\(\sigma^{2}\)</span>)</p>
 <p><br/><br/><br/></p>
-<div id="intervalos-de-confianza-para-la-media-con-varianza-conocida"
-class="section level3">
-<h3><strong>Intervalos de confianza para la media, con varianza
-conocida</strong></h3>
+</div>
+<div id="para-la-media-con-varianza-conocida" class="section level2">
+<h2><strong>Para la media, con varianza conocida</strong></h2>
 <p>Partimos de dos valores que contiene el parámetro <span
 class="math inline">\(\theta\)</span></p>
 <p><span class="math display">\[L_{I} \leq \theta \leq L_{S}
@@ -587,10 +581,8 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 </div>
 <p><br/><br/><br/></p>
 </div>
-<div id="intervalo-de-confianza-para-la-media-con-varianza-desconocida"
-class="section level3">
-<h3><strong>Intervalo de confianza para la media, con varianza
-desconocida</strong></h3>
+<div id="para-la-media-con-varianza-desconocida" class="section level2">
+<h2><strong>Para la media, con varianza desconocida</strong></h2>
 <p>En este caso se utiliza la distribución t-Student que presenta como
 parámetro n-1 grados de libertad</p>
 <p><span class="math display">\[T=\dfrac{\bar{X}-\mu}{s/
@@ -669,8 +661,8 @@ empresa está entre 35.7 dias y 42.5 dias con una confianza del 95%</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="tamaño-de-la-muestra-para-estimar-una-media"
-class="section level3">
-<h3><strong>Tamaño de la muestra para estimar una media</strong></h3>
+class="section level2">
+<h2><strong>Tamaño de la muestra para estimar una media</strong></h2>
 <p>Uno de los problemas más frecuentes a los que nos enfrentamos es la
 determinación del tamaño de la muestra para realizar una estimación de
 la media que garantice una confianza del <span
@@ -727,9 +719,8 @@ round(n,0)  # redondeo a entero</code></pre>
 <pre><code>[1] 212</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="intervalos-de-confianza-para-la-proporción"
-class="section level3">
-<h3><strong>Intervalos de confianza para la proporción</strong></h3>
+<div id="para-la-proporción" class="section level2">
+<h2><strong>Para la proporción</strong></h2>
 <p>La construcción del intervalo de confianza para una proporción es
 similar al proceso realizado en la construcción de la media, bajo el
 supuesto de <span class="math inline">\(np&gt;10\)</span> que permite la
@@ -771,9 +762,9 @@ una suscripción a HBO</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="tamaño-de-muestra-para-la-estimación-de-una-proporción"
-class="section level3">
-<h3><strong>Tamaño de muestra para la estimación de una
-proporción</strong></h3>
+class="section level2">
+<h2><strong>Tamaño de muestra para la estimación de una
+proporción</strong></h2>
 <p><span class="math display">\[n=\dfrac{z_{\alpha/2}^{2}\hspace{.3cm}
 p(1-p)}{e^{2}}\]</span> Donde :</p>
 <ul>
@@ -826,9 +817,8 @@ tal razón la propuesta realiza por la empresa consultora excede en 432
 encuesta que presentan un sobre costo de $21.6 millones</p>
 <p><br/><br/><br/></p>
 </div>
-<div id="intervalos-de-confianza-para-la-varianza"
-class="section level3">
-<h3><strong>Intervalos de confianza para la varianza</strong></h3>
+<div id="para-una-varianza" class="section level2">
+<h2><strong>Para una varianza</strong></h2>
 <p>En el caso del intervalo de confianza para la varianza se parte de la
 premisa de que la variable $ X^{2}$ sigue una distribución chi-cuadrado
 con <span class="math inline">\((n-a)\)</span> grados de libertad</p>
@@ -873,7 +863,6 @@ cat(&quot;IC_var :&quot;, paqueteDEG::intervalo.var(ecopetrol),&quot;\n&quot;)  
 <p>Se estima con una confianza del 95% que la desviación estándar del
 precio de las acciones de Ecopetrol está entre $ 75.7 y $ 140.0</p>
 <p><br/><br/><br/></p>
-</div>
 </div>
 
 

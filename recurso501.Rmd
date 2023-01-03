@@ -54,19 +54,19 @@ Desde el punto de vista clásico, todas las pruebas de hipótesis trabajan en ba
 
 <br/><br/>
 
-### **Hipótesis Nula (Ho)** 
+## **Hipótesis nula (Ho)** 
 
 Es la hipótesis a probar, ésta NO se rechaza si de la muestra no se obtiene suficiente evidencia para rechazarla.
 
 <br/><br/>
 
-### **Hipótesis Alterna (Ha)** 
+## **Hipótesis alterna (Ha)** 
 
 La hipótesis $Ho$ se contrasta con la hipótesis Ha, y ésta última corresponde a valores alternativos del parámetro planteados en la hipótesis nula. La hipótesis $Ha$ se considera cierta si existe suficiente evidencia para rechazar la hipótesis nula.
 
 <br/><br/>
 
-### **Estadístico de Prueba**  
+## **Estadístico de prueba  (EdeP)**  
 
 Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es tambien una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
 
@@ -74,7 +74,7 @@ Para una muestra determinada se obtiene un valor del estadístico de prueba, a p
 
 <br/><br/>
 
-### **Región de Rechazo (RdeR)**  
+## **Región de rechazo (RdeR)**  
 
 También llamada región crítica (RC), define los valores del estadístico de prueba para los cuales la información muestral contradice la hipótesis nula. Estos valores nos permitirán adoptar una regla de decisión consistente. Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
 su rechazo. 
@@ -84,13 +84,13 @@ su rechazo.
 
 <br/><br/>
 
-### **Regla de Decisión (RD)**  
+## **Regla de Decisión (RdeD)**  
 
 De esta manera, como una regla de decisión, si para una muestra particular el estadístico de prueba (valor calculado) cae dentro de la región crítica, rechazaremos la hipótesis nula $H_{o}$ en favor de la hipótesis alternativa $H_{a}$. En cambio, si el valor calculado no cae dentro de la RC, no podremos rechazar la hipótesis nula y por tanto decimos que la información contenida en la muestra no ofrece suficiente evidencia estadística que nos permita rechazar $Ho$, ASUMIMOS que la hipótesis nula es cierta. 
 
 <br/><br/>
 
-### **Errores asociados**
+## **Errores asociados**
 
 Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones descritas en la siguiente tabla:
 
@@ -130,13 +130,13 @@ Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour d
 
 <br/><br/>
 
-### **Nivel de significancia ($\alpha$)**  
+## **Nivel de significancia ($\alpha$)**  
 
 No es posible minimizar simultáneamente, las probabilidades de los errores tipo I y II, ya que en la medida que uno disminuye el otro aumenta, como se muestra en la figura siguiente, en la que claramente se ve que la reducción del área $\alpha$ (probabilidad de error tipo I), implica el aumento del área $\beta$ (probabilidad de error tipo II).
 
 <br/><br/>
 
-### **Tipos de pruebas de hipótesis**
+## **Tipos de pruebas de hipótesis**
 
 |                   |                                                                 |
 |:------------------|:----------------------------------------------------------------|

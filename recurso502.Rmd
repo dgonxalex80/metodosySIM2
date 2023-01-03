@@ -32,7 +32,7 @@ CarreraLuz22_c3 = subset(CarreraLuz22, CarreraLuz22$categoria=="3. Veteranos A")
 Se llaman pruebas paramétricas las que están soportadas en supuestos que por lo general corresponden a la distribución de la variable que trabajamos
 
 
-### **Pruebas de hipótesis sobre una media**
+## **Pruebas de hipótesis sobre una media**
 
 Dependiendo de las condiciones podemos optar por tres diferentes EdeP para la realización de la prueba para una media, aunque tenemos una cuarta posibilidad en el caso de realizarla mediante un método no paramétrico:
 
@@ -147,7 +147,7 @@ Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de un
 <br/><br/>
 
 
-### **Pruebas de hipótesis sobre una proporción**
+## **Pruebas de hipótesis sobre una proporción**
 
 En este caso debemos tener en cuenta que la muestra sea mayor a 30 con el fin de tener estimaciones mas robustas para estimar la proporción poblacional.
 
@@ -178,7 +178,7 @@ Como el valor-p (p-value = 0.01447) es menor que el nivel de significancia ($\al
 <br/><br/>
 
 
-### **Pruebas de hipótesis sobre una varianza**
+## **Pruebas de hipótesis sobre una varianza**
 
 <br/><br/>
 

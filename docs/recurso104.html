@@ -330,10 +330,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="recurso401.html">Intervalos de confianza</a>
+      <a href="recurso401.html">Intervalos una población</a>
     </li>
     <li>
-      <a href="recurso402.html">Estimación paramétrica</a>
+      <a href="recurso402.html">Intervalos dos poblaciones</a>
     </li>
     <li>
       <a href="recurso403.html">Estimación no paramétrica</a>
@@ -408,15 +408,13 @@ de probabilidad</strong></span></h1>
 
 
 <p><br/><br/></p>
-<div id="tipos-de-probabilidad" class="section level2">
-<h2><strong>Tipos de probabilidad</strong></h2>
 <p>Las probabilidade puede definirse para eventos simples (<span
 class="math inline">\(A\)</span>, <span
 class="math inline">\(B\)</span>,…) o compuestos (<span
-class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A
-\cap B\)</span>, <span class="math inline">\(B|A\)</span> ) que inclugen
-varios eventos. Dependiendo el tipo de evento puede tomar los siguientes
-nombres:</p>
+class="math inline">\((A \cup B)\)</span>, <span
+class="math inline">\((A \cap B)\)</span>, <span
+class="math inline">\((B|A)\)</span> ) que inclugen varios eventos.
+Dependiendo el tipo de evento puede tomar los siguientes nombres:</p>
 <p><br/><br/></p>
 <div style="display: flex;">
 <div>
@@ -427,8 +425,8 @@ nombres:</p>
 </div>
 </div>
 <p><br/><br/></p>
-<div id="probabilidad-simple-o-marginal" class="section level3">
-<h3><strong>Probabilidad simple o marginal</strong></h3>
+<div id="probabilidad-simple-o-marginal" class="section level2">
+<h2><strong>Probabilidad simple o marginal</strong></h2>
 <ul>
 <li><p><span class="math inline">\(P(A)\)</span> : probabilidad de que
 ocurra A</p></li>
@@ -439,10 +437,10 @@ ocurra B</p></li>
 <li><p><span class="math inline">\(P(B&#39;)\)</span> : probabilidad de
 que NO ocurra B</p></li>
 </ul>
-<p><br/><br/><br/></p>
+<p><br/><br/></p>
 </div>
-<div id="probabilidad-conjunta" class="section level3">
-<h3><strong>Probabilidad conjunta</strong></h3>
+<div id="probabilidad-conjunta" class="section level2">
+<h2><strong>Probabilidad conjunta</strong></h2>
 <ul>
 <li><p><span class="math inline">\(P(A \cap B)\)</span> : probabilidad
 de que ocurra A y B</p></li>
@@ -454,7 +452,6 @@ probabilidad de que ocurra A y NO ocurra B</p></li>
 probabilidad de que NO ocurra A ni B</p></li>
 </ul>
 <p><br/><br/></p>
-</div>
 </div>
 <div id="probabilidad-condicional" class="section level2">
 <h2><strong>Probabilidad condicional</strong></h2>
@@ -491,7 +488,8 @@ espacio muestal de referencia se debe establecer la probabilidad de que
 ocurra <span class="math inline">\(B\)</span></p>
 <p>De esta manera la probabilidad se expresa como la razón entre la
 probabilidad conjunta <span class="math inline">\(P(A \cap B)\)</span>
-con la probabilidad de <span class="math inline">\(A\)</span></p>
+con la probabilidad de <span class="math inline">\(A\)</span>, <span
+class="math inline">\(P(A)\)</span>.</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="ejemplo" class="section level2">
@@ -509,7 +507,8 @@ los tres tipos de probabilidad : <br/></p>
 <p><img src="img/tabla4_22.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<p><strong>Probabilidades simples o marginales</strong></p>
+<div id="probabilidades-simples-o-marginales" class="section level3">
+<h3><strong>Probabilidades simples o marginales</strong></h3>
 <ul>
 <li><p><span class="math inline">\(P(A) =\dfrac{600}{900} =
 0.6667\)</span></p></li>
@@ -520,7 +519,8 @@ los tres tipos de probabilidad : <br/></p>
 <li><p><span class="math inline">\(P(B&#39; = \dfrac{400}{900}) =
 0.4444\)</span></p></li>
 </ul>
-<p><br/></p>
+<p><br/><br/></p>
+</div>
 <div id="probabilidad-conjunta-1" class="section level3">
 <h3><strong>Probabilidad conjunta</strong></h3>
 <ul>
@@ -537,8 +537,8 @@ los tres tipos de probabilidad : <br/></p>
 <p>Esta información tambien se puede representar como un diagrama de
 árbol</p>
 <p><br/></p>
-<p><img src="img/arbol1_22.png" width="50%" style="display: block; margin: auto;" />
-<br/><br/></p>
+<p><img src="img/arbol1_22.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
 <p>O también como un diagrama de Venn:</p>
 <p><br/></p>
 <p><img src="img/diagrama5_22.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -597,6 +597,7 @@ P(B&#39;)\]</span></p>
 <p><img src="img/tabla1_22.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
+<p><br/></p>
 <p>En el caso que se cumplan todas las condiciones, diremos que los
 eventos son independientes. En caso contrario, los eventos no son
 independientes</p>
@@ -604,9 +605,7 @@ independientes</p>
 <p>Una aplicación de este concepto se ilustra con los siguientes
 ejemplos:</p>
 <p><br/><br/></p>
-</div>
-<div id="ejemplo-1" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
+<p><strong>Ejemplo</strong></p>
 <p>Se tiene un circuito formado por dos componentes <span
 class="math inline">\(A_{1}\)</span> y <span
 class="math inline">\(A_{2}\)</span> cada uno con probabilidad de
@@ -628,9 +627,7 @@ independencia tenemos que:</p>
 <p><span class="math display">\[P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2})
 = 0.90 \times  0.95 = 0.855\]</span></p>
 <p><br/><br/><br/></p>
-</div>
-<div id="ejemplo-2" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
+<p><strong>Ejemplo</strong></p>
 <p>Ahora supongamos que el circuito anterior está conectado en paralelo.
 Determinar la probabilidad de que el circuito funciones</p>
 <p><img src="img/circuito2.png" width="40%" style="display: block; margin: auto;" /></p>
@@ -649,9 +646,7 @@ cualquier evento <span class="math inline">\(A\)</span>, <span
 class="math inline">\(P(A&#39;)=1-P(A)\)</span></p>
 <p><span class="math display">\[1-0.005 = 0.995\]</span></p>
 <p><br/><br/><br/></p>
-</div>
-<div id="ejemplo-3" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
+<p><strong>Ejemplo</strong></p>
 <p>El departamento de crédito de la universidad, informa que el 30% de
 los pagos realizados en la universidad se efectúan en efectivo, un 40%
 con tarjeta de crédito y el resto con tarjeta débito. En todos los casos
@@ -883,9 +878,7 @@ A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\displaystyle\sum_{j=1}^{k}
 P(E_{j})P(A|E_{j})} \]</span></p>
 </div>
 <p><br/><br/><br/></p>
-</div>
-<div id="ejemplo-4" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
+<p><strong>Ejemplo</strong></p>
 <p><br/></p>
 <p>Continuando con el ejemplo anterior puede ser necesario calcular la
 probabilidad : <span class="math inline">\(P(E|+5)\)</span> para lo cual
@@ -897,9 +890,7 @@ utilizamos el Teorema de Bayes</p>
 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58}
 = 0.1034\)</span></p>
 <p><br/><br/></p>
-</div>
-<div id="ejemplo-5" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
+<p><strong>Ejemplo</strong></p>
 <p>En una fábrica de artı́culos para protección biodegradables, cuatro
 operarios colocan etiquetas de caducidad en cada artı́culo al final de la
 lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 %

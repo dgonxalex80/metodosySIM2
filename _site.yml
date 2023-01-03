@@ -42,9 +42,9 @@ navbar:
           href: recurso305.html        
     - text: "Intervalos"
       menu:
-        - text: "Intervalos de confianza"
+        - text: "Intervalos una población"
           href: recurso401.html
-        - text: "Estimación paramétrica"
+        - text: "Intervalos dos poblaciones"
           href: recurso402.html
         - text: "Estimación no paramétrica"
           href: recurso403.html

@@ -330,10 +330,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="recurso401.html">Intervalos de confianza</a>
+      <a href="recurso401.html">Intervalos una población</a>
     </li>
     <li>
-      <a href="recurso402.html">Estimación paramétrica</a>
+      <a href="recurso402.html">Intervalos dos poblaciones</a>
     </li>
     <li>
       <a href="recurso403.html">Estimación no paramétrica</a>
@@ -647,8 +647,9 @@ muestrales, mediante un proceso de aleatorización definido previamente
 (plan de muestreo). De acuerdo con esta definición, son tres los
 elementos esenciales de un diseño muestral:</p>
 <p><br/><br/></p>
-<div id="unidad-muestral" class="section level4">
-<h4><strong>Unidad muestral</strong></h4>
+</div>
+<div id="unidad-muestral" class="section level3">
+<h3><strong>Unidad muestral</strong></h3>
 <p><br/></p>
 <p>Constituye la unidad básica a partir de la cual se obtiene la
 información, pudiendo por tanto, ser éstas personas, o individuos de
@@ -659,8 +660,8 @@ especies por comunidad, áreas o cuadrículas si deseamos estimar
 densidades medias o biomasa total, etc.</p>
 <p><br/><br/></p>
 </div>
-<div id="proceso-de-aleatorización" class="section level4">
-<h4><strong>Proceso de aleatorización</strong></h4>
+<div id="proceso-de-aleatorización" class="section level3">
+<h3><strong>Proceso de aleatorización</strong></h3>
 <p><br/></p>
 <p>Aun cuando la unidad muestral esté claramente definida, existen
 algunos elementos que pueden afectar el proceso de muestreo, alterando
@@ -684,7 +685,6 @@ individuo, no esté condicionada a la selección de otro (independencia).
 Estas dos condiciones, en apariencia sencillas, pueden provocar algunas
 dificultades.</p>
 <p><br/><br/></p>
-</div>
 </div>
 <div id="tamaño-muestral" class="section level3">
 <h3><strong>Tamaño muestral</strong></h3>
@@ -800,10 +800,12 @@ son:</p>
 <li>muestreo aleatorio por conglomerados</li>
 </ul>
 <p><br/><br/></p>
-<div id="muestreos-probabilísticos" class="section level3">
-<h3><strong>Muestreos probabilísticos</strong></h3>
+</div>
+<div id="muestreos-probabilísticos" class="section level2">
+<h2><strong>Muestreos probabilísticos</strong></h2>
 <p><br/><br/></p>
-<p><strong>Muestreo Aleatorio simple (m.a.s)</strong></p>
+<div id="muestreo-aleatorio-simple-m.a.s" class="section level3">
+<h3><strong>Muestreo Aleatorio simple (m.a.s)</strong></h3>
 <p><br/></p>
 <p>Una muestra aleatoria simple tomada de una población finita, da a
 cada subconjunto de la población (muestra) de tamaño específico la misma
@@ -839,7 +841,9 @@ es la instrucción en R que selecciona las observaciones :</p>
 # extre la muestra
 # muestra1=Base1[sample(1:nrow(Base1),50,replace=F),] </code></pre>
 <p><br/><br/></p>
-<p><strong>Muestreo Estratificado</strong></p>
+</div>
+<div id="muestreo-estratificado" class="section level3">
+<h3><strong>Muestreo Estratificado</strong></h3>
 <p><br/></p>
 <p>Una muestra estratificada se obtiene formando estratos, de acuerdo a
 alguna característica de interés en la población (sexo, edad, ingresos
@@ -888,7 +892,9 @@ ser un sector de la ciudad de la provincia o de la región.</p>
 estratificado, es que las conclusiones pueden darse no sólo a nivel
 poblacional, sino que independientemente a nivel de cada estrato.</p>
 <p><br/><br/></p>
-<p><strong>Muestreo Sistemático</strong></p>
+</div>
+<div id="muestreo-sistemático" class="section level3">
+<h3><strong>Muestreo Sistemático</strong></h3>
 <p><br/></p>
 <p>Se forma una muestra sistemática seleccionando al azar una unidad y
 luego se seleccionan adicionalmente las unidades a intervalos igualmente
@@ -940,7 +946,9 @@ de los datos tiene un comportamiento cíclico o estacional, el cuál puede
 hacer que las unidades seleccionadas coincidan con todos los máximos o
 todos los mínimos.</p>
 <p><br/><br/></p>
-<p><strong>Muestreo por Conglomerados</strong></p>
+</div>
+<div id="muestreo-por-conglomerados" class="section level3">
+<h3><strong>Muestreo por Conglomerados</strong></h3>
 <p><br/></p>
 <p>Una muestra por conglomerados se obtiene identificando un conjunto de
 conglomerados que componen la población, aleatoriamente se selecciona un
@@ -955,8 +963,9 @@ de se elegidos. En general se selecciona a los sujetos siguiendo
 determinados criterios procurando que la muestra sea representativa.</p>
 <p><br/><br/><br/><br/></p>
 </div>
-<div id="muestreos-no-probabilísticos" class="section level3">
-<h3><strong>Muestreos no probabilísticos</strong></h3>
+</div>
+<div id="muestreos-no-probabilísticos" class="section level2">
+<h2><strong>Muestreos no probabilísticos</strong></h2>
 <p><br/></p>
 <p>En el caso de no contar con los supuestos que puedan garantizar la
 selección de la muestra de una manera aleatoria (no contar con un
@@ -966,7 +975,8 @@ realizar analisis exploratorios, podemos utilizar otro tipo de muestreos
 llamados no probabílisticos. A continuación se describen algunos de
 ellos:</p>
 <p><br/><br/></p>
-<p><strong>Muestreo por Cuotas</strong></p>
+<div id="muestreo-por-cuotas" class="section level3">
+<h3><strong>Muestreo por Cuotas</strong></h3>
 <p><br/></p>
 <p>También denominado en ocasiones <strong>accidental</strong>. Se
 asienta generalmente sobre la base de un buen conocimiento de los
@@ -982,7 +992,9 @@ cuota se eligen los primeros que se encuentren que cumplan esas
 características. Este método se utiliza mucho en las encuestas de
 opinión.</p>
 <p><br/><br/></p>
-<p><strong>Muestreo Intencional</strong></p>
+</div>
+<div id="muestreo-intencional" class="section level3">
+<h3><strong>Muestreo Intencional</strong></h3>
 <p><br/></p>
 <p>Este tipo de muestreo se caracteriza por un esfuerzo deliberado de
 obtener muestras “representativas mediante la inclusión en la muestra de
@@ -990,7 +1002,9 @@ grupos supuestamente típicos. Es muy frecuente su utilización en sondeos
 preelectorales de zonas que en anteriores votaciones han marcado
 tendencias de voto.</p>
 <p><br/><br/></p>
-<p><strong>Muestreo Casual o Incidental</strong></p>
+</div>
+<div id="muestreo-casual-o-incidental" class="section level3">
+<h3><strong>Muestreo Casual o Incidental</strong></h3>
 <p><br/></p>
 <p>Se trata de un proceso en el que el investigador selecciona directa e
 intencionadamente los individuos de la población. El caso más frecuente
@@ -999,7 +1013,9 @@ se tiene fácil acceso (los profesores de universidad emplean con mucha
 frecuencia a sus propios alumnos). Un caso particular es el de los
 voluntarios.</p>
 <p><br/><br/></p>
-<p><strong>Bola de Nieve</strong></p>
+</div>
+<div id="bola-de-nieve" class="section level3">
+<h3><strong>Bola de Nieve</strong></h3>
 <p><br/></p>
 <p>Se localiza a algunos individuos, los cuales conducen a otros, y
 estos a otros, y así hasta conseguir una muestra suficiente. Este tipo

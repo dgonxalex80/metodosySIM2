@@ -8,11 +8,13 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
-## **Enfoques de probabilidad**
+<br/><br/>
 
+La probabilidad es un número entre cero y uno que se asigna a cada resultado de un evento aleatorio, mediante diferentes enfoques.  A continuación se definen los enfoque:
 
-
-
+* Clásico o a priori
+* Frecuentista
+* Subjetiva
 
 <br/><br/><br/>
 
@@ -61,8 +63,6 @@ $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}
 knitr::include_graphics("img/penalti.gif")
 ```
 
-
-<br/><br/>
 
 Si observamos el cobro de un penalti en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 6 : parte baja derecha, parte alta derecha, parte baja al centro, parte alta central, parte baja izquierda y parte alta izquierda. Por su parte el arquero piensa también es estos lograres para evitar que el disparo termine en gol. Hoy en dia ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.
 

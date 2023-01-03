@@ -11,10 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 <br/><br/>
 
 
-## **Tipos de probabilidad**
-
-
-Las probabilidade puede definirse para eventos simples ($A$, $B$,...) o compuestos ($A \cup B$, $A \cap B$, $B|A$ ) que inclugen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
+Las probabilidade puede definirse para eventos simples ($A$, $B$,...) o compuestos ($(A \cup B)$, $(A \cap B)$, $(B|A)$ ) que inclugen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
 
 <br/><br/>
 
@@ -37,7 +34,7 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 <br/><br/>
 
-### **Probabilidad simple o marginal**
+## **Probabilidad simple o marginal**
 
 
 + $P(A)$ : probabilidad de que ocurra A 
@@ -48,9 +45,9 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 + $P(B')$ : probabilidad de que NO ocurra B 
 			
-<br/><br/><br/>
+<br/><br/>
 
-### **Probabilidad conjunta** 
+## **Probabilidad conjunta** 
 			
 + $P(A \cap B)$ : probabilidad de que ocurra A y B 
 			
@@ -92,7 +89,7 @@ $P(B|A)$ se puede leer como :
 El efecto de conocer la ocurrencia del evento $A$ hace que el espacio muestral de referencia pase de ser $S$ a solo $A$.  Ahora dentro de este nuevo espacio muestal de referencia se debe establecer la probabilidad de que ocurra $B$
 
 De esta manera la probabilidad se expresa como la razón entre la probabilidad conjunta 
-$P(A \cap B)$ con la probabilidad de $A$
+$P(A \cap B)$ con la probabilidad de $A$, $P(A)$.
 
 <br/><br/><br/>
 
@@ -118,7 +115,7 @@ knitr::include_graphics("img/tabla4_22.png")
   
 ::::
 
-**Probabilidades simples o marginales**
+### **Probabilidades simples o marginales**
 
 * $P(A) =\dfrac{600}{900} = 0.6667$
 
@@ -128,7 +125,8 @@ knitr::include_graphics("img/tabla4_22.png")
 
 + $P(B' = \dfrac{400}{900}) = 0.4444$ 
 
-<br/>
+<br/><br/>
+
 
 ### **Probabilidad conjunta** 
 			
@@ -144,9 +142,6 @@ knitr::include_graphics("img/tabla4_22.png")
 <br/><br/>
 
 
-
-
-
 Esta información tambien se puede representar como un diagrama de árbol 
 
 <br/>
@@ -154,6 +149,7 @@ Esta información tambien se puede representar como un diagrama de árbol
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/arbol1_22.png")
 ```
+
 <br/><br/>
 
 O también como un diagrama de Venn:
@@ -227,6 +223,7 @@ knitr::include_graphics("img/tabla1_22.png")
 :::
 ::::
 
+<br/>
 
 En el caso que se cumplan todas las condiciones, diremos que los eventos son independientes. En caso contrario,  los eventos no son independientes
 
@@ -236,7 +233,7 @@ Una aplicación de este concepto se ilustra con los siguientes ejemplos:
 
 <br/><br/>
 
-##  **Ejemplo**
+**Ejemplo**
 
 Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con probabilidad de funcionamiento $P(A_{1}) = 0.90$  y $P(A_{2}) = 0.95$ . Determinar la probabilidad de que el componente funcione.
 
@@ -255,12 +252,9 @@ Como para que el circuito funcione debe funcionar el componente $A_{1}$ y $A_{2}
 
 $$P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2}) = 0.90 \times  0.95 = 0.855$$
 
-
-
-
 <br/><br/><br/>
 
-##  **Ejemplo**
+**Ejemplo**
 
 Ahora supongamos que el circuito anterior está conectado en paralelo. Determinar la probabilidad de que el circuito funciones
 
@@ -284,7 +278,7 @@ $$1-0.005 = 0.995$$
 
 <br/><br/><br/>
 
-##  **Ejemplo**
+**Ejemplo**
 
 El departamento de crédito de la universidad, informa que el 30% de los pagos realizados en la universidad se efectúan en efectivo, un 40% con tarjeta de crédito y el resto con tarjeta débito. En todos los casos estos pagos solo son recibidos en la caja ubicada en la oficina de Registro Académico de la universidad.
 
@@ -461,7 +455,7 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/><br/><br/>
 
-## **Ejemplo**
+**Ejemplo**
 
 <br/>
 
@@ -474,7 +468,7 @@ $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \
 
 <br/><br/>
 
-##  **Ejemplo** 
+**Ejemplo** 
 
 En una fábrica de artı́culos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada
 artı́culo al final de la lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no

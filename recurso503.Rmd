@@ -30,11 +30,6 @@ data("evaluacion")
 <br/><br/><br/>
 
 
-## **P de H sobre dos poblaciones**
-
-<br/><br/><br/>
-
-
 | parámetro       |  prueba de dos colas    | prueba de cola inferior| prueba de cola superior|
 |:----------------|:------------------------|:-----------------------|:-----------------------|
 |$\mu_{1}-\mu_{2}$|$Ho: \mu_{1}-\mu_{2}=\Delta_{o}$|$Ho: \mu_{1}-\mu_{2} \geq=\Delta_{o}$  |$Ho: \mu_{1}-\mu_{2}\leq\Delta_{o}$  |
@@ -51,11 +46,11 @@ data("evaluacion")
 |                                |$Ha: \sigma_{1}^{2} \neq \sigma^{2}_{2}$|$Ha: \sigma_{1}^{2} < \sigma_{2}^{2}$    |$Ha: \sigma_{1}^{2} > \sigma_{2}^{2}$  |
 <br/><br/><br/>
 
-### **Pruebas de hipótesis para una comparación de dos medias** 
+## **Comparación de dos medias** 
 
 <br/><br/>
 
-### **Caso para grupos pareados**
+## **Caso para grupos pareados**
 
 <br/>
 
@@ -196,9 +191,9 @@ Analizando el resultado de la prueba t-Student, el valor-p resultante (3.781e-12
 
 
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
-### **Pruebas de hipótesis para la diferencia de proporciones**
+## **Diferencia de proporciones**
 
 |    |                                     |
 |:--:|:------------------------------------|

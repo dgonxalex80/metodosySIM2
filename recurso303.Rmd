@@ -23,7 +23,7 @@ Estas caractaristicas ahora en los estimadores se presentan a continuación:
 
 <br/><br/>
 
-### **Insesgadez**
+## **Insesgadez**
 
 <br/>
 
@@ -33,7 +33,7 @@ Está reprsentado por las figuras 3 y 4 que presentan un comportamiento que en p
 
 <br/><br/>
 
-### **Eficiente**
+## **Eficiente**
 
 <br/>
 
@@ -44,7 +44,7 @@ $$V[\widehat{\theta_{3}}] < V[\widehat{\theta_{4}}]$$
 
 <br/><br/>
 
-### **Consistente**
+## **Consistente**
 
 <br/>
 

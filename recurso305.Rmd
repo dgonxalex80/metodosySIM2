@@ -12,9 +12,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-## **Teorema central del límite**: 
-
-<br/>
 
 Si $\bar{X}$ es la media de una muestra de tamaño $n$ tomada una población con media $\mu$ y varianza $\sigma^{2}$, entonces la forma límite de la distribución de  $z =(\bar{X} - \mu)/(\sigma/\sqrt{n})$ se aproxima a una distribución normal estandar.
 

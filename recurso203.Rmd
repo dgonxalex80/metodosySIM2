@@ -457,7 +457,7 @@ $$E[XY]= \displaystyle\int_{-\infty}^{\infty} \displaystyle\int_{-\infty}^{\inft
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-Covarianza entre las variables $X$,$Y$
+**Covarianza** entre las variables $X$,$Y$
 
 $$COV[X,Y]=E[XY]-E[X]E[Y]$$
 
@@ -465,14 +465,14 @@ $$COV[X,Y]=E[XY]-E[X]E[Y]$$
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
- Correlación entre las variables $X$,$Y$
+ **Correlación** entre las variables $X$,$Y$
 	$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
 	La correlación es una medida que mide el grado de asociación lineal entre dos variables. $-1 \leq \rho \leq 1$
 </div>
 
 <br/><br/>
 
-**Escala para interpretación** : $\rho$ <br/>
+### **Escala para interpretación** : $\rho$ <br/>
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rho.png")

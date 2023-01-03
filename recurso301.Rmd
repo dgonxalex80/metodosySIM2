@@ -138,7 +138,7 @@ Un diseño muestral es una estrategia de selección de unidades muestrales, medi
 
 <br/><br/>
 
-#### **Unidad muestral**
+### **Unidad muestral**
 
 <br/>
 
@@ -146,7 +146,7 @@ Constituye la unidad básica a partir de la cual se obtiene la información, pud
 
 <br/><br/>
 
-#### **Proceso de aleatorización**
+### **Proceso de aleatorización**
 
 <br/>
 
@@ -237,11 +237,11 @@ De acuerdo con las consideraciones anteriores, algunas de las estrategias de mue
 
 <br/><br/>
 
-### **Muestreos probabilísticos**
+## **Muestreos probabilísticos**
 
 <br/><br/>
 
-**Muestreo Aleatorio simple (m.a.s)**
+### **Muestreo Aleatorio simple (m.a.s)**
 
 <br/>
 
@@ -265,7 +265,7 @@ El muestreo puede realizarse sin reemplazo o con reemplazo, o dicho de otro modo
 
 <br/><br/>
 
-**Muestreo Estratificado** 
+### **Muestreo Estratificado** 
 
 <br/>
 
@@ -291,7 +291,7 @@ Otro elemento interesante de considerar, en los estudios por muestreo estratific
 
 <br/><br/>
 
-**Muestreo Sistemático** 
+### **Muestreo Sistemático** 
 
 <br/>
 
@@ -308,7 +308,7 @@ Este tipo de muestreo no es recomendable cuando el preceso generador de los dato
 
 <br/><br/>
 
-**Muestreo por Conglomerados**
+### **Muestreo por Conglomerados**
 
 <br/>
 
@@ -318,7 +318,7 @@ A veces, para estudios exploratorios, el muestreo probabilístico resulta excesi
 
 <br/><br/><br/><br/>
 
-### **Muestreos no probabilísticos**
+## **Muestreos no probabilísticos**
 
 <br/>
 
@@ -326,7 +326,7 @@ En el caso de no contar con los supuestos que puedan garantizar la selección de
 
 <br/><br/>
 
-**Muestreo por Cuotas** 
+### **Muestreo por Cuotas** 
 
 <br/>
 
@@ -335,7 +335,7 @@ determinada la cuota se eligen los primeros que se encuentren que cumplan esas c
 
 <br/><br/>
 
-**Muestreo Intencional** 
+### **Muestreo Intencional** 
 
 <br/>
 
@@ -344,7 +344,7 @@ supuestamente típicos. Es muy frecuente su utilización en sondeos preelectoral
 
 <br/><br/>
 
-**Muestreo Casual o Incidental**
+### **Muestreo Casual o Incidental**
 
 <br/>
 
@@ -353,7 +353,7 @@ propios alumnos). Un caso particular es el de los voluntarios.
 
 <br/><br/>
 
-**Bola de Nieve** 
+### **Bola de Nieve** 
 
 <br/>
 

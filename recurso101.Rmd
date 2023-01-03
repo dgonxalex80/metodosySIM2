@@ -11,7 +11,12 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 </br></br>
 
 
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/decisiones.png")
+```
+Tomada de : pixabay.com
 
+</br>
 
 Muchos relacionamos el concepto de probabilidad con los dados, pues forma parte de su origen y de su desarrollo inicial a través de preguntas y situaciones imaginarias que  de alguna forma la moldearon desde la matemáticas. Pero este concepto va mucho más alla como lo veremos en esta unidad.
 
@@ -24,9 +29,6 @@ Sinembargo este concepto va más allá de los casinos y cobra importancia en la 
 
 En esta unidad inicalmente se revisan los principales conceptos de probabilidad y de variable alatoria, para finalizar en la inferencia estadística revisando los conceptos de estimación por intervalos de confianza y pruebas de hipótesis.
 
-</br></br>
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/decisiones.png")
-```
+
 

@@ -15,7 +15,7 @@ knitr::include_graphics("img/gic.png")
 ```
 
 
-Un estimador por intervalo de confianza (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales:  $normal$ $estándar$ ($Z$), $t-Student$, $\chi^{2}$ o $F-Fisher$
+Un estimador por intervalo de confianza (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales:  `normal estándar` , `t-Student`, `chi-cuadrado` o `F-Fisher`
 
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
@@ -32,22 +32,22 @@ Inicialmente se revisan los conceptos de **confianza** y **grados de libertad** 
 
 <br/><br/>
 
-### **Confianza**
+## **Confianza**
 
 Para explicar el concepto de confianza se simula 100 intervalos para la estimación de una media con valor de $\mu=100$, como se ve en la gráfica no todos los intervalos (representados por una línea) contienen el valor del parámetro, solo de color negro lo contiene.
 
-Al contarlos se encuentra que 35 no lo contienen (de color rojo), mientras que  65 lo contiene, por tanto este procedimiento tiene una confianza del 65% de contener el valor de $\mu=100$
+Al contarlos se encuentra que 2 no lo contienen (de color naranja), mientras que  98 lo contiene, por tanto este procedimiento tiene una confianza del 98% de contener el valor de $\mu$.
 
 
 
-```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/RplotConfianza.png")
 ```
 Este valor se integra al concepto de intervalo de confianza mediante el término $1-\alpha$, por defecto los programas utilizan un nivel de confianza del 95% ( $1-\alpha =0.95$) y se de nota por : $IC_{\mu; 1-\alpha=0.95}$ 
 
 <br/><br/><br/>
 
-### **Grados de libertad**
+## **Grados de libertad**
 
 Una definicion de grados de libertad encontrada: [¿Qué son los llamados “grados de libertad”?](https://psicologiaexperimental.files.wordpress.com/2010/04/grados-de-libertad.pdf) escrito por : Roberto Behar y Pere Grima, los define como el número de dimensiones en los que se puede mover un valor por asignar. En el caso de una variable X, solo tenemos un grado de libertad para asignar este valor. En el caso de tener una variable bidimensional (X,Y), al momento de asignar valores a esta variable tenemos dos dimensiones = dos grados de libertad. Sin embargo que colocamos la restricción de que X+Y=10, perdemos un grado de libertad, dado que al colocar el primero, el segundo queda asignado por la restricción.
 
@@ -59,7 +59,7 @@ Como ejemplo supongamos que tenemos una muestras de datos formado por : $X_{1}$,
 
 
 
-## **Intervalos de confianza para una población**
+## **Para una población**
 
 
 Para una población puede ser de interes estimar el intervalo de confianza para su media ($\mu$), proporción ($p$) o su varianza ($\sigma^{2}$)
@@ -67,7 +67,7 @@ Para una población puede ser de interes estimar el intervalo de confianza para 
 
 <br/><br/><br/>
 
-### **Intervalos de confianza para la media, con varianza conocida** 
+## **Para la media, con varianza conocida** 
 
 Partimos de dos valores que contiene el parámetro $\theta$
 
@@ -104,7 +104,7 @@ Supuestos:
 			
 <br/><br/><br/>
 
-### **Intervalo de confianza para la media, con varianza desconocida**
+## **Para la media, con varianza desconocida**
 
 En este caso se utiliza la distribución t-Student que presenta como parámetro n-1 grados de libertad
 
@@ -175,7 +175,7 @@ El tiempo promedio transcurrido entre la facturación y el pago en la empresa es
 
 <br/><br/><br/>
 
-### **Tamaño de la muestra para estimar una media**
+## **Tamaño de la muestra para estimar una media**
 
 Uno de los problemas más frecuentes a los que nos enfrentamos es la determinación del tamaño de la muestra para realizar una estimación de la media que garantice una confianza del $(1-\alpha)\%$
 
@@ -228,7 +228,7 @@ round(n,0)  # redondeo a entero
 
 <br/><br/>
 
-### **Intervalos de confianza para la proporción** 
+## **Para la proporción** 
 
 La construcción del intervalo de confianza para una proporción es similar al proceso realizado en la construcción de la media, bajo el supuesto de $np>10$ que permite la aproximación a una distribución normal
 
@@ -270,7 +270,7 @@ De acuerdo con el resultado anterior, se puede afirmar con una confianza del 95%
 <br/><br/><br/>
 
 
-### **Tamaño de muestra para la estimación de una proporción**
+## **Tamaño de muestra para la estimación de una proporción**
 
 $$n=\dfrac{z_{\alpha/2}^{2}\hspace{.3cm} p(1-p)}{e^{2}}$$
 Donde :
@@ -310,7 +310,7 @@ De acuerdo con la información sumunistrada por la empresa, el tamaño de muestr
   
 <br/><br/><br/>
 
-### **Intervalos de confianza para la varianza** 
+## **Para una varianza** 
 
 En el caso del intervalo de confianza para la varianza se parte de la premisa de que la variable $ X^{2}$ sigue una distribución chi-cuadrado con $(n-a)$ grados de libertad
 

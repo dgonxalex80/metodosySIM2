@@ -374,7 +374,7 @@ $$\text{factor por corrección por población finita : fcpf = } \dfrac{(N-n)}{(N
 
 <br/><br/>
 
- <span style="color:#034a94"> **Ejemplo**</span>
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -406,7 +406,7 @@ $$V[\hspace{.1cm}\widehat{p}\hspace{.1cm}] =\dfrac{p(1-p)}{n}$$
 
 <br/><br/>
 
- <span style="color:#034a94"> **Ejemplo**</span>
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 

@@ -22,16 +22,16 @@ x <- seq(-3,3, length=N)
 y <- seq(-3,3,length=N)
 z <- matrix(0, N, N)
 for (i in 1:N) for (j in 1:N) {
-  z[i,j]=dmvnorm(c(x[i],y[j]), c(0,0),
-        matrix(c(1,0.5,0.5,1),2,2))}
- persp(x,y,z,theta=20, phi=15, 
-       xlab="x", 
-       ylab="y", 
-       zlab="f(x,y)",
-       scale=TRUE,
-       expand=.4,
-       axes=TRUE,
-       col="#034A94")
+	z[i,j]=dmvnorm(c(x[i],y[j]), c(0,0),
+	matrix(c(1,0.5,0.5,1),2,2))}
+persp(x,y,z,theta=20, phi=15, 
+xlab="x", 
+ylab="y", 
+zlab="f(x,y)",
+scale=TRUE,
+expand=.4,
+axes=TRUE,
+col="#034A94")
 ```
 
 <br/><br/>
@@ -67,7 +67,7 @@ la cual debe cumplir con las siguientes características:
 
 **Ejemplo**
 
-El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un dia y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por : 
+El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un día y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por : 
 
 |    |        |       |  $x$ |      |
 |:--:|:------:|:-----:|:----:|:----:|
@@ -75,7 +75,7 @@ El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un 
 |$y$ |  1     | 0.05  | 0.05 | 0.10 |
 |    |  2     | 0.05 | 0.10 | 0.35  |
 |    |  3     | 0     | 0.20 | 0.10 |
- 
+
 
 Para verificar que $f(xy)$ conforme una función de distribución de probabilidad conjunta verificamos que la suma de todas las probabilidades de 1
 
@@ -94,15 +94,15 @@ y=c(0,1,2,0,1,2,0,1,2)
 fxy=c(0.05,0.05,0, 0.05,0.10,0.20, 0.10,0.35,0.10)
 
 plot3D::scatter3D(x, y, fxy,
-          colvar = NULL, 
-          col = "blue",
-          pch = 19, cex = 1.5,
-          phi = 20, theta = 60,  
-          zlab="f(xy)", xlab="x", ylab="y",
-          bty = "b2",
-          col.panel ="steelblue",
-          col.grid = "darkblue",
-          add_lines=TRUE)
+colvar = NULL, 
+col = "blue",
+pch = 19, cex = 1.5,
+phi = 20, theta = 60,  
+zlab="f(xy)", xlab="x", ylab="y",
+bty = "b2",
+col.panel ="steelblue",
+col.grid = "darkblue",
+add_lines=TRUE)
 
 
 ```
@@ -128,7 +128,7 @@ $$h(y)=f_{_{Y}}(y)=\sum_{x=x_{(1)}}^{x_{(n)}}f_{_{X,Y}}(x,y)$$
 </div> 
 
 Para el ejemplo podemos establecer las funciones marginales para las variables $X$ y $Y$ sumando por columnas en el caso de $Y$ y por filas en el caso de la variable $X$
- 
+
 ```{r}
 fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
 gx=addmargins(fxy,1)
@@ -148,7 +148,7 @@ hy
 ```
 
 
- 
+
 <br/><br/>
 
 
@@ -157,7 +157,7 @@ hy
 
 $$F_{_{X,Y}}(x,y)=\sum_{-\infty}^{x} \sum_{-\infty}^{y} f(x,y)$$
 
-Para el ejemplo se construye la función de distribución acumulada sumando tanto por columna com fila hasta la posición de los valores observados, por ejemplo .
+Para el ejemplo se construye la función de distribución acumulada sumando tanto por columna como fila hasta la posición de los valores observados, por ejemplo .
 
 $$F(2,2)= F_{_{X,Y}}(x,y)=\sum_{x=1}^{2} \sum_{y=1}^{2} f(x,y)  = f(1,1) + f(1,2) + f(2,1) + f(2,2) = 0.05 + 0.05 + 0.05 + 0.10 = 0.25$$
 
@@ -274,12 +274,12 @@ Lafunción de densidad conjunta para las variables $X$ y $Y$ $f(x,y)$ debe cumpl
 
 **Ejemplo**
 
-La cantidad de ácido ($X$) y la cantidad de ácido ($Y$), en litros, que se vierten en una mezcla se modela con la función fXY como se presenta a continuación $f(x,y)$ esta dada por: 
+La cantidad de ácido ($X$) y la cantidad de ácido ($Y$), en litros, que se vierten en una mezcla se modela con la función $f_{XY}$ como se presenta a continuación $f(x,y)$ esta dada por: 
 
 $$f(x,y) = \left \{ \begin{matrix} (x+y) & \mbox{ } 0 \leq x \leq 1\\ 
-                                     & \mbox{ } 0 \leq y \leq 1 \\
-                                     &\\
-                                   0 & \mbox{ en otro caso }\end{matrix}\right.  $$
+	& \mbox{ } 0 \leq y \leq 1 \\
+	&\\
+	0 & \mbox{ en otro caso }\end{matrix}\right.  $$
 
 <br/>
 
@@ -287,11 +287,11 @@ $$f(x,y) = \left \{ \begin{matrix} (x+y) & \mbox{ } 0 \leq x \leq 1\\
 Inicialmente debemos de verificar que se trata de una función de densidad 
 
 
- $\displaystyle\int_{0}^{1} \displaystyle\int_{0}^{1} (x+y) \:dx \:dy  = \displaystyle\int_{0}^{1}  \Bigg( \dfrac{x^{2}}{2}+ yx \Bigg|_{0}^{1}  \Bigg) \:dy$
- 
- <br/>
- 
- $\displaystyle\int_{0}^{1}  \Bigg( \dfrac{{1}}{2}+ y \Bigg) \:dy =\Bigg(\dfrac{1}{2}y + \dfrac{y^{2}}{2} \Bigg|_{0}^{1} \Bigg) = \dfrac{1}{2}\times  \dfrac{1}{2} = 1$
+$\displaystyle\int_{0}^{1} \displaystyle\int_{0}^{1} (x+y) \:dx \:dy  = \displaystyle\int_{0}^{1}  \Bigg( \dfrac{x^{2}}{2}+ yx \Bigg|_{0}^{1}  \Bigg) \:dy$
+
+<br/>
+
+$\displaystyle\int_{0}^{1}  \Bigg( \dfrac{{1}}{2}+ y \Bigg) \:dy =\Bigg(\dfrac{1}{2}y + \dfrac{y^{2}}{2} \Bigg|_{0}^{1} \Bigg) = \dfrac{1}{2}\times  \dfrac{1}{2} = 1$
 
 
 <br/><br/>
@@ -317,7 +317,7 @@ knitr::include_graphics("img/Figura318.png")
 
 ### **Densidad marginales**
 
-En el caso continuo- continuo las distribuciones de densidad marginales se pueden encontrar a partir de la funcion de densidad conjunta 
+En el caso continuo- continuo las distribuciones de densidad marginales se pueden encontrar a partir de la función de densidad conjunta 
 
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -347,20 +347,20 @@ $$g(x) = \displaystyle\int_{0}^{1} (x + y) \:dy = \bigg( xy + \dfrac{y^{2}}{2} \
 <br/>
 
 $$g(x) = \left \{ \begin{matrix} \bigg(x+ \dfrac{1}{2}\bigg) & \mbox{ } 0 \leq x \leq 1\\ 
-                                  &\\
-                                   0 & \mbox{ en otro caso }\end{matrix}\right.  $$
+	&\\
+	0 & \mbox{ en otro caso }\end{matrix}\right.  $$
 
 
 <br/><br/>
 
- $$h(y)=\displaystyle\int_{0}^{1} (x+y)\:dx =\bigg(\dfrac{1}{2} + yx \bigg) \Bigg|_{0}^{1} = \bigg(\dfrac{1}{2} + y \bigg)$$
- 
+$$h(y)=\displaystyle\int_{0}^{1} (x+y)\:dx =\bigg(\dfrac{1}{2} + yx \bigg) \Bigg|_{0}^{1} = \bigg(\dfrac{1}{2} + y \bigg)$$
+
 
 <br/><br/>
 
 $$h(y) = \left \{ \begin{matrix} \bigg(y + \dfrac{1}{2} \bigg) & \mbox{ } 0 \leq y \leq 1\\ 
-                                  &\\
-                                   0 & \mbox{ en otro caso }\end{matrix}\right.  $$
+	&\\
+	0 & \mbox{ en otro caso }\end{matrix}\right.  $$
 
 
 <br/><br/>
@@ -389,7 +389,7 @@ Propiedades de la función de distribución conjunta
 * $F_{_{X,Y}}(\infty,\infty)=1$
 
 * $F_{_{X,Y}}(\infty,y)=F_{Y}(y)F_{_{X,Y}}(x,\infty)=F_{X}(x)$
-	
+
 $P(x_1<X\leq x_2, y_1<Y\leq y_2)=F_{_{X,Y}}(x_2,y_2)-F_{_{X,Y}}(x_1,y_2)-F_{_{X,Y}}(x_2,y_1)+F_{_{X,Y}}(x_1,y_1)$	
 
 Para todo par de variables aleatorias continuas, si $F_{_{XY}}$ tiene derivadas parciales de orden superior a dos, se cumple que:
@@ -465,9 +465,9 @@ $$COV[X,Y]=E[XY]-E[X]E[Y]$$
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
- **Correlación** entre las variables $X$,$Y$
-	$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
-	La correlación es una medida que mide el grado de asociación lineal entre dos variables. $-1 \leq \rho \leq 1$
+**Correlación** entre las variables $X$,$Y$
+$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
+La correlación es una medida que mide el grado de asociación lineal entre dos variables. $-1 \leq \rho \leq 1$
 </div>
 
 <br/><br/>
@@ -497,7 +497,7 @@ knitr::include_graphics("img/Rho2.png")
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 **Independencia de variables**
-	
+
 Sean $X$ y $Y$ dos variables aleatorias discretas o continuas con función de probabilidad conjunta $f(x,y)$ y funciones de probabilidad marginales $g(x)$ y $h(y)$, respectivas, entonces se dice que las variables X y Y son estadísticamente independientes si:
 
 $$f(x,y)= g(x) h(y) $$

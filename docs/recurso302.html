@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -416,9 +419,9 @@ mediante un intervalo de confianza.</p>
 <p><br/><br/></p>
 <p>El método de momentos fue propuesto por Karl Pearson al rededor de
 1895, pensado en sus inicios en contexto descriptivo, analizando las
-distribuciones de probabilidad y aproximándolas al sistema de curvas que
-llevan su nombre. Posteriormente este concepto fue modificado por R.A.
-Fisher en 1920. El método consiste en estimar un parámetro de una
+distribuciones de probabilidad y aprisionándolas al sistema de curvas
+que llevan su nombre. Posteriormente este concepto fue modificado por
+R.A. Fisher en 1920. El método consiste en estimar un parámetro de una
 distribución igualando sus momentos teóricos o poblacionales, si
 existen, con los correspondientes momentos muestrales.</p>
 <p>Para mostrar este método es necesario definir el concepto de
@@ -455,7 +458,7 @@ dx \]</span></td>
 x_{i}^{k} \]</span></p>
 <p><br/></p>
 <p>El método de momentos supone que los momentos tanto poblacionales
-como muestrales son conocidos, y por lo tanto tambien la función de
+como muestrales son conocidos, y por lo tanto también la función de
 probabilidad.</p>
 <p>A continuación se relacionan algunos de estos momentos
 poblacionales:</p>
@@ -524,7 +527,7 @@ class="math inline">\(\displaystyle\frac{(b-a)^{2}}{12}\)</span></td>
 </table>
 <p><br/></p>
 <p>Nota: Existe una relación entre las distribuciones Poisson y
-exponencia.Se podrían dar en función de <span
+exponencial.Se podrían dar en función de <span
 class="math inline">\(\lambda\)</span>, haciendo <span
 class="math inline">\(\beta=\dfrac{1}{\lambda}\)</span></p>
 <p><br/><br/></p>
@@ -570,9 +573,9 @@ class="math inline">\(\mu^{2}=m^{2}\)</span>.</p>
 <p>entonces igualamos estos dos momentos poblacionales con sus
 respectivos momentos muestrales quedando la igualdad</p>
 <p><span class="math display">\[\begin{eqnarray*}
-V[X]&amp;=&amp; \mu^{2}-(\mu^{1})^{2}\\
-      &amp;=&amp;m^{2}-(m^{1})^{2}\\
-      &amp;=&amp;\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}
+    V[X]&amp;=&amp; \mu^{2}-(\mu^{1})^{2}\\
+    &amp;=&amp;m^{2}-(m^{1})^{2}\\
+    &amp;=&amp;\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}
 \end{eqnarray*}\]</span></p>
 <p>podemos representar la varianza por <span
 class="math inline">\(\sigma^{2}\)</span> y obtenemos</p>
@@ -645,7 +648,7 @@ estadístico britanico Sir R.A. Fisher, afirmando que el estimador será
 el valor del parámetro que maximice la función de verosimilitud <span
 class="math inline">\(L(\theta)\)</span>. \ \</p>
 <p>La función de verosimilitud <span
-class="math inline">\(L(\theta)\)</span> corresponde a la funcion de
+class="math inline">\(L(\theta)\)</span> corresponde a la función de
 distribución conjunta de variables aleatorias independientes con igual
 función de distribución. Estas variables aleatorias corresponden a las
 variables que conforman la muestra. % <span
@@ -681,7 +684,7 @@ objetivo, por ejemplo <span class="math inline">\(\mu\)</span>.</p>
 <p>Este proceso presenta algunas dificultades de cálculo que son
 atenuadas mediante la premisa de que el <em>máximo de la función <span
 class="math inline">\(L\)</span> corresponde a los mismos máximos de la
-funcion <span class="math inline">\(\ln(L)\)</span></em>, la cual es más
+función <span class="math inline">\(\ln(L)\)</span></em>, la cual es más
 sencilla de derivar. Este procedimiento es posible debido a que la
 función <span class="math inline">\(L\)</span> es creciente.</p>
 <p>Convertimos <span class="math inline">\(L\)</span> en <span
@@ -748,7 +751,7 @@ tiene la propiedad tal que la suma de <span
 class="math inline">\(n\)</span> variables aleatorias <span
 class="math inline">\(\chi^{2}\)</span> con <span
 class="math inline">\(n-1\)</span> grados de libertad. La razón de una
-variable con distribución normal estándar y la raiz cuadrada de una
+variable con distribución normal estándar y la raíz cuadrada de una
 variable chi-cuadrado, dividida por sus grados de libertad originan una
 variable con distribución <strong>t-student</strong>. Por último la
 razón de dos variables con distribución chi-cuadrado, divididas cada una
@@ -771,9 +774,9 @@ class="math display">\[\chi^{2}=\frac{(n-1)S^{2}}{\sigma^{2}}=\sum_{i=1}^{n}\fra
 \Big(\frac{x_{i}-\bar{x}}{\sigma}\Big)^{2} \]</span> tiene una
 distribución chi-cuadrado con <span class="math inline">\(v=n-1\)</span>
 grados de libertad.</p>
-<p>Nota: Esta función fue creada por Karl Pearson cientifico inglés
-(1857-1936) y su función de distribución y su represntación gráfica
-estan dadas por:</p>
+<p>Nota: Esta función fue creada por Karl Pearson científico inglés
+(1857-1936) y su función de distribución y su representación gráfica
+están dadas por:</p>
 <p><span
 class="math display">\[f(x)=\frac{1}{2^{(v/2)}\Gamma(v/2)}x^{(v/2)-1}\exp\{-x/2\}
 ,\hspace{.3cm} x&gt;0\]</span> <br/><br/></p>
@@ -786,9 +789,9 @@ parámetros <span class="math inline">\(\alpha=\frac{v}{2}\)</span> y
 <div id="distrución-t-student" class="section level2">
 <h2><strong>Distrución t-student</strong></h2>
 <p><br/></p>
-<p>Esta función nace de la relación entre una variable con distrución
-normal estandar y la raiz cuadrada de una variable con distribución
-chi-cuadrado Sea Z una variable con distribución normal estandar y V una
+<p>Esta función nace de la relación entre una variable con distribución
+normal estándar y la raíz cuadrada de una variable con distribución
+chi-cuadrado Sea Z una variable con distribución normal estándar y V una
 variable con distribución chi-cudadrado con v grados de libertad,
 entonces la variable aleatoria T se distribuye t-student con v grados de
 libertad</p>
@@ -796,12 +799,12 @@ libertad</p>
 t_{v}\]</span></p>
 <p>Nota: Esta función de distribución fue propuesta por William Sealy
 Gosset en 1908. Gosset trabajaba en una fábrica de cerveza de prppiedad
-de Guiness, quien prohibia a sus empleados la publicación de artículos
+de Guiness, quien prohibía a sus empleados la publicación de artículos
 cientificos debido a la difución previa de secretos industriales. Debido
-a esta prohibición Gosset publicaba sus artículos con el seudonimo de
+a esta prohibición Gosset publicaba sus artículos con el seudónimo de
 Student.(Wikipedia.org)</p>
 <p>La función de probabilidad de distribución t-student y su
-represntación gráfica están dadas por:</p>
+representación gráfica están dadas por:</p>
 <p><span
 class="math display">\[f(x)=\frac{\Gamma[(v+1)/2]}{\Gamma[v/2]\sqrt{\pi
 v}}\Bigg(1+\frac{x^{2}}{v} \Bigg)^{-(v+1)/2}, \hspace{.3cm} -\infty&lt;
@@ -830,7 +833,7 @@ class="math inline">\(v=n-1\)</span> grados de libertad</p>
 <p><br/></p>
 <p>Si <span class="math inline">\(S_{1}^{2}\)</span> y <span
 class="math inline">\(S_{2}^{2}\)</span> son las dos varianzas de
-muestras aleatorias independientes de tanaños <span
+muestras aleatorias independientes de tamaños <span
 class="math inline">\(n_{1}\)</span> y <span
 class="math inline">\(n_{2}\)</span> tomadas de poblaciones normales con
 varianzas <span class="math inline">\(\sigma_{1}^{2}\)</span> y <span
@@ -842,15 +845,15 @@ class="math display">\[F=\frac{S_{1}^{2}/\sigma_{1}^{2}}{S_{2}^{2}/\sigma_{1}^{2
 <p>tiene una distribución F con grados de libertad <span
 class="math inline">\(v_{1}=n_{1}-1\)</span> y <span
 class="math inline">\(v_{2}=n_{2}-1\)</span>\</p>
-<p>Nota: Ronald Aylmer Fisher (1890-1962) cientifico, matemático,
-estadístico, biólogo evolutivo y genet?sta inglés fue el creador de la
+<p>Nota: Ronald Aylmer Fisher (1890-1962) científico, matemático,
+estadístico, biólogo evolutivo y genetista inglés fue el creador de la
 distribución F. Su función de distribución y su representación gráfica
-estan dadas por:</p>
+están dadas por:</p>
 <p><span class="math display">\[f(x)=\displaystyle\frac{\Gamma
 \Bigg[\displaystyle\frac{v_{1}+v_{2}}{2}\Bigg]\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)^{v_{1}/2}
 x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma
 \Bigg[\displaystyle\frac{v_{2}}{2}\Bigg]
-\Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}},
+    \Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}},
 \hspace{.3cm} x&gt;0 \]</span></p>
 <p><img src="recurso302_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p><br/><br/></p>
@@ -861,21 +864,22 @@ x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma
 <p><span class="math display">\[ \bar{X}=\frac{1}{n}\sum_{i=1}^{n}
 X_{i}\]</span></p>
 <p>Al hablar de distribución de probabilidad de la media muestral,
-implicitamente estamos afirmando que <span
+implícitamente estamos afirmando que <span
 class="math inline">\(\bar{X}\)</span>, es una variable aleatoria. De
 esta variable a continuación estudiaremos sus principales
-caracteristicas.</p>
+características.</p>
 <p>Para verificar las propiedades de este estimador podemos hacer uso de
 las propiedades del valor esperado de la siguiente manera:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-E\big[\bar{X}\big] &amp;=&amp; E\Bigg[
+    E\big[\bar{X}\big] &amp;=&amp; E\Bigg[
 \frac{1}{n}\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\Bigg]\\  
-&amp;=&amp; \frac{1}{n} E\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\\
-&amp;&amp; \frac{1}{n} \Bigg[E\big[X_{1}\big]+E\big[X_{2}\big]+\cdots +
+    &amp;=&amp; \frac{1}{n} E\Big[X_{1}+X_{2}+\cdots + X_{n}\Big]\\
+    &amp;&amp; \frac{1}{n}
+\Bigg[E\big[X_{1}\big]+E\big[X_{2}\big]+\cdots +
 E\big[X_{n}\big]\Bigg]\\
-&amp;=&amp;\frac{1}{n} \big[\mu + \mu \cdots + \mu \big] \\
-&amp;=&amp; \frac{1}{n} n\mu \\
-&amp;=&amp; \mu
+    &amp;=&amp;\frac{1}{n} \big[\mu + \mu \cdots + \mu \big] \\
+    &amp;=&amp; \frac{1}{n} n\mu \\
+    &amp;=&amp; \mu
 \end{eqnarray*}\]</span></p>
 <p>por tanto:</p>
 <p><span class="math display">\[\mu = \mu_{\bar{X}}\]</span></p>
@@ -884,11 +888,12 @@ a la media de la variable.</p>
 <p>Con la varianza ocurre algo similar al utilizar las propiedades de la
 varianza:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-V[\bar{X}]&amp;=&amp;V\Bigg[\frac{1}{n} \sum_{i=1}^{n} x_{i}\Bigg] \\
-&amp;=&amp;\dfrac{1}{n^{2}} V\big[X_{1}+X_{2}+\cdots + X_{n}\big] \\
-&amp;=&amp; \dfrac{1}{n^{2}} V[X_{1}]+V[X_{2}]+\cdots +V[X_{n}]\\
-&amp;=&amp; \dfrac{1}{n^{2}} n\sigma^{2}\\
-&amp;=&amp; \dfrac{\sigma^{2}}{n}
+    V[\bar{X}]&amp;=&amp;V\Bigg[\frac{1}{n} \sum_{i=1}^{n} x_{i}\Bigg]
+\\
+    &amp;=&amp;\dfrac{1}{n^{2}} V\big[X_{1}+X_{2}+\cdots + X_{n}\big] \\
+    &amp;=&amp; \dfrac{1}{n^{2}} V[X_{1}]+V[X_{2}]+\cdots +V[X_{n}]\\
+    &amp;=&amp; \dfrac{1}{n^{2}} n\sigma^{2}\\
+    &amp;=&amp; \dfrac{\sigma^{2}}{n}
 \end{eqnarray*}\]</span></p>
 <p>Se concluye que:</p>
 <span class="math display">\[V[\bar{X}] = \dfrac{\sigma^{2}}{n}\]</span>
@@ -916,8 +921,8 @@ muestra</li>
 <p><br/><br/></p>
 <p>En este caso la media y la varianza de esta población son: <span
 class="math display">\[\begin{eqnarray*}
-\mu_{_{\bar{X}}}&amp;=&amp; \dfrac{1}{10}(15+20+...45) = 30 \\
-\sigma^{2}_{_{\bar{X}}}&amp;=&amp; \dfrac{1}{10}
+    \mu_{_{\bar{X}}}&amp;=&amp; \dfrac{1}{10}(15+20+...45) = 30 \\
+    \sigma^{2}_{_{\bar{X}}}&amp;=&amp; \dfrac{1}{10}
 \Big[\big(15-30\big)^{2} +...+\big(45-30\big)^{2} \Big]=75
 \end{eqnarray*}\]</span></p>
 <p>La diferencia presentada en la varianza, se debe a que se trata de
@@ -936,7 +941,7 @@ población finita : fcpf = } \dfrac{(N-n)}{(N-1)}\]</span></p>
 <p><strong>Ejemplo</strong></p>
 <p><br/></p>
 <p>Cierto tipo de batería para automóviles dura un promedio de 1110 días
-con una desviación estandar de 80 días. Si se eligen n=400 de estas
+con una desviación estándar de 80 días. Si se eligen n=400 de estas
 baterías de manera aleatoria, encuentre la probabilidad de que el
 <strong>promedio del tiempo de duración</strong> sea mayor a 1120 días.
 Como <span class="math inline">\(X \sim N(\mu=1110,
@@ -944,13 +949,13 @@ Como <span class="math inline">\(X \sim N(\mu=1110,
 anteriormente podemos afirmar que: <span class="math inline">\(\bar{X}
 \sim N(\mu=1110, \sigma_{\bar{X}}=80/\sqrt{400})\)</span></p>
 <p><span class="math display">\[\begin{eqnarray*}
-P(\bar{x} &gt; 1120) &amp;=&amp;
+    P(\bar{x} &gt; 1120) &amp;=&amp;
 P\Bigg(\dfrac{\bar{x}-\mu}{\sigma/\sqrt{n}} &gt;
 \dfrac{1120-1110}{80/\sqrt{400}}\Bigg)\\
-&amp;=&amp; P(Z &gt; 2.5)\\
-&amp;=&amp; 1-P(Z &lt; 2.5)\\
-&amp;=&amp; 1-0.9938 \\
-&amp;=&amp; 0.0068
+    &amp;=&amp; P(Z &gt; 2.5)\\
+    &amp;=&amp; 1-P(Z &lt; 2.5)\\
+    &amp;=&amp; 1-0.9938 \\
+    &amp;=&amp; 0.0068
 \end{eqnarray*}\]</span></p>
 <p><br/><br/><br/><br/></p>
 </div>
@@ -958,7 +963,7 @@ P\Bigg(\dfrac{\bar{x}-\mu}{\sigma/\sqrt{n}} &gt;
 <h2><strong>Proporción muestral</strong></h2>
 <p><br/></p>
 <p>Al igual que en la media podemos realizar la verificación las
-caracteristicas de la proporción</p>
+características de la proporción</p>
 <p><span
 class="math display">\[E[\hspace{.1cm}\widehat{p}\hspace{.1cm}]=
 p\]</span></p>
@@ -977,12 +982,12 @@ class="math inline">\(p\)</span> y varianza <span
 class="math inline">\(p(1-p)/n\)</span>. De esta manera podemos hallar
 la probabilidad solicitada:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-P(\widehat{p}&gt;0.82) &amp;=&amp;
+    P(\widehat{p}&gt;0.82) &amp;=&amp;
 P\Bigg(\dfrac{\widehat{p}-p}{(p(1-p)/\sqrt{n}} &gt; \dfrac{0.82 -
 0.84}{\sqrt{(0.85 \times 0.15)/500}}\Bigg) \\
-&amp;=&amp; P\big(Z &gt; -1.878 \big) \\
-&amp;=&amp; 1 - P(Z &lt; -1.88)\\
-&amp;=&amp; 1-0.0301
+    &amp;=&amp; P\big(Z &gt; -1.878 \big) \\
+    &amp;=&amp; 1 - P(Z &lt; -1.88)\\
+    &amp;=&amp; 1-0.0301
 \end{eqnarray*}\]</span></p>
 <p><br/><br/></p>
 </div>

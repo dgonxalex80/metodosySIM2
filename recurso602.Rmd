@@ -5,25 +5,408 @@ css: style.css
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
-## R Markdown
+<br/><br/>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+</br></br>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+# **Variables discretas**
+
+En el caso de las variables discretas la función de distribución de probabilidad $f(x)$ debe cumplir las siguientes propiedades
+
++ $f(x) = P(X=x) > 0$,  la probabilidad es un valor mayor a cero
+
++ $\sum_{R_X} f(x) = 1$, la suma de todas las probabilidades es igual a uno
+
+<br/>
+
+En este caso se puede utilizar la función sumatoria  `sum(x, na.rm = FALSE)`, donde `x` es un vector y `na.rm` indica si el vector tienen datos faltantes.
+
+<br/><br/>
+
+**Ejemplo** 
+
+Para la función $f(x)$   
+
+$$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\displaystyle\binom{40}{x}(0.7)^{x}(0.3)^{40-x} & \mbox{si }	x=0,1,2,\ldots,40\\ 
+				& \\
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+<br/>
+
+```{r}
+# declaracion de la funcion
+fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+
+# grafico de la funcion
+plot(w, fw(w), pch=19, col="#BC2B6A", las=1)
+grid()
+
 ```
 
-## Including Plots
+<br/>
 
-You can also embed plots, for example:
+Para verificar que la suma de todas las probabilidades es igual a uno 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+sum(fw(w))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<br/>
+
+Para calcular la probabilidad $P(20 \leq X \leq 30)$
+
+```{r}
+sum(fw(20:30))
+```
+
+<br/><br/><br/>
+
+### **Valor esperado**
+
+<br/>
+
+```{r}
+
+fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+Ex=sum(fw(w)*w)
+cat("E[X] = ",Ex)
+```
+
+<br/>
+
+### **Varianza**
+
+```{r}
+
+fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+Ex=sum(fw(w)*w)
+Ex2=sum(fw(w)*w^2)
+Vx=Ex2-Ex^2
+cat("V[X] = ",Vx)
+```
+
+
+<br/><br/>
+
+# **Variables continuas**
+
+## **Integración** 
+
+El concepto de integración se utiliza en probabilidad para determinar el área bajo la curva de una función de densidad $f(x)$ para una variable aleatoria continua.
+
+Dos de las propiedades de una $f(x)$ son:
+
++  $\displaystyle\int\limits_{-\infty}^{+\infty} \dfrac{1}{4} f(x) \:dx = 1$
+
++ $P(a \leq X \leq b) = \displaystyle\int\limits_{a}^{b} f(x) \:dx$
+
+<br/><br/>
+
+Estas verificaciones se pueden realizar en R con dos instrucciones: 
+ 
+ + Construcción de la función en R
+ + Realizar la integral : para ello utilizamos la función `integrate` que tiene los parámetros, `integrate( f, lower, upper)` 
+    + `f`: la función
+    + `lower` : limite inferior  . Puede ser un número o `-Inf`
+    + `upper` : limite superior  . Puede ser un número o `+Inf`
+ 
+ 
+ `integrate(function(x), lower = 0, upper = 1)`
+ 
+<br/><br/>
+ 
+**Ejemplo**
+
+Para la función $f(x)$   
+
+
+$$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
+				& \\
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+<br/>
+
+$$P(X < 5)$$				
+
+<br/>
+ 
+```{r}
+# declaracion de la funcion
+fx=function(x){1/4*exp(-x/4)}
+
+# representación gráfica de la función
+x=0:20
+plot(x,fx(x), type="l", col="#BC2B6A", lwd=5)
+
+# área de integración
+x1=seq(0,5,0.01)
+f1=fx(x1)
+polygon(c(0,x1,5),c(0,f1,0),col="skyblue")
+
+
+
+
+```
+
+<br/>
+
+```{r}
+# integral entre 5 y 15 : P( X < 5)
+integrate(fx, 0,5)
+
+```
+
+<br/>
+
+## **Valor esperado**
+
+$$E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$$
+<br/>
+
+En este caso la función se multiplica por $x$
+
+```{r}
+Mx=function(x){1/4*exp(-x/4)*x}
+Ex=integrate(Mx, 0, Inf)
+cat("E[X] = ", Ex$value,"\n")
+```
+
+<br/>
+
+## **Varianza**
+
+$$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$ 
+
+
+```{r}
+fx=function(x){1/4*exp(-x/4)}
+Mx1=function(x){1/4*exp(-x/4)*x}
+Mx2=function(x){1/4*exp(-x/4)*x^2}
+Ex=integrate(Mx1, lower=0,upper=Inf)
+Ex2=integrate(Mx2, lower=0,upper=Inf)
+
+cat("V[X] = ", Ex2$value-Ex$value^2)
+```
+
+<br/>
+
+```{r}
+fx=function(x){1/4*exp(-x/4)}
+Mx1=function(x){1/4*exp(-x/4)*x}
+Mx2=function(x){1/4*exp(-x/4)*x^2}
+Ex=integrate(Mx1, lower=0,upper=Inf)
+Ex2=integrate(Mx2, lower=0,upper=Inf)
+cat("E[X] = ", Ex$value,"\n")
+cat("V[X] = ", Ex2$value-Ex$value^2)
+```
+
+<br/><br/>
+
+
+# **Caso Discreto-Discreto** 
+
+<br/>
+
+**Ejemplo**
+
+El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un dia y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por :
+
+|    |        |       |  $x$ |      |
+|:--:|:------:|:-----:|:----:|:----:|
+|    |$f(x,y)$| 1     |  2   |  3   |
+|$y$ |  1     | 0.05  | 0.05 | 0.10 |
+|    |  2     | 0.050 | 0.10 | 0.35 |
+|    |  3     | 0     | 0.20 | 0.10 |
+
+<br/><br/>
+
+Función de distribución de probabilidad conjunta
+
+```{r}
+fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy
+sum(fxy)
+```
+
+<br/>
+
+### **Funciones distribución marginales**
+
+```{r}
+fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c("1","2","3","h(y)")
+rownames(fxy)=c("1","2","3","g(x)")
+fxy
+```
+
+<br/>
+
+### **Representación gráfica de $f(x,y)$**
+
+Para construir la gráfica de X y Y debemos crear los vectores
+
+|      |      |      |      |      |      |      |      |      |      |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|x     | 1    |     1|     1|     2|     2|     2|     3|     3|     3|
+|y     | 1    |     2|     3|     1|     2|     3|     1|     2|     3|
+|fxy   |  0.15|  0.05|     0|     0|  0.20|  0.35|     0|  0.10|  0.15|
+
+
+
+```{r}
+x=1:3
+y=1:3
+x=rep(x,each=3)
+y=rep(y,3)
+fxy=c(0.15,0.05,0, 0,0.20,0.35, 0,0.10,0.15)
+
+plot3D::scatter3D(x, y, fxy,
+          colvar = NULL, 
+          col = "blue",
+          pch = 19, cex = 1.5,
+          phi = 20, theta = 60,  
+          zlab="f(xy)", xlab="x", ylab="y",
+          bty = "b2",
+          col.panel ="steelblue",
+          col.grid = "darkblue",
+          add_lines=TRUE)
+
+
+```
+
+<br/>
+
+### **Funciones de distribución marginal**
+
+```{r}
+fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c("1","2","3","h(y)")
+rownames(fxy)=c("1","2","3","g(x)")
+fxy
+```
+
+<br/>
+
+### **Covarianza y Correlación**
+
+```{r, warning=FALSE, message=FALSE}
+x=c(0,1,2) 
+y=c(0,1,2)
+fxy=matrix(c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15), ncol=3 )
+
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c("1","2","3","h(y)")
+rownames(fxy)=c("1","2","3","g(x)")
+
+fxy=as.table(fxy)
+gx=fxy[,4]
+hy=fxy[4,]
+
+
+Ex=sum(x*gx)
+Ex2=sum(x^2*gx)
+Vx=Ex2-(Ex)^2
+
+Ey=sum(y*hy)
+Ey2=sum(y^2*hy)
+Vy=Ey2-(Ey)^2
+
+x=rep(x,each=3)
+y=rep(y,3)
+fxy=c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15)
+Exy=sum(x*y*fxy)
+CovXY=Exy-Ex*Ey
+Rho=CovXY/sqrt(Vx*Vy)
+
+
+```
+
+<br/>
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+
+cat("E(X)    = ", Ex, "\n")
+cat("E(X2)   = ", Ex2, "\n")
+cat("V(X)    = ", Vx, "\n")
+cat("E(Y)    = ", Ey, "\n")
+cat("E(Y2)   = ", Ey2, "\n")
+cat("V(Y)    = ", Vy, "\n")
+
+cat("E(XY)   = ", Exy, "\n")
+cat("Cov(XY) = ", CovXY, "\n")
+cat("Rho     = ", Rho, "\n")
+```
+
+
+
+<br/><br/><br/>
+
+# **Caso Continuo-continuo**  
+
+<br/>
+
+**Ejemplo**
+
+
+Una empresa prestadora se servicios a domicilio tienen dos lineas telefónicas para que los clientes puedan realizar sus pedidos. Sea X y Y la proporción del tiempo en que las lineas se encuentran ocupadas. La función de densidad conjunta que modela $f(x,y)$ esta dada por:
+
+$$f(x,y) = \left \{ \begin{matrix} \dfrac{3}{2}(x^{2}+y^{2}) & \mbox{ } 0 \leq x \leq 1\\ 
+                                     & \mbox{ } 0 \leq y \leq 1 \\
+                                     &\\
+                                   0 & \mbox{ en otro caso }\end{matrix}\right.  $$
+<br/><br/>
+
+Inicialmente se verifica la condición :
+
+ $\displaystyle\int_{0}^{1} \displaystyle\int_{0}^{1} \dfrac{3}{2}(x^{2}+y^{2}) \:dx \:dy  = 1$
+ 
+
+
+```{r}
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))
+```
+
+basado en : http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf
+
+
+<br/>
+
+Ahora su representación gráfica
+
+```{r}
+x=seq(0,1,length=10)
+y=seq(0,1,length=10)
+fxy=function(x,y){3/2*(x^2+y^2)}
+z=outer(x, y, fxy)
+persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = "#FF7F00",
+      xlab = "x", ylab ="y", zlab = "f(x,y)",
+      main=" ", col.main="blue")
+
+```
+
+Nota: basada en : https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html
+
+<br/><br/>
+
+
+

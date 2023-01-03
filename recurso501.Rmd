@@ -68,7 +68,7 @@ La hipótesis $Ho$ se contrasta con la hipótesis Ha, y ésta última correspond
 
 ## **Estadístico de prueba  (EdeP)**  
 
-Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es tambien una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
+Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es también una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
 
 Para una muestra determinada se obtiene un valor del estadístico de prueba, a partir del cálculo y se determina el rechazo o no, de la hipótesis nula.
 
@@ -108,13 +108,13 @@ Existen dos situaciones en las que se comenten errores después de tomar una dec
 
 <br/><br/>
 
-**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como simil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
+**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como símil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
 $$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
 
 
 **Ejemplo**
 
-Para ilustrar el error tipo I, podeos acudir aun evento ocurrido a una estudiante que después de realizar una donación de sangre fue requerida por la clinica benefactora, pues el examen que le habían practicado a la sangre donada, presentaba signos de estar infectada por hepatitis c. Esto prendió las alarmas en la casa y fue llevada por la familia a que se le realizaran otros exámenes para confirmar el diagnostico inicial. Las segundas pruebas evidenciaron que se trataba de un error. Este caso constituye un caso de falso positivo (Se diagnostica como enferan, cuando en verdad esta sana) 
+Para ilustrar el error tipo I, podemos acudir aun evento ocurrido a una estudiante que después de realizar una donación de sangre fue requerida por la clínica benefactora, pues el examen que le habían practicado a la sangre donada, presentaba signos de estar infectada por hepatitis c. Esto prendió las alarmas en la casa y fue llevada por la familia a que se le realizaran otros exámenes para confirmar el diagnostico inicial. Las segundas pruebas evidenciaron que se trataba de un error. Este caso constituye un caso de falso positivo (Se diagnostica como enferma, cuando en verdad esta sana) 
 
 
 <br/><br/>
@@ -126,7 +126,7 @@ $$P(\text{No rechazar} Ho | Ho \text{ es falsa}) $$
 
 **Ejemolo**
 
-Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadunidence Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de dopin, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practivados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo. 
+Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadounidense Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de dopin, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practicados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo. 
 
 <br/><br/>
 

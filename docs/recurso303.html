@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -410,20 +413,20 @@ $(document).ready(function () {
 <p><br/><br/></p>
 <p>Los estimadores son variables aleatorias que toman su valor de los
 datos obtenidos en una muestra y que siguen una distribución conocida
-(distribuciones muestrales), pero además poseen propiedade deseables
+(distribuciones muestrales), pero además poseen propiedades deseables
 como son : insesgadez, eficiencia, consistencia entre otras. Con la
 siguiente figura se representa de manera figurativa lo que pueden ser
 estas propiedades</p>
 <p><img src="img/estimador.png" width="70%" style="display: block; margin: auto;" /></p>
-<p>En el centro se ubica el parámeto desconocido y que tratamos de
+<p>En el centro se ubica el parámetro desconocido y que tratamos de
 estimar utilizando para ello el estimador apropiado (figurativamente el
 arma que utilizamos). En la figura 1 tenemos el resultado de un arma
 (estimador 1) que aunque tiene una alta precisión ( poca varianza),
-presenta un desvio del centro (sesgo). En la segunda figura se presenta
+presenta un desvío del centro (sesgo). En la segunda figura se presenta
 el resultado de otra arma (estimador 2) que al igual que la primera que
-presenta un desvio del centro (sesgo), presenta una mayor varianza. La
+presenta un desvío del centro (sesgo), presenta una mayor varianza. La
 figura 3 representa el arma ideal (no tiene sesgo y poca varianza) y por
-último la figura 4 que en promedio diriamos que está centrada (no
+último la figura 4 que en promedio diríamos que está centrada (no
 sesgo), presenta una variación alta.</p>
 <p>Estas caractaristicas ahora en los estimadores se presentan a
 continuación:</p>
@@ -435,7 +438,7 @@ continuación:</p>
 class="math inline">\(\widehat{\theta_{3}}\)</span> se considera
 insesgado si <span class="math inline">\(E[\widehat{\theta_{3}}] =
 \theta\)</span></p>
-<p>Está reprsentado por las figuras 3 y 4 que presentan un
+<p>Está representado por las figuras 3 y 4 que presentan un
 comportamiento que en promedio aciertan al centro</p>
 <p><br/><br/></p>
 </div>
@@ -488,21 +491,19 @@ class="math inline">\(X_{4}\)</span>)</p>
 class="math inline">\(\widehat{\theta}_{3}\)</span> es el mejor
 estimador de los tres, siendo insesgado y eficiente</p>
 <p><br/><br/><br/><br/></p>
-<p>Primero verifiquemos cuales de los estiamdores son insesgados, para
+<p>Primero verifiquemos cuales de los estimadores son insesgados, para
 ello debemos obtener sus valores esperados:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-E\big[\widehat{\theta_{1}}\big] &amp; = &amp;
+    E\big[\widehat{\theta_{1}}\big] &amp; = &amp;
 E\Bigg[\dfrac{1}{6}(X_{1}+X_{2}) \dfrac{1}{3}(X_{3}+X_{4})\Bigg] \\
-                      &amp; = &amp;
-\dfrac{1}{6}E\bigg[(X_{1}+X_{2})\bigg] \dfrac{1}{3}
+    &amp; = &amp; \dfrac{1}{6}E\bigg[(X_{1}+X_{2})\bigg] \dfrac{1}{3}
 E\bigg[(X_{3}+X_{4})\bigg]\\
-                      &amp; = &amp;  \dfrac{1}{6}\bigg[
+    &amp; = &amp;  \dfrac{1}{6}\bigg[
 E\big[X_{1}\big]+E\big[X_{2}\big]\bigg] + \dfrac{1}{3} \bigg[
 E\big[(X_{3}\big]+E\big[X_{4}\big]\bigg]\\
-                      &amp; = &amp; \dfrac{1}{6}\bigg[ \beta+
-\beta  \bigg] + \dfrac{1}{3} \bigg[ \beta+ \beta \bigg]\\
-                      &amp; = &amp; \dfrac{2 \beta}{6} + \dfrac{2
-\beta}{3}  = \beta
+    &amp; = &amp; \dfrac{1}{6}\bigg[ \beta+ \beta  \bigg] + \dfrac{1}{3}
+\bigg[ \beta+ \beta \bigg]\\
+    &amp; = &amp; \dfrac{2 \beta}{6} + \dfrac{2 \beta}{3}  = \beta
 \end{eqnarray*}\]</span></p>
 <p>Concluimos que <span
 class="math inline">\(\widehat{\theta_{1}}\)</span> es un estimador
@@ -511,25 +512,24 @@ insesgado</p>
 <ul>
 <li><p><span class="math inline">\(\widehat{\theta_{2}}\)</span> es un
 estimador insesgado</p></li>
-<li><p><span class="math inline">\(\widehat{\theta_{3}}\)</span> tambien
+<li><p><span class="math inline">\(\widehat{\theta_{3}}\)</span> también
 es un estimador insesgado</p></li>
 </ul>
 <p>Para determinar el estimador eficiente se deben encontrar las
 varianza de los estimadores, para lo cual procedemos de la misma
 forma:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-V\big[\widehat{\theta_{1}}\big] &amp; = &amp;
+    V\big[\widehat{\theta_{1}}\big] &amp; = &amp;
 V\Bigg[\dfrac{1}{6}(X_{1}+X_{2}) \dfrac{1}{3}(X_{3}+X_{4})\Bigg] \\
-                      &amp; = &amp;
-\dfrac{1}{36}V\bigg[(X_{1}+X_{2})\bigg] + \dfrac{1}{9}
+    &amp; = &amp; \dfrac{1}{36}V\bigg[(X_{1}+X_{2})\bigg] + \dfrac{1}{9}
 V\bigg[(X_{3}+X_{4})\bigg]\\
-                      &amp; = &amp;  \dfrac{1}{36}\bigg[
+    &amp; = &amp;  \dfrac{1}{36}\bigg[
 V\big[X_{1}\big]+V\big[X_{2}\big]\bigg] + \dfrac{1}{9} \bigg[
 V\big[(X_{3}\big]+V\big[X_{4}\big]\bigg]\\
-                      &amp; = &amp; \dfrac{1}{36}\bigg[ \beta^{2} +
-\beta^{2}  \bigg] + \dfrac{1}{3} \bigg[ \beta^{2} + \beta^{2} \bigg]\\
-                      &amp; = &amp; \dfrac{2 \beta^{2}}{36} + \dfrac{2
-\beta^{2}}{9}  = \dfrac{10 \beta^{2}}{36}
+    &amp; = &amp; \dfrac{1}{36}\bigg[ \beta^{2} + \beta^{2}  \bigg] +
+\dfrac{1}{3} \bigg[ \beta^{2} + \beta^{2} \bigg]\\
+    &amp; = &amp; \dfrac{2 \beta^{2}}{36} + \dfrac{2 \beta^{2}}{9}  =
+\dfrac{10 \beta^{2}}{36}
 \end{eqnarray*}\]</span></p>
 <p>Se puede verificar que :</p>
 <ul>

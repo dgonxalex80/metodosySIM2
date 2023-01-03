@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 ```
 
 
-La construcción de estimadores de parámetros tiene un soporte mátematico que está basado en  el valor esperado y las funciones de probabilidad revisadas enteriormente. Tambien supone que las puestras son tomadas aleatoriamente y que valores obtenidos son independiente unos de otros. 
+La construcción de estimadores de parámetros tiene un soporte matemático que está basado en  el valor esperado y las funciones de probabilidad revisadas anteriormente. También supone que las muestras son tomadas aleatoriamente y que valores obtenidos son independiente unos de otros. 
 
 A continuación se presentan el método de Momentos y el método de Máxima Verosimiulitud:
 
@@ -38,7 +38,7 @@ En ambos casos
 
 $$m^{k}=\frac{1}{n}\sum_{i=1}^{n} x_{i}^{k} $$  
 
-El método de momentos supone que los momentos tanto poblacionales como muestrales son conocidos, y por lo tanto tambien la función de probabilidad. 
+El método de momentos supone que los momentos tanto poblacionales como muestrales son conocidos, y por lo tanto también la función de probabilidad. 
 
 A continuación se relacionan algunos de estos momentos poblacionales:
 
@@ -93,9 +93,9 @@ $$V[X]=E[X^{2}]-E[X]^{2} = \mu^{2}-(\mu^{1})^{2}$$
 entonces igualamos estos dos momentos poblacionales con sus respectivos momentos muestrales quedando la igualdad
 
 $$\begin{eqnarray*}
-V[X]&=& \mu^{2}-(\mu^{1})^{2}\\
-      &=&m^{2}-(m^{1})^{2}\\
-      &=&\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}
+	V[X]&=& \mu^{2}-(\mu^{1})^{2}\\
+	&=&m^{2}-(m^{1})^{2}\\
+	&=&\displaystyle\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\bar{x}^{2}
 \end{eqnarray*}$$
 
 podemos representar la varianza por $\sigma^{2}$ y obtenemos

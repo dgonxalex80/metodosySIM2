@@ -62,7 +62,7 @@ Como ejemplo supongamos que tenemos una muestras de datos formado por : $X_{1}$,
 ## **Para una población**
 
 
-Para una población puede ser de interes estimar el intervalo de confianza para su media ($\mu$), proporción ($p$) o su varianza ($\sigma^{2}$)
+Para una población puede ser de interés estimar el intervalo de confianza para su media ($\mu$), proporción ($p$) o su varianza ($\sigma^{2}$)
 
 
 <br/><br/><br/>
@@ -84,14 +84,14 @@ $$P(L_{IC} \leq Z \leq L_{SC})=1-\alpha $$
 donde $(1-\alpha)$ conforma el concepto de confianza, el cual difiere del concepto de probabilidad, en cuanto la confianza representa la proporción de intervalos que contienen el parámetro. Lo que significa que de 100 intervalos construidos a partir muestras aleatorias, $(1-\alpha)$% o más contendrán el parámetro. 
 
 $$\begin{eqnarray*}
-		P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&=&1-\alpha \\
-		P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leq z_{\alpha/2}\Bigg)&=&1-\alpha\\
-		P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&=&1-\alpha \\
-	\end{eqnarray*}$$
-	
+	P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&=&1-\alpha \\
+	P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leq z_{\alpha/2}\Bigg)&=&1-\alpha\\
+	P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&=&1-\alpha \\
+\end{eqnarray*}$$
+
 el intervalo de confianza para la media poblacional queda determinado por:
 
- <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000  ; background-color: #FFFFFF ; border-color: #000000;">
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000  ; background-color: #FFFFFF ; border-color: #000000;">
 
 $$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} $$
 
@@ -101,7 +101,7 @@ Supuestos:
 *	varianza conocida
 
 </div>
-			
+
 <br/><br/><br/>
 
 ## **Para la media, con varianza desconocida**
@@ -113,15 +113,15 @@ $$T=\dfrac{\bar{X}-\mu}{s/ \sqrt{n}}$$
 
 
 $$\begin{eqnarray*}
-		P\Big(-t_{\alpha/2} \leq T \leq t_{\alpha/2} \Big)&=&1-\alpha \\
-		P\Big(-t_{\alpha/2} \leq \frac{\bar{X}-\mu}{s/\sqrt{n}} \leq t_{\alpha/2} \Big)&=&1-\alpha \\
-		P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{\alpha/2}\dfrac{s}{\sqrt{n}}\Bigg)&=&1-\alpha \\
-	\end{eqnarray*}$$
+	P\Big(-t_{\alpha/2} \leq T \leq t_{\alpha/2} \Big)&=&1-\alpha \\
+	P\Big(-t_{\alpha/2} \leq \frac{\bar{X}-\mu}{s/\sqrt{n}} \leq t_{\alpha/2} \Big)&=&1-\alpha \\
+	P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{\alpha/2}\dfrac{s}{\sqrt{n}}\Bigg)&=&1-\alpha \\
+\end{eqnarray*}$$
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
 $$IC_{\mu}: \bar{x} \pm t_{\alpha/2} \hspace{.1cm}\frac{s}{\sqrt{n}} $$
-			
+
 Supuestos:
 
 *	$X\sim N(\mu,\sigma^{2})$
@@ -150,7 +150,7 @@ Supuestos:
 
 Se registró el tiempo transcurrido entre la facturación y la recepción del pago, para una muestra de 100 clientes en una empresa. La media y la desviación estándar son respectivamente: 39.1 días y 17.3 días. Con el fin de establecer una medición de la calidad en el servicio, se requiere determinar una estimación del 95% para la media.
 
-Este caso tambien se utiliza cuando se desconoce la distribución de la variable X. En este caso se utiliza el teorema central del límite que aproxima la distribución de la media muestral a la distribución normal
+Este caso también se utiliza cuando se desconoce la distribución de la variable X. En este caso se utiliza el teorema central del límite que aproxima la distribución de la media muestral a la distribución normal
 
 <br/><br/>
 
@@ -171,7 +171,7 @@ $$\Bigg(39.1 -1.96 \frac{17.3}{\sqrt{100}};39.1 + 1.96 \frac{17.3}{\sqrt{100}}\B
 
 $$(35.71; 42.49 )$$
 
-El tiempo promedio transcurrido entre la facturación y el pago en la empresa está entre 35.7 dias y 42.5 dias con una confianza del 95% 
+El tiempo promedio transcurrido entre la facturación y el pago en la empresa está entre 35.7 días y 42.5 días con una confianza del 95% 
 
 <br/><br/><br/>
 
@@ -294,20 +294,20 @@ Una empresa requiere realizar un estudio para establecer las proporción de fall
 Información de la solicitud: 
 
 * Objetivo : Analizar la propuesta realizada por la firma externa
-  + Valor total : 110.2 millones
-  + Valor costos administrativos y logísticos : 25.4 millones
-  + Valor encuestas : 110.2-55.4 = 54.8 millones
-  + Número de encuestas propuestas a realizar : 1096
-  + nivel de confianza 99%
-  + error de muestreo 0.05
-  
++ Valor total : 110.2 millones
++ Valor costos administrativos y logísticos : 25.4 millones
++ Valor encuestas : 110.2-55.4 = 54.8 millones
++ Número de encuestas propuestas a realizar : 1096
++ nivel de confianza 99%
++ error de muestreo 0.05
+
 ```{r}
 library(paqueteDEG)
 paqueteDEG::sizep(qnorm(0.995),0.5,0.05)
 ```
 
 De acuerdo con la información sumunistrada por la empresa, el tamaño de muestra apropiado para la estimación de la proporción, suponiendo varianza máxima es de $n=664$, por tal razón la propuesta realiza por la empresa consultora excede en   432 encuesta que presentan un sobre costo de \$21.6 millones
-  
+
 <br/><br/><br/>
 
 ## **Para una varianza** 
@@ -329,7 +329,7 @@ finalmente tenemos
 $$P\Bigg( \frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2}} \leq \sigma^{2} \leq \frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2}} \Bigg)=1-\alpha$$
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-	
+
 
 $$IC_{\sigma^{2}}: \Bigg( \displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2 ; v=n-1}} ;\displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2; v=n-1}} \Bigg)$$
 
@@ -351,7 +351,7 @@ Se quiere estimar un intervalo de confianza del 95% para la desviación estandar
 ecopetrol=c(2810, 2810,	2825, 2769, 2734, 2706,	2699, 2671, 2550, 2590,	2570, 2529,	2520, 2566,	2615, 2620, 2550, 2572,	2553, 2570,	2593, 2606)	
 
 cat("IC_var :", paqueteDEG::intervalo.var(ecopetrol),"\n")  # intervalo de confianza para la varianza
-cat("IC_sd :",sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estandar
+cat("IC_sd :",sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar
 ```
 <br/><br/>
 

@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -407,32 +410,97 @@ $(document).ready(function () {
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p></br></br></p>
+<p>A continuación se presentan una serie de códigos relacionados el
+calculo de probabilidades</p>
+<div id="simulacion-del-lanzamiento-de-un-dados" class="section level2">
+<h2><strong>Simulacion del lanzamiento de un dados</strong></h2>
+<p>Para simular el lanzamiento de un dado utilizaremos la función
+<code>sample(x, size, replace = FALSE, prob = NULL)</code>, con
+parámetros: <code>x</code> : valores del espacio muestral;
+<code>size</code> : tamaño de la muestra y <code>replace</code> : para
+determinar si la selección se realiza con remplazo o sin remplazo.</p>
+<p><code>sample(1:6,200, replace = TRUE)</code>, da un resultado una
+muestra de 200 valores enteros entre 1 y 6, con repetición.</p>
+<pre class="r"><code>n=200                            # tamaño de la muestra
+x=sample(1:6,n, replace = TRUE)  # extracción de la muestra 
+td1=prop.table(table(x))         # tabla de los resultados
+barplot(td1, las=1)              # gráfico de los resultados</code></pre>
+<p><img src="recurso601_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p></br></br></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso601_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="lanzamiento-de-dos-dados" class="section level2">
+<h2><strong>Lanzamiento de dos dados</strong></h2>
+<pre class="r"><code>n=500                               # tamaño de muestra
+d1=sample(1:6,n, replace = TRUE)    # muestra dado 1
+d2=sample(1:6,n, replace = TRUE)    # muestra dado 2
+dados=data.frame(d1,d2)             #  creación de data.frame 
+suma=apply(dados, 1, sum)           # obtención de la suma de los dos datos
+barplot(table(suma), las=1,cex.axis=0.7)  # gráfico  de la suma</code></pre>
+<p><img src="recurso601_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p></br></br></p>
+</div>
+<div id="extracción-de-urna" class="section level2">
+<h2><strong>Extracción de urna</strong></h2>
+<p>Para simular la extracción de bolas de una urna, se utilizan las
+funciones <code>sample()</code> y <code>rep()</code> mostradas en el
+siguiente ejemplo :</p>
+<ul>
+<li>Simulación de urna con: 3 bolas azules, 5 blancas y 4 rojas
+<ul>
+<li>1 representa las bolas blancas</li>
+<li>2 representa las bolas rojas</li>
+<li>3 representa las bolas azules</li>
+</ul></li>
+</ul>
+<pre class="r"><code>u=sample(c(&quot;azul&quot;,&quot;blanca&quot;,&quot;roja&quot;),  # vector con elementos 
+       size=200,                    # tamaño de la muestra
+       rep=TRUE,                   # con repeticion 
+       prob=c(3,5,4))              # número de bolas por color
+barplot(table(u), las=1)</code></pre>
+<p><img src="recurso601_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p></br></br></p>
+</div>
+<div id="tablas-de-contingencia" class="section level1">
+<h1><strong>Tablas de contingencia</strong></h1>
+<p>Las tablas de contingencia o tablas cruzadas se basan en las tablas
+de frecuencia para dos variables cualitativas o cuantitativas con pocos
+valores. En ellas se representan probabilidades conjuntas, marginales y
+condicionales</p>
+<p></br></p>
+<pre class="r"><code>x=c(20,60,100,30,140,50)
+    m=matrix(x,ncol=2)
+    rownames(m)=c(&quot;Adminitrativo&quot;,&quot;Operativo&quot;,&quot;Vendedor&quot;)
+    colnames(m)=c(&quot;Mujer&quot;,&quot;Hombre&quot;)
+    m</code></pre>
+<pre><code>              Mujer Hombre
+Adminitrativo    20     30
+Operativo        60    140
+Vendedor        100     50</code></pre>
+<pre class="r"><code>addmargins(m)</code></pre>
+<pre><code>              Mujer Hombre Sum
+Adminitrativo    20     30  50
+Operativo        60    140 200
+Vendedor        100     50 150
+Sum             180    220 400</code></pre>
+<pre class="r"><code>prop.table(m)</code></pre>
+<pre><code>              Mujer Hombre
+Adminitrativo  0.05  0.075
+Operativo      0.15  0.350
+Vendedor       0.25  0.125</code></pre>
+<p>Esta función también se utiliza para calcular las probabilidades
+condicionales por filas</p>
+<pre class="r"><code>prop.table(m,1)</code></pre>
+<pre><code>                  Mujer    Hombre
+Adminitrativo 0.4000000 0.6000000
+Operativo     0.3000000 0.7000000
+Vendedor      0.6666667 0.3333333</code></pre>
+<p>o las probabilidades condicionales por columnas</p>
+<pre class="r"><code>prop.table(m,2)</code></pre>
+<pre><code>                  Mujer    Hombre
+Adminitrativo 0.1111111 0.1363636
+Operativo     0.3333333 0.6363636
+Vendedor      0.5555556 0.2272727</code></pre>
 </div>
 
 

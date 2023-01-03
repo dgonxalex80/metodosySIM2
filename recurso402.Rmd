@@ -29,7 +29,7 @@ data("evaluacion")
 
 <br/><br/>
 
-Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupos se puede tener interes en la diferencia de medias ($\mu_1- \mu_2$), en la diferencia de proporciones ($p_1-p_2$) o en la razón de sus varianzas ($\sigma_1^{2} / \sigma_2^{2}$)
+Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupos se puede tener interés en la diferencia de medias ($\mu_1- \mu_2$), en la diferencia de proporciones ($p_1-p_2$) o en la razón de sus varianzas ($\sigma_1^{2} / \sigma_2^{2}$)
 
 
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
@@ -82,8 +82,8 @@ peso.ant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 peso.des=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
 
 t.test(peso.ant,peso.des,             # variables
-       paired = TRUE,                 # pareadas  
-       conf.level = 0.95)$conf.int    # nivel de confianza
+paired = TRUE,                 # pareadas  
+conf.level = 0.95)$conf.int    # nivel de confianza
 
 ```
 
@@ -143,8 +143,8 @@ boxplot(inf.fin, las=1, col=c3, ylim=c(3,6)); grid()
 
 var.test(inf.ing, inf.fin)$conf.int         # variables
 t.test(inf.ing, inf.fin,  paired = FALSE,   # grupos independientes 
-       var.equal = TRUE,                    # varianzas iguales
-       conf.level = 0.95)$conf.int 
+var.equal = TRUE,                    # varianzas iguales
+conf.level = 0.95)$conf.int 
 ```
 
 Al realizar la comparación de las varianzas se puede observar que el intervalo contiene a 1, por lo cual asumiremos que las varianza son iguales (este procedimiento se debe hacer mediante pruebas de hipótesis que ser verán en la Unidad 4.3). Utilizaremos la función de R `var.test(x, ...)` para establecer si las varianzas son iguales o diferentes y luego la función `t.test(x,y, ...)$conf.int` para calcular el intervalo.
@@ -160,7 +160,7 @@ La diferencia entre la estimación promedio de la inflación pronosticada por lo
 **Caso2** : Supone varianzas diferentes, pero desconocidas 
 
 En el caso tenemos
-			
+
 $$(\bar{x}_{1}-\bar{x}_{2})\pm t_{\alpha/2} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$$
 
 donde los grados de libertad de t se aproximan a
@@ -188,8 +188,8 @@ boxplot(inf.fin, las=1, col=c3, ylim=c(1,6)); grid()
 
 var.test(inf.ing, inf.fin)$conf.int
 t.test(inf.ing, inf.fin,  paired = FALSE,   # grupos independientes 
-       var.equal = FALSE,                    # varianzas diferentes
-       conf.level = 0.95)$conf.int 
+var.equal = FALSE,                    # varianzas diferentes
+conf.level = 0.95)$conf.int 
 
 # resumen pronóstico ingenieros
 summary(inf.ing)
@@ -217,9 +217,9 @@ En cualquiera de los casos los resultados pueden generar que intervalo sea de la
 |$(+,+)$| los dos limites son positivos , entonces podemos decir que $\mu_{1}>\mu_{2}$ |
 
 </div>
-	
 
-	
+
+
 <br/><br/><br/>
 
 ### **Diferencia de proporciones**
@@ -236,20 +236,20 @@ $$(\widehat{p_{1}}-\widehat{p_{2}}) \pm z_{\alpha/2} \sqrt{\frac{\widehat{p_{1}}
 
 **Ejemplo**
 
-En una muestra de 200 clientes, el 20% indica preferencia por tamaño especial de pizza. Con posterioridad a una campaña publicitaria realizada en radio y televisión promoviendo dicho producto, se selecciono una muestra de igual tamaño. En esta ultima muestra el 22% de los clientes indico preferencia por el producto. De acuerdo con estos resultados calcule un intervalo de confianza del 95% para la diferencia de proporciones. De acuerdo a los resultados obtenidos, podría afirmarse que la campaña publicitaria fue efectiva? |
+En una muestra de 200 clientes, el 20% indica preferencia por tamaño especial de pizza. Con posterioridad a una campaña publicitaria realizada en radio y televisión promoviendo dicho producto, se selecciono una muestra de igual tamaño. En esta ultima muestra el 22% de los clientes indico preferencia por el producto. De acuerdo con estos resultados calcule un intervalo de confianza del 95% para la diferencia de proporciones. De acuerdo a los resultados obtenidos, podría afirmarse que la campaña publicitaria fue efectiva? 
 
 <br/><br/>
 
 **Solución**
 
 En este caso se trata de la comparación de dos proporciones (proporción de clientes que prefieren el tamaño especial dentro de los clientes de la pizzería - $p_{2}$ comparada con la proporción de los clientes de la misma pizzería pero después de realizada la campaña publicitaria - $p_{2}$)
-	
+
 Información suministrada:
- 	
+
 * $n_{1}=200$(numero de clientes encuestados sobre sus preferencias antes de realizar la campaña publicitaria
 * $\widehat{p}_{1}=0.20$ proporción muestral de clientes que prefieren el tamaño especial de pizza antes de la campaña publicitaria
 * $n_{2}=200$(numero de clientes encuestados sobre sus preferencias después de realizada la campaña publicitaria
-* $\widehat{p}_{2}=0.22$ proporción muestral de clientes que prefieren el tamaño especial de pizza después de realizadala campaña publicitaria
+* $\widehat{p}_{2}=0.22$ proporción muestral de clientes que prefieren el tamaño especial de pizza después de realizada la campaña publicitaria
 
 En ambos casos los tamaños de muestra se consideran grandes, permitiendo transformar la diferencia de proporciones en una variable z con distribución normal estándar
 

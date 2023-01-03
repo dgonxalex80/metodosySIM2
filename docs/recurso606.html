@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -407,32 +410,208 @@ $(document).ready(function () {
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p><br/><br/></p>
+<div id="pruebas-no-paramétricas" class="section level1">
+<h1><strong>Pruebas no paramétricas</strong></h1>
+<p><br/><br/></p>
+<p><strong>Prueba de rachas</strong></p>
+<p>Se desea estraer una muestra aleatoria del grupo de participantes y
+probar que es aleatoria con respecto al sexo.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span>: <span
+class="math inline">\(X\)</span> es aleatoria</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span>: <span
+class="math inline">\(X\)</span> NO es aleatoria</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>library(randtests)
+x=sample(CarreraLuz22$sex, 100)
+rachas&lt;-as.numeric(x==&quot;Hombre&quot;)
+runs.test(rachas,alternative = &quot;left.sided&quot;,threshold = 0.5,pvalue = &quot;exact&quot;,plot=F)</code></pre>
+<pre><code>
+    Runs Test
+
+data:  rachas
+statistic = 0.12885, runs = 50, n1 = 59, n2 = 41, n = 100, p-value =
+0.5901
+alternative hypothesis: trend</code></pre>
+<p><br/><br/><br/></p>
+<p><strong>Pruebas de normalidad</strong></p>
+<p>Existen varias pruebas de hipótesis para verificar si una variable
+tiene un comportamiento aproximadamente normal.En todos los casos las
+hipótesis planteadas son:</p>
+<p><br/></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span>: <span
+class="math inline">\(X\)</span> tiene distribución Normal</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span>: <span
+class="math inline">\(X\)</span> no tiene distribución Normal</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>plot(density(w))</code></pre>
+<p><img src="recurso606_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><strong>Shapiro Wilk</strong></p>
+<pre class="r"><code>shapiro.test(w)</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  w
+W = 0.97905, p-value = 0.1121</code></pre>
+<p>Esta prueba no requiere la instalación de paquetes adicionales, está
+disponible en la configuración básica de R</p>
+<p><br/><br/></p>
+<p><strong>Paquete normtest</strong></p>
+<p>Las siguientes pruebas requieren instalar y cargar el paquete:
+<code>normtest</code></p>
+<pre class="r"><code># install.packages(&quot;normtets&quot;)
+library(normtest)</code></pre>
+<p><br/><br/></p>
+<p><strong>Jarque-Bera ajustado</strong></p>
+<pre class="r"><code>ajb.norm.test(w)    </code></pre>
+<pre><code>
+    Adjusted Jarque-Bera test for normality
+
+data:  w
+AJB = 3.7737, p-value = 0.1215</code></pre>
+<p><br/><br/></p>
+<p><strong>Frosini</strong></p>
+<pre class="r"><code>frosini.norm.test(w)    </code></pre>
+<pre><code>
+    Frosini test for normality
+
+data:  w
+B = 0.26557, p-value = 0.09</code></pre>
+<p><br/><br/></p>
+<p><strong>Geary</strong></p>
+<pre class="r"><code>geary.norm.test(w)  </code></pre>
+<pre><code>
+    Geary test for normality
+
+data:  w
+d = 0.82206, p-value = 0.1525</code></pre>
+<p><br/><br/></p>
+<p><strong>Hagazy-Green 1</strong></p>
+<pre class="r"><code>hegazy1.norm.test(w)    </code></pre>
+<pre><code>
+    Hegazy-Green test for normality
+
+data:  w
+T = 0.10963, p-value = 0.078</code></pre>
+<p><br/></p>
+<p><strong>Hagazy-Green 2</strong></p>
+<pre class="r"><code>hegazy2.norm.test(w)</code></pre>
+<pre><code>
+    Hegazy-Green test for normality
+
+data:  w
+T = 0.019091, p-value = 0.1845</code></pre>
+<p><br/><br/></p>
+<p><strong>Jarque-Bera</strong></p>
+<pre class="r"><code>jb.norm.test(w) </code></pre>
+<pre><code>
+    Jarque-Bera test for normality
+
+data:  w
+JB = 3.6821, p-value = 0.1025</code></pre>
+<p><br/><br/></p>
+<p><strong>de kurtosis</strong></p>
+<pre class="r"><code>kurtosis.norm.test(w)</code></pre>
+<pre><code>
+    Kurtosis test for normality
+
+data:  w
+T = 2.6449, p-value = 0.426</code></pre>
+<p><br/><br/></p>
+<p><strong>de sesgo</strong></p>
+<pre class="r"><code>skewness.norm.test(w)   </code></pre>
+<pre><code>
+    Skewness test for normality
+
+data:  w
+T = 0.4352, p-value = 0.0705</code></pre>
+<p><br/><br/></p>
+<p><strong>Spiegelhalter</strong></p>
+<pre class="r"><code>spiegelhalter.norm.test(w)  </code></pre>
+<pre><code>
+    Spiegelhalter test for normality
+
+data:  w
+T = 1.2165, p-value = 0.8755</code></pre>
+<p><br/><br/></p>
+<p><strong>Weisberg-Bingham</strong></p>
+<pre class="r"><code>wb.norm.test(w) </code></pre>
+<pre><code>
+    Weisberg-Bingham test for normality
+
+data:  w
+WB = 0.98099, p-value = 0.128</code></pre>
+<p><br/><br/><br/></p>
+<div id="paquete-nortest" class="section level3">
+<h3><strong>Paquete nortest</strong></h3>
+<p>Las siguientes pruebas requieren instalar y cargar el paquete:
+<code>nortest</code></p>
+<pre class="r"><code># install.packages(&quot;nortets&quot;)
+ library(nortest)</code></pre>
+<p><br/></p>
+<p><strong>Anderson-Darling</strong></p>
+<pre class="r"><code>ad.test(w)</code></pre>
+<pre><code>
+    Anderson-Darling normality test
+
+data:  w
+A = 0.65549, p-value = 0.08464</code></pre>
+<p><br/></p>
+<p><strong>Cramer-von Mises</strong></p>
+<pre class="r"><code>cvm.test(w)</code></pre>
+<pre><code>
+    Cramer-von Mises normality test
+
+data:  w
+W = 0.1096, p-value = 0.08168</code></pre>
+<p><br/></p>
+<p><strong>Lilliefors (Kolmogorov-Smirnov)</strong></p>
+<pre class="r"><code>lillie.test(w)</code></pre>
+<pre><code>
+    Lilliefors (Kolmogorov-Smirnov) normality test
+
+data:  w
+D = 0.085674, p-value = 0.06747</code></pre>
+<p><br/></p>
+<p><strong>chi-cuadrado de Pearson</strong></p>
+<pre class="r"><code>pearson.test(w)</code></pre>
+<pre><code>
+    Pearson chi-square normality test
+
+data:  w
+P = 12.06, p-value = 0.2811</code></pre>
+<p><br/></p>
+<p><strong>Shapiro-Francia</strong></p>
+<pre class="r"><code>sf.test(w)</code></pre>
+<pre><code>
+    Shapiro-Francia normality test
+
+data:  w
+W = 0.98099, p-value = 0.1394</code></pre>
+<p>En todos los casos se presenta un valor-p grande por lo cual no se
+rechaza <span class="math inline">\(Ho\)</span>, asumimos que <span
+class="math inline">\(Ho\)</span> es verdad. Asumimos que la
+distribución de la variable <span class="math inline">\(X\)</span> es
+normal</p>
+<p>Referencias :</p>
+<p><a href="https://rpubs.com/CJRR/PUJ_DECB_NP"
+class="uri">https://rpubs.com/CJRR/PUJ_DECB_NP</a></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso606_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
 </div>
 
 

@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -455,7 +458,7 @@ class="math inline">\(\displaystyle\sum\limits_{x=x_{(1)}}^{x_{(n)}}\displaystyl
 <p><strong>Ejemplo</strong></p>
 <p>El número de veces que falla una máquina <span
 class="math inline">\(X\)</span> con <span
-class="math inline">\(R_{X}=\{1,2,3\}\)</span> durante un dia y el
+class="math inline">\(R_{X}=\{1,2,3\}\)</span> durante un día y el
 número de veces en que el operario requiere llamar al técnico para su
 arreglo esta dado por <span class="math inline">\(Y\)</span> con <span
 class="math inline">\(R_{Y}=\{1,2,3\}\)</span>. Su función de
@@ -572,7 +575,7 @@ hy</code></pre>
 <p><span class="math display">\[F_{_{X,Y}}(x,y)=\sum_{-\infty}^{x}
 \sum_{-\infty}^{y} f(x,y)\]</span></p>
 <p>Para el ejemplo se construye la función de distribución acumulada
-sumando tanto por columna com fila hasta la posición de los valores
+sumando tanto por columna como fila hasta la posición de los valores
 observados, por ejemplo .</p>
 <p><span class="math display">\[F(2,2)= F_{_{X,Y}}(x,y)=\sum_{x=1}^{2}
 \sum_{y=1}^{2} f(x,y)  = f(1,1) + f(1,2) + f(2,1) + f(2,2) = 0.05 + 0.05
@@ -743,15 +746,14 @@ valor de <span class="math inline">\((x,y)\)</span></p></li>
 <p><strong>Ejemplo</strong></p>
 <p>La cantidad de ácido (<span class="math inline">\(X\)</span>) y la
 cantidad de ácido (<span class="math inline">\(Y\)</span>), en litros,
-que se vierten en una mezcla se modela con la función fXY como se
-presenta a continuación <span class="math inline">\(f(x,y)\)</span> esta
-dada por:</p>
+que se vierten en una mezcla se modela con la función <span
+class="math inline">\(f_{XY}\)</span> como se presenta a continuación
+<span class="math inline">\(f(x,y)\)</span> esta dada por:</p>
 <p><span class="math display">\[f(x,y) = \left \{ \begin{matrix} (x+y)
 &amp; \mbox{ } 0 \leq x \leq 1\\
-                                     &amp; \mbox{ } 0 \leq y \leq 1 \\
-                                     &amp;\\
-                                   0 &amp; \mbox{ en otro caso
-}\end{matrix}\right.  \]</span></p>
+    &amp; \mbox{ } 0 \leq y \leq 1 \\
+    &amp;\\
+    0 &amp; \mbox{ en otro caso }\end{matrix}\right.  \]</span></p>
 <p><br/></p>
 <p>Inicialmente debemos de verificar que se trata de una función de
 densidad</p>
@@ -777,7 +779,7 @@ Ifxy$integral</code></pre>
 <div id="densidad-marginales" class="section level3">
 <h3><strong>Densidad marginales</strong></h3>
 <p>En el caso continuo- continuo las distribuciones de densidad
-marginales se pueden encontrar a partir de la funcion de densidad
+marginales se pueden encontrar a partir de la función de densidad
 conjunta</p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -801,9 +803,8 @@ class="math display">\[h(y)=f_{_{Y}}(y)=\displaystyle\int_{-\infty}^{\infty}f_{_
 <p><br/></p>
 <p><span class="math display">\[g(x) = \left \{ \begin{matrix} \bigg(x+
 \dfrac{1}{2}\bigg) &amp; \mbox{ } 0 \leq x \leq 1\\
-                                  &amp;\\
-                                   0 &amp; \mbox{ en otro caso
-}\end{matrix}\right.  \]</span></p>
+    &amp;\\
+    0 &amp; \mbox{ en otro caso }\end{matrix}\right.  \]</span></p>
 <p><br/><br/></p>
 <p><span class="math display">\[h(y)=\displaystyle\int_{0}^{1} (x+y)\:dx
 =\bigg(\dfrac{1}{2} + yx \bigg) \Bigg|_{0}^{1} = \bigg(\dfrac{1}{2} + y
@@ -811,9 +812,8 @@ class="math display">\[h(y)=f_{_{Y}}(y)=\displaystyle\int_{-\infty}^{\infty}f_{_
 <p><br/><br/></p>
 <p><span class="math display">\[h(y) = \left \{ \begin{matrix} \bigg(y +
 \dfrac{1}{2} \bigg) &amp; \mbox{ } 0 \leq y \leq 1\\
-                                  &amp;\\
-                                   0 &amp; \mbox{ en otro caso
-}\end{matrix}\right.  \]</span></p>
+    &amp;\\
+    0 &amp; \mbox{ en otro caso }\end{matrix}\right.  \]</span></p>
 <p><br/><br/></p>
 </div>
 <div id="función-de-densidad-de-probabilidad-conjunta-acumulada"

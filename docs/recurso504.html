@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -408,31 +411,27 @@ $(document).ready(function () {
 
 
 <p><br/><br/><br/></p>
-<p>Hasta el momento nos hemos dedicado a la estadística parametrica, que
+<p>Hasta el momento nos hemos dedicado a la estadística paramétrica, que
 exige la estimación de parámetros y de la comprobación de supuestos
 sobre las distribuciones de las variables, como por ejemplo que se
 distribuyan normal.</p>
 <p>Note que la distribución normal esta relacionada con las
 distribuciones t-student, chi-cuadrado y F entre otras.</p>
-<div id="cuando-utilizar-pruebas-no-parametricas"
+<div id="cuando-utilizar-pruebas-no-paramétricas"
 class="section level3">
-<h3><strong>Cuando utilizar pruebas no parametricas</strong>:</h3>
+<h3><strong>Cuando utilizar pruebas no paramétricas</strong>:</h3>
 <ul>
-<li>Cuando no se cumplen los supuestos como Normalidad
-<ul>
-<li>Tamaños mínimos de muestra</li>
-<li>Número igual de elementos en cada muestra</li>
-<li>Homogeneidad de varianza, etc</li>
-</ul></li>
-<li>Cuando se usan tamaños de muestra pequeños
-<ul>
-<li>Menores a 30 que no permiten comprobar supuestos sobre la
-población.</li>
-</ul></li>
-<li>Cuando se convierten datos cualitativas (escalas nominales u
+<li><p>Cuando no se cumplen los supuestos como Normalidad</p></li>
+<li><p>Tamaños mínimos de muestra</p></li>
+<li><p>Número igual de elementos en cada muestra</p></li>
+<li><p>Homogeneidad de varianza, etc</p></li>
+<li><p>Cuando se usan tamaños de muestra pequeños</p></li>
+<li><p>Menores a 30 que no permiten comprobar supuestos sobre la
+población.</p></li>
+<li><p>Cuando se convierten datos cualitativas (escalas nominales u
 ordinales ) a información útil para la toma de decisiones (escala de
 intervalo). Utilizado en estudios mercadeo para medir variables como
-gustos, satisfacción, nivel de necesidad etc.</li>
+gustos, satisfacción, nivel de necesidad etc.</p></li>
 </ul>
 </div>
 <div id="ventajas-de-utilizar-pruebas-no-paramétricas"
@@ -450,12 +449,12 @@ ambas se corren con una línea)</li>
 <h3><strong>Desventajas</strong></h3>
 <ul>
 <li>Ignoran información</li>
-<li>No son tan eficientes como las pruebas parametricas, tienen menor
+<li>No son tan eficientes como las pruebas paramétricas, tienen menor
 potencia.</li>
 <li>Llevan a una mayor probabilidad de cometer error tipo II ( no
 rechazar Ho falsa)</li>
 </ul>
-<p>Entre las principales pruebas no paramétricas estan :</p>
+<p>Entre las principales pruebas no paramétricas están :</p>
 <ul>
 <li>Prueba Chi-Cuadrado de Independencia</li>
 <li>Prueba Chi-Cuadrado de Bondad de Ajuste</li>
@@ -498,28 +497,18 @@ muestras pareadas. Esta prueba se realiza sobre la mediana de los datos
 </tr>
 </tbody>
 </table>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej8.png" /></td>
-<td align="left">Carlos y Ángela, Administradoras investigadores de una
-firma de artículos deportivos tienen la creencia que el deporte afecta
-la imagen que cada persona tiene de si misma. Para investigar esta
-posibilidad eligieron a 18 personas de manera aleatoria, para participar
-en un programa de ejercicios. Antes de empezar el programa las personas
+<p><strong>Ejemplo</strong></p>
+<p>Carlos y Ángela, Administradoras investigadores de una firma de
+artículos deportivos tienen la creencia que el deporte afecta la imagen
+que cada persona tiene de si misma. Para investigar esta posibilidad
+eligieron a 18 personas de manera aleatoria, para participar en un
+programa de ejercicios. Antes de empezar el programa las personas
 respondieron un cuestionario para medir su propia imagen. Un nivel de 15
 puntos en la prueba establece que la persona tiene un concepto
 indiferente frente a la afirmación, valores menores de 15 que la afecta
 en forma negativa y valores por encima de 15 que afectan su imagen en
 forma positiva. Los siguientes son resultados obtenidos : 16, 15, 12,
-17, 18, 14, 16, 14, 16, 17, 19, 16, 14, 21, 20, 16, 16, 16</td>
-</tr>
-</tbody>
-</table>
+17, 18, 14, 16, 14, 16, 17, 19, 16, 14, 21, 20, 16, 16, 16 |</p>
 <pre class="r"><code>x.img=c(16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16 )</code></pre>
 <p><strong>Solución</strong>:</p>
 <p>Hipótesis Nula <span class="math inline">\(Ho: Me = 15\)</span></p>
@@ -639,7 +628,7 @@ class="section level3">
 <td align="left">Cualitativa</td>
 </tr>
 <tr class="even">
-<td align="left">Número de categorias</td>
+<td align="left">Número de categorías</td>
 <td align="left"><span class="math inline">\(k &gt; 2\)</span>
 valores</td>
 </tr>
@@ -653,31 +642,20 @@ el supuesto de normalidad, o de otras distribuciones.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej9.png" /></td>
-<td align="left">El dueño de una panadería tiene la posibilidad de
-controlar los niveles de inventarios de leche para cuatro marcas
-diferentes. Con el fin de establecer políticas para la realización de
-nuevos pedidos requiere saber si la demanda de estas marcas son iguales
-(distribución uniforme). Con este propósito tomo la información de un
-día:</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>El dueño de una panadería tiene la posibilidad de controlar los
+niveles de inventarios de leche para cuatro marcas diferentes. Con el
+fin de establecer políticas para la realización de nuevos pedidos
+requiere saber si la demanda de estas marcas son iguales (distribución
+uniforme). Con este propósito tomo la información de un día: |</p>
 <table>
 <thead>
 <tr class="header">
 <th align="right">Producto</th>
-<th align="center">Parmalat</th>
-<th align="center">Uno A</th>
-<th align="center">Colanta</th>
-<th align="center">Purace</th>
+<th align="center">Marca 1</th>
+<th align="center">Marca 2</th>
+<th align="center">Marca 3</th>
+<th align="center">Marca 4</th>
 </tr>
 </thead>
 <tbody>
@@ -717,21 +695,10 @@ chisq.test(x=obs,p=esp)</code></pre>
 data:  obs
 X-squared = 3.6, df = 3, p-value = 0.308</code></pre>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej10.png" /></td>
-<td align="left">Un profesor desea establecer si los resultados
-obtenidos por sus estudiantes tienen una distribución normal con media
-3.5 y desviación estándar 0.7 puntos. Los datos se resumen en la
-siguiente tabla:</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Un profesor desea establecer si los resultados obtenidos por sus
+estudiantes tienen una distribución normal con media 3.5 y desviación
+estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:</p>
 <pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=&quot; &quot;, xlab=&quot; &quot;, ylab=&quot; &quot;)</code></pre>
@@ -755,21 +722,11 @@ X-squared = 2.8988, df = 5, p-value = 0.7156</code></pre>
 <div id="prueba-chi-cuadrado-de-independencia" class="section level3">
 <h3><strong>Prueba chi-cuadrado de independencia</strong></h3>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej11.png" /></td>
-<td align="left">Un investigador desea establecer la relación que puede
-existir entre la calificación obtenida por un producto por parte de sus
-consumidores y su ubicación de residencia. Con este fin recoge
-información de 100 de sus clientes:</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Un investigador desea establecer la relación que puede existir entre
+la calificación obtenida por un producto por parte de sus consumidores y
+su ubicación de residencia. Con este fin recoge información de 100 de
+sus clientes:</p>
 <p><br/></p>
 <table>
 <thead>
@@ -886,22 +843,12 @@ pareadas</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej12.png" /></td>
-<td align="left">Los siguiente datos se tomaron de un estudio de
-comparación de adolescentes sanos (G1) y de adolescentes con bulimia
-(G2). El primer grupo está conformado por 15 estudiantes y el segundo
-grupo por 14 estudiantes y corresponden al consumo diario en calorías.
-Los datos obtenidos son los siguientes:</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Los siguiente datos se tomaron de un estudio de comparación de
+adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer
+grupo está conformado por 15 estudiantes y el segundo grupo por 14
+estudiantes y corresponden al consumo diario en calorías. Los datos
+obtenidos son los siguientes:</p>
 <p>Nota: antes de realizar la comparación de medias, se debe realizar
 una prueba de bondad de ajuste para establecer si los datos siguen una
 distribución normal o no. En caso de que los datos no tengan
@@ -965,23 +912,12 @@ estadísticamente significativas. Versión no parametrica del ANOVA.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej13.png" /></td>
-<td align="left">Para verificar si la memoria cambia con la edad, una
-investigadora realiza un estudio en el cual hay tres grupos de personas:
-G1- 60 años de edad, G2: con 50 años de edad, G3: con 40 años de edad. A
-cada persona se le presenta una serie de palabras. La serie es
-presentada dos veces y se cuenta el número de palabras que pueden
-recordar.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Para verificar si la memoria cambia con la edad, una investigadora
+realiza un estudio en el cual hay tres grupos de personas: G1- 60 años
+de edad, G2: con 50 años de edad, G3: con 40 años de edad. A cada
+persona se le presenta una serie de palabras. La serie es presentada dos
+veces y se cuenta el número de palabras que pueden recordar.</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -1044,22 +980,12 @@ Kruskal-Wallis chi-squared = 5, df = 5, p-value = 0.4159</code></pre>
 </div>
 <div id="correlación-de-spearman" class="section level3">
 <h3><strong>Correlación de Spearman</strong></h3>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej14.png" /></td>
-<td align="left">Se requiere establecer si existe relación entre el
-tiempo de estudio dedicado a la preparación de una evaluación y la nota
-obtenida. Como la nota obtenida representa una variable cualitativa, se
-debe utilizar una prueba no paramétrica (coeficiente de correlación de
-Spearman). Los datos obtenidos son los siguientes:</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Se requiere establecer si existe relación entre el tiempo de estudio
+dedicado a la preparación de una evaluación y la nota obtenida. Como la
+nota obtenida representa una variable cualitativa, se debe utilizar una
+prueba no paramétrica (coeficiente de correlación de Spearman). Los
+datos obtenidos son los siguientes:</p>
 <table>
 <colgroup>
 <col width="10%" />
@@ -1125,23 +1051,13 @@ con una nota.</p>
 </div>
 <div id="prueba-de-rachas" class="section level3">
 <h3><strong>Prueba de Rachas</strong></h3>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej15.png" /></td>
-<td align="left">Para verificar si los números aleatorios generados por
-Excel son de verdad aleatorios se tomó una muestra de ellos mediante la
-función =aleatorio.entre(), obteniendo como resultado los siguientes
-números: 0.738, 0.202, 0.357, 0.561, 0.509, 0.146, 0.746, 0.666, 0.133,
-0.430, 0.972, 0.999, 0.499, 0.869, 0.821, 0.732, 0.355, 0.189, 0.478,
-0.162 .</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>Para verificar si los números aleatorios generados por Excel son de
+verdad aleatorios se tomó una muestra de ellos mediante la función
+=aleatorio.entre(), obteniendo como resultado los siguientes números:
+0.738, 0.202, 0.357, 0.561, 0.509, 0.146, 0.746, 0.666, 0.133, 0.430,
+0.972, 0.999, 0.499, 0.869, 0.821, 0.732, 0.355, 0.189, 0.478, 0.162
+.</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -1209,7 +1125,7 @@ variable es normal.</p>
 <div id="otras-pruebas-de-normalidad-utilizadas" class="section level3">
 <h3><strong>Otras pruebas de normalidad utilizadas</strong></h3>
 <pre class="r"><code># install.packages(&quot;normtets&quot;)
- library(normtest)
+library(normtest)
 
 jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
 <pre><code>

@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -496,12 +499,12 @@ Bernoulli. Sus principales características son:</p>
 <p>Rango : <span class="math inline">\(R_{X}=\{0,1 \}\)</span>, Función
 de distribución de probabilidad $</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            p &amp; \mbox{si } x=1   \\
-            q &amp; \mbox{si } x=0
-        \end{array}
-        \right.
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        p &amp; \mbox{si } x=1   \\
+        q &amp; \mbox{si } x=0
+    \end{array}
+    \right.
 \end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]= p\]</span></p>
 <p><span class="math display">\[V[X]= pq\]</span></p>
@@ -547,14 +550,14 @@ class="math inline">\(n,p\)</span>)</p></li>
 </ul>
 <p>La función de distribución de probabilidad está dada por:</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp;
-x=0,1,2, \ldots, n   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} &amp;,&amp; x=0,1,2,
+\ldots, n   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
 \end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=np\]</span></p>
 <p><span class="math display">\[V[X]= np(1-p) \]</span></p>
@@ -591,8 +594,8 @@ distribución Poisson esta dada por siguiente la expresión:</p>
 <p><span
 class="math inline">\(\begin{equation*}  f(x)=\left\lbrace  \begin{array}{lll}  \dfrac{\lambda^{x}}{x!}
 \hspace{.2cm} e^{-\lambda} &amp;,&amp; x \geq 0 \\  &amp;&amp;\\  0
-&amp;,&amp; \mbox{en otro
-caso}  \end{array}  \right.  \end{equation*}\)</span></p>
+&amp;,&amp; \mbox{en otro caso}  \end{array}  \right.
+\end{equation*}\)</span></p>
 <p>Donde <span class="math inline">\(\lambda\)</span> es la cantidad
 promedio de ocurrencias en el periodo de interés.</p>
 <p><span class="math display">\[E[X]=\lambda\]</span></p>
@@ -628,16 +631,16 @@ corresponde al <strong>número de éxitos obtenidos en la
 muestra</strong>.</p>
 <p>Su función de masa de probabilidad esta dada por</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \dfrac{\displaystyle\binom{K}{x}
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \dfrac{\displaystyle\binom{K}{x}
 \displaystyle\binom{N-K}{n-x}}{\displaystyle\binom{N}{n}} &amp;, {\text{
 si }\max(0,K+n-N) \leq x \leq \min(n,K) }&amp;   \\
-            &amp;\\
-            0, \mbox{en otro caso}
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+        &amp;\\
+        0, \mbox{en otro caso}
+    \end{array}
+    \right.
+\end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=\dfrac{nK}{N}\]</span> <span
 class="math display">\[V[X]=n\Bigg(\frac{K}{N}\Bigg)
 \Bigg(1-\dfrac{K}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}\Bigg)\]</span></p>
@@ -714,19 +717,19 @@ ocurre el primer éxito</strong>.</p>
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Distribución geométrica</strong></p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            p(1-p)^{x-1}     &amp;,&amp; x \geq 1   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        p(1-p)^{x-1}     &amp;,&amp; x \geq 1   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
 \end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=\dfrac{1}{p}\]</span></p>
 <p><span class="math display">\[V[X]=\dfrac{1-p}{p^{2}} \]</span></p>
 </div>
 <p>Nota: En R la variable corresponde al <strong>número de fracasos
-necesarios para obtener el primer exito</strong> <br/><br/></p>
+necesarios para obtener el primer éxito</strong> <br/><br/></p>
 <p><span class="math inline">\(X \sim geom(x,p=0.5)\)</span></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p><br/><br/></p>
@@ -750,15 +753,15 @@ Geométrica con igual parámetro <span
 class="math inline">\(p\)</span>.</p>
 <p>Su función de masa está dada por :</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \displaystyle \binom{x-1}{r-1} p^{r}
-(1-p)^{x-r}     &amp;,&amp; x= r, r+1,  \ldots    \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \displaystyle \binom{x-1}{r-1} p^{r} (1-p)^{x-r}     &amp;,&amp;
+x= r, r+1,  \ldots    \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
+\end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=\dfrac{r}{p}\]</span></p>
 <p><span class="math display">\[V[X]=\dfrac{r(1-p)}{p^{2}}\]</span></p>
 </div>

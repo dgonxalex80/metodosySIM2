@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -413,7 +416,7 @@ class="math inline">\(A\)</span>, <span
 class="math inline">\(B\)</span>,…) o compuestos (<span
 class="math inline">\((A \cup B)\)</span>, <span
 class="math inline">\((A \cap B)\)</span>, <span
-class="math inline">\((B|A)\)</span> ) que inclugen varios eventos.
+class="math inline">\((B|A)\)</span> ) que incluyen varios eventos.
 Dependiendo el tipo de evento puede tomar los siguientes nombres:</p>
 <p><br/><br/></p>
 <div style="display: flex;">
@@ -577,7 +580,7 @@ probabilidad de sus probabilidades marginales :</p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Definición: Independencia de eventos</strong></p>
-<p>Dos eventos A y B son independientes si y solo si la probabiliad del
+<p>Dos eventos A y B son independientes si y solo si la probabilidad del
 evento B no es afectada por la ocurrencia del evento A o viceversa.</p>
 <p><span class="math inline">\(P(A \cap B) = P(A) P(B)\)</span> o <span
 class="math inline">\(P(B|A)=P(B)\)</span></p>
@@ -641,7 +644,7 @@ independientes es:</p>
 P(A_{1}^{&#39;}) \times P(A_{2}^{&#39;}) = 0.10 \times 0.05 = 0.005
 \]</span></p>
 <p>Ahora como se requiere la probabilidad de que el circuito funciones
-se utiliza el axiona <span class="math inline">\(A_{4}\)</span> : Para
+se utiliza el axioma <span class="math inline">\(A_{4}\)</span> : Para
 cualquier evento <span class="math inline">\(A\)</span>, <span
 class="math inline">\(P(A&#39;)=1-P(A)\)</span></p>
 <p><span class="math display">\[1-0.005 = 0.995\]</span></p>
@@ -652,7 +655,7 @@ los pagos realizados en la universidad se efectúan en efectivo, un 40%
 con tarjeta de crédito y el resto con tarjeta débito. En todos los casos
 estos pagos solo son recibidos en la caja ubicada en la oficina de
 Registro Académico de la universidad.</p>
-<p>Tambien se conoce que 20% de los pagos realizados en efectivo, 70% de
+<p>También se conoce que 20% de los pagos realizados en efectivo, 70% de
 los pagos realizados con tarjeta de crédito y el 80% de los pagos
 realizados con tarjeta débito, corresponden a pagos por valores
 superiores a $500 mil pesos</p>
@@ -784,16 +787,16 @@ el procedimiento</p>
 class="math inline">\(B\)</span> :</p>
 <p><img src="img/particion3_22.png" width="50%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<p>Tambien podemos recostruir <span class="math inline">\(B\)</span>
+<p>También podemos reconstruir <span class="math inline">\(B\)</span>
 como :</p>
 <p><span class="math inline">\(B = (A_{1} \cap B) \cup (A_{2} \cap B)
 \cup (A_{3} \cap B) \cup (A_{4} \cap B) \cup (A_{5} \cap B)\)</span></p>
 <p><br/><br/></p>
-<p>En terminos de probabilidad tenemos</p>
+<p>En términos de probabilidad tenemos</p>
 <p><span class="math inline">\(P(B) = P(A_{1} \cap B) + P(A_{2} \cap B)
 + P(A_{3} \cap B) + P(A_{4} \cap B) + P(A_{5} \cap B)\)</span></p>
-<p>Este resultado se puede expresar en otros terminos de la regla de la
-multiplicacion:</p>
+<p>Este resultado se puede expresar en otros términos de la regla de la
+multiplicación:</p>
 <p><span class="math inline">\(P(B) = P(A_{1})P(B|A_{1}) +
 P(A_{2})P(B|A_{2}) +P(A_{3})P(B|A_{}) + P(A_{4})P(B|A_{4}) +
 P(A_{5})P(B|A_{5})\)</span></p>
@@ -891,8 +894,8 @@ utilizamos el Teorema de Bayes</p>
 = 0.1034\)</span></p>
 <p><br/><br/></p>
 <p><strong>Ejemplo</strong></p>
-<p>En una fábrica de artı́culos para protección biodegradables, cuatro
-operarios colocan etiquetas de caducidad en cada artı́culo al final de la
+<p>En una fábrica de artículos para protección biodegradables, cuatro
+operarios colocan etiquetas de caducidad en cada articulo al final de la
 lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 %
 de los paquetes no logra ponerla en uno de cada 200 paquetes; Luis,
 quien coloca en 30 % de los paquetes, no logra colocarla en uno de 100
@@ -964,8 +967,8 @@ library(rattle)
 library(rpart.plot)
 
 arbol=rpart( formula = Survived ~ Sex,
-             data = titanic_train,
-             method = &quot;class&quot;)
+data = titanic_train,
+method = &quot;class&quot;)
 fancyRpartPlot(arbol)</code></pre>
 <p><img src="recurso104_files/figure-html/unnamed-chunk-15-1.png" width="672" />
 <br/> Código basado en: <a
@@ -995,16 +998,16 @@ class="uri">https://www.youtube.com/watch?v=t0lmtrm_aa0</a></p>
 </ul>
 <p><br/><br/></p>
 <pre class="r"><code>t= table(titanic_train$Survived,
-         titanic_train$Sex)       # construcción tabla cruzada
+titanic_train$Sex)       # construcción tabla cruzada
 
 t = t %&gt;%  
-      prop.table() %&gt;% 
-      addmargins() %&gt;% 
-      round(.,4)
+prop.table() %&gt;% 
+addmargins() %&gt;% 
+round(.,4)
 
 rownames(t)=c(&quot;Died&quot;,&quot;Survived&quot;, &quot;Sum&quot;)
 
-      
+
 t        # tabla de probabilidades</code></pre>
 <pre><code>          
            female   male    Sum

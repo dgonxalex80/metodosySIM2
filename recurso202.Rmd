@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 El valor esperado o esperanza matemática y la varianza corresponde a dos los conceptos principales asociados a una variable aleatoria. El concepto de esperanza está relacionado en un principio con los juegos de azar, pues los jugadores querían conocer cual era el valor esperado de ganar cuando jugaban un gran número de veces. 
 
-La esperanza matemática de una variable aleatoria $X$,  corresponde a un valor que representa el valor más probable que ocurra o la media población de la variable aleatoria denotada por $E[x]$ o tambien $\mu$
+La esperanza matemática de una variable aleatoria $X$,  corresponde a un valor que representa el valor más probable que ocurra o la media población de la variable aleatoria denotada por $E[x]$ o también $\mu$
 
 <br/><br/>
 
@@ -55,7 +55,7 @@ En el caso continuo y similarmente para el caso discreto.
 
 # **Varianza**
 
-Otra caracteristica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de **momento** de una variable aleatoria
+Otra característica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de **momento** de una variable aleatoria
 
 <br/><br/>
 
@@ -110,12 +110,12 @@ $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$
 El valor esperado y la varianza para el número de personas que asisten al restaurante, con la siguiente función de distribución: 
 
 $$f_{_{X}}(x) = \left \{ 
-				\begin{matrix} 
-				\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
-				& \\
-				0  & \mbox{en otro caso }
-				\end{matrix}\right.  
-				$$
+\begin{matrix} 
+	\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.  
+$$
 
 
 $E(X)=\displaystyle\sum\limits_{x=0}^{20}x_{i} 	\displaystyle\binom{20}{x_{i}}(0.7)^{x_{i}}(0.3)^{20-x_{i}} = 14$ 
@@ -131,19 +131,19 @@ Este resultado nos indica que en promedio asisten al restaurante 14 personas de 
 Para el caso continuo retomamos la función: 
 
 $$f_{_{X}}(x) = \left \{ 
-				\begin{matrix} 
-				\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
-				& \\
-				0  & \mbox{en otro caso }
-				\end{matrix}\right.  
-				$$
+\begin{matrix} 
+	\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.  
+$$
 Que define la variable tiempo de duración de un electrodoméstico si realizar alguna reparación
 
 
 $E(X)=\displaystyle\int\limits_{-\infty}^{+\infty } \dfrac{x}{4} e^{-x/4}  \:dx  = 4$
- 
+
 Se puede verificar que $V[X] = 16$
 
-Esto nos indica que el valor esperado correspondiente al tiempo en que una lavadora requiere una reparación mayor es de 4 años.  Para la interpretación de la varianza podemos utilizar el concepto de desviación estandar o de coeficiente de variación.
+Esto nos indica que el valor esperado correspondiente al tiempo en que una lavadora requiere una reparación mayor es de 4 años.  Para la interpretación de la varianza podemos utilizar el concepto de desviación estándar o de coeficiente de variación.
 
 <br/><br/><br/><br/>

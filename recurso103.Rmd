@@ -23,11 +23,11 @@ La probabilidad es un número entre cero y uno que se asigna a cada resultado de
 ### **Enfoque clásico**  
 
 Es el enfoque más antiguo de probabilidad y está basado en el supuesto de eventos individuales igualmente probables. La probabilidad bajo ese enfoque para el evento $A$ se calcula como la fracción entre el número de elementos del conjunto $A$, $n(A)$ y el número de elementos del espacio muestral $n(S)$: 
-		
+
 $$P(A)=\dfrac{n(A)}{n(S)}$$
 
 </div>
-	
+
 En el caso del evento $A_{1}=\{(c,c)\}$, su probabilidad se obtiene como: 
 
 $P(A_{1}=\dfrac{n(A_{1})}{n(S_{1})}=\dfrac{1}{4}=0.25$ 
@@ -39,9 +39,9 @@ $P(A_{2})=\dfrac{n(A_{2})}{n(S_{2})}=\dfrac{9}{36}=0.25$
 <br/><br/> 
 
 
-En la gran mayoria de casos no se cumplen los supuestos anteriores, pues se tienen eventos que no son igualmente probables, lo cual impide que podamos utilizar el enfoque frecuentista. 
+En la gran mayoría de casos no se cumplen los supuestos anteriores, pues se tienen eventos que no son igualmente probables, lo cual impide que podamos utilizar el enfoque frecuentista. 
 
-Ahora suponemos que lo ocurrió en el pasado segirá pasando y asi estudiando la información recogida podemos predecir la posibilidad de ocurrencia de un evento futuro
+Ahora suponemos que lo ocurrió en el pasado seguirá pasando y así estudiando la información recogida podemos predecir la posibilidad de ocurrencia de un evento futuro
 
 <br/><br/><br/>
 
@@ -51,7 +51,7 @@ Ahora suponemos que lo ocurrió en el pasado segirá pasando y asi estudiando la
 
 Este enfoque se basa en la frecuencia con que ocurre un evento $A$ y el tamaño de muestra $n$, permitiendo calcular la probabilidad como una proporción de veces que ocurre un resultado sobre las veces en que se repite el experimento.  Cuanto mayor sea el tamaño de muestra mayor será su proximidad al valor de  la probabilidad.
 
-			
+
 $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}{n} \Bigg]$$
 
 </div>
@@ -64,11 +64,11 @@ knitr::include_graphics("img/penalti.gif")
 ```
 
 
-Si observamos el cobro de un penalti en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 6 : parte baja derecha, parte alta derecha, parte baja al centro, parte alta central, parte baja izquierda y parte alta izquierda. Por su parte el arquero piensa también es estos lograres para evitar que el disparo termine en gol. Hoy en dia ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.
+Si observamos el cobro de un penalti en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 6 : parte baja derecha, parte alta derecha, parte baja al centro, parte alta central, parte baja izquierda y parte alta izquierda. Por su parte el arquero piensa también es estos lograres para evitar que el disparo termine en gol. Hoy en día ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.
 
 <br/>
 
-Para calcular la probabilidad de que un jugador ejecute y convierta gol, debemos utilizar el enfoque frecuentista, contando para ello información pasada y realizando una división entre el numero de aciertos sobre el numero total de cobros.
+Para calcular la probabilidad de que un jugador ejecute y convierta gol, debemos utilizar el enfoque frecuentista, contando para ello información pasada y realizando una división entre el numero de aciertos sobre el número total de cobros.
 
 
 <br/><br/><br/>
@@ -77,7 +77,7 @@ Para calcular la probabilidad de que un jugador ejecute y convierta gol, debemos
 
 ### **Enfoque subjetivo** 
 
-En este caso la probabilidad es valorada y asignada por un **EXPERTO**, es decir que el valor es asignado a juicio de una parsona de acuerdo con su experiencia  como:  un médico, un ingeniero, un abogado, un economista, un biólogo, un cientifico de datos ......
+En este caso la probabilidad es valorada y asignada por un **EXPERTO**, es decir que el valor es asignado a juicio de una persona de acuerdo con su experiencia  como:  un médico, un ingeniero, un abogado, un economista, un biólogo, un científico de datos ......
 
 </div>
 
@@ -118,4 +118,3 @@ $$P(\phi) = 0$$
 </div>
 
 <br/><br/><br/>
-

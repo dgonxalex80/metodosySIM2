@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 # **Introducción**
 
-El concepto de variable aleatoria constituye uno de los principales pilares de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatória como función de números reales y  el espacio para el sustento matemático. 
+El concepto de variable aleatoria constituye uno de los principales pilares de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica según J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
 
 Este  concepto está relacionado a diferentes contextos donde se requiere dar respuesta a preguntas relacionadas con la ocurrencia o no de fenómenos aleatorios que eventualmente se presentarán en el futuro, como por ejemplo: 
 
@@ -138,7 +138,7 @@ Las siguientes variables se clasifican como **variables aleatorias discretas** :
 
 * X : Número de llamadas que entran a un conmutador diariamente
 
-* Y: Número de personas contagiadas por Covid19 durante un día
+* Y: Número de personas contagiadas por Covid 19 durante un día
 
 * Z: Número de quejas reportadas a una sucursal bancaria en un día
 
@@ -176,12 +176,12 @@ El restaurante "Asados y algo más"  solo da servicio mediante reservas. De acue
 <br/>
 
 $$f_{_{X}}(x) = \left \{ 
-				\begin{matrix} 
-				\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
-				& \\
-				0  & \mbox{en otro caso }
-				\end{matrix}\right.  
-				$$
+\begin{matrix} 
+	\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.  
+$$
 
 <br/>
 
@@ -292,12 +292,12 @@ Con base en información histórica una compañía que fabrica lavadoras determi
 <br/>
 
 $$f_{_{X}}(x) = \left \{ 
-				\begin{matrix} 
-				\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
-				& \\
-				0  & \mbox{en otro caso }
-				\end{matrix}\right.  
-				$$
+\begin{matrix} 
+	\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.  
+$$
 
 <br/>
 
@@ -313,6 +313,5 @@ integrate(fy, lower=0,upper=Inf)
 </pre>
 
 $\displaystyle\int\limits_{0}^{+\infty} \dfrac{1}{4} e^{-x/4} \:dx =1$
-
 
 

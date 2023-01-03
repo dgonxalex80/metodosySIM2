@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -526,25 +529,15 @@ class="math inline">\(\sigma_{1}^{2}/\sigma_{2}^{2}\)</span></td>
 <div id="caso-para-grupos-pareados" class="section level2">
 <h2><strong>Caso para grupos pareados</strong></h2>
 <p><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej4.png" /></td>
-<td align="left">El director de un gimnasio requiere determinar si
-contrata o no a un instructor para su campaña de reducción de peso. Para
-tomar la decisión decide tomar un grupo de 16 personas que acuden
-normalmente para darle una oportunidad a un aspirante al cargo. Los
-siguientes datos corresponden a los resultados obtenidos antes y después
-de un mes de estar en el programa. Utilice un nivel de significancia
-<span class="math inline">\(\alpha= 0.10\)</span>, para determinar si
-contrata o no al aspirante.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Ejemplo</strong></p>
+<p>El director de un gimnasio requiere determinar si contrata o no a un
+instructor para su campaña de reducción de peso. Para tomar la decisión
+decide tomar un grupo de 16 personas que acuden normalmente para darle
+una oportunidad a un aspirante al cargo. Los siguientes datos
+corresponden a los resultados obtenidos para los pesos antes (pant) y
+pesos después (pdes) de un mes de participación en el programa. Utilice
+un nivel de significancia <span class="math inline">\(\alpha=
+0.10\)</span>, para determinar si contrata o no al aspirante.</p>
 <table>
 <colgroup>
 <col width="5%" />
@@ -613,10 +606,10 @@ contrata o no al aspirante.</td>
 pdes=c(98,85.5,85,103.5,88.5,95,79.5,90,82,76,89.5,81,99.5,86.5,15.5,70)
 
 t.test(pant, pdes,
-       alternative = &quot;less&quot;,
-       mu = 0, 
-       paired = TRUE, 
-       conf.level = 0.95)</code></pre>
+alternative = &quot;less&quot;,
+mu = 0, 
+paired = TRUE, 
+conf.level = 0.95)</code></pre>
 <pre><code>
     Paired t-test
 
@@ -642,30 +635,28 @@ id="caso-par-grupos-independientes-variables-normales-varianzas-iguales"
 class="section level3">
 <h3><strong>Caso par grupos independientes, variables normales,
 varianzas iguales</strong></h3>
+<p><strong>Ejemplo</strong></p>
+<p>Una empresa desarrolla un curso de entrenamiento para sus empleados,
+formando dos grupos y aplicando dos metodologías diferentes de
+entrenamiento con el fin de poder evaluar que método produce los mejores
+resultados. El primer grupo (g1) esta conformado por 36 empleados y el
+segundo grupo (g2) por 40 empleados . Se puede afirmar que el método
+aplicado al segundo grupo produce mejores resultados que el aplicado al
+primer grupo ? ¿Que supuestos debe tener en cuenta?</p>
 <table>
 <colgroup>
-<col width="9%" />
-<col width="90%" />
+<col width="6%" />
+<col width="93%" />
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="center"><img src="img/ej5.png" /></td>
-<td align="left">Una empresa desarrolla un curso de entrenamiento para
-sus empleados, formando dos grupos y aplicando dos metodologías
-diferentes de entrenamiento con el fin de poder evaluar que método
-produce los mejores resultados. El primer grupo (g1) esta conformado por
-36 empleados y el segundo grupo (g2) por 40 empleados . Se puede afirmar
-que el método aplicado al segundo grupo produce mejores resultados que
-el aplicado al primer grupo ? ¿Que supuestos debe tener en cuenta?</td>
-</tr>
-<tr class="even">
-<td align="center">Grupo 1</td>
+<td align="left">Grupo 1</td>
 <td align="left">6.8, 6.1, 5.8, 5.9, 5.8, 6.4, 5.7, 6.0, 5.9, 6.4, 6.0,
 5.7, 6.5, 6.5, 6.0, 5.9, 5.7, 5.8, 5.9, 5.8, 6.0, 6.0, 5.8, 5.7, 6.1,
 5.9, 5.2, 6.3, 5.4, 6.5, 5.5, 5.9, 7.0, 6.4, 5.1, 6.3</td>
 </tr>
-<tr class="odd">
-<td align="center">Grupo 2</td>
+<tr class="even">
+<td align="left">Grupo 2</td>
 <td align="left">8.8, 8.5, 8.4, 8.5, 7.6, 8.7, 8.0, 7.9, 8.2, 8.0, 7.8,
 8.6, 8.5, 7.9, 8.5, 8.3, 8.4, 8.2, 8.3, 7.9, 8.2, 7.7, 7.8, 7.7, 8.1,
 8.0, 8.3, 8.2, 8.1, 8.3, 8.1, 8.8, 7.7, 9.1, 7.6, 8.4, 8.2, 8.3, 8.1,
@@ -709,11 +700,11 @@ rechazarla, asumimos que las varianza son iguales.</p>
 Ha: <span class="math inline">\(\mu_{1} &lt; \mu_{2}\)</span> <br/></p>
 <p><br/></p>
 <pre class="r"><code>t.test(grupo1, grupo2,
-       alternative =&quot;less&quot;,
-       mu = 0, 
-       paired = FALSE, 
-       var.equal = TRUE,
-       conf.level = 0.95)</code></pre>
+alternative =&quot;less&quot;,
+mu = 0, 
+paired = FALSE, 
+var.equal = TRUE,
+conf.level = 0.95)</code></pre>
 <pre><code>
     Two Sample t-test
 
@@ -774,11 +765,11 @@ sample estimates:
 ratio of variances 
           7.297388 </code></pre>
 <pre class="r"><code>t.test(grupo3, grupo2,
-       alternative =&quot;less&quot;,
-       mu = 0, 
-       paired = FALSE, 
-       var.equal = FALSE,
-       conf.level = 0.95)</code></pre>
+alternative =&quot;less&quot;,
+mu = 0, 
+paired = FALSE, 
+var.equal = FALSE,
+conf.level = 0.95)</code></pre>
 <pre><code>
     Welch Two Sample t-test
 
@@ -805,33 +796,23 @@ diferencias significativas entre las dos medias.</p>
 </div>
 <div id="diferencia-de-proporciones" class="section level2">
 <h2><strong>Diferencia de proporciones</strong></h2>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej7.png" /></td>
-<td align="left">Una encuesta realizada a 100 usuarios de una tarjeta de
-crédito seleccionados aleatoriamente, 57 dijeron que sabían que
-empleando su tarjeta podían ganar millas de viajero. Después de una
-campaña publicitaria para difundir este beneficio, se realizo una
-encuesta independiente entre 150 usuarios de la tarjeta de crédito y 87
+<p><strong>Ejemplo</strong></p>
+<p>Una encuesta realizada a 100 usuarios de una tarjeta de crédito
+seleccionados aleatoriamente, 57 dijeron que sabían que empleando su
+tarjeta podían ganar millas de viajero. Después de una campaña
+publicitaria para difundir este beneficio, se realizo una encuesta
+independiente entre 150 usuarios de la tarjeta de crédito y 87
 informaron que conocían el beneficio. ¿Se puede concluir que el
 conocimiento de este beneficio aumento después de la campaña
-publicitaria?</td>
-</tr>
-</tbody>
-</table>
+publicitaria? |</p>
 <p><br/><br/></p>
 <p>Ho: <span class="math inline">\(p_{1} \geq p_{2}\)</span> <br/> Ha:
 <span class="math inline">\(p_{1} &lt; p_{2}\)</span> <br/></p>
 <p><br/></p>
 <pre class="r"><code>prop.test(c(57,87),c(100,150),
-          p = NULL,
-          alternative = &quot;less&quot;,
-          conf.level = 0.95)</code></pre>
+p = NULL,
+alternative = &quot;less&quot;,
+conf.level = 0.95)</code></pre>
 <pre><code>
     2-sample test for equality of proportions with continuity correction
 

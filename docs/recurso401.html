@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -535,7 +538,7 @@ determinado por el valor de la media.</p>
 </div>
 <div id="para-una-población" class="section level2">
 <h2><strong>Para una población</strong></h2>
-<p>Para una población puede ser de interes estimar el intervalo de
+<p>Para una población puede ser de interés estimar el intervalo de
 confianza para su media (<span class="math inline">\(\mu\)</span>),
 proporción (<span class="math inline">\(p\)</span>) o su varianza (<span
 class="math inline">\(\sigma^{2}\)</span>)</p>
@@ -561,12 +564,12 @@ partir muestras aleatorias, <span
 class="math inline">\((1-\alpha)\)</span>% o más contendrán el
 parámetro.</p>
 <p><span class="math display">\[\begin{eqnarray*}
-        P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&amp;=&amp;1-\alpha \\
-        P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}
-\leq z_{\alpha/2}\Bigg)&amp;=&amp;1-\alpha\\
-        P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq
+    P(-z_{\alpha/2} \leq Z \leq z_{\alpha/2})&amp;=&amp;1-\alpha \\
+    P\Bigg(-z_{\alpha/2} \leq \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \leq
+z_{\alpha/2}\Bigg)&amp;=&amp;1-\alpha\\
+    P\Bigg(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \mu \leq
 \bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)&amp;=&amp;1-\alpha \\
-    \end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>el intervalo de confianza para la media poblacional queda determinado
 por:</p>
 <div
@@ -588,13 +591,13 @@ parámetro n-1 grados de libertad</p>
 <p><span class="math display">\[T=\dfrac{\bar{X}-\mu}{s/
 \sqrt{n}}\]</span></p>
 <p><span class="math display">\[\begin{eqnarray*}
-        P\Big(-t_{\alpha/2} \leq T \leq t_{\alpha/2}
+    P\Big(-t_{\alpha/2} \leq T \leq t_{\alpha/2}
 \Big)&amp;=&amp;1-\alpha \\
-        P\Big(-t_{\alpha/2} \leq \frac{\bar{X}-\mu}{s/\sqrt{n}} \leq
+    P\Big(-t_{\alpha/2} \leq \frac{\bar{X}-\mu}{s/\sqrt{n}} \leq
 t_{\alpha/2} \Big)&amp;=&amp;1-\alpha \\
-        P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq
+    P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq
 \bar{X}+t_{\alpha/2}\dfrac{s}{\sqrt{n}}\Bigg)&amp;=&amp;1-\alpha \\
-    \end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><span class="math display">\[IC_{\mu}: \bar{x} \pm t_{\alpha/2}
@@ -628,7 +631,7 @@ media y la desviación estándar son respectivamente: 39.1 días y 17.3
 días. Con el fin de establecer una medición de la calidad en el
 servicio, se requiere determinar una estimación del 95% para la
 media.</p>
-<p>Este caso tambien se utiliza cuando se desconoce la distribución de
+<p>Este caso también se utiliza cuando se desconoce la distribución de
 la variable X. En este caso se utiliza el teorema central del límite que
 aproxima la distribución de la media muestral a la distribución
 normal</p>
@@ -657,7 +660,7 @@ class="math inline">\(\mu\)</span>, que implica un valor del percentil
 \frac{17.3}{\sqrt{100}}\Bigg)\]</span></p>
 <p><span class="math display">\[(35.71; 42.49 )\]</span></p>
 <p>El tiempo promedio transcurrido entre la facturación y el pago en la
-empresa está entre 35.7 dias y 42.5 dias con una confianza del 95%</p>
+empresa está entre 35.7 días y 42.5 días con una confianza del 95%</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="tamaño-de-la-muestra-para-estimar-una-media"
@@ -797,15 +800,13 @@ por la firma de auditores a la mayor brevedad</p>
 <p><strong>Solución</strong></p>
 <p>Información de la solicitud:</p>
 <ul>
-<li>Objetivo : Analizar la propuesta realizada por la firma externa
-<ul>
+<li>Objetivo : Analizar la propuesta realizada por la firma externa</li>
 <li>Valor total : 110.2 millones</li>
 <li>Valor costos administrativos y logísticos : 25.4 millones</li>
 <li>Valor encuestas : 110.2-55.4 = 54.8 millones</li>
 <li>Número de encuestas propuestas a realizar : 1096</li>
 <li>nivel de confianza 99%</li>
 <li>error de muestreo 0.05</li>
-</ul></li>
 </ul>
 <pre class="r"><code>library(paqueteDEG)
 paqueteDEG::sizep(qnorm(0.995),0.5,0.05)</code></pre>
@@ -857,7 +858,7 @@ oct.7.2021, tomados de :Investing.com)</p>
 
 cat(&quot;IC_var :&quot;, paqueteDEG::intervalo.var(ecopetrol),&quot;\n&quot;)  # intervalo de confianza para la varianza</code></pre>
 <pre><code>IC_var : 9810.519 10202.94 </code></pre>
-<pre class="r"><code>cat(&quot;IC_sd :&quot;,sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estandar</code></pre>
+<pre class="r"><code>cat(&quot;IC_sd :&quot;,sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar</code></pre>
 <pre><code>IC_sd : 99.04807 101.0096</code></pre>
 <p><br/><br/></p>
 <p>Se estima con una confianza del 95% que la desviación estándar del

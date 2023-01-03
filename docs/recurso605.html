@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -407,32 +410,339 @@ $(document).ready(function () {
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p>Supongamos las hipótesis:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{W} = 40\)</span> min</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{W} \neq 40\)</span> min</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>w=sample(CarreraLuz22F3$timerun/60, 100) # simulación de los datos</code></pre>
+<p><br/><br/></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(X \sim norm\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(X no \sim norm\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>shapiro.test(w)  # verificación de normalidad</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  w
+W = 0.97905, p-value = 0.1121</code></pre>
+<p><br/><br/><br/></p>
+<p><strong>Prueba de hipótesis para una media</strong></p>
+<p><br/></p>
+<p>Supuestos:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">X normal</td>
+</tr>
+<tr class="even">
+<td align="left">Varianza conocida (<span
+class="math inline">\(\sigma^{2}=4\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<pre class="r"><code>BSDA::z.test(w, mu=60, sigma.x = 125)</code></pre>
+<pre><code>
+    One-sample z-Test
+
+data:  w
+z = 0.82593, p-value = 0.4088
+alternative hypothesis: true mean is not equal to 60
+95 percent confidence interval:
+ 45.82462 94.82372
+sample estimates:
+mean of x 
+ 70.32417 </code></pre>
+<p><br/><br/><br/></p>
+<div id="prueba-de-hipótesis-para-una-media" class="section level3">
+<h3><strong>Prueba de hipótesis para una media</strong></h3>
+<p><br/><br/></p>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="30%" />
+<col width="35%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu = \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \leq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \geq \mu_o\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu \neq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &gt; \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; \mu_o\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<p>Supuestos:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">X normal</td>
+</tr>
+<tr class="even">
+<td align="left">Varianza desconocida</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \geq 70\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; 70\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<pre class="r"><code>#-------------------------------------------------------------------------------
+# Problema 2
+t.test(w,mu=70, alternative=&quot;less&quot;)</code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  w
+t = 0.29153, df = 99, p-value = 0.6144
+alternative hypothesis: true mean is less than 70
+95 percent confidence interval:
+     -Inf 72.17041
+sample estimates:
+mean of x 
+ 70.32417 </code></pre>
+<p><br/><br/></p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="recurso605_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="prueba-de-hipótesis-para-una-proporción"
+class="section level3">
+<h3><strong>Prueba de hipótesis para una proporción</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(p_{_{M}} \leq 0.50\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(p_{_{M}} &gt; 0.50\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>#-------------------------------------------------------------------------------
+t1=table(CarreraLuz22$sex)
+
+prop.test(t1[1],length(CarreraLuz22$sex),0.50,alternative=&quot;greater&quot;)</code></pre>
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  t1[1] out of length(CarreraLuz22$sex), null probability 0.5
+X-squared = 97.549, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: true p is greater than 0.5
+95 percent confidence interval:
+ 0.5942197 1.0000000
+sample estimates:
+        p 
+0.6129032 </code></pre>
+<p>El resultado indica que la mayoria de los participantes son
+hombres</p>
+<p><br/><br/></p>
+<p><strong>Pruebas de hipótesis para la comparación de medias en grupos
+independientes</strong></p>
+<p>Previamente a realizar la comparación de medias se deben realizar las
+pruebas de normalidad para cada una de las variables y la comparación de
+varianzas:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(X_{_{M}} \sim normal\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(X_{_{M}} \sim \text{ No } normal\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(X_{_{F}} \sim normal\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(X_{_{F}} \sim \text{ No } normal\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\sigma^{2}_{_{M}} =
+\sigma^{2}_{_{F}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\sigma^{2}_{_{M}} \neq
+\sigma^{2}_{_{F}}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{_{M}} \geq \mu_{_{F}}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{_{M}} &lt; \mu_{_{F}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>#  xM1=sample(CarreraLuz22M$timerun/60, 100)
+# xF1=sample(CarreraLuz22F$timerun/60, 100)
+
+shapiro.test(xM1) # validación de normalidad tiempo hombre</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  xM1
+W = 0.99075, p-value = 0.725</code></pre>
+<pre class="r"><code>shapiro.test(xF1) # validación de normalidad tiempo mujeres  </code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  xF1
+W = 0.99111, p-value = 0.7535</code></pre>
+<pre class="r"><code>var.test(xM1,xF1) # comparación de varianzas </code></pre>
+<pre><code>
+    F test to compare two variances
+
+data:  xM1 and xF1
+F = 1.0403, num df = 99, denom df = 99, p-value = 0.8447
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.6999399 1.5460907
+sample estimates:
+ratio of variances 
+          1.040274 </code></pre>
+<pre class="r"><code>t.test(xM1, xF1, alternative = &quot;less&quot;)  # comparación de medias</code></pre>
+<pre><code>
+    Welch Two Sample t-test
+
+data:  xM1 and xF1
+t = -4.3355, df = 197.92, p-value = 1.157e-05
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+      -Inf -4.269767
+sample estimates:
+mean of x mean of y 
+ 63.38167  70.28150 </code></pre>
+<p>Los resultado indican :</p>
+<ul>
+<li>Las dos variables tienen una distribución aproximadamente
+normal</li>
+<li>Se asume que las varianza son iguales</li>
+<li>La media del tiempo empleado por los hombre es menor que la media
+empleada por la mujeres</li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+<div id="pruebas-de-hipótesis-para-comparación-de-proporciones"
+class="section level2">
+<h2><strong>Pruebas de hipótesis para comparación de
+proporciones</strong></h2>
+<pre class="r"><code>#---------------------------------------------------------------------------------
+t1=table(CarreraLuz22M$categoria)
+t2=table(CarreraLuz22F$categoria)
+
+prop.test(c(t1[2], t2[2]),c(sum(t1), sum(t2)) )</code></pre>
+<pre><code>
+    2-sample test for equality of proportions with continuity correction
+
+data:  c(t1[2], t2[2]) out of c(sum(t1), sum(t2))
+X-squared = 18.821, df = 1, p-value = 1.436e-05
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.14505912 -0.05499747
+sample estimates:
+   prop 1    prop 2 
+0.5747029 0.6747312 </code></pre>
+<p>El resultado indica que existen diferencias entre las proporciones de
+hombre y mujeres en la categoría abierta</p>
+<p><br/><br/></p>
+</div>
+<div id="pruebas-de-hipótesis-comparación-de-medias-grupos-pareados"
+class="section level2">
+<h2><strong>Pruebas de hipótesis comparación de medias grupos
+pareados</strong></h2>
+<p>Ahora supongamos que un grupo de atletas corrió tambien en el 2021
+(<span class="math inline">\(xMa\)</span>) y repitió su participación en
+el 2022 (<span class="math inline">\(xMd\)</span>), se desea determinar
+si se presentaron mejoras o no en el rendimiento del grupo</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{_{M_{antes}}} =
+\mu_{_{M_{despues}}}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{_{M_{antes}}} \neq
+\mu_{_{M_{despues}}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code>#-----------------------------------------------------------------------------------
+t.test(xMa,xMd,paired = TRUE)</code></pre>
+<pre><code>
+    Paired t-test
+
+data:  xMa and xMd
+t = 0.80513, df = 99, p-value = 0.4227
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -1.970666  4.661998
+sample estimates:
+mean difference 
+       1.345666 </code></pre>
+<p>Los reultados indican que los promedios se supomen iguales</p>
 </div>
 
 

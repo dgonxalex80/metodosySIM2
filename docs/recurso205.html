@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -463,14 +466,14 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 función de densidad es constante en su recorrido o dominio de definición
 (intervalo [a,b])</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \dfrac{1}{b-a}   &amp;,&amp; a \leq x \leq b   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; \mbox{en otro caso}
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \dfrac{1}{b-a}   &amp;,&amp; a \leq x \leq b   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
+\end{equation*}\]</span></p>
 </div>
 <p><br/><br/></p>
 <p><span class="math inline">\(X \sim unif(x, a=0 , b=1)\)</span></p>
@@ -495,20 +498,16 @@ estadística</p></li>
 distribución normal, tiende a aproximarse a una distribución normal, a
 medida que el tamaño de muestra aumenta. (Teorema del Límite
 Central)</p></li>
-<li><p>La regla empírica establece que:</p>
-<ul>
+<li><p>La regla empírica establece que:</p></li>
 <li><p>Aproximadamente el 68% de la población se encuentra en el
 intervalo centrado <span class="math display">\[(\mu - \sigma ; \mu +
-\sigma)\]</span></p>
-<ul>
+\sigma)\]</span></p></li>
 <li><p>Aproximadamente el 95% de la población se encuentra en el
 intervalo centrado <span class="math display">\[(\mu - 2\sigma ; \mu +
 2\sigma)\]</span></p></li>
 <li><p>Aproximadamente el 99.7% de la población se encuentra en el
 intervalo centrado <span class="math display">\[(\mu - 3\sigma ; \mu +
 3\sigma)\]</span></p></li>
-</ul></li>
-</ul></li>
 </ul>
 <p>Su distribución fué planteada por el matemático francés del siglo 18,
 Abraham de Moivre, quien a partir de la distribución Binomial, con <span
@@ -590,14 +589,14 @@ utilizada para modelar el tiempo entre dos eventos consecutivos.</p>
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Distribución exponencial</strong></p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \lambda e^{-\lambda x}  &amp;,&amp; x &gt; 0   \\
-            &amp;&amp;\\
-            0 &amp;,&amp; x \leq 0
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \lambda e^{-\lambda x}  &amp;,&amp; x &gt; 0   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; x \leq 0
+    \end{array}
+    \right.
+\end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=\dfrac{1}{\lambda}\]</span></p>
 <p><span class="math display">\[V[X]=\dfrac{1}{\lambda^{2}}\]</span></p>
 <p>Observación: algunos autores utilizan <span
@@ -652,15 +651,15 @@ con parámetro <span class="math inline">\(\lambda\)</span>.</p>
 <span class="math inline">\(X_{i} \sim Exp(\lambda)\)</span>, entonces
 <span class="math inline">\(Y \sim \Gamma(r,\lambda)\)</span>.</p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \dfrac{\lambda^{r}x^{r-1} e^{-\lambda
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \dfrac{\lambda^{r}x^{r-1} e^{-\lambda
 x}}{\Gamma(r)}  &amp;,&amp; x &gt; 0   \\
-            &amp;&amp;\\
-            0 &amp;,&amp;   x \leq 0
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+        &amp;&amp;\\
+        0 &amp;,&amp;   x \leq 0
+    \end{array}
+    \right.
+\end{equation*}\]</span></p>
 <p>Distribuciones exponenciales gamma(3,1)}, gamma(2,1) y gamma(5,1)
 fig_gammas.pdf</p>
 <p>Algunos autores utilizan <span
@@ -697,15 +696,15 @@ principales características son:</p>
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Distribución Weibull</strong></p>
 <p><span class="math display">\[\begin{equation*}
-        f(x)=\left\lbrace
-        \begin{array}{lll}
-            \Bigg(\dfrac{\alpha}{\beta}\Bigg)\Bigg(\dfrac{x}{\beta}\Bigg)^{\alpha-1}\exp{\Bigg\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Bigg\}}&amp;,&amp;
+f(x)=\left\lbrace
+\begin{array}{lll}
+    \Bigg(\dfrac{\alpha}{\beta}\Bigg)\Bigg(\dfrac{x}{\beta}\Bigg)^{\alpha-1}\exp{\Bigg\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Bigg\}}&amp;,&amp;
 x &gt; 0\\
-            &amp;&amp;\\
-            0 &amp;,&amp; x \leq 0
-        \end{array}
-        \right.
-    \end{equation*}\]</span></p>
+    &amp;&amp;\\
+    0 &amp;,&amp; x \leq 0
+\end{array}
+\right.
+\end{equation*}\]</span></p>
 <p><span class="math display">\[E[X]=\beta
 \hspace{.2cm}\Gamma\Bigg(1+\frac{1}{\alpha}\Bigg)\]</span></p>
 <p><span class="math display">\[V[X]=\beta^{2}

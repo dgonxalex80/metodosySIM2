@@ -64,6 +64,8 @@ navbar:
           href: recurso601.html
         - text: "Variable aleatória"
           href: recurso602.html
+        - text: "Modelos de probabilidad"
+          href: recurso607.html          
         - text: "Estimación"
           href: recurso603.html  
         - text: "Intervalos de confianza"

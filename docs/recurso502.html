@@ -375,6 +375,9 @@ $(document).ready(function () {
       <a href="recurso602.html">Variable aleatória</a>
     </li>
     <li>
+      <a href="recurso607.html">Modelos de probabilidad</a>
+    </li>
+    <li>
       <a href="recurso603.html">Estimación</a>
     </li>
     <li>
@@ -481,7 +484,7 @@ normal</td>
 <p><br/><br/><br/></p>
 <p><strong>Ejemplo</strong></p>
 <p>Para una muestra de <span class="math inline">\(n=50\)</span> de la
-edad de los participantes de la Carrera La Luz inicalmente se verifica
+edad de los participantes de la Carrera La Luz inicialmente se verifica
 si su distribución es normal con el fin de determinar que prueba
 utilizar. Cumplido este supuesto y al no tener conocimiento del valor de
 la varianza utilizaremos una <strong>prueba t</strong> para una
@@ -495,9 +498,9 @@ shapiro.test(x)  # prueba de normalidad</code></pre>
 data:  x
 W = 0.96305, p-value = 0.1194</code></pre>
 <pre class="r"><code>t.test(x,                         #  
-       alternative = &quot;two.sided&quot;, # tipo de prueba
-       mu = 31,                  # valor a contrastar
-       conf.level = 0.90)         # nivel de confianza</code></pre>
+alternative = &quot;two.sided&quot;, # tipo de prueba
+mu = 31,                  # valor a contrastar
+conf.level = 0.90)         # nivel de confianza</code></pre>
 <pre><code>
     One Sample t-test
 
@@ -523,8 +526,8 @@ suficiente evidencia para rechazarla, <strong>asumimos</strong> que
 <span class="math inline">\(H_{0}\)</span> es verdad.</p>
 <p>En este caso es necesario determinar la región de rechazo (<span
 class="math inline">\(RdeR\)</span>) de acuerdo al tipo de hipótesis y a
-la distribución del estadistico de prueba. En esta caso estamos
-realizando una prueba de dos colas, para un estadistico de prueba con
+la distribución del estadístico de prueba. En esta caso estamos
+realizando una prueba de dos colas, para un estadístico de prueba con
 distribución t-Student con 99 grados de libertad.</p>
 <p><br/><br/></p>
 <p><strong>Región de Rechazo</strong></p>
@@ -542,12 +545,12 @@ library(ggdistribute)
 p=ggdistribution(dt, seq(-3, +3, 0.1), df = 99, colour = &quot;blue&quot;)
 p=ggdistribution(dt, seq(-3, qt(0.025,99), 0.1), df = 99, colour = &#39;blue&#39;, fill=&quot;red&quot;, p=p)   
 p=ggdistribution(dt, seq(qt(0.975,99),+3, 0.1), df = 99, colour = &#39;blue&#39;, fill=&quot;red&quot;, p=p)+ 
-     ggtitle(&quot;Región de rechazo : (-Inf, -1.984217)  (1.984217, +Inf)&quot;)
+ggtitle(&quot;Región de rechazo : (-Inf, -1.984217)  (1.984217, +Inf)&quot;)
 p</code></pre>
 <p><br/></p>
 <p><strong>Conclusión</strong>: Como el <strong>EdeP</strong>
 (<code>t = 0.76215</code>) NO cae en la <strong>RdeR</strong>, entonces
-NO rechazamos <span class="math inline">\(Ho\)</span>, asuminos <span
+NO rechazamos <span class="math inline">\(Ho\)</span>, asumimos <span
 class="math inline">\(Ho\)</span> es verdadera, es decir ASUMIMOS que
 <span class="math inline">\(\mu\)</span> de las edades es igual a 31
 años.</p>
@@ -604,7 +607,7 @@ class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
 construcción de una <span class="math inline">\(RdeR\)</span> para tomar
 la decisión. Solo con revisar el valor-p entregado por la prueba y
 aplicar la regla se toma la decisión. En adelante utilizaremos las
-reglas 2 y 3 dado que al ejecutar las funciones en R nos sumunistran
+reglas 2 y 3 dado que al ejecutar las funciones en R nos suministra
 información sobre valor-p.|</p>
 <p><br/><br/></p>
 </div>
@@ -631,8 +634,8 @@ en el programa de entrenamiento reducen la selección</em>.</p>
 Ha :<span class="math inline">\(p &lt; 0.76\)</span> <br/>
 <br/><br/></p>
 <pre class="r"><code>prop.test(24, 40, p = 0.76,
-          alternative = &quot;less&quot;,
-          conf.level = 0.95)</code></pre>
+alternative = &quot;less&quot;,
+conf.level = 0.95)</code></pre>
 <pre><code>
     1-sample proportions test with continuity correction
 
@@ -674,7 +677,7 @@ pRdeR=qchisq(c(0.025,0.975),9)
 p=ggdistribution(dchisq, seq(0, 30, 0.1), df = 9, colour = &#39;blue&#39;)
 p=ggdistribution(dchisq, seq(0, pRdeR[1], 0.1), df = 9, colour = &#39;blue&#39;, fill=&quot;blue&quot;, p=p)
 p=ggdistribution(dchisq, seq(pRdeR[2], 30, 0.1), df = 9, colour = &#39;blue&#39;, fill=&quot;blue&quot;, p=p)+
-       ggtitle(&quot;Región de rechazo:  (0; 2.70) (19.0, Inf) &quot;)
+ggtitle(&quot;Región de rechazo:  (0; 2.70) (19.0, Inf) &quot;)
 p
 pRdeR</code></pre>
 <pre class="r"><code>t=c(11.1, 15.6, 11.1, 7.5, 7.9, 14.7, 6.3, 8.5, 8.0 , 7.6)

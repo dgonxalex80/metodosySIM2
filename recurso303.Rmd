@@ -57,7 +57,7 @@ $$\lim_{n \to{+}\infty} E[\widehat{\theta}] = \theta$$
 <br/><br/>
 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 

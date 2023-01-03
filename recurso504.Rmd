@@ -80,7 +80,7 @@ Entre las principales pruebas no paramétricas están :
 | Objetivo               | Esta prueba puede ser utilizada para determinar si la diferencia entre el numero de veces que los datos caen a un lado de la media verdadera es significativamente diferente al número de veces que cae en el otro lado . Determinar si la diferencia entre el numero de veces en que el valor de una variable es mayor que el de la otra y el numero de veces que es menor es estadísticamente significativa. Versión no paramétrica de la prueba t para una muestra o de la prueba  t para muestras pareadas. Esta prueba se realiza sobre la mediana de los datos $Me$. |
 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Carlos y Ángela, Administradoras investigadores de una firma de artículos deportivos tienen la creencia que el deporte afecta la imagen que cada persona tiene de si misma. Para investigar esta posibilidad eligieron a 18 personas de manera aleatoria, para participar en un programa de ejercicios. Antes de empezar el programa las personas respondieron un cuestionario para medir su propia imagen.  Un nivel de 15 puntos en la prueba establece que la persona tiene un concepto indiferente frente a la afirmación, valores menores de 15 que la afecta en forma negativa y valores por encima de 15 que afectan su imagen en forma positiva. Los siguientes son resultados obtenidos : 16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16  |
 
@@ -91,9 +91,10 @@ x.img=c(16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16
 
 **Solución**:
 
-Hipótesis Nula	$Ho: Me = 15$ 
-
-Hipótesis Alterna  $Ha : Me > 15$ 
+|                    |                        |
+|-------------------:|:-----------------------|
+|Hipótesis Nula	     |$Ho: Me = 15$           | 
+|Hipótesis Alterna   |$Ha : Me > 15$          |
 
 Estadístico de Prueba : $M +$ : Numero de signos positivos
 
@@ -131,7 +132,7 @@ SIGN.test(x.img,md=15,alternative = "greater")
 
 <br/><br/>
 
-**Ejemplo** 
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El dueño de una panadería tiene la posibilidad de controlar los niveles de inventarios de leche para cuatro marcas diferentes. Con el fin de establecer políticas para la realización de nuevos pedidos requiere saber si la demanda de estas marcas son iguales (distribución uniforme). Con este propósito tomo la información de un día: |
 
@@ -143,8 +144,11 @@ El dueño de una panadería tiene la posibilidad de controlar los niveles de inv
 
 **Solución**:
 
-Ho: Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas)
-Ha: Las ventas no tienen una distribución uniforme
+|                    |                                                         |
+|-------------------:|:--------------------------------------------------------|
+|Hipótesis Nula	     |$Ho$ : Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) | 
+|Hipótesis Alterna   |$Ha$ : Las ventas no tienen una distribución uniforme    |
+ 
 
 
 ```{r}
@@ -156,23 +160,28 @@ chisq.test(x=obs,p=esp)
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Un profesor desea establecer si los resultados obtenidos por sus estudiantes tienen una distribución normal con media 3.5 y desviación estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:  
+
+|                    |                        |
+|-------------------:|:-----------------------|
+|Hipótesis Nula	     |$Ho: X \sim  normal$    | 
+|Hipótesis Alterna   |$Ha: X \hspace{.1cm}\text{ No} \sim normal$  |
 
 ```{r}
 nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=" ", xlab=" ", ylab=" ")
-lim.nf=h$breaks # cortes de los intervalos
-obs.nf=h$counts   # valores observados 
-mx=mean(nf)     # media
-sdx=sd(nf)          # desviación estandar
+lim.nf=h$breaks               # cortes de los intervalos
+obs.nf=h$counts               # valores observados 
+mx=mean(nf)                   # media
+sdx=sd(nf)                    # desviación estandar
 Fx.nf=pnorm(lim.nf, mx,sdx)   # probabilidades en caso de que Ho sea verdadera
 prob.nf=Fx.nf[2:7]-Fx.nf[1:6]
-esp.nf=prob.nf+0.002300453     # ajuste para que el sum(esp.nf)=1
+esp.nf=prob.nf+0.002300453    # ajuste para que el sum(esp.nf)=1
 
-chisq.test(x=obs.nf,p=esp.nf)
+chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste
 
 ```
 
@@ -184,7 +193,7 @@ chisq.test(x=obs.nf,p=esp.nf)
 <br/><br/>
 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Un investigador desea establecer la relación que puede existir entre la calificación obtenida por un producto por parte de sus consumidores y su ubicación de residencia. Con este fin recoge información de 100 de sus clientes:
 
@@ -203,10 +212,11 @@ Un investigador desea establecer la relación que puede existir entre la calific
 
 **Solución**:
 
-|                                                                                |
-|:-------------------------------------------------------------------------------|
-| $Ho$ : Las variables lugar de residencia y calificación son independientes     |
-| $Ha$ : Las variables lugar de residencia y calificación no son independientes  |
+
+|        |                                                                        |
+|-------:|:-----------------------------------------------------------------------|
+| $Ho$ : |Las variables lugar de residencia y calificación son independientes     |
+| $Ha$ : |Las variables lugar de residencia y calificación no son independientes  |
 |                                                                                |
 
 El siguiente código da solución a la constrastación de las hipótesis
@@ -239,15 +249,16 @@ Objetivo	          | Determinar su la diferencia entre la magnitud de las difere
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Los siguiente datos se tomaron de un estudio de comparación de adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer grupo está conformado por 15 estudiantes y el segundo grupo por 14 estudiantes y corresponden al consumo diario en calorías. Los datos obtenidos son los siguientes:  
 
 Nota: antes de realizar la comparación de medias, se debe realizar una prueba de bondad de ajuste para establecer si los datos siguen una distribución normal o no. En caso de que los datos no tengan distribución normal, entonces se debe realizar una prueba no paramétrica.
 
 
-|                                 |
-|:--------------------------------|
+
+|       |                         |
+|------:|:------------------------|
 |$Ho$ : $Me_{g1} \leq   Me_{g2}$  |
 |$Ha$ : $Me_{g1} >  Me_{g2}$      |
 
@@ -280,7 +291,7 @@ Objetivo	            |Determinar si las diferencias entre las medias de los rang
 <br/><br/>
 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para verificar si la memoria cambia con la edad, una investigadora realiza un estudio en el cual hay tres grupos de personas: G1- 60 años de edad, G2: con 50 años de edad, G3: con 40 años de edad. A cada persona se le presenta una serie de palabras. La serie es presentada dos veces y se cuenta el número de palabras que pueden recordar. 
 
@@ -291,10 +302,10 @@ Para verificar si la memoria cambia con la edad, una investigadora realiza un es
 |Grupo 3  |37  |28  |26  |35  |31  |    |    |  
 
 
-|                            |
-|:------------------------------------------|
-|$Ho$ : Las poblaciones son idénticas       |
-|$Ha$ : Las poblaciones no son idénticas    |
+|        |                                       |
+|:------:|:--------------------------------------|
+|$Ho$ :  | Las poblaciones son idénticas         |
+|$Ha$ :  | Las poblaciones no son idénticas      |
 
 Las anteriores hipótesis implica que sus distribuciones son las mismas (medias y varianzas iguales)
 
@@ -311,7 +322,7 @@ kruskal.test(g1,g2,g3)
 
 ### **Correlación de Spearman**
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Se requiere establecer si existe relación entre el tiempo de estudio dedicado a la preparación de una evaluación y la nota obtenida. Como la nota obtenida representa una variable cualitativa, se debe utilizar una prueba no paramétrica (coeficiente de correlación de Spearman). Los datos obtenidos son los siguientes: 
 
@@ -335,14 +346,14 @@ En este caso se utiliza el coeficiente de correlación de Sperman para valorar l
 
 ### **Prueba de Rachas**
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para verificar si los números aleatorios generados por Excel son de verdad aleatorios se tomó una muestra de ellos mediante la función =aleatorio.entre(), obteniendo como resultado los siguientes números: 0.738, 0.202, 0.357, 0.561, 0.509, 0.146, 0.746, 0.666, 0.133, 0.430, 0.972, 0.999, 0.499, 0.869, 0.821, 0.732, 0.355, 0.189, 0.478, 0.162 .
 
-|                            |
-|:---------------------------|
-|$Ho$ : La muestra es aleatoria    |
-|$Ha$ : La muestra no es aleatoria |
+|       |                           |
+|------:|:--------------------------|
+|$Ho$ : |La muestra es aleatoria    |
+|$Ha$ : |La muestra no es aleatoria |
 
 
 ```{r}
@@ -363,10 +374,10 @@ Como el valor-p (0.3149) es mayor al nivel de significancia, no se rechaza la hi
 
 Uno de los procedimientos mas utilizados en estadística es la relacionada con la verificación de normalidad de una variable. 
 
-|                                      |
-|:-------------------------------------|
-| $Ho$: X tiene distribución Normal    |
-| $Ha$: X no tiene distribución Normal |
+|        |                                 |
+|-------:|:--------------------------------|
+| $Ho$:  |$X$ tiene distribución Normal    |
+| $Ha$:  |$X$ no tiene distribución Normal |
 
 Existen muchas pruebas que nos ayudan en este propósito, a continuación relacionamos algunas de ellas 
 ```{r}
@@ -407,118 +418,5 @@ pearson.test(x) # chi-cuadrado de Pearson
 ```
 
 
-<br/><br/>
-
-
 <br/><br/><br/><br/>
 
-## **Resumen**
-
-<br/><br/>
-
-|    |                 |**Estadístico de prueba**                                       |
-|:--:|:----------------|:---------------------------------------------------------------|
-|    |Una población    |                                                                |
-|(1) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)$   |
-|(2) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)$       |
-|(3) |                 | $T_{o} = \dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}$   |
-|(4) |                 | $X^{2}_{o} = \dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}$ | 
-|(5) |                 | $Z_{o} =  \dfrac{X-n \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim N(0,1)$ |
-|    |                 | $Z_{o} = \dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim N(0,1)$ |
-|    | Dos poblaciones |                                                                 |
-|(6) |                 | $T_{o} =  \dfrac{\bar{d}-\Delta_{o}}{s_{d}^{2}} \sim t_{v=n-1}$ |
-|    |                 | donde: $\bar{d}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}d_{i} \hspace{.2cm}\text{ y } \hspace{.2cm} d_{i} = x_{1}-x_{2}$ |
-|(7) |                 | $Z_{o} = \dfrac{(\bar{x}_{1}-\bar{x}_{2})- \Delta_{o}}{\sqrt{\dfrac{\sigma_{1}^{2}}{n_{1}}+\dfrac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1)$|
-|(8) |                 | $T_{o} = \dfrac{(\bar{x}_{1}-\bar{x}_{2})-\Delta_{o}}{s_{p}\sqrt{\dfrac{1}{n_{1}} + \dfrac{1}{n_{2}}}} \sim t_{v=n_{1}+n_{2}-2}$|
-|    |                 | donde: $s^{2}_{p}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s^{2}_{2}}{n_{1}+n_{2}-2}$ |
-|(9) |                 | $T_{o} =  \dfrac{(\bar{x}_{1}-\bar{x}_{2}-\Delta_{o}}{\sqrt{\dfrac{s^{2}_{1}}{n_{1}}+\dfrac{s^{2}_{2}}{n_{2}}}} \sim t_{v^{*}}$ |
-|    |                 | donde: $v^{*}= \dfrac{(s^{2}_{1}/n_{1} + s^{2}_{2}/n_{2})^{2}}{\dfrac{(s^{2}_{1}/n_{1})^{2}}{n_{1}-1}+\dfrac{(s^{2}_{2}/n_{2})^{2}}{n_{2}-1}}$|
-|(10)|                 | $Z_{o} =  \dfrac{(\widehat{p_{1}}-\widehat{p_{2}})-\Delta_{o}}{\sqrt{\widehat{p}\widehat{q}(1/n_{1}+1/n_{2})}}$ |
-|    |                 | donde: $\widehat{p}=\dfrac{x_{1}+x_{2}}{n_{1}+n_{2}}$ \hspace{.2cm} $\widehat{q}=1-\widehat{p}$, |
-|    |                 | $\widehat{p_{1}}=\dfrac{x_{1}}{n_{1}} \hspace{.1cm} \text{ y } \hspace{.1cm}\widehat{p_{2}}=\dfrac{x_{2}}{n_{2}}$ |
-|(11)|                 | $F =  \dfrac{s_{1}^{2}}{s_{2}^{2}} \sim F_{v_{1}:n_{1}-1; v_{2}: n_{2}-1}$ |
-|    |                 | |
-
-<br/><br/>
-
-|                 |  **Reglas de decisión**                                        |
-|:----------------|:---------------------------------------------------------------|
-| Regla1:         | Si el $EdeP$ cae en la $RdeR$, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.|
-| Regla2:         | Si $\alpha >$ `valor-p` entonces rechazamos $H_{0}$, se **acepta** $H_{a}$. Si por el contrario $\alpha<$ `valor-p`, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. |
-| Regla3:         | El `valor-p` se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, asumo que $H_{0}$ es verdad.|
-
-
-```{r}
-
-```
-
-<br/><br/>
-
-```{r, echo=FALSE, out.width="80%", fig.align = "center"}
-#knitr::include_graphics("img/relacionPdeH.png")
-```
-
-
-<br/><br/>
-
-## **Código R**
-
-```{r, echo=FALSE, out.width="10%"}
-#knitr::include_graphics("img/logoR.png")
-```
-
-|                   |                                                          |
-|:------------------|:---------------------------------------------------------|
-|                   |**Pruebas paramétricas**                                  |
-|Entrada de datos   |                                                          |
-|                   |`x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)`                       |
-|                   |`x2=c(3,7,2,3,6,2,1,0,2)`                                 |  
-|Una población      |                                                          |
-||`z.test(datos,mu=10,stdev=4, conf.level=0.98)`                               |
-||`t.test(datos, mu=10,conf.level=0.98)`                                       |
-||`t.test(datos, mu=10,conf.level=0.98,alternative="greater")`                 |
-||`t.test(datos, mu=10,conf.level=0.98,alternative="less)`                     |
-||`prop.test(x=22,n=100, p=0.20, conf.level=0.98)`                             |
-|Dos poblaciones    |                                                          |
-|                   |`t.test(x1,x2,  paired=TRUE)`                             |    
-|                   |`t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0.95)` |
-|                   |`t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)`|
-|                   |`var.test(x,y)`                                           |
-|                   |`prop.test(c(x1,x2), c(n1,n2))`                           |
-|                   |**Pruebas no paramétricas**                               |
-|                   | `chisq.test(x=obs,p=esp)`                                |
-| paquete: MASS     | `library(MASS)`                                          |
-|                   |`chisq.test(M)`  # M: matriz                              |
-|paquete: BSDA      |`library(BSDA)`                                           |
-|                   |`SIGN.test(x,md=15,alternative = "greater")`              |
-|                   |`wilcox.test(g1,g2,paired = FALSE,alternative = "less")`  |
-|                   |**Pruebas de normalidad**                                 |
-|                   |`shapiro.test(x)`                                         |
-| paquete:normtest  |` library(normtest)`                                      |
-|                   |`ajb.norm.test(x)`                                        |
-|                   |`frosini.norm.test(x)`                                    |
-|                   |`geary.norm.test(x)`                                      |
-|                   |`hegazy1.norm.test(x)	`                                  |
-|                   |`hegazy2.norm.test(x)`                                    |
-|                   |`jb.norm.test(x)	`                                      |
-|                   |`kurtosis.norm.test(x)`                                   |
-|                   |`skewness.norm.test(x)	`                                  |
-|                   |`spiegelhalter.norm.test(x)`                              |
-|                   |`wb.norm.test(x)	`                                      |
-|paquete: nortest   |`library(nortest)`                                        |
-|                   |`ad.test(x)`                                              |
-|                   |`cvm.test(x)`                                             |
-|                   |`lillie.test(x)`                                          |
-|                   |`pearson.test(x)`                                         |
-|                   |`sf.test(x)`                                              |
-
-<br/><br/>
-
-
-|Tipos de pruebas   |                                                                 |
-|:------------------|:----------------------------------------------------------------|
-|Dos colas          |$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$  |
-|Cola superior      |$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$  |
-|Cola inferior      |$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$  |
-
-<br/><br/>

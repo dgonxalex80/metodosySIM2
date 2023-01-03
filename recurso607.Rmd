@@ -112,8 +112,7 @@ En cada caso si no recuerda las sintaxis de la función puede hacer uso de las a
 <br/><br/>
 
 
-
-**Ejemplo**
+<span style="color:#034a94"> **Ejemplo**</span>
 
 **Caso distribución binomial**
 
@@ -200,7 +199,7 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "orange", size = 4) +
 <br/><br/><br/>
 
 
-**Ejemplo**
+ <span style="color:#034a94"> **Ejemplo**</span>
 
 **Caso distribución normal**
 
@@ -288,7 +287,7 @@ Como ejemplo se presentan los siguientes problemas tomados de Navidi.
 <br/><br/>
 
 
-**Ejemplo**
+ <span style="color:#034a94"> **Ejemplo**</span>
 
 Se fabrican placas rectangulares cuyas longitudes en pulgadas se distribuyen como $N(2.0; 0.01)$ y cuyos anchos se distribuyen $N(3.0; 0.04)$. Suponga que las longitudes y los anchos son independientes. El área de una placa esta dada por $A=XY$. 
 

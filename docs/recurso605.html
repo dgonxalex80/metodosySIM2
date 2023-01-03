@@ -411,45 +411,114 @@ $(document).ready(function () {
 
 
 <p><br/><br/></p>
-<p><br/><br/></p>
-<p>Supongamos las hipótesis:</p>
+<div id="resumen" class="section level3">
+<h3><strong>Resumen</strong></h3>
 <table>
+<colgroup>
+<col width="24%" />
+<col width="75%" />
+</colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu_{W} = 40\)</span> min</td>
+<td align="left"></td>
+<td align="left"><strong>Pruebas paramétricas</strong></td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu_{W} \neq 40\)</span> min</td>
+<td align="left">Entrada de datos</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>x2=c(3,7,2,3,6,2,1,0,2)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Una población</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td
+align="left"><code>z.test(datos,mu=10,stdev=4, conf.level=0.98)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>t.test(datos, mu=10,conf.level=0.98)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td
+align="left"><code>t.test(datos, mu=10,conf.level=0.98,alternative="greater")</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td
+align="left"><code>t.test(datos, mu=10,conf.level=0.98,alternative="less)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td
+align="left"><code>prop.test(x=22,n=100, p=0.20, conf.level=0.98)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Dos poblaciones</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>t.test(x1,x2,  paired=TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td
+align="left"><code>t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0.95)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td
+align="left"><code>t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>var.test(x,y)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>prop.test(c(x1,x2), c(n1,n2))</code></td>
 </tr>
 </tbody>
 </table>
-<p><br/></p>
-<pre class="r"><code>w=sample(CarreraLuz22F3$timerun/60, 100) # simulación de los datos</code></pre>
-<p><br/><br/></p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(X \sim norm\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(X no \sim norm\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<pre class="r"><code>shapiro.test(w)  # verificación de normalidad</code></pre>
-<pre><code>
-    Shapiro-Wilk normality test
-
-data:  w
-W = 0.97905, p-value = 0.1121</code></pre>
 <p><br/><br/><br/></p>
-<p><strong>Prueba de hipótesis para una media</strong></p>
+</div>
+<div id="prueba-de-hipótesis-para-una-media" class="section level2">
+<h2><strong>Prueba de hipótesis para una media</strong></h2>
+<p>Podemos estar interesado en uno de los tres casos siguientes | | | |
+|:——————————–|:—————————–|:———————————| |<span
+class="math inline">\(Ho\)</span> : <span class="math inline">\(\mu =
+\mu_o\)</span> |<span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \leq \mu_o\)</span> | <span
+class="math inline">\(Ho\)</span> : <span class="math inline">\(\mu \geq
+\mu_o\)</span> | |<span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu \neq \mu_o\)</span> |<span
+class="math inline">\(Ha\)</span> : <span class="math inline">\(\mu &gt;
+\mu_o\)</span> |<span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; \mu_o\)</span> |</p>
+<p>Además se presentan tres alernativas para el estadístico de
+prueba:</p>
+<ul>
+<li>Prueba Z, con varianza conocida y X con distribución normal.</li>
+<li>Prueba t, con varianza desconocida y X con distribución normal.</li>
+<li>Prueba Z, con distribución de X desconocida y n lo suficientemente
+grande para garantizar distribución normal de la media a través del
+teorema del límite central.</li>
+</ul>
 <p><br/></p>
+<div id="prueba-para-una-media-con-varianza-conocida"
+class="section level3">
+<h3><strong>Prueba para una media con varianza conocida</strong></h3>
 <p>Supuestos:</p>
 <table>
 <tbody>
@@ -476,35 +545,10 @@ sample estimates:
 mean of x 
  70.32417 </code></pre>
 <p><br/><br/><br/></p>
-<div id="prueba-de-hipótesis-para-una-media" class="section level3">
+</div>
+<div id="prueba-de-hipótesis-para-una-media-1" class="section level3">
 <h3><strong>Prueba de hipótesis para una media</strong></h3>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="34%" />
-<col width="30%" />
-<col width="35%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu = \mu_o\)</span></td>
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu \leq \mu_o\)</span></td>
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu \geq \mu_o\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu \neq \mu_o\)</span></td>
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu &gt; \mu_o\)</span></td>
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu &lt; \mu_o\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
+<p><br/></p>
 <p>Supuestos:</p>
 <table>
 <tbody>
@@ -549,6 +593,8 @@ mean of x
 <div id="prueba-de-hipótesis-para-una-proporción"
 class="section level3">
 <h3><strong>Prueba de hipótesis para una proporción</strong></h3>
+<p>En este caso suponemos que <span class="math inline">\(n\)</span> es
+grande</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -633,7 +679,7 @@ class="math inline">\(\mu_{_{M}} &lt; \mu_{_{F}}\)</span></td>
 </tbody>
 </table>
 <p><br/></p>
-<pre class="r"><code>#  xM1=sample(CarreraLuz22M$timerun/60, 100)
+<pre class="r"><code># xM1=sample(CarreraLuz22M$timerun/60, 100)
 # xF1=sample(CarreraLuz22F$timerun/60, 100)
 
 shapiro.test(xM1) # validación de normalidad tiempo hombre</code></pre>
@@ -681,6 +727,7 @@ normal</li>
 empleada por la mujeres</li>
 </ul>
 <p><br/><br/><br/></p>
+</div>
 </div>
 <div id="pruebas-de-hipótesis-para-comparación-de-proporciones"
 class="section level2">

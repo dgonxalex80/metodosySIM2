@@ -69,7 +69,7 @@ Las variables aleatorias se clasifican teniendo en cuenta las características d
 <br/><br/>
 
 
-**Ejemplo 1**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Un experimento aleatorio $E$, consiste en lanzar una moneda balanceada al aire tres veces y observar el orden de caras ($c$) y sellos ($s$) que se obtienen en los tres lanzamientos. El espacio muestral $S$ de $E$, estará dado por: |
 
@@ -132,7 +132,7 @@ Por lo general este tipo de variables proceden del conteo y empiezan por **núme
 
 <br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplos**</span>
 
 Las siguientes variables se clasifican como **variables aleatorias discretas** :
 
@@ -169,7 +169,7 @@ $$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$$
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El restaurante "Asados y algo más"  solo da servicio mediante reservas. De acuerdo con los registros diarios en los últimos diez años se sabe que el treinta por ciento de las personas que reservan no llegan al restaurante. El restaurante tiene veinte  puestos y acepta cuarenta reservas. La función de distribución probabilidad que modela el número de personas que llegan al restaurante es $f$, dada por: 
 
@@ -232,7 +232,7 @@ Como se mencionó se considera una variable como continua cuando el conjunto de 
 Para este caso la probabilidad se puede modelar a través de una función continua, la cual se puede visualizar al construir un gráfico de densidad a partir de una muestra de ellos. A esta función se le llama función de densidad de probabilidad
 
 
-**Ejemplo 5**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 En el caso de las **variables aleatorias continuas** por lo general proceden de una **medición** como por ejemplo:
 
@@ -285,7 +285,7 @@ $F(x) = P(X \leq x) = P(X < x)$
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Con base en información histórica una compañía que fabrica lavadoras determinó que el tiempo $Y$ (en años) para que el electrodoméstico requiera una reparación mayor se obtiene mediante la siguiente función de densidad de probabilidad: 
 

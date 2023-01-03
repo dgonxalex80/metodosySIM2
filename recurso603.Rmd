@@ -103,9 +103,9 @@ Verificación del Teorema Central del Límite para una población exponencial co
 
 Con este fin se siguen los siguientes pasos:
 
-1. Se construye una matriz de dimensión 1000 x 1000 con números procedentes del modelo determinado
-2. Se separan matrices de dimensión 1000 x n , para n=1,2,20,30,50, 100 y 1000 . 
-3. A cada matriz construida en el paso anterior se le calcula la media por filas, como resultado se obtiene un vector de 1000 medias 
+1. Se construye una matriz de dimensión $1000$ x $1000$ con números procedentes del modelo determinado
+2. Se separan matrices de dimensión $1000$ x $n$ , para $n=1,2,20,30,50,100$ y $1000$. 
+3. A cada matriz construida en el paso anterior se le calcula la media por filas, como resultado se obtiene un vector de $1000$ medias 
 4. Cada uno de los vectores resultantes se visualiza a través de un histograma, gráfico de densidad y se construye también un gráfico de normalidad con el fin de validar el resultado 
 
 <br/><br/>

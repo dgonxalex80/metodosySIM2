@@ -413,9 +413,9 @@ $(document).ready(function () {
 <p><br/><br/></p>
 <div id="inrtevalo-de-confianza-para-una-media" class="section level2">
 <h2><strong>Inrtevalo de confianza para una media</strong></h2>
-<p>Como ejemplo se estima un IC para la el tiempo de carrera de los
-participantes en la carrera La Luz 2022, para una muestra de n=100
-competidores</p>
+<p>Como ejemplo se estima un intervalo de confianza para la el tiempo de
+carrera de los participantes en la carrera La Luz 2022, para una muestra
+de n=100 competidores</p>
 <pre class="r"><code>x=sample(CarreraLuz22$timerun/60, 100)
 t.test(x,conf.level = 0.95)$conf.int</code></pre>
 <pre><code>[1] 61.81836 66.96431

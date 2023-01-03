@@ -48,7 +48,7 @@ Es necesario extraer un gran número de muestras (suponga $k = 1000$). Para cada
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Construya el intervalo de confianza por los dos métodos y compare los resultados obtenidos.
 Tomado de Navidi(2006)

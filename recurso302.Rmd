@@ -63,7 +63,7 @@ Nota: Existe una relación entre las distribuciones Poisson y exponencial.Se pod
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -142,7 +142,9 @@ La función de verosimilitud $L(\theta)$ corresponde a la función de distribuci
 $$L(\theta)=f(x_{1},\theta).f(x_{2},\theta).f(x_{3},\theta)....f(x_{n}),\theta)$$
 El objetivo del método será encontrar el valor del parámetro que maximice la probabilidad conjunta, suponiendo el conocimiento de la función de distribución de probabilidad de la variable en estudio. 
 
-**Ejemplo**
+</br></br>
+
+<span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el caso de la distribución normal cuya función de distribución de probabilidad esta dada por :
 
@@ -366,21 +368,13 @@ $$\sigma^{2}_{_{\bar{X}}} = \dfrac{\sigma^{2}_{_{X}}}{n}$$
 
 <br/><br/>
 
-En este caso la media y la varianza de esta población son:
-$$\begin{eqnarray*}
-	\mu_{_{\bar{X}}}&=& \dfrac{1}{10}(15+20+...45) = 30 \\
-	\sigma^{2}_{_{\bar{X}}}&=& \dfrac{1}{10} \Big[\big(15-30\big)^{2} +...+\big(45-30\big)^{2} \Big]=75
-\end{eqnarray*}$$
 
-La diferencia presentada en la varianza, se debe a que se trata de una muestra grande en relaciona a la población ($\frac{n}{N}=\frac{2}{5}=0.20$). El haber realizado el muestreo sin repetición cambia la probabilidad del segundo elemento y generando un cambio en la varianza. En este caso se debe corregir el valor obtenido para obtener el valor correcto de la varianza multiplicando la varianza por **fcpf** factor de corrección por población finita
-
-$$\sigma^{2}_{_{\bar{X}}} \times \dfrac{(N-n)}{(N-1)} =100 \times \dfrac{(5-2)}{(5-1)}=75$$
 
 $$\text{factor por corrección por población finita : fcpf = } \dfrac{(N-n)}{(N-1)}$$
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#034a94"> **Ejemplo**</span>
 
 <br/>
 
@@ -412,7 +406,7 @@ $$V[\hspace{.1cm}\widehat{p}\hspace{.1cm}] =\dfrac{p(1-p)}{n}$$
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#034a94"> **Ejemplo**</span>
 
 <br/>
 

@@ -413,6 +413,118 @@ $(document).ready(function () {
 <p><br/><br/></p>
 <div id="pruebas-no-paramétricas" class="section level1">
 <h1><strong>Pruebas no paramétricas</strong></h1>
+<div id="resumen" class="section level2">
+<h2><strong>Resumen</strong></h2>
+<table>
+<colgroup>
+<col width="24%" />
+<col width="75%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>chisq.test(x=obs,p=esp)</code></td>
+</tr>
+<tr class="even">
+<td align="left">paquete: MASS</td>
+<td align="left"><code>library(MASS)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>chisq.test(M)</code> # M: matriz</td>
+</tr>
+<tr class="even">
+<td align="left">paquete: BSDA</td>
+<td align="left"><code>library(BSDA)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td
+align="left"><code>SIGN.test(x,md=15,alternative = "greater")</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td
+align="left"><code>wilcox.test(g1,g2,paired = FALSE,alternative = "less")</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><strong>Pruebas de normalidad</strong></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>shapiro.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">paquete:normtest</td>
+<td align="left"><code>library(normtest)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>ajb.norm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>frosini.norm.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>geary.norm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>hegazy1.norm.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>hegazy2.norm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>jb.norm.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>kurtosis.norm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>skewness.norm.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>spiegelhalter.norm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>wb.norm.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left">paquete: nortest</td>
+<td align="left"><code>library(nortest)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>ad.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>cvm.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>lillie.test(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><code>pearson.test(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><code>sf.test(x)</code></td>
+</tr>
+</tbody>
+</table>
 <p><br/><br/></p>
 <p><strong>Prueba de rachas</strong></p>
 <p>Se desea estraer una muestra aleatoria del grupo de participantes y
@@ -611,6 +723,7 @@ normal</p>
 <p>Referencias :</p>
 <p><a href="https://rpubs.com/CJRR/PUJ_DECB_NP"
 class="uri">https://rpubs.com/CJRR/PUJ_DECB_NP</a></p>
+</div>
 </div>
 </div>
 

@@ -22,7 +22,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 
 <br/><br/>
 
-**Ejemplos**
+ <span style="color:#FF7F00"> **Ejemplos**</span>
 
 + $E_{1}$: Lanzar una moneda dos veces y observar los resultados obtenidos en sus caras superiores 
 
@@ -45,7 +45,7 @@ Conjunto de todos los posibles valores que puede tomar el experimento aleatorio.
 
 <br/><br/>
 
-**Ejemplos**
+ <span style="color:#FF7F00"> **Ejemplos**</span>
 
 * $S_{1}$= $\{ (cc), (cs), (sc), (ss) \}$  
 <br/>
@@ -89,7 +89,7 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 <br/><br/>
 
-**Ejemplos**
+ <span style="color:#FF7F00"> **Ejemplos**</span>
 
 |           |                                       |                      |
 |:----------|:--------------------------------------|:---------------------|

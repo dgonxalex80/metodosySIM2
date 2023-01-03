@@ -624,7 +624,7 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Se registró el tiempo transcurrido entre la facturación y la
 recepción del pago, para una muestra de 100 clientes en una empresa. La
 media y la desviación estándar son respectivamente: 39.1 días y 17.3
@@ -691,7 +691,7 @@ class="math inline">\((1-\alpha)\%\)</span> de que el error no exceda
 <p><span class="math display">\[n =
 \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}\]</span></p>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Se desea estimar la media de las personas que han fallecido por
 Covid19 en Colombia, con una confianza del 98% y un error de muestreo de
 1 persona . ¿Qué tamaño deberá tener la muestra para cumplir con estas
@@ -717,7 +717,7 @@ a=1-.98
 e=3 # personas 
 
 # tamaño de muestra
-n=paqueteDEG::sizemu(qnorm(1-a/2),s2.nota,e)
+n=paqueteMET::sizemu(qnorm(1-a/2),s2.nota,e)
 round(n,0)  # redondeo a entero</code></pre>
 <pre><code>[1] 212</code></pre>
 <p><br/><br/></p>
@@ -747,7 +747,7 @@ class="math inline">\(n(1-p)&gt;5\)</span></li>
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>En una encuesta aleatoria realizada a 500 familias de la ciudad que
 poseen televisión por cable, se encuentra que 340 tienen suscripción a
 HBO. Calcule un intervalo de confianza para la proporción de familias
@@ -784,7 +784,7 @@ representa la tolerancia al erro que tiene el investigador (<span
 class="math inline">\(|\widehat{p}-p|&lt;e\)</span>).</p></li>
 </ul>
 <p><br/><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Una empresa requiere realizar un estudio para establecer las
 proporción de fallas diarias que presta la empresa al presentar un
 servicio . El gerente encargado del estudio decide que la tasa de error
@@ -849,17 +849,19 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Se quiere estimar un intervalo de confianza del 95% para la
 desviación estandar de los precios de los últimos 22 dias (sep.10.2021 a
 oct.7.2021, tomados de :Investing.com)</p>
 <p><br/><br/></p>
-<pre class="r"><code>ecopetrol=c(2810, 2810, 2825, 2769, 2734, 2706, 2699, 2671, 2550, 2590, 2570, 2529, 2520, 2566, 2615, 2620, 2550, 2572, 2553, 2570, 2593, 2606) 
+<pre class="r"><code># install.packages(&quot;paqueteMET&quot;)
+library(paqueteMET)
+ecopetrol=c(2810, 2810, 2825, 2769, 2734, 2706, 2699, 2671, 2550, 2590, 2570, 2529, 2520, 2566, 2615, 2620, 2550, 2572, 2553, 2570, 2593, 2606) 
 
-cat(&quot;IC_var :&quot;, paqueteDEG::intervalo.var(ecopetrol),&quot;\n&quot;)  # intervalo de confianza para la varianza</code></pre>
-<pre><code>IC_var : 9810.519 10202.94 </code></pre>
-<pre class="r"><code>cat(&quot;IC_sd :&quot;,sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar</code></pre>
-<pre><code>IC_sd : 99.04807 101.0096</code></pre>
+cat(&quot;IC_var : &quot;, paqueteMET::intervalo.var(ecopetrol),&quot;\n&quot;)  # intervalo de confianza para la varianza</code></pre>
+<pre><code>IC_var :  9810.519 10202.94 </code></pre>
+<pre class="r"><code>cat(&quot;IC_sd  : &quot;,sqrt(paqueteMET::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar</code></pre>
+<pre><code>IC_sd  :  99.04807 101.0096</code></pre>
 <p><br/><br/></p>
 <p>Se estima con una confianza del 95% que la desviación estándar del
 precio de las acciones de Ecopetrol está entre $ 75.7 y $ 140.0</p>

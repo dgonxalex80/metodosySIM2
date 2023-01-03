@@ -52,7 +52,7 @@ Desde el punto de vista clásico, todas las pruebas de hipótesis trabajan en ba
 
 ## **Conceptos básicos** 
 
-<br/><br/>
+<br/>
 
 ## **Hipótesis nula (Ho)** 
 
@@ -112,7 +112,7 @@ Existen dos situaciones en las que se comenten errores después de tomar una dec
 $$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para ilustrar el error tipo I, podemos acudir aun evento ocurrido a una estudiante que después de realizar una donación de sangre fue requerida por la clínica benefactora, pues el examen que le habían practicado a la sangre donada, presentaba signos de estar infectada por hepatitis c. Esto prendió las alarmas en la casa y fue llevada por la familia a que se le realizaran otros exámenes para confirmar el diagnostico inicial. Las segundas pruebas evidenciaron que se trataba de un error. Este caso constituye un caso de falso positivo (Se diagnostica como enferma, cuando en verdad esta sana) 
 
@@ -124,7 +124,7 @@ Para ilustrar el error tipo I, podemos acudir aun evento ocurrido a una estudian
 $$P(\text{No rechazar} Ho | Ho \text{ es falsa}) $$
 
 
-**Ejemolo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadounidense Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de dopin, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practicados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo. 
 

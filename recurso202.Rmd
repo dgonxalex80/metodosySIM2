@@ -105,7 +105,7 @@ $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$
 
 <br/><br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El valor esperado y la varianza para el número de personas que asisten al restaurante, con la siguiente función de distribución: 
 
@@ -126,7 +126,7 @@ Este resultado nos indica que en promedio asisten al restaurante 14 personas de 
 
 <br/><br/>
 
-## **Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el caso continuo retomamos la función: 
 

@@ -414,6 +414,152 @@ $(document).ready(function () {
 <p>Se llaman pruebas paramétricas las que están soportadas en supuestos
 que por lo general corresponden a la distribución de la variable que
 trabajamos</p>
+<div id="resumen" class="section level2">
+<h2><strong>Resumen</strong></h2>
+<p><br/><br/></p>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="20%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="left"></th>
+<th align="left"><strong>Estadístico de prueba</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="left">Una población</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">(1)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o}
+=\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">(2)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o}
+=\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">(3)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(T_{o} =
+\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">(4)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(X^{2}_{o} =
+\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">(5)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o} = \dfrac{X-n
+\hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim
+N(0,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o} =
+\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim
+N(0,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="79%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"><strong>Reglas de decisión</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Regla1:</td>
+<td align="left">Si el <span class="math inline">\(EdeP\)</span> cae en
+la <span class="math inline">\(RdeR\)</span>, entonce se rechaza la
+<span class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong>
+<span class="math inline">\(H_{a}\)</span> como verdadera. Si por el
+contrario el <span class="math inline">\(EdeP\)</span> NO cae en la
+<span class="math inline">\(RdeR\)</span>, entonces NO se rechaza <span
+class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
+para rechazarla, <strong>asumimos</strong> que <span
+class="math inline">\(H_{0}\)</span> es verdad.</td>
+</tr>
+<tr class="even">
+<td align="left">Regla2:</td>
+<td align="left">Si <span class="math inline">\(\alpha &gt;\)</span>
+<code>valor-p</code> entonces rechazamos <span
+class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span>. Si por el contrario <span
+class="math inline">\(\alpha&lt;\)</span> <code>valor-p</code>, no
+rechazamos <span class="math inline">\(H_{0}\)</span>,
+<strong>asumimos</strong> que <span class="math inline">\(H_{0}\)</span>
+es verdad.</td>
+</tr>
+<tr class="odd">
+<td align="left">Regla3:</td>
+<td align="left">El <code>valor-p</code> se interpreta como el error que
+puedo cometer al rechazar <span class="math inline">\(H_{0}\)</span>,
+siendo esta verdadera (cometer error tipo I). Si este valor es
+considerado como pequeño, rechazo <span
+class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span>. Si por el contrario se considera
+este valor grande, entonce no rechazo <span
+class="math inline">\(H_{0}\)</span>, asumo que <span
+class="math inline">\(H_{0}\)</span> es verdad.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tipos de pruebas</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dos colas</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta =
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
+\theta_{o}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Cola superior</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta \leq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
+\theta_{o}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Cola inferior</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta \geq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
+\theta_{o}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+</div>
 <div id="pruebas-de-hipótesis-sobre-una-media" class="section level2">
 <h2><strong>Pruebas de hipótesis sobre una media</strong></h2>
 <p>Dependiendo de las condiciones podemos optar por tres diferentes EdeP
@@ -482,7 +628,7 @@ normal</td>
 </tbody>
 </table>
 <p><br/><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Para una muestra de <span class="math inline">\(n=50\)</span> de la
 edad de los participantes de la Carrera La Luz inicialmente se verifica
 si su distribución es normal con el fin de determinar que prueba
@@ -619,7 +765,7 @@ class="section level2">
 con el fin de tener estimaciones mas robustas para estimar la proporción
 poblacional.</p>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Una empresa al seleccionar su personal, lo somete a un curso de
 entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes
 aprueban el curso. Durante el último proceso, los encargados efectúan
@@ -662,7 +808,7 @@ aprobación.</p>
 class="section level2">
 <h2><strong>Pruebas de hipótesis sobre una varianza</strong></h2>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Un fabricante de baterías para celulares afirma que el tiempo de
 duración de sus baterías se distribuyen aproximadamente normal con una
 desviación estándar de 9 horas. Un comprador antes de realizar un pedido

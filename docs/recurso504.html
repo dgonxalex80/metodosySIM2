@@ -497,7 +497,7 @@ muestras pareadas. Esta prueba se realiza sobre la mediana de los datos
 </tr>
 </tbody>
 </table>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Carlos y Ángela, Administradoras investigadores de una firma de
 artículos deportivos tienen la creencia que el deporte afecta la imagen
 que cada persona tiene de si misma. Para investigar esta posibilidad
@@ -511,9 +511,19 @@ forma positiva. Los siguientes son resultados obtenidos : 16, 15, 12,
 17, 18, 14, 16, 14, 16, 17, 19, 16, 14, 21, 20, 16, 16, 16 |</p>
 <pre class="r"><code>x.img=c(16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16 )</code></pre>
 <p><strong>Solución</strong>:</p>
-<p>Hipótesis Nula <span class="math inline">\(Ho: Me = 15\)</span></p>
-<p>Hipótesis Alterna <span class="math inline">\(Ha : Me &gt;
-15\)</span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="right">Hipótesis Nula</td>
+<td align="left"><span class="math inline">\(Ho: Me = 15\)</span></td>
+</tr>
+<tr class="even">
+<td align="right">Hipótesis Alterna</td>
+<td align="left"><span class="math inline">\(Ha : Me &gt;
+15\)</span></td>
+</tr>
+</tbody>
+</table>
 <p>Estadístico de Prueba : <span class="math inline">\(M +\)</span> :
 Numero de signos positivos</p>
 <table>
@@ -642,7 +652,7 @@ el supuesto de normalidad, o de otras distribuciones.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>El dueño de una panadería tiene la posibilidad de controlar los
 niveles de inventarios de leche para cuatro marcas diferentes. Con el
 fin de establecer políticas para la realización de nuevos pedidos
@@ -683,9 +693,25 @@ uniforme). Con este propósito tomo la información de un día: |</p>
 </tbody>
 </table>
 <p><strong>Solución</strong>:</p>
-<p>Ho: Las ventas se distribuyen de manera uniforme (cantidad demandada
-es igual para todas las marcas) Ha: Las ventas no tienen una
-distribución uniforme</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="74%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="right">Hipótesis Nula</td>
+<td align="left"><span class="math inline">\(Ho\)</span> : Las ventas se
+distribuyen de manera uniforme (cantidad demandada es igual para todas
+las marcas)</td>
+</tr>
+<tr class="even">
+<td align="right">Hipótesis Alterna</td>
+<td align="left"><span class="math inline">\(Ha\)</span> : Las ventas no
+tienen una distribución uniforme</td>
+</tr>
+</tbody>
+</table>
 <pre class="r"><code>obs=c(33,22,21,24)
 esp=c(0.25,0.25,0.25,0.25)
 chisq.test(x=obs,p=esp)</code></pre>
@@ -695,23 +721,37 @@ chisq.test(x=obs,p=esp)</code></pre>
 data:  obs
 X-squared = 3.6, df = 3, p-value = 0.308</code></pre>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Un profesor desea establecer si los resultados obtenidos por sus
 estudiantes tienen una distribución normal con media 3.5 y desviación
 estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="right">Hipótesis Nula</td>
+<td align="left"><span class="math inline">\(Ho: X \sim
+normal\)</span></td>
+</tr>
+<tr class="even">
+<td align="right">Hipótesis Alterna</td>
+<td align="left"><span class="math inline">\(Ha: X \hspace{.1cm}\text{
+No} \sim normal\)</span></td>
+</tr>
+</tbody>
+</table>
 <pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=&quot; &quot;, xlab=&quot; &quot;, ylab=&quot; &quot;)</code></pre>
 <p><img src="recurso504_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<pre class="r"><code>lim.nf=h$breaks # cortes de los intervalos
-obs.nf=h$counts   # valores observados 
-mx=mean(nf)     # media
-sdx=sd(nf)          # desviación estandar
+<pre class="r"><code>lim.nf=h$breaks               # cortes de los intervalos
+obs.nf=h$counts               # valores observados 
+mx=mean(nf)                   # media
+sdx=sd(nf)                    # desviación estandar
 Fx.nf=pnorm(lim.nf, mx,sdx)   # probabilidades en caso de que Ho sea verdadera
 prob.nf=Fx.nf[2:7]-Fx.nf[1:6]
-esp.nf=prob.nf+0.002300453     # ajuste para que el sum(esp.nf)=1
+esp.nf=prob.nf+0.002300453    # ajuste para que el sum(esp.nf)=1
 
-chisq.test(x=obs.nf,p=esp.nf)</code></pre>
+chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste</code></pre>
 <pre><code>
     Chi-squared test for given probabilities
 
@@ -722,7 +762,7 @@ X-squared = 2.8988, df = 5, p-value = 0.7156</code></pre>
 <div id="prueba-chi-cuadrado-de-independencia" class="section level3">
 <h3><strong>Prueba chi-cuadrado de independencia</strong></h3>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Un investigador desea establecer la relación que puede existir entre
 la calificación obtenida por un producto por parte de sus consumidores y
 su ubicación de residencia. Con este fin recoge información de 100 de
@@ -774,18 +814,22 @@ sus clientes:</p>
 <p><strong>Solución</strong>:</p>
 <table>
 <colgroup>
-<col width="100%" />
+<col width="10%" />
+<col width="90%" />
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : Las variables
-lugar de residencia y calificación son independientes</td>
+<td align="right"><span class="math inline">\(Ho\)</span> :</td>
+<td align="left">Las variables lugar de residencia y calificación son
+independientes</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : Las variables
-lugar de residencia y calificación no son independientes</td>
+<td align="right"><span class="math inline">\(Ha\)</span> :</td>
+<td align="left">Las variables lugar de residencia y calificación no son
+independientes</td>
 </tr>
 <tr class="odd">
+<td align="right"></td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -843,7 +887,7 @@ pareadas</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Los siguiente datos se tomaron de un estudio de comparación de
 adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer
 grupo está conformado por 15 estudiantes y el segundo grupo por 14
@@ -857,12 +901,14 @@ paramétrica.</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
+<td align="right"><span class="math inline">\(Ho\)</span> : <span
 class="math inline">\(Me_{g1} \leq Me_{g2}\)</span></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
+<td align="right"><span class="math inline">\(Ha\)</span> : <span
 class="math inline">\(Me_{g1} &gt; Me_{g2}\)</span></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -912,7 +958,7 @@ estadísticamente significativas. Versión no parametrica del ANOVA.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Para verificar si la memoria cambia con la edad, una investigadora
 realiza un estudio en el cual hay tres grupos de personas: G1- 60 años
 de edad, G2: con 50 años de edad, G3: con 40 años de edad. A cada
@@ -955,12 +1001,12 @@ veces y se cuenta el número de palabras que pueden recordar.</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : Las
-poblaciones son idénticas</td>
+<td align="center"><span class="math inline">\(Ho\)</span> :</td>
+<td align="left">Las poblaciones son idénticas</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : Las
-poblaciones no son idénticas</td>
+<td align="center"><span class="math inline">\(Ha\)</span> :</td>
+<td align="left">Las poblaciones no son idénticas</td>
 </tr>
 </tbody>
 </table>
@@ -980,7 +1026,7 @@ Kruskal-Wallis chi-squared = 5, df = 5, p-value = 0.4159</code></pre>
 </div>
 <div id="correlación-de-spearman" class="section level3">
 <h3><strong>Correlación de Spearman</strong></h3>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Se requiere establecer si existe relación entre el tiempo de estudio
 dedicado a la preparación de una evaluación y la nota obtenida. Como la
 nota obtenida representa una variable cualitativa, se debe utilizar una
@@ -1051,7 +1097,7 @@ con una nota.</p>
 </div>
 <div id="prueba-de-rachas" class="section level3">
 <h3><strong>Prueba de Rachas</strong></h3>
-<p><strong>Ejemplo</strong></p>
+<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Para verificar si los números aleatorios generados por Excel son de
 verdad aleatorios se tomó una muestra de ellos mediante la función
 =aleatorio.entre(), obteniendo como resultado los siguientes números:
@@ -1061,12 +1107,12 @@ verdad aleatorios se tomó una muestra de ellos mediante la función
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : La muestra es
-aleatoria</td>
+<td align="right"><span class="math inline">\(Ho\)</span> :</td>
+<td align="left">La muestra es aleatoria</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : La muestra no
-es aleatoria</td>
+<td align="right"><span class="math inline">\(Ha\)</span> :</td>
+<td align="left">La muestra no es aleatoria</td>
 </tr>
 </tbody>
 </table>
@@ -1093,11 +1139,13 @@ relacionada con la verificación de normalidad de una variable.</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span>: X tiene
+<td align="right"><span class="math inline">\(Ho\)</span>:</td>
+<td align="left"><span class="math inline">\(X\)</span> tiene
 distribución Normal</td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span>: X no tiene
+<td align="right"><span class="math inline">\(Ha\)</span>:</td>
+<td align="left"><span class="math inline">\(X\)</span> no tiene
 distribución Normal</td>
 </tr>
 </tbody>
@@ -1160,430 +1208,7 @@ D = 0.051775, p-value = 0.2128</code></pre>
 
 data:  x
 P = 15.05, p-value = 0.3747</code></pre>
-<p><br/><br/></p>
 <p><br/><br/><br/><br/></p>
-</div>
-<div id="resumen" class="section level2">
-<h2><strong>Resumen</strong></h2>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="20%" />
-<col width="75%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="left"></th>
-<th align="left"><strong>Estadístico de prueba</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"></td>
-<td align="left">Una población</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="center">(1)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o}
-=\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(2)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o}
-=\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(3)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(T_{o} =
-\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(4)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(X^{2}_{o} =
-\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(5)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} = \dfrac{X-n
-\hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim
-N(0,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} =
-\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim
-N(0,1)\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="left">Dos poblaciones</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="center">(6)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(T_{o} =
-\dfrac{\bar{d}-\Delta_{o}}{s_{d}^{2}} \sim t_{v=n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left">donde: <span
-class="math inline">\(\bar{d}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}d_{i}
-\hspace{.2cm}\text{ y } \hspace{.2cm} d_{i} = x_{1}-x_{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(7)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} =
-\dfrac{(\bar{x}_{1}-\bar{x}_{2})-
-\Delta_{o}}{\sqrt{\dfrac{\sigma_{1}^{2}}{n_{1}}+\dfrac{\sigma_{2}^{2}}{n_{2}}}}
-\sim N(0,1)\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(8)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(T_{o} =
-\dfrac{(\bar{x}_{1}-\bar{x}_{2})-\Delta_{o}}{s_{p}\sqrt{\dfrac{1}{n_{1}}
-+ \dfrac{1}{n_{2}}}} \sim t_{v=n_{1}+n_{2}-2}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left">donde: <span
-class="math inline">\(s^{2}_{p}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s^{2}_{2}}{n_{1}+n_{2}-2}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(9)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(T_{o} =
-\dfrac{(\bar{x}_{1}-\bar{x}_{2}-\Delta_{o}}{\sqrt{\dfrac{s^{2}_{1}}{n_{1}}+\dfrac{s^{2}_{2}}{n_{2}}}}
-\sim t_{v^{*}}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left">donde: <span class="math inline">\(v^{*}=
-\dfrac{(s^{2}_{1}/n_{1} +
-s^{2}_{2}/n_{2})^{2}}{\dfrac{(s^{2}_{1}/n_{1})^{2}}{n_{1}-1}+\dfrac{(s^{2}_{2}/n_{2})^{2}}{n_{2}-1}}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(10)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} =
-\dfrac{(\widehat{p_{1}}-\widehat{p_{2}})-\Delta_{o}}{\sqrt{\widehat{p}\widehat{q}(1/n_{1}+1/n_{2})}}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left">donde: <span
-class="math inline">\(\widehat{p}=\dfrac{x_{1}+x_{2}}{n_{1}+n_{2}}\)</span>
-<span class="math inline">\(\widehat{q}=1-\widehat{p}\)</span>,</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"><span
-class="math inline">\(\widehat{p_{1}}=\dfrac{x_{1}}{n_{1}} \hspace{.1cm}
-\text{ y }
-\hspace{.1cm}\widehat{p_{2}}=\dfrac{x_{2}}{n_{2}}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(11)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(F =
-\dfrac{s_{1}^{2}}{s_{2}^{2}} \sim F_{v_{1}:n_{1}-1; v_{2}:
-n_{2}-1}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="20%" />
-<col width="79%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left"><strong>Reglas de decisión</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Regla1:</td>
-<td align="left">Si el <span class="math inline">\(EdeP\)</span> cae en
-la <span class="math inline">\(RdeR\)</span>, entonce se rechaza la
-<span class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong>
-<span class="math inline">\(H_{a}\)</span> como verdadera. Si por el
-contrario el <span class="math inline">\(EdeP\)</span> NO cae en la
-<span class="math inline">\(RdeR\)</span>, entonces NO se rechaza <span
-class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
-para rechazarla, <strong>asumimos</strong> que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
-</tr>
-<tr class="even">
-<td align="left">Regla2:</td>
-<td align="left">Si <span class="math inline">\(\alpha &gt;\)</span>
-<code>valor-p</code> entonces rechazamos <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
-class="math inline">\(H_{a}\)</span>. Si por el contrario <span
-class="math inline">\(\alpha&lt;\)</span> <code>valor-p</code>, no
-rechazamos <span class="math inline">\(H_{0}\)</span>,
-<strong>asumimos</strong> que <span class="math inline">\(H_{0}\)</span>
-es verdad.</td>
-</tr>
-<tr class="odd">
-<td align="left">Regla3:</td>
-<td align="left">El <code>valor-p</code> se interpreta como el error que
-puedo cometer al rechazar <span class="math inline">\(H_{0}\)</span>,
-siendo esta verdadera (cometer error tipo I). Si este valor es
-considerado como pequeño, rechazo <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
-class="math inline">\(H_{a}\)</span>. Si por el contrario se considera
-este valor grande, entonce no rechazo <span
-class="math inline">\(H_{0}\)</span>, asumo que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<p><br/><br/></p>
-</div>
-<div id="código-r" class="section level2">
-<h2><strong>Código R</strong></h2>
-<table>
-<colgroup>
-<col width="24%" />
-<col width="75%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><strong>Pruebas paramétricas</strong></td>
-</tr>
-<tr class="even">
-<td align="left">Entrada de datos</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>x2=c(3,7,2,3,6,2,1,0,2)</code></td>
-</tr>
-<tr class="odd">
-<td align="left">Una población</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td
-align="left"><code>z.test(datos,mu=10,stdev=4, conf.level=0.98)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>t.test(datos, mu=10,conf.level=0.98)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td
-align="left"><code>t.test(datos, mu=10,conf.level=0.98,alternative="greater")</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td
-align="left"><code>t.test(datos, mu=10,conf.level=0.98,alternative="less)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td
-align="left"><code>prop.test(x=22,n=100, p=0.20, conf.level=0.98)</code></td>
-</tr>
-<tr class="odd">
-<td align="left">Dos poblaciones</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>t.test(x1,x2,  paired=TRUE)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td
-align="left"><code>t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0.95)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td
-align="left"><code>t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>var.test(x,y)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>prop.test(c(x1,x2), c(n1,n2))</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><strong>Pruebas no paramétricas</strong></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>chisq.test(x=obs,p=esp)</code></td>
-</tr>
-<tr class="odd">
-<td align="left">paquete: MASS</td>
-<td align="left"><code>library(MASS)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>chisq.test(M)</code> # M: matriz</td>
-</tr>
-<tr class="odd">
-<td align="left">paquete: BSDA</td>
-<td align="left"><code>library(BSDA)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td
-align="left"><code>SIGN.test(x,md=15,alternative = "greater")</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td
-align="left"><code>wilcox.test(g1,g2,paired = FALSE,alternative = "less")</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><strong>Pruebas de normalidad</strong></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>shapiro.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left">paquete:normtest</td>
-<td align="left"><code>library(normtest)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>ajb.norm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>frosini.norm.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>geary.norm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>hegazy1.norm.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>hegazy2.norm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>jb.norm.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>kurtosis.norm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>skewness.norm.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>spiegelhalter.norm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>wb.norm.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left">paquete: nortest</td>
-<td align="left"><code>library(nortest)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>ad.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>cvm.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>lillie.test(x)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"><code>pearson.test(x)</code></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"><code>sf.test(x)</code></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="22%" />
-<col width="77%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tipos de pruebas</th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Dos colas</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta =
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
-\theta_{o}\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Cola superior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \leq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
-\theta_{o}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left">Cola inferior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \geq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
-\theta_{o}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
 </div>
 
 

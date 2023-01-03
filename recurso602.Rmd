@@ -10,9 +10,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-</br></br>
-
-
 # **Variables discretas**
 
 En el caso de las variables discretas la función de distribución de probabilidad $f(x)$ debe cumplir las siguientes propiedades
@@ -27,7 +24,7 @@ En este caso se puede utilizar la función sumatoria  `sum(x, na.rm = FALSE)`, d
 
 <br/><br/>
 
-**Ejemplo** 
+ <span style="color:#034a94"> **Ejemplo**</span>
 
 Para la función $f(x)$   
 
@@ -128,7 +125,7 @@ Estas verificaciones se pueden realizar en R con dos instrucciones:
  
 <br/><br/>
  
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para la función $f(x)$   
 
@@ -223,7 +220,7 @@ cat("V[X] = ", Ex2$value-Ex$value^2)
 
 <br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un dia y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por :
 
@@ -363,7 +360,7 @@ cat("Rho     = ", Rho, "\n")
 
 <br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 
 Una empresa prestadora se servicios a domicilio tienen dos lineas telefónicas para que los clientes puedan realizar sus pedidos. Sea X y Y la proporción del tiempo en que las lineas se encuentran ocupadas. La función de densidad conjunta que modela $f(x,y)$ esta dada por:

@@ -65,7 +65,7 @@ la cual debe cumplir con las siguientes características:
 
 </div>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un día y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por : 
 
@@ -272,7 +272,7 @@ Lafunción de densidad conjunta para las variables $X$ y $Y$ $f(x,y)$ debe cumpl
 
 <br/><br/>
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 La cantidad de ácido ($X$) y la cantidad de ácido ($Y$), en litros, que se vierten en una mezcla se modela con la función $f_{XY}$ como se presenta a continuación $f(x,y)$ esta dada por: 
 
@@ -339,7 +339,7 @@ $$h(y)=f_{_{Y}}(y)=\displaystyle\int_{-\infty}^{\infty}f_{_{X,Y}}(x,y)\:dx$$
 
 <br/><br/>
 
-Para el **ejemplo** tenemos:
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 
 $$g(x) = \displaystyle\int_{0}^{1} (x + y) \:dy = \bigg( xy + \dfrac{y^{2}}{2} \bigg) \Bigg|_{0}^{1} = \bigg(x + \dfrac{1}{2}\bigg)$$
@@ -503,7 +503,7 @@ Sean $X$ y $Y$ dos variables aleatorias discretas o continuas con función de pr
 $$f(x,y)= g(x) h(y) $$
 </div> 
 
-**Ejemplo**
+ <span style="color:#FF7F00"> **Ejemplo**</span>
 
 
 $$\bigg(x+\dfrac{1}{2}\bigg) \bigg(y + \dfrac{1}{2}\bigg) = xy + \dfrac{x}{2} + \dfrac{y}{2} + \dfrac{1}{4} \neq (x+y)  $$

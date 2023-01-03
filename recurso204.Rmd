@@ -128,9 +128,6 @@ $$V[X]= np(1-p) $$
 
 </div> 
 
-
-**Ejemplo**
-
 $X \sim binom(x,n=10,p=0.30)$
 
 ```{r, echo=FALSE, fig.height=3.5}

@@ -17,7 +17,7 @@ CarreraLuz22F = subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
 ## **Inrtevalo de confianza para una media**
 
 
-Como ejemplo se estima un IC para la el tiempo de carrera de los participantes en la carrera La Luz 2022, para una muestra de n=100 competidores
+Como ejemplo se estima un intervalo de confianza para la el tiempo de carrera de los participantes en la carrera La Luz 2022, para una muestra de n=100 competidores
 
 ```{r}
 x=sample(CarreraLuz22$timerun/60, 100)

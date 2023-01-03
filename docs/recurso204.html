@@ -472,9 +472,10 @@ contienen la palabras <strong>número de…</strong></p>
 <div id="bernoulli" class="section level2">
 <h2><strong>Bernoulli</strong></h2>
 <p><br/></p>
-<p>Empezaremos enunciando el modelo Bernoulli, aunque algunos autores no
-lo reconocen como modelo, ayuda en la compresión de los modelos
-siguientes. Toma su nombre del matemático Jacob Bernoulli.</p>
+<p>Empezaremos enunciando el modelo <strong>Bernoulli</strong>, aunque
+algunos autores no lo reconocen como modelo, ayuda en la compresión de
+los modelos siguientes. Toma su nombre del matemático Jacob
+Bernoulli.</p>
 <p><br/><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -506,50 +507,16 @@ de distribución de probabilidad $</p>
 <p><span class="math display">\[V[X]= pq\]</span></p>
 </div>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>Un biólogo realiza una salida de campo para estudiar el
-comportamiento del cucarachero común. Se considera éxito si puede filmar
-al animal y fracaso si no puede hacerlo. Por información suministrada en
-artículos científicos la probabilidad de lograrlo se estima en 0.20.</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p>Se requiere examinar si dentro de este contexto existe una variable
-que proceda de un experimento Bernoulli y ese caso como se podría
-caracterizar.</p>
-<p>Primero es necesario revisar las características de un experimento
-Bernoulli y confrontarlas contra el contexto presentado en el
-ejemplo.</p>
-<p>Primero existe un solo ensayo o salida de campo, durante después de
-la salida de campo se pueden obtener dos resultados posibles: lograr el
-objetivo de visualizar y filmar al animal (Éxito) y por otro lado el no
-lograrlo (Fracaso). También se posee la probabilidad de éxito (<span
-class="math inline">\(0.20\)</span>), este caso establecida mediante el
-enfoque subjetivo de un experto en un artículo científico. Lo anterior
-nos permite poder asociar la variable que llamaremos <span
-class="math inline">\(X\)</span> asociada con el poder o no realizar la
-filmación.</p>
-<p>La variable aleatoria se define en este caso como:</p>
-<p><span class="math display">\[X =\left\lbrace
-\begin{array}{lll}
-    1 &amp; \mbox{si se realiza la filmación del ave}   \\
-    0 &amp; \mbox{si no se logra realizar la filmación}
-\end{array}
-\right.\]</span></p>
-<p>y su función de distribución de probabilidad está dada por:</p>
-<p><span class="math display">\[f(x)= 0.2^{x} (1-0.2)^{1-x} ,\text{ si }
-x=0,1.\]</span> <span class="math display">\[E[X]=p =0.20\]</span></p>
-<p><span class="math display">\[V[X] =p(1-p)= 0.16\]</span>
-<br/><br/></p>
 </div>
 <div id="binomial" class="section level2">
 <h2><strong>binomial</strong></h2>
 <p><br/></p>
-<p>El segundo modelo que abordaremos corresponde al modelo binomial, que
-puede verse como una generalización del modelo Bernoulli, pasando de un
-ensayo a <span class="math inline">\(n\)</span> ensayos. Fue investigada
-y analizada por el físico y matemático suizo Jakob Bernoulli en relación
-con problemas presentados en los juegos de azar. Su trabajo fue
-presentado en 1713.</p>
+<p>El modelo <strong>binomial</strong>, que puede verse como una
+generalización del modelo Bernoulli, pasando de un ensayo a <span
+class="math inline">\(n\)</span> ensayos. Fue investigada y analizada
+por el físico y matemático suizo Jakob Bernoulli en relación con
+problemas presentados en los juegos de azar. Su trabajo fue presentado
+en 1713.</p>
 <p><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -592,66 +559,20 @@ x=0,1,2, \ldots, n   \\
 <p><span class="math display">\[E[X]=np\]</span></p>
 <p><span class="math display">\[V[X]= np(1-p) \]</span></p>
 </div>
-<p><img src="recurso204_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p><br/><br/></p>
 <p><strong>Ejemplo</strong></p>
-<p>Un sistema de seguridad para casas está diseñado para tener una
-confiabilidad del 90% . Suponga que nueve casas equipadas con este
-dispositivo sufrieron tentativa de robo. Se requiere calcular la
-probabilidad de que en siete de las nueve, la alarma se activará.</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p>En este caso la variable <span class="math inline">\(X\)</span> se
-define como el número de casas de las nueve en las que se activa el
-sistema de alarma. Observe que en cada caso se puede presentar dos
-posibles resultados frente a la tentativa de robo :</p>
-<ul>
-<li><p>La alarma se active (E) o que el sistema falle y no se active
-(F), los cuales conforman los eventos de exito (E) y fracaso
-(F).</p></li>
-<li><p>Los sistemas operan de manera independiente y se pueden
-considerar como idénticos.</p></li>
-<li><p>La probabilidad de que un equipo se active frente a una tentativa
-de robo es de 0.9 (<span class="math inline">\(p\)</span>) y por tanto
-la probabilidad de que no funcione será de 0.1 (<span
-class="math inline">\(q\)</span>)</p></li>
-<li><p>Se tienen nueve casas, que representaría la realización de nueve
-ensayos, bajo las mismas condiciones.</p></li>
-</ul>
-<p>Por las anteriores razones, el proceso enunciado corresponde a un
-experimento binomial y por tanto podemos afirmar que la variable X:
-número de sistemas que se activan ante la tentativa de robo, es una
-variable con distribución binomial con parámetros <span
-class="math inline">\(n=9\)</span> y <span
-class="math inline">\(p=0.90\)</span>.</p>
-<p>Para calcular la probabilidad requerida utilizamos la función de
-distribución de probabilidad del modelo Binomial</p>
-<p><span class="math display">\[\begin{equation*}
-    \begin{array}{lcl}
-        f(7) = P(X=7)&amp;=&amp; \displaystyle\binom{9}{7} 0.90^{7}
-0.10^{2} \\
-        &amp;=&amp; 0.17218688
-    \end{array}
-\end{equation*}\]</span></p>
-<p>En R se corre el siguiente código:</p>
-<pre class="r"><code> dbinom(7,9,0.90)</code></pre>
-<pre><code>[1] 0.1721869</code></pre>
-<p>La siguiente gráfica corresponde a la función de distribución de
-probabilidad del ejemplo2 :binomial con <span
-class="math inline">\(n=9\)</span> y <span
-class="math inline">\(p=0.90\)</span></p>
-<p>Distribución binomial <span class="math inline">\(n=9\)</span>, <span
-class="math inline">\(p=0.90\)</span> fig_binom.pdf</p>
+<p><span class="math inline">\(X \sim binom(x,n=10,p=0.30)\)</span></p>
+<p><img src="recurso204_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="poisson" class="section level2">
 <h2><strong>Poisson</strong></h2>
 <p><br/></p>
-<p>El siguiente modelo fue plantea por el físico y matemático francés
-Siméon-Denis Poissonen uno de sus trabajos presentado en 1838
-relacionado con temas sobre juicios en temas criminales y civiles. Es
-utilizado para resolver problemas asociados con el número de eventos que
-ocurren en un intervalo de tiempo o espacio, como por ejemplo:</p>
+<p>El modelo <strong>Poisson</strong> fue plantea por el físico y
+matemático francés Siméon-Denis Poissonen uno de sus trabajos presentado
+en 1838 relacionado con temas sobre juicios en temas criminales y
+civiles. Es utilizado para resolver problemas asociados con el número de
+eventos que ocurren en un intervalo de tiempo o espacio, como por
+ejemplo:</p>
 <ul>
 <li><p>número de llamadas que recibe un conmutador durante una
 hora</p></li>
@@ -682,32 +603,15 @@ superficie o volumen</strong></p>
 </div>
 <p>La siguiente gráfica representa la distribución de masa de una
 variable de Poisson con media 2.</p>
-<p><strong>Distribución Poisson (<span
-class="math inline">\(\lambda=2\)</span>)</strong></p>
-<p><img src="recurso204_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>Se estima que en el cruce más importante de la cuidad, ocurren 2
-accidentes por día y se desea valorar la probabilidad de que en un día
-cualquiera no ocurra ningún accidente en dicho cruce.</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p>El número de accidentes que pueden ocurrir en este cruce, para un dia
-cualquiera, se puede considerar como una variable aleatoria con
-distribución Poisson, pues la variable hace referencia al número de
-eventos que se pueden presentar en un determinado espacio de tiempo.
-Para calcular la probabilidad de que no ocurra ningún evento, utilizamos
-el modelo Poisson:</p>
-<p><span class="math display">\[f(0) = P(X = 0) = \dfrac{2^{0}}{0!}
-\hspace{.2cm} e^{-2}=0.135335\]</span></p>
-<pre class="r"><code>dpois(0,2)</code></pre>
-<pre><code>[1] 0.1353353</code></pre>
+<p><span class="math inline">\(X \sim poiss(x,\lambda=2)\)</span></p>
+<p><img src="recurso204_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="hipergeometrico" class="section level2">
 <h2><strong>hipergeometrico</strong></h2>
-<p>Este modelo nace de la necesidad de modelar eventos Bernoulli con
-probabilidad no constante generados en elecciones sin repetición.</p>
+<p>Este modelo <strong>hipergeométrico</strong> nace de la necesidad de
+modelar eventos Bernoulli con probabilidad no constante generados en
+elecciones sin repetición.</p>
 <p><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -738,36 +642,18 @@ si }\max(0,K+n-N) \leq x \leq \min(n,K) }&amp;   \\
 class="math display">\[V[X]=n\Bigg(\frac{K}{N}\Bigg)
 \Bigg(1-\dfrac{K}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}\Bigg)\]</span></p>
 </div>
-<p><strong>Distribución binomial hipergeometrica (<span
-class="math inline">\(m=95, n=5, k=10\)</span>)</strong></p>
-<p><img src="recurso204_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>Las tarjetas de circuito impreso se someten a una prueba de
-funcionamiento antes de ser ensambladas en un dispositivo de seguridad,
-después de ser rellenado con chips semiconductores. Un lote de estas
-tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin
-reemplazo para realizar una prueba de control de calidad internacional.
-Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos
-1 tarjeta defectuosa aparezca en la muestra? (3-92. Mongomery)</p>
-<p><strong>Solución</strong></p>
-<p><span class="math inline">\(\begin{eqnarray*}  P(X\geq
-1)=1-P(X=0)  &amp;=&amp; 1 -
-\dfrac{\displaystyle\binom{5}{0}\displaystyle\binom{135}{20}}{\displaystyle\binom{140}{20}}\\  &amp;=&amp;
-1-\big[ 0.4570594 \big] \\  &amp;=&amp; 0.5429406
-\end{eqnarray*}\)</span></p>
-<pre class="r"><code>phyper(0,5,135,20, lower.tail = FALSE)</code></pre>
-<pre><code>[1] 0.5429406</code></pre>
+<p><span class="math inline">\(X \sim hyperg(x, m=95, n=5,
+k=10)\)</span></p>
+<p><img src="recurso204_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="geométrico-o-de-pascal" class="section level2">
 <h2><strong>geométrico o de Pascal</strong></h2>
-<p>La distribución geométrica también conocida como distribución de
-Pascal, fue esbozada en el escrito El arte de la conjetura, escrita por
-Jakob Bernoulli. Esta distribución modela el número de ensayos Bernoulli
-necesarios para obtener el primer éxito. Los valores que puede tomar
-esta variable son:</p>
+<p>La distribución <strong>geométrica</strong> también conocida como
+distribución de Pascal, fue esbozada en el escrito El arte de la
+conjetura, escrita por Jakob Bernoulli. Esta distribución modela el
+número de ensayos Bernoulli necesarios para obtener el primer éxito. Los
+valores que puede tomar esta variable son:</p>
 <p><br/></p>
 <table>
 <thead>
@@ -841,46 +727,26 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 </div>
 <p>Nota: En R la variable corresponde al <strong>número de fracasos
 necesarios para obtener el primer exito</strong> <br/><br/></p>
-<p><strong>Distribución geométrica o de Pascal (<span
-class="math inline">\(p=0.5\)</span>)</strong></p>
-<p><img src="recurso204_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>En un estudio realizado en peces, los animales son sometidos a
-pruebas para determinar si poseen o no un gen que aumenta el riesgo de
-una enfermedad mortal. la probabilidad de que una animal de la especie
-en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más
-animales deban ser sometidos a pruebas antes de detectar el primer pez
-con el gen objeto de estudio?</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math display">\[\begin{eqnarray*}
-    P(X\geq 3)&amp;=&amp; 1-P(X\leq 2)\\
-    &amp;=&amp; 1-[p(1)+p(2)] \\
-    &amp;=&amp; 1-[0.5+0.5 \times 0.5] \\
-    &amp;=&amp;0.25
-\end{eqnarray*}\]</span></p>
-<pre class="r"><code>dgeom(2, 0.50)</code></pre>
-<pre><code>[1] 0.125</code></pre>
-<pre class="r"><code>0.50*0.50</code></pre>
-<pre><code>[1] 0.25</code></pre>
+<p><span class="math inline">\(X \sim geom(x,p=0.5)\)</span></p>
+<p><img src="recurso204_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="binomial-negativo" class="section level2">
 <h2><strong>binomial negativo</strong></h2>
 <p><br/></p>
-<p>La distribución binomial negativa esta relacionada con la
-distribución geométrica</p>
+<p>La distribución <strong>binomial negativa</strong> esta relacionada
+con la distribución geométrica</p>
 <p><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Distribución binomial negativa</strong></p>
-<p>Se considera una generalización de la distribución Geométrica. En
-este caso la variable objeto de estudio corresponde a <span
-class="math inline">\(X\)</span>: <strong>número de ensayos requeridos
-para obtener <span class="math inline">\(r\)</span> éxitos</strong>.
-Esta variable se obtiene al sumar <span class="math inline">\(r\)</span>
-variables con distribución Geométrica con igual parámetro <span
+<p>El modelo <strong>binomial negativo* se considera una generalización
+de la distribución Geométrica. En este caso la variable objeto de
+estudio corresponde a <span class="math inline">\(X\)</span>:
+</strong>número de ensayos requeridos para obtener <span
+class="math inline">\(r\)</span> éxitos**. Esta variable se obtiene al
+sumar <span class="math inline">\(r\)</span> variables con distribución
+Geométrica con igual parámetro <span
 class="math inline">\(p\)</span>.</p>
 <p>Su función de masa está dada por :</p>
 <p><span class="math display">\[\begin{equation*}
@@ -897,23 +763,9 @@ class="math inline">\(p\)</span>.</p>
 <p><span class="math display">\[V[X]=\dfrac{r(1-p)}{p^{2}}\]</span></p>
 </div>
 <p><br/><br/></p>
-<p><strong>Distribución binomial negativa (<span
-class="math inline">\(k=2, p=0.50\)</span>)</strong></p>
-<p><img src="recurso204_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><span class="math inline">\(X \sim nbiom(x,k=2, p=0.50)\)</span></p>
+<p><img src="recurso204_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>Un sitio Web está soportado por tres servidores idénticos. Sólo uno
-de ellos se utiliza para operar el sitio, y los otros dos son de
-repuesto, los cuales se activan en caso de que el sistema principal
-falle. La probabilidad de falla en el sistema principal (o cualquier
-otro sistema de repuesto activado) ante una solicitud de servicio es
-0,0005. Suponiendo que cada solicitud representa un juicio
-independiente, cuál es el número medio de solicitudes que se espera
-hasta el fracaso de los tres servidores?</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math display">\[E[X]=\dfrac{3}{0.0005}= 6000 \]</span>
-<br/><br/></p>
 </div>
 
 

@@ -15,23 +15,38 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/>
 
+
 La inferencia estadística permite generalizar lo hallado en una muestra a toda la población. Para realizar este proceso contamos con dos opciones: Estimación y las Pruebas de hipótesis. El fundamento de estos procesos está relacioando con varios conceptos como:
 
 <br/>
 
-|               |                 |                    |                    |                      |
-|:--------------|:----------------|:-------------------|:-------------------|:---------------------| 
-|población              |parámetro                   |censo                     |muestra                         |muestreo                  | 
-|muestreo probabilistico| muestreo no probabilistico |muestreo aleatorio simple |muestreo aleatorio estratificado|muestreo por conglomerados|
-|muestreo por juicio    | muestreo por conveniciencia|muestreo bola de nieve    |estimador puntual               |estimador insesgado       | 
-|estimador consistente  | estimador eficiente        |estimación por intervalos de confianza|pruebas de hipótesis |  |
+
+
+```{r, echo=FALSE}
+library("SnowballC")
+library("wordcloud2")
+library("RColorBrewer")
+nube <- read.csv("palabras1.csv")
+
+nube1=rep(nube$palabra,nube$replicas)
+
+t=data.frame(table(nube1))
+
+dword=t[,1]
+dfreq=t[,2]
+set.seed(1234)
+# wordcloud(words = dword, freq = dfreq, min.freq = 1,
+#            max.words=200, random.order=FALSE, rot.per=0.35, 
+#            colors=brewer.pal(8, "Dark2"))
+
+library(wordcloud2)
+wordcloud2(data = t, size = .25, shape = 'pentagon') #"circle")
+```
 
 
 <br/><br/>
 
 ### **Población** 
-
-<br/>
 
 En Estadística, se identifica el término población con el dominio de la variable aleatoria X, asociada a los objetos o individuos sobre los cuales se desarrolla un experimento y cuyo valor ocurre al azar. El estudio del conjunto de todas las mediciones de interés para un investigador se llama CENSO (Mendenhall (2008)). Como ejemplo podemos mencionar la población de habitantes de Colombia que se estudia a través del Censo de población que se debe realizar cada diez años. 
 
@@ -39,15 +54,11 @@ En Estadística, se identifica el término población con el dominio de la varia
 
 ### **Muestra** 
 
-<br/>
-
 Un subconjunto extraido de los elementos que conforman la población se denomina MUESTRA. Una definición técnica de muestra está dada por: repetición $n$ veces, en idénticas condiciones de la experiencia aleatoria, se puede obtener $n$ valores independientes de una variable aleatoria $X_{1}, X_{2},...,X_{n}$ a la que se le denomina muestra de la variable $X$.
 
 <br/><br/>
 
 ### **Parámetro** 
-
-<br/>
 
 Es una caracterización numérica de la distribución de probabilidad de una variable aleatoria. Como ejemplo de parámetros tenemos a $\mu$, $\sigma^{2}$ que determinan la función de probabilidad de una variable con distribución normal: 
 
@@ -62,8 +73,6 @@ $$f(x)=\frac{1}{\sqrt{50 \pi}} \exp{\Bigg(- \frac{1}{50}\big(x-100\big)^{2}\Bigg
 
 ### **Estimador** 
 
-<br/>
-
 Es una función de los valores obtenidos en una muestra aleatoria que da como resultado un valor que corresponde a una aproximación del parámetro objeto de estudio. Generalmente se representa como $\widehat{\theta}$. Como algunos ejemplos podemos citar:
 
 $$\widehat{\mu}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\bar{x} $$
@@ -73,20 +82,9 @@ $$\widehat{\sigma^{2}}=\frac{1}{n-1}\sum_{i=1}^{n}\big(x_{i}-\bar{x}\big)^{2} = 
 
 ### **Estimación** 
 
-<br/>
-
 Es la evaluación o generación del estimador para una muestra determinada. 
 
 Como ejemplo podemos utilizar uno de los estimadores que estudiaremos :  $\widehat{\mu}= \bar{x}$, para una muestra dada
-
-<br/>
-
-$$ 630, 650, 710, 750, 790, 820, 860 \text{ y } 910$$
-
-<br/>
-
-$$\widehat{\mu}=\frac{1}{n}\sum_{i=1}^{n} x_{i} =\frac{1}{8}(630+650+...+910)=765$$
-El valor del estimador de $\mu$ para esta muestra es $$\widehat{\mu}=\bar{x}= 765$$.
 
 <br/><br/>
 
@@ -95,8 +93,6 @@ El valor del estimador de $\mu$ para esta muestra es $$\widehat{\mu}=\bar{x}= 76
 <br/>
 
 ### **Importancia del Muestreo**
-
-<br/>
 
 El papel principal de la estadística está relacionado con el análisis de información que permita tomar decisiones con respecto a una población. Es posible que se pueda estudiar la totalidad de elementos  que determinan la población, en este caso estaremos realizando un censo. Sin embargo no siempre podemos estudiar la totalidad de la población por lo cual debemos seleccionar una pequeña parte de ella. A este subconjunto lo podemos llamar muestra.
 
@@ -113,6 +109,7 @@ El papel principal de la estadística está relacionado con el análisis de info
 |Naturaleza de la prueba               |desctructiva     |no destructiva      |
 |Atención a casos individuales         |si               |no                  |
 ||||
+
 <font size="-1">Tomado de Malhotra(2004)</font>
 
 <br/>
@@ -132,23 +129,17 @@ c.El conocimiento de los procesos que generan los verdaderos valores de las unid
 
 ### **Diseños Muestrales**
 
-<br/>
-
 Un diseño muestral es una estrategia de selección de unidades muestrales, mediante un proceso de aleatorización definido previamente (plan de muestreo). De acuerdo con esta definición, son tres los elementos esenciales de un diseño muestral:
 
 <br/><br/>
 
 ### **Unidad muestral**
 
-<br/>
-
 Constituye la unidad básica a partir de la cual se obtiene la información, pudiendo por tanto, ser éstas personas,  o individuos de cualquier tipo si , por ejemplo nuestro interés es estimar la talla promedio; casas, número promedio de habitaciones, o el consumo de energía; comunidades, si los que nos interesa es el número promedio de especies por comunidad, áreas o cuadrículas si deseamos estimar densidades medias o biomasa total, etc.
 
 <br/><br/>
 
 ### **Proceso de aleatorización**
-
-<br/>
 
 Aun cuando la unidad muestral esté claramente definida, existen algunos elementos que pueden afectar el proceso de muestreo, alterando la calidad de la información. En este caso no es la definición, sino la selección de la unidad muestral, la que puede estar sesgada por la naturaleza de la medición, así por ejemplo, si deseamos encuestar a personas para averiguar su tendencia política o su nivel socio económico, pudiéramos sentirnos tentados a seleccionar sus nombres desde una guía telefónica, lo que dejaría fuera de la encuesta a todas aquellas personas  que no tienen teléfono, constituyéndose ello en una fuente de sesgo. En  otros casos, la naturaleza del muestreo tiene que ver con el entrenamiento de los muestreadores, es el caso, por ejemplo, de las muestras para identificar fallas en un equipo, en que la experiencia del muestreador juega un papel importante en la identificación de los mismos.
 
@@ -157,8 +148,6 @@ Lo anterior significa que, en términos prácticos, la aleatoriedad debe garanti
 <br/><br/>
 
 ###  **Tamaño muestral**
-
-<br/>
 
 Una vez que las unidades muestrales han sido definidas y se ha acordado un proceso de aleatorización, debemos preguntarnos, cuántas unidades debemos seleccionar para tener una buena representación en la  muestra.
 
@@ -182,7 +171,9 @@ Donde:
 
 <br/><br/>
 
-**Ejemplo de cálculo de tamaño de la muestra- Caso de una media** : Suponga que deseamos determinar el tamaño de la muestra para estimar la media de la nota del curso de estadística, con una confianza del 95\% y un error de muestreo de 0.2 puntos. Un estudio realizado el semestre pasado arrojó una varianza de 1.6.
+**Ejemplo**
+
+**Caso de una media** : Suponga que deseamos determinar el tamaño de la muestra para estimar la media de la nota del curso de estadística, con una confianza del 95\% y un error de muestreo de 0.2 puntos. Un estudio realizado el semestre pasado arrojó una varianza de 1.6.
 
 La información necesaria para el calculo del tamaño de muestra requerido es:
 
@@ -204,13 +195,15 @@ $$n= \dfrac{154 \times 200}{154 + 200 -1} =87.2 \approxeq 88 $$
 
 <br/><br/>
 
-**Ejemplo de cálculo de tamaño de la muestra- Caso de una proporción**: Supongamos ahora que se desea calcular el tamaño de la muestra para realizar una estimación de la proporción de estudiantes que reprueban el curso de matemáticas fundamentales y que deseamos una confianza del 98\% y un error de muetreo de 0.1. En este caso la varianza corresponde a $pq$ donde $q=1-p$ y por tanto tendrá su valor máximo cuando $p=0.50$, es decir que si utilizamos como varianza $0.5 \times (1-0.5)=0.25$ obtendremos el valor más grande de tamaño de muestra posible.
+**Ejemplo**
+
+**Caso de una proporción**: Supongamos ahora que se desea calcular el tamaño de la muestra para realizar una estimación de la proporción de estudiantes que reprueban el curso de matemáticas fundamentales y que deseamos una confianza del 98\% y un error de muetreo de 0.1. En este caso la varianza corresponde a $pq$ donde $q=1-p$ y por tanto tendrá su valor máximo cuando $p=0.50$, es decir que si utilizamos como varianza $0.5 \times (1-0.5)=0.25$ obtendremos el valor más grande de tamaño de muestra posible.
 
 $$ n=\dfrac{2.33^2 \times 0.25}{0.1^{2}}=135.7 \approxeq 136$$
 
 En caso de poder realizar una prueba piloto (observación de una muestra, digamos 30 unidades) y estimar en este caso su varianza, el resultado del tamaño de muestra será inferior al anteriormente calculado.
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 ## **Tipos de muestreo** 
 
@@ -228,12 +221,6 @@ probabilidad de ser elegidos para formar parte de una muestra y, consiguientemen
 
 Sólo estos métodos de muestreo probabilísticos nos aseguran la representatividad de la muestra extraída y son, por tanto, los más recomendables. Dentro de los métodos de
 muestreo probabilísticos encontramos los siguientes tipos:
-De acuerdo con las consideraciones anteriores, algunas de las estrategias de muestreo más conocidas son:
-
-+ muestreo aleatorio simple 
-+ muestreo aleatorio sistemático 
-+ muestreo aleatorio estratificado 
-+ muestreo aleatorio por conglomerados
 
 <br/><br/>
 
@@ -243,25 +230,11 @@ De acuerdo con las consideraciones anteriores, algunas de las estrategias de mue
 
 ### **Muestreo Aleatorio simple (m.a.s)**
 
-<br/>
-
-Una muestra aleatoria simple tomada de una población finita, da a cada subconjunto de la población (muestra) de tamaño específico la misma probabilidad de ser seleccionada.
+Una muestra **aleatoria simple** tomada de una población finita, da a cada subconjunto de la población (muestra) de tamaño específico la misma probabilidad de ser seleccionada.
 
 El muestreo aleatorio simple es un procedimiento de selección de un conjunto de individuos de modo que toda posible muestra de $n$ unidades tiene la misma probabilidad de ser seleccionada de los $N$ individuos asociados a la  población. La muestra se selecciona en $n$ etapas, en cada una de las cuales, cada elemento que no ha sido aún seleccionado, tiene la misma probabilidad de ser seleccionado. Si el número de individuos de donde seleccionamos los $n$ individuos para determinar la muestra tiene un tamaño conocido, podemos asignar un número a cada una de las $N$ unidades y luego mediante la generación de $n$ números aleatorios entre $1$ y $N$, seleccionamos los individuos que determinarán la  muestra de tamaño $n$ correspondiente.
 
 El muestreo puede realizarse sin reemplazo o con reemplazo, o dicho de otro modo, la muestra puede elegirse de dos maneras: sin reposición de la unidad extraída o con reposición de ella. El muestreo con reemplazo es usado cuando es aceptable tener la misma unidad dos veces en la muestra.
-
-**Ejemplo**  De la base del caso 1 con 200 observaciones deseamos seleccionar una muestra aleatorio de tamaño n=50. La siguiente es la instrucción en R que selecciona las observaciones :
-
-
-```{r}
-# Importa los datos en formato csv
-# Base1=read.csv("~/Talleres/Base1.csv")
-# visualiza los datos
-# viewData(Base1)
-# extre la muestra
-# muestra1=Base1[sample(1:nrow(Base1),50,replace=F),] 
-```
 
 <br/><br/>
 
@@ -269,9 +242,7 @@ El muestreo puede realizarse sin reemplazo o con reemplazo, o dicho de otro modo
 
 <br/>
 
-Una muestra estratificada se obtiene formando estratos, de acuerdo a alguna característica de interés en la población (sexo, edad, ingresos etc.), y de cada estrato se selecciona una muestra aleatoria simple. 
-
-Supongamos, que la población finita se subdivide en $L$ subpoblaciones o estratos, de modo que la muestra esté constituída por elementos de cada uno de ellos. El  muestreo estratificado considera la selección, desde cada uno de los estratos, una muestra aleatoria simple.
+Una **muestra estratificada** se obtiene formando estratos, de acuerdo a alguna característica de interés en la población (sexo, edad, ingresos etc.), y de cada estrato se selecciona una muestra aleatoria simple. 
 
 La subdivisión de la población en estratos tiene como objetivo reducir la variabilidad total asociada al proceso de muestreo. Por lo tanto es necesario incluir en cada estrato, individuos o unidades muestrales cuya medida de interés tengan variabilidad pequeña respecto a la media. El objetivo general es entonces lograr varianza mínima dentro del estrato y varianza máxima entre estratos. En caso de no lograr esta estratificación, en función de las varianzas, lo más probable es que el proceso de muestreo sea equivalente al que se pudiera haber realizado por muestreo aleatorio simple.
 
@@ -279,15 +250,6 @@ La ventaja principal que puede conseguirse estratificando, es aumentar la precis
 
 Por otra parte, la estratificación procura muestras  más representativas. Exagerando, si se pudiera conseguir que cada uno de los $L$ estratos estuviese constituído por elementos idénticos, bastaría tomar $L$ elementos, uno por estrato, y la representatividad sería perfecta. Además, puede lograrse un mejor aprovechamiento de la organización administrativa destinada a la selección de las muestras, al centrar la actividad de muestreo en áreas homogéneas.
 
-El número de estratos depende del criterio de clasificación, es un problema intrínsecamente ligado a la investigación, por ejemplo, si se está trabajando con características de individuos, los estratos pueden elegirse en la siguiente forma:
-
-Estrato 1 $\cdots$ niños (menores de 14 años)
-Estrato 2 $\cdots$ jóvenes (15 - 25 años)
-Estrato 3 $\cdots$ adultos (26 años o mas)
-
-Otros criterios de clasificación pueden obedecer también, por ejemplo, a posiciones geográficas, en otros casos, cada estrato puede ser un sector de la ciudad de la provincia o de la región.
-
-Otro elemento interesante de considerar, en los estudios por muestreo estratificado, es que las conclusiones  pueden darse no sólo a nivel poblacional, sino que independientemente a nivel de cada estrato.
 
 <br/><br/>
 
@@ -295,7 +257,7 @@ Otro elemento interesante de considerar, en los estudios por muestreo estratific
 
 <br/>
 
-Se forma una muestra sistemática seleccionando al azar una unidad y luego se seleccionan adicionalmente las unidades a intervalos igualmente espaciados (cada $k$ unidades de la población, $k>1$) hasta formar la muestra total.
+Se forma una **muestra sistemática** seleccionando al azar una unidad y luego se seleccionan adicionalmente las unidades a intervalos igualmente espaciados (cada $k$ unidades de la población, $k>1$) hasta formar la muestra total.
 
 Supongamos que estamos interesados en una población cuyos individuos  han sido numerados desde 1 a $N$, y elegimos una muestra de tamaño $n$ como sigue: entre las $k$ primeras unidades, donde $k =N/n$ elegimos, en forma aleatoria, el elemento $i-ésimo$,entre los $k$ primeros elementos o unidades muestrales. A continuación, sistemáticamente se eligen los elementos $i+k$ que están $k$ lugares después  del $i-ésimo$, y así  sucesivamente hasta agotar los elementos disponibles de la lista, lo que ocurrirá al llegar al elemento que ocupa el lugar $i+(n-1)k$.
 
@@ -310,9 +272,7 @@ Este tipo de muestreo no es recomendable cuando el preceso generador de los dato
 
 ### **Muestreo por Conglomerados**
 
-<br/>
-
-Una muestra por conglomerados se obtiene identificando un conjunto de conglomerados que componen la población, aleatoriamente se selecciona un subconjunto de estos conglomerados y se hace un censo en cada uno de los seleccionados.
+Una **muestra por conglomerados** se obtiene identificando un conjunto de conglomerados que componen la población, aleatoriamente se selecciona un subconjunto de estos conglomerados y se hace un censo en cada uno de los seleccionados.
 
 A veces, para estudios exploratorios, el muestreo probabilístico resulta excesivamente costoso y se acude a métodos no probabilísticos, aún siendo conscientes de que no sirven para realizar generalizaciones, púes no se tiene certeza de que la muestra extraída sea representativa, ya que no todos los sujetos de la población tienen la misma probabilidad de se elegidos. En general se selecciona a los sujetos siguiendo determinados criterios procurando que la muestra sea representativa.
 
@@ -328,8 +288,6 @@ En el caso de no contar con los supuestos que puedan garantizar la selección de
 
 ### **Muestreo por Cuotas** 
 
-<br/>
-
 También denominado en ocasiones **accidental**. Se asienta generalmente sobre la base de un buen conocimiento de los estratos de la población y/o de los individuos más **representativos** o **adecuados** para los fines de la investigación. Mantiene, por tanto, semejanzas con el muestreo aleatorio estratificado, pero no tiene el carácter de aleatoriedad de aquel. En este tipo de muestreo se fijan unas "cuotas" que consisten en un número de individuos que reúnen unas determinadas condiciones, por ejemplo: 20 individuos de 25 a 40 años, de sexo femenino y residentes en una determinada región. Una vez
 determinada la cuota se eligen los primeros que se encuentren que cumplan esas características. Este método se utiliza mucho en las encuestas de opinión.
 
@@ -337,16 +295,11 @@ determinada la cuota se eligen los primeros que se encuentren que cumplan esas c
 
 ### **Muestreo Intencional** 
 
-<br/>
-
-Este tipo de muestreo se caracteriza por un esfuerzo deliberado de obtener muestras "representativas mediante la inclusión en la muestra de grupos
-supuestamente típicos. Es muy frecuente su utilización en sondeos preelectorales de zonas que en anteriores votaciones han marcado tendencias de voto.
+Este tipo de muestreo se caracteriza por un esfuerzo deliberado de obtener muestras "representativas mediante la inclusión en la muestra de grupos supuestamente típicos. Es muy frecuente su utilización en sondeos preelectorales de zonas que en anteriores votaciones han marcado tendencias de voto.
 
 <br/><br/>
 
 ### **Muestreo Casual o Incidental**
-
-<br/>
 
 Se trata de un proceso en el que el investigador selecciona directa e intencionadamente los individuos de la población. El caso más frecuente de este procedimiento es utilizar como muestra los individuos a los que se tiene fácil acceso (los profesores de universidad emplean con mucha frecuencia a sus
 propios alumnos). Un caso particular es el de los voluntarios.
@@ -355,9 +308,6 @@ propios alumnos). Un caso particular es el de los voluntarios.
 
 ### **Bola de Nieve** 
 
-<br/>
-
 Se localiza a algunos individuos, los cuales conducen a otros, y estos a otros, y así hasta conseguir una muestra suficiente. Este tipo se emplea muy frecuentemente cuando se hacen estudios con poblaciones "marginales", delincuentes, sectas, determinados tipos de enfermos, etc.
 
 
-<br/><br/><br/><br/>

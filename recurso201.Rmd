@@ -305,32 +305,14 @@ Para tener la seguridad que $f(x)$ puede ser una función de densidad de probabi
 
 <br/>
 
-$\displaystyle\int\limits_{0}^{+\infty} \dfrac{1}{4} e^{-x/4} \:dx =1$
-
-```{r, echo=FALSE}
+<pre>
 fy=function(y){1/4*exp(-y/4)}
 integrate(fy, lower=0,upper=Inf)
-```
 
-<br/>
+1 with absolute error < 2.7e-05
+</pre>
 
-```{r, echo=FALSE}
-# declaracion de la funcion
-fx=function(x){1/4*exp(-x/4)}
-
-# representación gráfica de la función
-x=0:20
-plot(x,fx(x), type="l", col="#BC2B6A", lwd=5, las=1)
-
-# área de integración
-x1=seq(0,20,0.01)
-f1=fx(x1)
-polygon(c(0,x1,20),c(0,f1,0),col="#DFF4F9")
-```
-
-```{r}
-integrate(fx, 0, Inf)
-```
+$\displaystyle\int\limits_{0}^{+\infty} \dfrac{1}{4} e^{-x/4} \:dx =1$
 
 
 

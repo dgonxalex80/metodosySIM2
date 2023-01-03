@@ -33,6 +33,11 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<link href="site_libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="site_libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="site_libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="site_libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -416,49 +421,11 @@ muestra a toda la población. Para realizar este proceso contamos con dos
 opciones: Estimación y las Pruebas de hipótesis. El fundamento de estos
 procesos está relacioando con varios conceptos como:</p>
 <p><br/></p>
-<table>
-<colgroup>
-<col width="15%" />
-<col width="18%" />
-<col width="21%" />
-<col width="21%" />
-<col width="23%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left">población</td>
-<td align="left">parámetro</td>
-<td align="left">censo</td>
-<td align="left">muestra</td>
-<td align="left">muestreo</td>
-</tr>
-<tr class="even">
-<td align="left">muestreo probabilistico</td>
-<td align="left">muestreo no probabilistico</td>
-<td align="left">muestreo aleatorio simple</td>
-<td align="left">muestreo aleatorio estratificado</td>
-<td align="left">muestreo por conglomerados</td>
-</tr>
-<tr class="odd">
-<td align="left">muestreo por juicio</td>
-<td align="left">muestreo por conveniciencia</td>
-<td align="left">muestreo bola de nieve</td>
-<td align="left">estimador puntual</td>
-<td align="left">estimador insesgado</td>
-</tr>
-<tr class="even">
-<td align="left">estimador consistente</td>
-<td align="left">estimador eficiente</td>
-<td align="left">estimación por intervalos de confianza</td>
-<td align="left">pruebas de hipótesis</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+<div class="wordcloud2 html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1b4ff99564eb6e8884a5" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1b4ff99564eb6e8884a5">{"x":{"word":["aleatorio","aleatorio simple","bola de nieve","casual","censo","confiabilidad","conglomerados","consistente","conveniciencia","eficiente","error de muestreo","estimación ","estimador","estratificado ","hipótesis","insesgado","intencional","juicio","media","muestra","muestreo","n","N","parámetro","población","por cuotas","por intervalos ","probabilístico","proporción","pruebas","puntual","s","sesgado","simple","sistemático","tamaño","unidad","varianza","x"],"freq":[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":4.5,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"pentagon","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 <p><br/><br/></p>
 <div id="población" class="section level3">
 <h3><strong>Población</strong></h3>
-<p><br/></p>
 <p>En Estadística, se identifica el término población con el dominio de
 la variable aleatoria X, asociada a los objetos o individuos sobre los
 cuales se desarrolla un experimento y cuyo valor ocurre al azar. El
@@ -470,7 +437,6 @@ del Censo de población que se debe realizar cada diez años.</p>
 </div>
 <div id="muestra" class="section level3">
 <h3><strong>Muestra</strong></h3>
-<p><br/></p>
 <p>Un subconjunto extraido de los elementos que conforman la población
 se denomina MUESTRA. Una definición técnica de muestra está dada por:
 repetición <span class="math inline">\(n\)</span> veces, en idénticas
@@ -483,7 +449,6 @@ class="math inline">\(X\)</span>.</p>
 </div>
 <div id="parámetro" class="section level3">
 <h3><strong>Parámetro</strong></h3>
-<p><br/></p>
 <p>Es una caracterización numérica de la distribución de probabilidad de
 una variable aleatoria. Como ejemplo de parámetros tenemos a <span
 class="math inline">\(\mu\)</span>, <span
@@ -503,7 +468,6 @@ función de distribución de probabilidad quedará determinada por :</p>
 </div>
 <div id="estimador" class="section level3">
 <h3><strong>Estimador</strong></h3>
-<p><br/></p>
 <p>Es una función de los valores obtenidos en una muestra aleatoria que
 da como resultado un valor que corresponde a una aproximación del
 parámetro objeto de estudio. Generalmente se representa como <span
@@ -518,20 +482,11 @@ class="math display">\[\widehat{\sigma^{2}}=\frac{1}{n-1}\sum_{i=1}^{n}\big(x_{i
 </div>
 <div id="estimación" class="section level3">
 <h3><strong>Estimación</strong></h3>
-<p><br/></p>
 <p>Es la evaluación o generación del estimador para una muestra
 determinada.</p>
 <p>Como ejemplo podemos utilizar uno de los estimadores que estudiaremos
 : <span class="math inline">\(\widehat{\mu}= \bar{x}\)</span>, para una
 muestra dada</p>
-<p><br/></p>
-<p><span class="math display">\[ 630, 650, 710, 750, 790, 820, 860
-\text{ y } 910\]</span></p>
-<p><br/></p>
-<p><span class="math display">\[\widehat{\mu}=\frac{1}{n}\sum_{i=1}^{n}
-x_{i} =\frac{1}{8}(630+650+...+910)=765\]</span> El valor del estimador
-de <span class="math inline">\(\mu\)</span> para esta muestra es <span
-class="math display">\[\widehat{\mu}=\bar{x}= 765\]</span>.</p>
 <p><br/><br/></p>
 </div>
 </div>
@@ -540,7 +495,6 @@ class="math display">\[\widehat{\mu}=\bar{x}= 765\]</span>.</p>
 <p><br/></p>
 <div id="importancia-del-muestreo" class="section level3">
 <h3><strong>Importancia del Muestreo</strong></h3>
-<p><br/></p>
 <p>El papel principal de la estadística está relacionado con el análisis
 de información que permita tomar decisiones con respecto a una
 población. Es posible que se pueda estudiar la totalidad de elementos
@@ -641,7 +595,6 @@ verdaderos valores de las unidades medidas.</p>
 </div>
 <div id="diseños-muestrales" class="section level3">
 <h3><strong>Diseños Muestrales</strong></h3>
-<p><br/></p>
 <p>Un diseño muestral es una estrategia de selección de unidades
 muestrales, mediante un proceso de aleatorización definido previamente
 (plan de muestreo). De acuerdo con esta definición, son tres los
@@ -650,7 +603,6 @@ elementos esenciales de un diseño muestral:</p>
 </div>
 <div id="unidad-muestral" class="section level3">
 <h3><strong>Unidad muestral</strong></h3>
-<p><br/></p>
 <p>Constituye la unidad básica a partir de la cual se obtiene la
 información, pudiendo por tanto, ser éstas personas, o individuos de
 cualquier tipo si , por ejemplo nuestro interés es estimar la talla
@@ -662,7 +614,6 @@ densidades medias o biomasa total, etc.</p>
 </div>
 <div id="proceso-de-aleatorización" class="section level3">
 <h3><strong>Proceso de aleatorización</strong></h3>
-<p><br/></p>
 <p>Aun cuando la unidad muestral esté claramente definida, existen
 algunos elementos que pueden afectar el proceso de muestreo, alterando
 la calidad de la información. En este caso no es la definición, sino la
@@ -688,7 +639,6 @@ dificultades.</p>
 </div>
 <div id="tamaño-muestral" class="section level3">
 <h3><strong>Tamaño muestral</strong></h3>
-<p><br/></p>
 <p>Una vez que las unidades muestrales han sido definidas y se ha
 acordado un proceso de aleatorización, debemos preguntarnos, cuántas
 unidades debemos seleccionar para tener una buena representación en la
@@ -729,11 +679,12 @@ valor de la característica en la población (parámetro) y el valor
 obtenido con la información de la muestra (estimador).Equivale al error
 que estamos en capacidad de tolerar en las unidades de la variable.</p>
 <p><br/><br/></p>
-<p><strong>Ejemplo de cálculo de tamaño de la muestra- Caso de una
-media</strong> : Suponga que deseamos determinar el tamaño de la muestra
-para estimar la media de la nota del curso de estadística, con una
-confianza del 95% y un error de muestreo de 0.2 puntos. Un estudio
-realizado el semestre pasado arrojó una varianza de 1.6.</p>
+<p><strong>Ejemplo</strong></p>
+<p><strong>Caso de una media</strong> : Suponga que deseamos determinar
+el tamaño de la muestra para estimar la media de la nota del curso de
+estadística, con una confianza del 95% y un error de muestreo de 0.2
+puntos. Un estudio realizado el semestre pasado arrojó una varianza de
+1.6.</p>
 <p>La información necesaria para el calculo del tamaño de muestra
 requerido es:</p>
 <ul>
@@ -755,12 +706,13 @@ corregido ser{a:</p>
 <p><span class="math display">\[n= \dfrac{154 \times 200}{154 + 200 -1}
 =87.2 \approxeq 88 \]</span></p>
 <p><br/><br/></p>
-<p><strong>Ejemplo de cálculo de tamaño de la muestra- Caso de una
-proporción</strong>: Supongamos ahora que se desea calcular el tamaño de
-la muestra para realizar una estimación de la proporción de estudiantes
-que reprueban el curso de matemáticas fundamentales y que deseamos una
-confianza del 98% y un error de muetreo de 0.1. En este caso la varianza
-corresponde a <span class="math inline">\(pq\)</span> donde <span
+<p><strong>Ejemplo</strong></p>
+<p><strong>Caso de una proporción</strong>: Supongamos ahora que se
+desea calcular el tamaño de la muestra para realizar una estimación de
+la proporción de estudiantes que reprueban el curso de matemáticas
+fundamentales y que deseamos una confianza del 98% y un error de muetreo
+de 0.1. En este caso la varianza corresponde a <span
+class="math inline">\(pq\)</span> donde <span
 class="math inline">\(q=1-p\)</span> y por tanto tendrá su valor máximo
 cuando <span class="math inline">\(p=0.50\)</span>, es decir que si
 utilizamos como varianza <span class="math inline">\(0.5 \times
@@ -772,7 +724,7 @@ muestra posible.</p>
 muestra, digamos 30 unidades) y estimar en este caso su varianza, el
 resultado del tamaño de muestra será inferior al anteriormente
 calculado.</p>
-<p><br/><br/><br/><br/></p>
+<p><br/><br/><br/></p>
 </div>
 </div>
 <div id="tipos-de-muestreo" class="section level2">
@@ -790,15 +742,7 @@ elegidas.</p>
 <p>Sólo estos métodos de muestreo probabilísticos nos aseguran la
 representatividad de la muestra extraída y son, por tanto, los más
 recomendables. Dentro de los métodos de muestreo probabilísticos
-encontramos los siguientes tipos: De acuerdo con las consideraciones
-anteriores, algunas de las estrategias de muestreo más conocidas
-son:</p>
-<ul>
-<li>muestreo aleatorio simple</li>
-<li>muestreo aleatorio sistemático</li>
-<li>muestreo aleatorio estratificado</li>
-<li>muestreo aleatorio por conglomerados</li>
-</ul>
+encontramos los siguientes tipos:</p>
 <p><br/><br/></p>
 </div>
 <div id="muestreos-probabilísticos" class="section level2">
@@ -806,10 +750,9 @@ son:</p>
 <p><br/><br/></p>
 <div id="muestreo-aleatorio-simple-m.a.s" class="section level3">
 <h3><strong>Muestreo Aleatorio simple (m.a.s)</strong></h3>
-<p><br/></p>
-<p>Una muestra aleatoria simple tomada de una población finita, da a
-cada subconjunto de la población (muestra) de tamaño específico la misma
-probabilidad de ser seleccionada.</p>
+<p>Una muestra <strong>aleatoria simple</strong> tomada de una población
+finita, da a cada subconjunto de la población (muestra) de tamaño
+específico la misma probabilidad de ser seleccionada.</p>
 <p>El muestreo aleatorio simple es un procedimiento de selección de un
 conjunto de individuos de modo que toda posible muestra de <span
 class="math inline">\(n\)</span> unidades tiene la misma probabilidad de
@@ -831,28 +774,15 @@ de otro modo, la muestra puede elegirse de dos maneras: sin reposición
 de la unidad extraída o con reposición de ella. El muestreo con
 reemplazo es usado cuando es aceptable tener la misma unidad dos veces
 en la muestra.</p>
-<p><strong>Ejemplo</strong> De la base del caso 1 con 200 observaciones
-deseamos seleccionar una muestra aleatorio de tamaño n=50. La siguiente
-es la instrucción en R que selecciona las observaciones :</p>
-<pre class="r"><code># Importa los datos en formato csv
-# Base1=read.csv(&quot;~/Talleres/Base1.csv&quot;)
-# visualiza los datos
-# viewData(Base1)
-# extre la muestra
-# muestra1=Base1[sample(1:nrow(Base1),50,replace=F),] </code></pre>
 <p><br/><br/></p>
 </div>
 <div id="muestreo-estratificado" class="section level3">
 <h3><strong>Muestreo Estratificado</strong></h3>
 <p><br/></p>
-<p>Una muestra estratificada se obtiene formando estratos, de acuerdo a
-alguna característica de interés en la población (sexo, edad, ingresos
-etc.), y de cada estrato se selecciona una muestra aleatoria simple.</p>
-<p>Supongamos, que la población finita se subdivide en <span
-class="math inline">\(L\)</span> subpoblaciones o estratos, de modo que
-la muestra esté constituída por elementos de cada uno de ellos. El
-muestreo estratificado considera la selección, desde cada uno de los
-estratos, una muestra aleatoria simple.</p>
+<p>Una <strong>muestra estratificada</strong> se obtiene formando
+estratos, de acuerdo a alguna característica de interés en la población
+(sexo, edad, ingresos etc.), y de cada estrato se selecciona una muestra
+aleatoria simple.</p>
 <p>La subdivisión de la población en estratos tiene como objetivo
 reducir la variabilidad total asociada al proceso de muestreo. Por lo
 tanto es necesario incluir en cada estrato, individuos o unidades
@@ -877,30 +807,17 @@ representatividad sería perfecta. Además, puede lograrse un mejor
 aprovechamiento de la organización administrativa destinada a la
 selección de las muestras, al centrar la actividad de muestreo en áreas
 homogéneas.</p>
-<p>El número de estratos depende del criterio de clasificación, es un
-problema intrínsecamente ligado a la investigación, por ejemplo, si se
-está trabajando con características de individuos, los estratos pueden
-elegirse en la siguiente forma:</p>
-<p>Estrato 1 <span class="math inline">\(\cdots\)</span> niños (menores
-de 14 años) Estrato 2 <span class="math inline">\(\cdots\)</span>
-jóvenes (15 - 25 años) Estrato 3 <span
-class="math inline">\(\cdots\)</span> adultos (26 años o mas)</p>
-<p>Otros criterios de clasificación pueden obedecer también, por
-ejemplo, a posiciones geográficas, en otros casos, cada estrato puede
-ser un sector de la ciudad de la provincia o de la región.</p>
-<p>Otro elemento interesante de considerar, en los estudios por muestreo
-estratificado, es que las conclusiones pueden darse no sólo a nivel
-poblacional, sino que independientemente a nivel de cada estrato.</p>
 <p><br/><br/></p>
 </div>
 <div id="muestreo-sistemático" class="section level3">
 <h3><strong>Muestreo Sistemático</strong></h3>
 <p><br/></p>
-<p>Se forma una muestra sistemática seleccionando al azar una unidad y
-luego se seleccionan adicionalmente las unidades a intervalos igualmente
-espaciados (cada <span class="math inline">\(k\)</span> unidades de la
-población, <span class="math inline">\(k&gt;1\)</span>) hasta formar la
-muestra total.</p>
+<p>Se forma una <strong>muestra sistemática</strong> seleccionando al
+azar una unidad y luego se seleccionan adicionalmente las unidades a
+intervalos igualmente espaciados (cada <span
+class="math inline">\(k\)</span> unidades de la población, <span
+class="math inline">\(k&gt;1\)</span>) hasta formar la muestra
+total.</p>
 <p>Supongamos que estamos interesados en una población cuyos individuos
 han sido numerados desde 1 a <span class="math inline">\(N\)</span>, y
 elegimos una muestra de tamaño <span class="math inline">\(n\)</span>
@@ -949,11 +866,10 @@ todos los mínimos.</p>
 </div>
 <div id="muestreo-por-conglomerados" class="section level3">
 <h3><strong>Muestreo por Conglomerados</strong></h3>
-<p><br/></p>
-<p>Una muestra por conglomerados se obtiene identificando un conjunto de
-conglomerados que componen la población, aleatoriamente se selecciona un
-subconjunto de estos conglomerados y se hace un censo en cada uno de los
-seleccionados.</p>
+<p>Una <strong>muestra por conglomerados</strong> se obtiene
+identificando un conjunto de conglomerados que componen la población,
+aleatoriamente se selecciona un subconjunto de estos conglomerados y se
+hace un censo en cada uno de los seleccionados.</p>
 <p>A veces, para estudios exploratorios, el muestreo probabilístico
 resulta excesivamente costoso y se acude a métodos no probabilísticos,
 aún siendo conscientes de que no sirven para realizar generalizaciones,
@@ -977,7 +893,6 @@ ellos:</p>
 <p><br/><br/></p>
 <div id="muestreo-por-cuotas" class="section level3">
 <h3><strong>Muestreo por Cuotas</strong></h3>
-<p><br/></p>
 <p>También denominado en ocasiones <strong>accidental</strong>. Se
 asienta generalmente sobre la base de un buen conocimiento de los
 estratos de la población y/o de los individuos más
@@ -995,7 +910,6 @@ opinión.</p>
 </div>
 <div id="muestreo-intencional" class="section level3">
 <h3><strong>Muestreo Intencional</strong></h3>
-<p><br/></p>
 <p>Este tipo de muestreo se caracteriza por un esfuerzo deliberado de
 obtener muestras “representativas mediante la inclusión en la muestra de
 grupos supuestamente típicos. Es muy frecuente su utilización en sondeos
@@ -1005,7 +919,6 @@ tendencias de voto.</p>
 </div>
 <div id="muestreo-casual-o-incidental" class="section level3">
 <h3><strong>Muestreo Casual o Incidental</strong></h3>
-<p><br/></p>
 <p>Se trata de un proceso en el que el investigador selecciona directa e
 intencionadamente los individuos de la población. El caso más frecuente
 de este procedimiento es utilizar como muestra los individuos a los que
@@ -1016,13 +929,11 @@ voluntarios.</p>
 </div>
 <div id="bola-de-nieve" class="section level3">
 <h3><strong>Bola de Nieve</strong></h3>
-<p><br/></p>
 <p>Se localiza a algunos individuos, los cuales conducen a otros, y
 estos a otros, y así hasta conseguir una muestra suficiente. Este tipo
 se emplea muy frecuentemente cuando se hacen estudios con poblaciones
 “marginales”, delincuentes, sectas, determinados tipos de enfermos,
 etc.</p>
-<p><br/><br/><br/><br/></p>
 </div>
 </div>
 

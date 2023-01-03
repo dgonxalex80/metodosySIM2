@@ -459,8 +459,9 @@ modelos continuos.</p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <p><strong>Distribución uniforme</strong></p>
-<p>Se caracteriza porque su función de densidad es constante en su
-recorrido o dominio de definición (intervalo [a,b])</p>
+<p>La distribución <strong>uniforme</strong> Se caracteriza porque su
+función de densidad es constante en su recorrido o dominio de definición
+(intervalo [a,b])</p>
 <p><span class="math display">\[\begin{equation*}
         f(x)=\left\lbrace
         \begin{array}{lll}
@@ -472,28 +473,15 @@ recorrido o dominio de definición (intervalo [a,b])</p>
     \end{equation*}\]</span></p>
 </div>
 <p><br/><br/></p>
-<p><strong>Distribución uniforme (<span
-class="math inline">\(0,1\)</span>)</strong></p>
+<p><span class="math inline">\(X \sim unif(x, a=0 , b=1)\)</span></p>
 <p><img src="recurso205_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p><strong>Ejemplo</strong></p>
-<p>En la fabricación de portaobjetos, que son láminas rectangulares de
-vidrio muy delgada (76x26 mm y 1 mm de espesor), utilizados para la
-observación de sustancias en el microscopio. Una de sus principales
-características está relacionada con su espesor (<span
-class="math inline">\(X\)</span>), el cual tiene una distribución
-uniforme entre 0.95 mm y 1.05 mm. Determine la probabilidad de que un
-portaobjeto determinado tenga un espesor superior a 1.03 mm.|</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math display">\[P(X\geq 1.03)= (1.05-1.03) \times
-\frac{1}{0.10}=0.20 \]</span></p>
 <p><br/><br/></p>
 </div>
 <div id="normal" class="section level2">
 <h2><strong>normal</strong></h2>
-<p>La distribución normal es uno de los modelos más utilizados en las
-aplicaciones de la Estadística. Estas aplicaciones están relacionadas
-con:</p>
+<p>La distribución <strong>normal</strong> es uno de los modelos más
+utilizados en las aplicaciones de la Estadística. Estas aplicaciones
+están relacionadas con:</p>
 <p>Usos de la distribución normal</p>
 <ul>
 <li><p>La mayoría de variables en la naturaleza, se distribuyen
@@ -535,7 +523,6 @@ dió el nombre.</p>
 <p><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución normal</strong></p>
 <p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
 \hspace{.1cm}
 e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}  \hspace{.5cm}  -\infty
@@ -548,10 +535,11 @@ class="math display">\[V[X]=\sigma^{2}\]</span></p>
 producto de cambios en la media o en la varianza. A mayor valor de la
 media la curva se desplaza a la derecha, mientras que a menor varianza
 la curva se vuelve mas angosta o puntiaguda</p>
-<p>Distribuciones normales : <span style="color:blue"><span
-class="math inline">\(N(0,1)\)</span></span>, <span style="color:red">
-<span class="math inline">\(N(0,1.5)\)</span></span> y <span
-style="color:orange"> <span
+<p>Distribuciones normales : <span style="color:#034A94"><span
+class="math inline">\(N(0,1)\)</span></span>, <span
+style="color:#FF7F00"> <span
+class="math inline">\(N(0,1.5)\)</span></span> y <span
+style="color:#686868"> <span
 class="math inline">\(N(2,1.5)\)</span></span></p>
 <p><img src="recurso205_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Dentro del sin número de posibles curvas que se pueden obtener con
@@ -590,37 +578,13 @@ la siguiente gráfica.</p>
 estandar</strong></p>
 <p><img src="img/norm01.png" width="70%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>La velocidad de transferencia de archivos desde un servidor en el
-campus de la universidad a un ordenador personal en casa de un
-estudiante en un día laborable, se distribuye normalmente con una media
-de 60 kilobits por segundo y una desviación estándar de 4 kilobits por
-segundo. ¿Cuál es la probabilidad de que el archivo se transfiera a una
-velocidad de 70 kilobits por segundo o más? |</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p>Para una variable <span class="math inline">\(X\)</span> con
-distribución <span class="math inline">\(N(60,16)\)</span>, debemos
-calcular la probabilidad <span class="math inline">\(P(X \geq
-70)\)</span> \</p>
-<p><span class="math display">\[\begin{eqnarray*}
-    P(X \geq 70)&amp;=&amp;P\Bigg(\dfrac{X-\mu}{\sigma} \geq
-\dfrac{70-60}{4}\Bigg)\\
-    &amp;=&amp; P\Bigg(Z \geq \dfrac{70-60}{4}\Bigg)\\
-    &amp;=&amp; P(Z\geq 2.5)=1-P(Z &lt; 2.5 )\\
-    &amp;=&amp; 1-0.9938=0.0062
-\end{eqnarray*}\]</span></p>
-<p>En R se utiliza el siguiente código:</p>
-<pre class="r"><code>pnorm(70, mean=60, sd=4, lower.tail=FALSE)</code></pre>
-<pre><code>[1] 0.006209665</code></pre>
-<p><br/><br/></p>
 </div>
 <div id="exponencial" class="section level2">
 <h2><strong>exponencial</strong></h2>
-<p>Este modelo fue planteado por el matemático estadístico e ingeniero
-Agner Kraru Erlang, experto en el trafico de las comunicaciones y la
-teoría de colas. Distribución utilizada para modelar el tiempo entre dos
-eventos consecutivos.</p>
+<p>El modelo <strong>exponencial</strong> fue planteado por el
+matemático estadístico e ingeniero Agner Kraru Erlang, experto en el
+trafico de las comunicaciones y la teoría de colas. Distribución
+utilizada para modelar el tiempo entre dos eventos consecutivos.</p>
 <p><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
@@ -643,34 +607,18 @@ class="math inline">\(\lambda\)</span></p>
 \hspace{1cm} x &gt; 0\]</span></p>
 </div>
 <p><br/><br/></p>
-<p>Distribuciones exponenciales : <span style="color:blue"> <span
-class="math inline">\(exp(1)\)</span></span>, <span style="color:red">
-<span class="math inline">\(exp(2)\)</span></span> y <span
-style="color:orange"> <span
-class="math inline">\(exp(5)\)</span></span></p>
+<p>Distribuciones exponenciales : <span style="color:#FF7F00"> <span
+class="math inline">\(X\sim exp(x,\lambda=1)\)</span></span>, <span
+style="color:#034A94"> <span class="math inline">\(X\sim
+exp(x,\lambda=2)\)</span></span> y <span style="color:#686868"> <span
+class="math inline">\(X\sim exp(x,\lambda=5)\)</span></span></p>
+<p><img src="recurso205_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><strong>Distribución exponencial acumulad</strong></p>
 <p><img src="recurso205_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p><strong>Distribuciones exponenciales acumuladas</strong></p>
-<p><img src="recurso205_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>El tiempo entre llamadas de los clientes a una empresa de turismo
-ecológico tiene una distribución exponencial con un tiempo medio entre
-llamadas de 15 minutos. ¿Cuál es la probabilidad de que transcurra más
-de 20 minutos antes de que se realiza una nueva llamada? (Ejemplo 8 4-77
-Mongomery) |</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math inline">\(X\)</span>: el tiempo entre dos llamadas
-consecutivas <span class="math inline">\(\lambda=\frac{1}{15}\)</span>
-minutos.</p>
-<p><span class="math display">\[\begin{eqnarray}
-    P(X \geq 20) &amp;=&amp; 1-P(X &lt; 20) \\
-    &amp;=&amp; 1-(1-e^{-\frac{20}{15}}) \\
-    &amp;=&amp; 0.2636
-\end{eqnarray}\]</span></p>
-<p>En R se utiliza el siguiente código:</p>
-<pre class="r"><code> pexp(20,1/15, lower.tail=FALSE)</code></pre>
-<pre><code>[1] 0.2635971</code></pre>
+</div>
+<div id="gamma" class="section level2">
+<h2><strong>gamma</strong></h2>
 <p>Para tratar las distribuciones Gamma y Weibull, es necesario definir
 la función Gamma como:</p>
 <p><span class="math display">\[\Gamma(r)= \int_{0}^{\infty} t^{r-1}
@@ -688,9 +636,6 @@ class="math inline">\(\Gamma(1/2)=\sqrt{\pi}\)</span></p></li>
 \hspace{.1cm}\Gamma(n+1)=n!\)</span></p></li>
 </ul>
 <p><br/><br/></p>
-</div>
-<div id="gamma" class="section level2">
-<h2><strong>gamma</strong></h2>
 <p>Esta distribución tiene su origen en la familia de curvas sesgadas
 propuestas por Karl Pearson. Esta distribución es otra alternativa para
 modelar los tiempos de espera de ocurrencia de sucesos o eventos. En
@@ -699,8 +644,7 @@ exponenciales sucesivas con igual media.</p>
 <p><br/><br/></p>
 <div
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución gamma</strong></p>
-<p>La distribución Gamma se obtiene al sumar <span
+<p>La distribución <strong>gamma</strong> se obtiene al sumar <span
 class="math inline">\(r\)</span> variables con distribución exponencial
 con parámetro <span class="math inline">\(\lambda\)</span>.</p>
 <p>Distribución</p>
@@ -728,29 +672,13 @@ class="math inline">\(r\)</span></p>
 class="math display">\[V[X]= \dfrac{r}{\lambda^{2}}\]</span></p>
 </div>
 <p><br/><br/></p>
-<p>Distribuciones : <span style="color:blue"> <span
-class="math inline">\(gamma(3,1)\)</span></span>, <span
-style="color:red"><span class="math inline">\(gamma(2,1)\)</span></span>
-y <span style="color:orange"> <span
-class="math inline">\(gamma(5,1)\)</span></span></p>
-<p><img src="recurso205_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<p><strong>Ejemplo</strong></p>
-<p>En cierta ciudad el consumo diario de energía eléctrica, en millones
-de kilovatios por hora, puede considerarse como una variable aleatoria
-con distribución Gamma de parámetros <span class="math inline">\(r=
-3\)</span> y <span class="math inline">\(\lambda= 0.5\)</span>. La
-planta de energía de esta ciudad tiene una capacidad diaria de 10
-millones de KW/hora. ¿Cuál es la probabilidad de que este
-abastecimientos sea insuficiente en un día cualquiera?.|</p>
-<p><br/><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math inline">\(X\)</span>: consumo diario de energia</p>
-<p><span class="math display">\[\begin{eqnarray*}
-    P(X &gt; 10)&amp;=&amp; 1-P(X \leq 10) \\
-    &amp;=&amp; 1 - \dfrac{1}{\Gamma(3)} \int_{0}^{10}
-(0.5)^{3}  x^{3-1} e^{-0.5x} \,dx \\
-    &amp;=&amp; 0.124652
-\end{eqnarray*}\]</span></p>
+<p>Distribuciones : &lt;span style=“color:”#FF7F00”“&gt; <span
+class="math inline">\(X\sim gamma(x, \alpha=3,\beta=1)\)</span></span>,
+<span style="color:#034A94"><span class="math inline">\(X\sim gamma(x,
+\alpha=2,\beta=1)\)</span></span> y <span style="color:#686868"> <span
+class="math inline">\(X\sim gamma(x,
+\alpha=5,\beta=1)\)</span></span></p>
+<p><img src="recurso205_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <pre class="r"><code>pgamma(10,3,0.5, lower.tail = FALSE)</code></pre>
 <pre><code>[1] 0.124652</code></pre>
 <p><br/><br/></p>
@@ -787,45 +715,21 @@ x &gt; 0\\
 class="math display">\[F(x)=1-\exp{\Big\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Big\}}
 \]</span></p>
 </div>
-<p>Distribuciones : <span style="color:blue"> <span
+<p>Distribuciones : <span style="color:#FF7F00"> <span
 class="math inline">\(Weibull(0.8, 1)\)</span></span>, <span
 style="color:red"> <span
 class="math inline">\(Weibul(2,1)\)</span></span> y <span
 style="color:orange"> <span
 class="math inline">\(Weibull(2,2)\)</span></span></p>
-<p><img src="recurso205_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="recurso205_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p><br/><br/></p>
 <p>La siguiente gráfica corresponde a varias conformaciones de los
 parámetros de esta distribución.</p>
 <p>Distribuciones exponenciales , y fig_weibulls.pdf</p>
-<p>Función de riesgo</p>
+<p><strong>Función de riesgo</strong></p>
 <p>Se llama así a la tasa de fallas por unidad de tiempo, expresada como
 la proporción de elementos que no han fallado</p>
-<p><span class="math display">\[h(t)=\dfrac{f(t)}{1-F(t)} \]</span>
-<br/><br/></p>
-<p><strong>Ejemplo</strong></p>
-<p>La duración de una batería se modela mediante una distribución
-Weibull con parámetros: <span class="math inline">\(\alpha=0.1\)</span>
-y <span class="math inline">\(\beta=2\)</span>. Determine la
-probabilidad de que una batería dure más de 10 horas. Determine la
-proporción de baterías que durarán más de 10 horas. |</p>
-<p><br/></p>
-<p><strong>Solución</strong></p>
-<p><span class="math display">\[\begin{eqnarray*}
-    P(X &gt; 10) &amp;=&amp; 1- F(10)\\
-    &amp;=&amp; 1-\Big(1-e^{-[10/2]^{0.1}}\Big)\\
-    &amp;=&amp; -e^{[5]^{0.1}}\\
-    &amp;=&amp; 0.3089367
-\end{eqnarray*}\]</span></p>
-<p><br/><br/></p>
-<p>En este caso también se puede obtener la tasa de fallos esta
-determinada por: <span class="math display">\[\begin{eqnarray*}
-    h(10)&amp;=&amp;\dfrac{f(10)}{1-F(10)}\\
-    &amp;&amp;\\
-    &amp;=&amp; \dfrac{0.003628829}{1-0.6910633}\\
-    &amp;&amp;\\
-    &amp;=&amp; 0.01174619
-\end{eqnarray*}\]</span></p>
+<p><span class="math display">\[h(t)=\dfrac{f(t)}{1-F(t)} \]</span></p>
 <p><br/><br/></p>
 </div>
 

@@ -1161,8 +1161,8 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 1.0051, runs = 56, n1 = 50, n2 = 50, n = 100, p-value =
-0.3149
+statistic = -1.4071, runs = 44, n1 = 50, n2 = 50, n = 100, p-value =
+0.1594
 alternative hypothesis: nonrandomness</code></pre>
 <p><strong>Conclusión</strong></p>
 <p>Como el valor-p (0.3149) es mayor al nivel de significancia, no se
@@ -1197,7 +1197,7 @@ plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &q
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.98522, p-value = 0.03439</code></pre>
+W = 0.9903, p-value = 0.1976</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el valor-p es superior al nivel de significancia <span
@@ -1216,19 +1216,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 5.4756, p-value = 0.05</code></pre>
+JB = 2.3475, p-value = 0.245</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 3.0169, p-value = 0.964</code></pre>
+T = 2.6943, p-value = 0.335</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = -0.40521, p-value = 0.0195</code></pre>
+T = -0.21694, p-value = 0.192</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -1237,13 +1237,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.045579, p-value = 0.3949</code></pre>
+D = 0.051775, p-value = 0.2128</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 18.11, p-value = 0.2018</code></pre>
+P = 15.05, p-value = 0.3747</code></pre>
 <p><br/><br/></p>
 <p><br/><br/><br/><br/></p>
 </div>

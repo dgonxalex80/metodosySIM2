@@ -216,9 +216,10 @@ En caso de poder realizar una prueba piloto (observación de una muestra, digamo
 	knitr::include_graphics("img/muestreos.png")
 ```
 	
-	
-	<br/>
-	
+<center>Fuente: construcción propia</center>
+
+<br/><br/>
+
 En general pueden dividirse en dos grandes grupos: métodos de muestreo probabilísticos y métodos de muestreo no probabilísticos.
 	
 Los **métodos de muestreo probabilísticos** son aquellos que se basan en el principio de equiprobabilidad. Es decir, aquellos en los que todos los individuos tienen la misma probabilidad de ser elegidos para formar parte de una muestra y, consiguientemente, todas las posibles muestras de tamaño n tienen la misma probabilidad de ser elegidas.

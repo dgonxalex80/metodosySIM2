@@ -71,7 +71,7 @@ Entre las principales pruebas no paramétricas están :
 
 <br/><br/>
 
-### **Prueba de signos**  
+### **De signos**  
 
 |            |                                           |
 |:---------- |:----------------------------------------------------------------|
@@ -122,7 +122,7 @@ SIGN.test(x.img,md=15,alternative = "greater")
 
 <br/><br/>
 
-### **Prueba chi-cuadrado de bondad de ajuste**
+### **Chi-cuadrado de bondad de ajuste**
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -188,7 +188,7 @@ chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste
 
 <br/><br/>
 
-### **Prueba chi-cuadrado de independencia**
+### **Chi-cuadrado de independencia**
 
 <br/><br/>
 
@@ -239,7 +239,7 @@ Como p-value = 0.1543 lo podemos considerar grande, no se rechaza $Ho$, asumimos
 
 <br/><br/><br/>
 
-### **Prueba de Wilcoxon**
+### **De Wilcoxon**
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -280,7 +280,7 @@ Por lo tanto los estudiantes sanos presentan consumo de calorías menores que lo
 
 <br/><br/>
 
-### **Prueba de Kruskal-Wallis**
+### **De Kruskal-Wallis**
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -344,7 +344,7 @@ En este caso se utiliza el coeficiente de correlación de Sperman para valorar l
 
 <br/><br/>
 
-### **Prueba de Rachas**
+### **De Rachas**
 
  <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -370,7 +370,7 @@ Como el valor-p (0.3149) es mayor al nivel de significancia, no se rechaza la hi
 
 <br/><br/>
 
-### **Prueba de normalidad**
+### **De normalidad**
 
 Uno de los procedimientos mas utilizados en estadística es la relacionada con la verificación de normalidad de una variable. 
 

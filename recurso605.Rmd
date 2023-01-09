@@ -55,10 +55,11 @@ xMd=c(
 
 <br/><br/><br/>
 
-## **Prueba de hipótesis para una media**
+## **Para una media**
 
 
 Podemos estar interesado en uno de los tres casos siguientes
+
 |                                 |                              |                                  |
 |:--------------------------------|:-----------------------------|:---------------------------------|
 |$Ho$ : $\mu = \mu_o$             |$Ho$ : $\mu \leq \mu_o$       |  $Ho$ : $\mu \geq \mu_o$         |
@@ -73,7 +74,7 @@ Además se presentan tres alernativas para el estadístico de prueba:
 
 <br/>
 
-### **Prueba para una media con varianza conocida**
+### **Para una media con varianza conocida**
 
 Supuestos:
 
@@ -90,7 +91,7 @@ BSDA::z.test(w, mu=60, sigma.x = 125)
 ```
 <br/><br/><br/>
 
-### **Prueba de hipótesis para una media**
+### **Para una media**
 
 <br/>
 
@@ -119,7 +120,7 @@ t.test(w,mu=70, alternative="less")
 
 <br/><br/>
 
-### **Prueba de hipótesis para una proporción**
+### **Para una proporción**
 
 En este caso suponemos que $n$ es grande 
 
@@ -140,7 +141,7 @@ El resultado indica que la mayoria de los participantes son hombres
 
 <br/><br/>
 
-**Pruebas de hipótesis para la comparación de medias en grupos independientes**
+### **Para la comparación de medias en grupos independientes**
 
 Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables y la comparación de varianzas:
 
@@ -179,7 +180,7 @@ Los resultado indican :
 <br/><br/><br/>
 
 
-## **Pruebas de hipótesis para comparación de proporciones**
+## **Para comparación de proporciones**
 
 ```{r}
 #---------------------------------------------------------------------------------
@@ -193,7 +194,7 @@ El resultado indica que existen diferencias entre las proporciones de hombre y m
 <br/><br/>
 
 
-## **Pruebas de hipótesis comparación de medias grupos pareados**
+## **Comparación de medias grupos pareados**
 
 Ahora supongamos que un grupo de atletas corrió tambien en el 2021 ($xMa$) y repitió su participación en el 2022 ($xMd$), se desea determinar si se presentaron mejoras o no en el rendimiento del grupo
 

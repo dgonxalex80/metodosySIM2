@@ -493,19 +493,34 @@ align="left"><code>t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98
 </table>
 <p><br/><br/><br/></p>
 </div>
-<div id="prueba-de-hipótesis-para-una-media" class="section level2">
-<h2><strong>Prueba de hipótesis para una media</strong></h2>
-<p>Podemos estar interesado en uno de los tres casos siguientes | | | |
-|:——————————–|:—————————–|:———————————| |<span
-class="math inline">\(Ho\)</span> : <span class="math inline">\(\mu =
-\mu_o\)</span> |<span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu \leq \mu_o\)</span> | <span
-class="math inline">\(Ho\)</span> : <span class="math inline">\(\mu \geq
-\mu_o\)</span> | |<span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu \neq \mu_o\)</span> |<span
-class="math inline">\(Ha\)</span> : <span class="math inline">\(\mu &gt;
-\mu_o\)</span> |<span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu &lt; \mu_o\)</span> |</p>
+<div id="para-una-media" class="section level2">
+<h2><strong>Para una media</strong></h2>
+<p>Podemos estar interesado en uno de los tres casos siguientes</p>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="30%" />
+<col width="35%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu = \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \leq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \geq \mu_o\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu \neq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &gt; \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; \mu_o\)</span></td>
+</tr>
+</tbody>
+</table>
 <p>Además se presentan tres alernativas para el estadístico de
 prueba:</p>
 <ul>
@@ -516,9 +531,8 @@ grande para garantizar distribución normal de la media a través del
 teorema del límite central.</li>
 </ul>
 <p><br/></p>
-<div id="prueba-para-una-media-con-varianza-conocida"
-class="section level3">
-<h3><strong>Prueba para una media con varianza conocida</strong></h3>
+<div id="para-una-media-con-varianza-conocida" class="section level3">
+<h3><strong>Para una media con varianza conocida</strong></h3>
 <p>Supuestos:</p>
 <table>
 <tbody>
@@ -546,8 +560,8 @@ mean of x
  70.32417 </code></pre>
 <p><br/><br/><br/></p>
 </div>
-<div id="prueba-de-hipótesis-para-una-media-1" class="section level3">
-<h3><strong>Prueba de hipótesis para una media</strong></h3>
+<div id="para-una-media-1" class="section level3">
+<h3><strong>Para una media</strong></h3>
 <p><br/></p>
 <p>Supuestos:</p>
 <table>
@@ -590,9 +604,8 @@ mean of x
  70.32417 </code></pre>
 <p><br/><br/></p>
 </div>
-<div id="prueba-de-hipótesis-para-una-proporción"
-class="section level3">
-<h3><strong>Prueba de hipótesis para una proporción</strong></h3>
+<div id="para-una-proporción" class="section level3">
+<h3><strong>Para una proporción</strong></h3>
 <p>En este caso suponemos que <span class="math inline">\(n\)</span> es
 grande</p>
 <table>
@@ -626,8 +639,11 @@ sample estimates:
 <p>El resultado indica que la mayoria de los participantes son
 hombres</p>
 <p><br/><br/></p>
-<p><strong>Pruebas de hipótesis para la comparación de medias en grupos
-independientes</strong></p>
+</div>
+<div id="para-la-comparación-de-medias-en-grupos-independientes"
+class="section level3">
+<h3><strong>Para la comparación de medias en grupos
+independientes</strong></h3>
 <p>Previamente a realizar la comparación de medias se deben realizar las
 pruebas de normalidad para cada una de las variables y la comparación de
 varianzas:</p>
@@ -729,10 +745,8 @@ empleada por la mujeres</li>
 <p><br/><br/><br/></p>
 </div>
 </div>
-<div id="pruebas-de-hipótesis-para-comparación-de-proporciones"
-class="section level2">
-<h2><strong>Pruebas de hipótesis para comparación de
-proporciones</strong></h2>
+<div id="para-comparación-de-proporciones" class="section level2">
+<h2><strong>Para comparación de proporciones</strong></h2>
 <pre class="r"><code>#---------------------------------------------------------------------------------
 t1=table(CarreraLuz22M$categoria)
 t2=table(CarreraLuz22F$categoria)
@@ -753,10 +767,8 @@ sample estimates:
 hombre y mujeres en la categoría abierta</p>
 <p><br/><br/></p>
 </div>
-<div id="pruebas-de-hipótesis-comparación-de-medias-grupos-pareados"
-class="section level2">
-<h2><strong>Pruebas de hipótesis comparación de medias grupos
-pareados</strong></h2>
+<div id="comparación-de-medias-grupos-pareados" class="section level2">
+<h2><strong>Comparación de medias grupos pareados</strong></h2>
 <p>Ahora supongamos que un grupo de atletas corrió tambien en el 2021
 (<span class="math inline">\(xMa\)</span>) y repitió su participación en
 el 2022 (<span class="math inline">\(xMd\)</span>), se desea determinar

@@ -63,7 +63,7 @@ Se llaman pruebas paramétricas las que están soportadas en supuestos que por l
 <br/><br/>
 
 
-## **Pruebas de hipótesis sobre una media**
+## **Sobre una media**
 
 Dependiendo de las condiciones podemos optar por tres diferentes EdeP para la realización de la prueba para una media, aunque tenemos una cuarta posibilidad en el caso de realizarla mediante un método no paramétrico:
 
@@ -178,7 +178,19 @@ Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de un
 <br/><br/>
 
 
-## **Pruebas de hipótesis sobre una proporción**
+## **Sobre una proporción**
+
+
+Ho: $p = p_{o}$ <br/>   
+Ha :$p \leq p_{o}$   
+
+<br/>
+
+
+Estadístico de prueba
+
+$$Z = \dfrac{\dfrac{x}{n}-p_{o}}{\sqrt{\dfrac{p_{o}(1-p_{o})}{n}}} \sim N(0,1) $$
+
 
 En este caso debemos tener en cuenta que la muestra sea mayor a 30 con el fin de tener estimaciones mas robustas para estimar la proporción poblacional.
 
@@ -193,6 +205,7 @@ Debemos realizar una prueba de cola inferior debido al sentido que tienen la afi
 
 Ho: $p \geq 0.76$ <br/>   
 Ha :$p < 0.76$   <br/>
+
 <br/><br/>
 
 ```{r}
@@ -209,9 +222,19 @@ Como el valor-p (p-value = 0.01447) es menor que el nivel de significancia ($\al
 <br/><br/>
 
 
-## **Pruebas de hipótesis sobre una varianza**
+## **Sobre una varianza**
+
+<br/>
+
+Ho: $\sigma^{2} = \sigma^{2}_{o}$
+
+Ha :$\sigma^{2} \neq \sigma^{2}_{o}$ 
 
 <br/><br/>
+
+Estadístico de prueba
+
+$$X^{2} =\dfrac{(n-1) s^{2}}{\sigma^{2}_{o}} \sim \chi^{2}_{v: n-1}$$
 
  <span style="color:#FF7F00"> **Ejemplo**</span>
 

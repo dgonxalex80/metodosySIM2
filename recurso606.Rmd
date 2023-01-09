@@ -68,7 +68,7 @@ xMd=c(
 
 <br/><br/>
 
-**Prueba de rachas**
+**De rachas**
 
 Se desea estraer una muestra aleatoria del grupo de participantes y probar que es aleatoria con respecto al sexo.
 
@@ -88,7 +88,7 @@ runs.test(rachas,alternative = "left.sided",threshold = 0.5,pvalue = "exact",plo
 
 <br/><br/><br/>
 
-**Pruebas de normalidad**
+**De normalidad**
 
 Existen varias pruebas de hipótesis para verificar si una variable tiene un comportamiento aproximadamente normal.En todos los casos las hipótesis planteadas son:
 

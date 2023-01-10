@@ -103,8 +103,6 @@ bty = "b2",
 col.panel ="steelblue",
 col.grid = "darkblue",
 add_lines=TRUE)
-
-
 ```
 
 

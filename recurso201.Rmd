@@ -42,7 +42,7 @@ En esta unidad se tratará el  caso univariado discreto, luego el caso continuo,
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-**Definición Variable aleatoria**
+### **Definición Variable aleatoria**
 
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un número . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable $X$, ($R_{_{X}}$) 
 
@@ -57,8 +57,7 @@ Las variables aleatorias se clasifican teniendo en cuenta las características d
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-
-**Tipos de variables**
+### **Tipos de variables**
 
 + Una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores.
 
@@ -67,7 +66,6 @@ Las variables aleatorias se clasifican teniendo en cuenta las características d
 </div> 
 
 <br/><br/>
-
 
  <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -102,7 +100,7 @@ Bajo el supuesto que la moneda es balanceada, se cumple que los resultados en $S
 $$f_{_{X}}(0) =P(X=0)= \frac{1}{8} \hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(1) = P(X=1)=\frac{3}{8},$$
 $$f_{_{X}}(2) = P(X=2)=\frac{3}{8}\hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(3) =P(X=3)= \frac{1}{8}$$
 
-<br/><br/><br/>
+<br/><br/>
 
 
 # **Variables discretas** 
@@ -116,7 +114,7 @@ Para catacterizar la variable se define  la función de distribución de probabi
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-**Función de distribución de probabilidad**
+### **Función de distribución de probabilidad**
 
 Para $X$ un variable aleatoria discreta, su función de distribución de probabilidad estará dada por $f(x)$, la cual proporciona las probabilidades asociadas a todos los valores de su rango $R_{X}$ . Esta función debe cumplir las siguientes propiedades:
 
@@ -136,19 +134,19 @@ Por lo general este tipo de variables proceden del conteo y empiezan por **núme
 
 Las siguientes variables se clasifican como **variables aleatorias discretas** :
 
-* X : Número de llamadas que entran a un conmutador diariamente
+* $X$ : Número de llamadas que entran a un conmutador diariamente
 
-* Y: Número de personas contagiadas por Covid 19 durante un día
+* $Y$: Número de personas contagiadas por Covid 19 durante un día
 
-* Z: Número de quejas reportadas a una sucursal bancaria en un día
+* $Z$: Número de quejas reportadas a una sucursal bancaria en un día
 
-* W: Número de accidentes producidos en una ciudad
+* $W$: Número de accidentes producidos en una ciudad
 
-* S: Número de huevos producidos diariamente en una avícola
+* $S$: Número de huevos producidos diariamente en una avícola
 
-* T: Número de hijos en una familia
+* $T$: Número de hijos en una familia
 
-* M: Número de mensajes enviados en un grupo de Whatsapp
+* $M$: Número de mensajes enviados en un grupo de Whatsapp
 
 <br/><br/>
 
@@ -157,7 +155,6 @@ Como complemento de $f(x)$ y debido a que puede resultar más interesante calcul
 <br/><br/>
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
 
 ### **Función de probabilidad acumulada**
 
@@ -180,48 +177,52 @@ $$f_{_{X}}(x) = \left \{
 	\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
 	& \\
 	0  & \mbox{en otro caso }
-\end{matrix}\right.  
-$$
+\end{matrix}\right.$$
 
-<br/>
+<center>
 
-En este caso se utiliza la función combinatoria  y el operador de sumatoria 
+```{r, echo=FALSE, fig.height=3.5}
+library(ggplot2)
+# modelo binomial  ok
+dat<-data.frame(x<-0:20,
+                fx<-dbinom(x,20,0.70))
 
-Representada de manera gráfica: 
-
-<br/>
-
-```{r}
-x=0:20
-fx=choose(20,x)*0.70^x*0.30^(20-x)  
-Fx=cumsum(fx)
+ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 2) +
+scale_x_continuous(limits = c(0, 20),
+                   breaks = 0:20, 
+                   labels = c('0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'))+
+   labs(title = "",
+       x= "x",
+       y= "f(x)")
 ```
+</center>
 
-
-```{r, echo=FALSE}
-x=0:20
-fx=choose(20,x)*0.70^x*0.30^(20-x)  
-plot(x,fx, las=1, ylab="f(x)", xlab="número personas que asisten", pch=19)
-lines(x, fx, type="h", col=2)
+<center>
+```{r, echo=FALSE, fig.height=3.5}
+library(ggplot2)
+ggplot() +
+  stat_function(fun = function(q) pbinom(q = q, size = 20, prob = 0.7),
+                geom = "step",
+                n = 20,
+                colour = "#4271AE",
+                size = 1) +
+  scale_x_continuous(n.breaks = 20, limits = c(0, 20))+
+   labs(title = "",
+       x= "x",
+       y= "F(x)")
 ```
+</center>
+
 <br/>
 
-```{r, echo=FALSE}
-x=0:20
-fx=choose(20,x)*0.70^x*0.30^(20-x)  
-Fx=cumsum(fx)
-plot(x,Fx, las=1, ylab="F(x)", xlab="número personas que asisten",pch=19, ylim=c(0,1))
-lines(x, Fx, type="s", col=2)
-grid()
+$P(X = 0)  =  0$ 
 
-```
+$P(X = 15) =  0.178863$ 
 
-<br/>
+$P(X < 15) = P(X \leq 14) =  0.5836$ 
 
-$P(X=0)  =  0$ 
-$P(X=15) =  0.178863$ 
-$P(X<15) = P(X \leq 14) =  0.5836$ 
 $P(X > 15) = 1 - P(X \leq 14) = 0.4164$
+
 
 <br/><br/><br/><br/>
 
@@ -268,6 +269,7 @@ La función de densidad de probablidad se define como $f(x)$, tal que cumpla las
 
 </div> 
 
+
 <br/><br/>
 
 Para el caso continuo la función de distribución de probabilidad corresponde a una integral 
@@ -296,10 +298,21 @@ $$f_{_{X}}(x) = \left \{
 	\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
 	& \\
 	0  & \mbox{en otro caso }
-\end{matrix}\right.  
-$$
+\end{matrix}\right.$$
 
 <br/>
+
+<center>
+```{r, echo=FALSE, fig.height=3.5}
+fx=function(x){1/4*exp(-x/4)}
+ggplot() +
+  xlim(c(0, 20)) +
+  geom_function(fun = fx,
+                colour = "#FF7F00",
+                lwd = 1,
+                linetype = 1)
+```
+</center>
 
 Para tener la seguridad que $f(x)$ puede ser una función de densidad de probabilidad se debe verificar
 
@@ -312,6 +325,7 @@ integrate(fy, lower=0,upper=Inf)
 1 with absolute error < 2.7e-05
 </pre>
 
-$\displaystyle\int\limits_{0}^{+\infty} \dfrac{1}{4} e^{-x/4} \:dx =1$
+$$\displaystyle\int\limits_{0}^{+\infty} \dfrac{1}{4} e^{-x/4} \:dx =1$$
+
 
 

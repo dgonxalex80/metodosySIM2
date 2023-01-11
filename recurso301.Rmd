@@ -18,30 +18,30 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 La inferencia estadística permite generalizar lo hallado en una muestra a toda la población. Para realizar este proceso contamos con dos opciones: Estimación y las Pruebas de hipótesis. El fundamento de estos procesos está relacionado con varios conceptos como:
 
-<br/>
+<!-- <br/> -->
 
 
 
-```{r, echo=FALSE}
-library("SnowballC")
-library("wordcloud2")
-library("RColorBrewer")
-nube <- read.csv("palabras1.csv")
+<!-- ```{r, echo=FALSE} -->
+<!-- library("SnowballC") -->
+<!-- library("wordcloud2") -->
+<!-- library("RColorBrewer") -->
+<!-- nube <- read.csv("palabras1.csv") -->
 
-nube1=rep(nube$palabra,nube$replicas)
+<!-- nube1=rep(nube$palabra,nube$replicas) -->
 
-t=data.frame(table(nube1))
+<!-- t=data.frame(table(nube1)) -->
 
-dword=t[,1]
-dfreq=t[,2]
-set.seed(1234)
-# wordcloud(words = dword, freq = dfreq, min.freq = 1,
-#            max.words=200, random.order=FALSE, rot.per=0.35, 
-#            colors=brewer.pal(8, "Dark2"))
+<!-- dword=t[,1] -->
+<!-- dfreq=t[,2] -->
+<!-- set.seed(1234) -->
+<!-- # wordcloud(words = dword, freq = dfreq, min.freq = 1, -->
+<!-- #            max.words=200, random.order=FALSE, rot.per=0.35,  -->
+<!-- #            colors=brewer.pal(8, "Dark2")) -->
 
-library(wordcloud2)
-wordcloud2(data = t, size = .25, shape = 'pentagon') #"circle")
-```
+<!-- library(wordcloud2) -->
+<!-- wordcloud2(data = t, size = .25, shape = 'pentagon') #"circle") -->
+<!-- ``` -->
 
 
 <br/><br/>
@@ -226,7 +226,7 @@ Los **métodos de muestreo probabilísticos** son aquellos que se basan en el pr
 	
 Sólo estos métodos de muestreo probabilísticos nos aseguran la representatividad de la muestra extraída y son, por tanto, los más recomendables. Dentro de los métodos de 	muestreo probabilísticos encontramos los siguientes tipos:
 	
-	<br/><br/>
+<br/><br/>
 	
 ## **Muestreos probabilísticos**
 	

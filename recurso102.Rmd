@@ -8,6 +8,8 @@ css: style.css
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
+<br/>
+
 Iniciaremos definiendo tres conceptos, a partir de los cuales se construyen la probabilidad:
 
 <br/>
@@ -20,7 +22,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 
 </div>
 
-<br/><br/>
+<br/>
 
  <span style="color:#FF7F00"> **Ejemplos**</span>
 
@@ -34,7 +36,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 
 + $E_{5}$: Observo el número total de ensayos de laboratorio exitosos en  20 intentos realizados.
 
-<br/><br/>
+<br/>
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
@@ -43,7 +45,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra con una letra mayúscula $S$ o tambien con **$\Omega$**
 </div>
 
-<br/><br/>
+<br/>
 
  <span style="color:#FF7F00"> **Ejemplos**</span>
 
@@ -77,7 +79,7 @@ Conjunto de todos los posibles valores que puede tomar el experimento aleatorio.
 
 * $S_{5} = \{ x \in \mathbb{N}| 0 \leq x \leq 20 \}$
 
-<br/><br/><br/>
+<br/><br/>
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
@@ -87,7 +89,7 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 </div>
 
-<br/><br/>
+<br/>
 
  <span style="color:#FF7F00"> **Ejemplos**</span>
 

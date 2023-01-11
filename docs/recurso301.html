@@ -33,11 +33,6 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
-<link href="site_libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
-<script src="site_libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
-<script src="site_libs/wordcloud2-0.0.1/hover.js"></script>
-<script src="site_libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -423,9 +418,23 @@ $(document).ready(function () {
 muestra a toda la población. Para realizar este proceso contamos con dos
 opciones: Estimación y las Pruebas de hipótesis. El fundamento de estos
 procesos está relacionado con varios conceptos como:</p>
-<p><br/></p>
-<div class="wordcloud2 html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1b4ff99564eb6e8884a5" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-1b4ff99564eb6e8884a5">{"x":{"word":["aleatorio","aleatorio simple","bola de nieve","casual","censo","confiabilidad","conglomerados","consistente","conveniciencia","eficiente","error de muestreo","estimación ","estimador","estratificado ","hipótesis","insesgado","intencional","juicio","media","muestra","muestreo","n","N","parámetro","población","por cuotas","por intervalos ","probabilístico","proporción","pruebas","puntual","s","sesgado","simple","sistemático","tamaño","unidad","varianza","x"],"freq":[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":4.5,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"pentagon","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<!-- <br/> -->
+<!-- ```{r, echo=FALSE} -->
+<!-- library("SnowballC") -->
+<!-- library("wordcloud2") -->
+<!-- library("RColorBrewer") -->
+<!-- nube <- read.csv("palabras1.csv") -->
+<!-- nube1=rep(nube$palabra,nube$replicas) -->
+<!-- t=data.frame(table(nube1)) -->
+<!-- dword=t[,1] -->
+<!-- dfreq=t[,2] -->
+<!-- set.seed(1234) -->
+<!-- # wordcloud(words = dword, freq = dfreq, min.freq = 1, -->
+<!-- #            max.words=200, random.order=FALSE, rot.per=0.35,  -->
+<!-- #            colors=brewer.pal(8, "Dark2")) -->
+<!-- library(wordcloud2) -->
+<!-- wordcloud2(data = t, size = .25, shape = 'pentagon') #"circle") -->
+<!-- ``` -->
 <p><br/><br/></p>
 <div id="población" class="section level3">
 <h3><strong>Población</strong></h3>
@@ -750,7 +759,7 @@ elegidas.</p>
 representatividad de la muestra extraída y son, por tanto, los más
 recomendables. Dentro de los métodos de muestreo probabilísticos
 encontramos los siguientes tipos:</p>
-<pre><code>&lt;br/&gt;&lt;br/&gt;</code></pre>
+<p><br/><br/></p>
 </div>
 <div id="muestreos-probabilísticos" class="section level2">
 <h2><strong>Muestreos probabilísticos</strong></h2>

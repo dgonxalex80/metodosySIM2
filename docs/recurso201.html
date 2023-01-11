@@ -451,9 +451,9 @@ manejo.</p>
 continuo,con sus principales características, conceptos relacionados con
 los vistos en el modulo anterior.</p>
 <p><br/><br/></p>
-<div
+<div id="definición-variable-aleatoria" class="section level3"
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Definición Variable aleatoria</strong></p>
+<h3><strong>Definición Variable aleatoria</strong></h3>
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> es una
 función que asigna a cada valor de un espacio muestral <span
 class="math inline">\(S\)</span> un número . El conjunto formado por
@@ -470,9 +470,9 @@ variable y serán </strong>multivariadas** si se considera el
 comportamiento conjunto de varias variables definidas sobre el mismo
 espacio muestral.</p>
 <p><br/><br/></p>
-<div
+<div id="tipos-de-variables" class="section level3"
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Tipos de variables</strong></p>
+<h3><strong>Tipos de variables</strong></h3>
 <ul>
 <li><p>Una variable <span class="math inline">\(X\)</span> se considera
 <strong>DISCRETA</strong> si su rango <span
@@ -529,7 +529,7 @@ posibles y por lo tanto:</p>
 <span class="math display">\[f_{_{X}}(2) =
 P(X=2)=\frac{3}{8}\hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(3) =P(X=3)=
 \frac{1}{8}\]</span></p>
-<p><br/><br/><br/></p>
+<p><br/><br/></p>
 </div>
 <div id="variables-discretas" class="section level1">
 <h1><strong>Variables discretas</strong></h1>
@@ -541,9 +541,9 @@ enteros.</p>
 <p>Para catacterizar la variable se define la función de distribución de
 probabilidad que modela la asignación de las probabilidades</p>
 <p><br/><br/></p>
-<div
+<div id="función-de-distribución-de-probabilidad" class="section level3"
 style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Función de distribución de probabilidad</strong></p>
+<h3><strong>Función de distribución de probabilidad</strong></h3>
 <p>Para <span class="math inline">\(X\)</span> un variable aleatoria
 discreta, su función de distribución de probabilidad estará dada por
 <span class="math inline">\(f(x)\)</span>, la cual proporciona las
@@ -564,17 +564,20 @@ por <strong>número de….</strong></p>
 <p>Las siguientes variables se clasifican como <strong>variables
 aleatorias discretas</strong> :</p>
 <ul>
-<li><p>X : Número de llamadas que entran a un conmutador
-diariamente</p></li>
-<li><p>Y: Número de personas contagiadas por Covid 19 durante un
-día</p></li>
-<li><p>Z: Número de quejas reportadas a una sucursal bancaria en un
-día</p></li>
-<li><p>W: Número de accidentes producidos en una ciudad</p></li>
-<li><p>S: Número de huevos producidos diariamente en una
-avícola</p></li>
-<li><p>T: Número de hijos en una familia</p></li>
-<li><p>M: Número de mensajes enviados en un grupo de Whatsapp</p></li>
+<li><p><span class="math inline">\(X\)</span> : Número de llamadas que
+entran a un conmutador diariamente</p></li>
+<li><p><span class="math inline">\(Y\)</span>: Número de personas
+contagiadas por Covid 19 durante un día</p></li>
+<li><p><span class="math inline">\(Z\)</span>: Número de quejas
+reportadas a una sucursal bancaria en un día</p></li>
+<li><p><span class="math inline">\(W\)</span>: Número de accidentes
+producidos en una ciudad</p></li>
+<li><p><span class="math inline">\(S\)</span>: Número de huevos
+producidos diariamente en una avícola</p></li>
+<li><p><span class="math inline">\(T\)</span>: Número de hijos en una
+familia</p></li>
+<li><p><span class="math inline">\(M\)</span>: Número de mensajes
+enviados en un grupo de Whatsapp</p></li>
 </ul>
 <p><br/><br/></p>
 <p>Como complemento de <span class="math inline">\(f(x)\)</span> y
@@ -609,24 +612,19 @@ class="math inline">\(f\)</span>, dada por:</p>
 }    x=0,1,2,\ldots,20\\
     &amp; \\
     0  &amp; \mbox{en otro caso }
-\end{matrix}\right.  
-\]</span></p>
+\end{matrix}\right.\]</span></p>
+<center>
+<img src="recurso201_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+</center>
+<center>
+<img src="recurso201_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+</center>
 <p><br/></p>
-<p>En este caso se utiliza la función combinatoria y el operador de
-sumatoria</p>
-<p>Representada de manera gráfica:</p>
-<p><br/></p>
-<pre class="r"><code>x=0:20
-fx=choose(20,x)*0.70^x*0.30^(20-x)  
-Fx=cumsum(fx)</code></pre>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-2-1.png" width="672" />
-<br/></p>
-<p><img src="recurso201_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p><br/></p>
-<p><span class="math inline">\(P(X=0) = 0\)</span> <span
-class="math inline">\(P(X=15) = 0.178863\)</span> <span
-class="math inline">\(P(X&lt;15) = P(X \leq 14) = 0.5836\)</span> <span
-class="math inline">\(P(X &gt; 15) = 1 - P(X \leq 14) =
+<p><span class="math inline">\(P(X = 0) = 0\)</span></p>
+<p><span class="math inline">\(P(X = 15) = 0.178863\)</span></p>
+<p><span class="math inline">\(P(X &lt; 15) = P(X \leq 14) =
+0.5836\)</span></p>
+<p><span class="math inline">\(P(X &gt; 15) = 1 - P(X \leq 14) =
 0.4164\)</span></p>
 <p><br/><br/><br/><br/></p>
 </div>
@@ -695,9 +693,11 @@ mediante la siguiente función de densidad de probabilidad:</p>
     \dfrac{1}{4} e^{-x/4} &amp; \mbox{ , }  x \geq 0\\
     &amp; \\
     0  &amp; \mbox{en otro caso }
-\end{matrix}\right.  
-\]</span></p>
+\end{matrix}\right.\]</span></p>
 <p><br/></p>
+<center>
+<img src="recurso201_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+</center>
 <p>Para tener la seguridad que <span class="math inline">\(f(x)\)</span>
 puede ser una función de densidad de probabilidad se debe verificar</p>
 <p><br/></p>
@@ -707,8 +707,8 @@ integrate(fy, lower=0,upper=Inf)
 
 1 with absolute error < 2.7e-05
 </pre>
-<p><span class="math inline">\(\displaystyle\int\limits_{0}^{+\infty}
-\dfrac{1}{4} e^{-x/4} \:dx =1\)</span></p>
+<p><span class="math display">\[\displaystyle\int\limits_{0}^{+\infty}
+\dfrac{1}{4} e^{-x/4} \:dx =1\]</span></p>
 </div>
 
 

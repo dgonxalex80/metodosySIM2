@@ -8,6 +8,7 @@ css: style.css
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 
+
 ```
 
 Cuando se estudian dos variables al tiempo se conforma una variable aleatoria bivariada $(X,Y)$ que se define en un rango formado en un plano y cuyo valor de probabilidad genera un volumen como se muestra en la siguiente figura: 
@@ -18,8 +19,8 @@ Cuando se estudian dos variables al tiempo se conforma una variable aleatoria bi
 library("mvtnorm")
 
 N=30
-x <- seq(-3,3, length=N)
-y <- seq(-3,3,length=N)
+x <- seq(-4,4, length=N)
+y <- seq(-4,4,length=N)
 z <- matrix(0, N, N)
 for (i in 1:N) for (j in 1:N) {
 	z[i,j]=dmvnorm(c(x[i],y[j]), c(0,0),
@@ -34,7 +35,7 @@ axes=TRUE,
 col="#034A94")
 ```
 
-<br/><br/>
+<br/>
 
 ## **Introducción**
 
@@ -64,6 +65,8 @@ la cual debe cumplir con las siguientes características:
 + $f(x,y)\geq 0$ 
 
 </div>
+
+<br/>
 
  <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -96,8 +99,8 @@ fxy=c(0.05,0.05,0, 0.05,0.10,0.20, 0.10,0.35,0.10)
 plot3D::scatter3D(x, y, fxy,
 colvar = NULL, 
 col = "blue",
-pch = 19, cex = 1.5,
-phi = 20, theta = 60,  
+pch = 19, cex = 1,
+phi = 15, theta = 45,  
 zlab="f(xy)", xlab="x", ylab="y",
 bty = "b2",
 col.panel ="steelblue",
@@ -124,6 +127,9 @@ La función de probabilidad marginal de $Y$ (función de probabilidad de $Y$ al 
 $$h(y)=f_{_{Y}}(y)=\sum_{x=x_{(1)}}^{x_{(n)}}f_{_{X,Y}}(x,y)$$
 
 </div> 
+
+
+<span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el ejemplo podemos establecer las funciones marginales para las variables $X$ y $Y$ sumando por columnas en el caso de $Y$ y por filas en el caso de la variable $X$
 
@@ -154,6 +160,8 @@ hy
 
 
 $$F_{_{X,Y}}(x,y)=\sum_{-\infty}^{x} \sum_{-\infty}^{y} f(x,y)$$
+
+<span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el ejemplo se construye la función de distribución acumulada sumando tanto por columna como fila hasta la posición de los valores observados, por ejemplo .
 
@@ -217,6 +225,9 @@ $$\begin{equation*}
 
 </div> 
 
+<br/>
+
+<span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para ilustrarlo utilizamos la función del Ejemplo 1 para la función condicional $f(x|y=2)$
 
@@ -337,7 +348,7 @@ $$h(y)=f_{_{Y}}(y)=\displaystyle\int_{-\infty}^{\infty}f_{_{X,Y}}(x,y)\:dx$$
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+<span style="color:#FF7F00"> **Ejemplo**</span>
 
 
 $$g(x) = \displaystyle\int_{0}^{1} (x + y) \:dy = \bigg( xy + \dfrac{y^{2}}{2} \bigg) \Bigg|_{0}^{1} = \bigg(x + \dfrac{1}{2}\bigg)$$

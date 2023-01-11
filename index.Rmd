@@ -27,7 +27,7 @@ El concepto de probabilidad constituye uno de los pilares de la estadística que
 
 </br>
 
-Las etapas de la  Metodología Estadística nos permiten ubicar los temas abordados en esta unidad. Aunque la Probabilidad y Variable Aleatoria no forman parte explicita de la metodología, son conceptos necesario para su abordaje.
+Las etapas de la  Metodología Estadística nos permiten ubicar los temas abordados en esta unidad. Aunque la Probabilidad y Variable Aleatoria no forman parte explicita de la metodología, son conceptos necesario para el abordaje de la Inferencia Estadística.
 
 </br></br>
 

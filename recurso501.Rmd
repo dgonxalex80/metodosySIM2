@@ -29,9 +29,18 @@ data("evaluacion")
 <br/><br/>
 
 
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/prueba.png")
+```
+<br/><br/>
+
+
 ## **Introducción**
 
-El origen de los estudios, relacionados con las pruebas de hipótesis estadísticas, se sitúa alrededor de 1738, cuando en un ensayo escrito por Daniel Bernoulli(1) aparece el cálculo una estadística de prueba para ensayar su hipótesis en el campo de la astronomía. Entre 1915 y 1933 se desarrolla esta formulación gracias a los estudios realizados por tres grandes autores: Ronald Fisher(2), Jerzy Neyman(3) y Egon Pearson(4). Hoy en día predomina la teoría de Neyman-Pearson (lema de Neyman-Pearson).
+Actualmente se raalizan pruebas de sangre para determinar su una persona padece de una enfermedad o no, supongamos Covid-19. Para realizar la prueba se toma una muestra de sangre del paciente con la que se realiza un protocolo, despues del cual se concluye o no que el paciente examinado tienen o no el virus. De igual manera la Estadística proporciona los elementos que permiten a partir de los datos recogidos en una muestra establecer el valor de verdad de una afirmación sobre un parámetro poblacional (hipótesis). 
+
+Este procedimiento tiene sus origenes al  alrededor de 1738, cuando en un ensayo escrito por Daniel Bernoulli(1) aparece el cálculo una estadística de prueba para ensayar su hipótesis en el campo de la astronomía. Entre 1915 y 1933 se desarrolla esta formulación gracias a los estudios realizados por tres grandes autores: Ronald Fisher(2), Jerzy Neyman(3) y Egon Pearson(4). Hoy en día predomina la teoría de Neyman-Pearson (lema de Neyman-Pearson).
 
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 # knitr::include_graphics("img/prueba.jpg")

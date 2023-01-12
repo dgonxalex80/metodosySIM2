@@ -10,12 +10,14 @@ library(paqueteMET)
 
 ```
 
+<br/><br/>
 
-
-```{r, echo=FALSE, out.width="40%", fig.align = "center"}
-knitr::include_graphics("img/gic.png")
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/manos2.png")
 ```
+Tomada de : pixabay.com
 
+<br/>
 
 Un estimador por intervalo de confianza (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales:  `normal estándar` , `t-Student`, `chi-cuadrado` o `F-Fisher`
 
@@ -207,21 +209,28 @@ Se desea estimar la media de las personas que han fallecido por Covid19 en Colom
 **Solución**
 
 Información:
+
 Confianza  : 98%  ($z_{\alpha/2}$)
+
 error de muestro : 3 una personas ($|\bar{x}-\mu| < e$)
-varianza : no tenemos la varianza y por tanto tenemos 3 alternativas :(1) mediante un estudio previo similar obtener el valor de la varianza,  (2) realizar una muestra piloto  que puede ser de n=40 y con ella estimar la varianza $s^{2}$, (3) preguntando a un experto sobre el valor del mínimo y el máximo de la variable se puede estimar la desviación estándar 
-$$s=\frac{\max\{x\}-\min\{x\}}{2}$$   
+
+varianza : no tenemos la varianza y por tanto tenemos 3 alternativas :
+
+1. mediante un estudio previo similar obtener el valor de la varianza,  
+2. realizar una muestra piloto  que puede ser de n=40 y con ella estimar la varianza $s^{2}$, 
+3. preguntando a un experto sobre el valor del mínimo y el máximo de la variable se puede estimar la desviación estándar 
+$s=\frac{\max\{x\}-\min\{x\}}{4}$   
 
 ```{r}
 # varianza
 # s2.nota=var(sample(Colombia$edad, 100))
-s2.nota =352.2395
+s2.nota = 352.2395
 # confianza : 1-a
-a=1-.98
+a = 1 - 0.98
 # error de nuestre
-e=3 # personas 
+e = 3 # personas 
 
-# tamaño de muestra
+# tamaño de muestra utilizando función sizemu de paqueteMET
 n=paqueteMET::sizemu(qnorm(1-a/2),s2.nota,e)
 round(n,0)  # redondeo a entero
 

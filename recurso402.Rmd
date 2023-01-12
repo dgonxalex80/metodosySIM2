@@ -34,12 +34,32 @@ Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupo
 
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-|$\mu_{1}-\mu_{2}$|$\bar{d} \pm t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}$    |Grupos pareados $d={x}_{1}-x_{2}$,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$| |              
+|$\mu_{1}-\mu_{2}$|$\bar{d} \pm t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}$    |Grupos pareados $d={x}_{1}-x_{2}$,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$| |
+
+<br/>
+
+|              |                                                                                 |                       |
+|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 |              | $(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2} \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}$ | Grupos independientes,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$, varianzas iguales|
 |                 | donde $s_{p}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$ y $v=n_{1}+n_{2}-2$ | |
+
+<br/>
+
+|              |                                                                                 |                       |
+|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 |              |$(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2, v^{*}} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$ |Grupos independientes,$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$, varianzas diferentes |
-||donde $v^{*}=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}$||
+||  donde $v^{*}=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}$||
+
+<br/>
+
+|              |                                                                                 |                       |
+|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 | $p_{1}-p_{2}$|$(\widehat{p_{1}}-\widehat{p_{2}})\pm z_{\alpha/2} \sqrt{\dfrac{\widehat{p_{1}}(1-\widehat{p_{1}})}{n_{1}}+\dfrac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$|$n_{1}>>$, $n_{2}>>$|
+
+<br/>
+
+|              |                                                                                 |                       |
+|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 | $\dfrac{\sigma^{2}_{1}}{\sigma^{2}_{2}}$ |$\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{1-\alpha/2}(v_{1}v_{2})}; \dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{\alpha/2}(v_{1}v_{2})}\Bigg)$|$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$| 
 
 
@@ -77,19 +97,20 @@ peso.ant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 
 pes.des=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
 
+
 Pruebe la afirmación sobre la dieta calculando un intervalo de confianza del 95% para la diferencia de medias . Suponga que las diferencias de los pesos se distribuyen aproximadamente normal.
 
 ```{r}
 peso.ant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 peso.des=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
 
-t.test(peso.ant,peso.des,             # variables
+t.test(peso.ant,peso.des,      # variables
 paired = TRUE,                 # pareadas  
 conf.level = 0.95)$conf.int    # nivel de confianza
 
 ```
 
-<br/><br/>
+<br/>
 
 Se puede afirmar que la diferencia entre los promedios de los peso antes y después, está entre $(0.80 6.11)$ kilogramos con una confianza del 95%. Por el momento diremos que la dieta generó una reducción en el peso dado que los dos valores del intervalo son positivos.  La veracidad de la afirmación, la retomaremos en la unidad 4.3 donde se realiza una prueba de hipótesis.  
 
@@ -124,8 +145,12 @@ Supuestos:
 
 A seis ingenieros que trabajan para el estado se les solicito realizar un pronostico la tasa de inflación para el año entrante. La misma petición se le realizo a ocho especialistas en finanzas que trabajan para el sector privado. Los pronósticos entregado fueron: 
 
-* ingenieros :  4.2%, 5.1%, 3.9%, 4.7%, 4.8%, 5.8%   
-* especialistas en finanzas:  5.7%, 6.1%, 5.2%, 4.9%, 4.6%, 4.5%, 5.2%, 5.5%  
+
+|                            |       |       |        |         |         |      |        |       |
+|:---------------------------|:------|:------|:-------|:--------|:--------|:-----|:-------|-------|
+| ingenieros :               | 14.2%,| 15.1%,| 13.9%, |14.9%,   |14.8%,   |15.8% |        |       |
+| especialistas en finanzas: | 15.7%,| 16.1%,| 15.2%, |14.9%,   |14.6%,   |14.5%,| 15.2%, | 15.5% | 
+
 
 ¿Están los especialistas (ingenieros y financieros) realizando pronósticos similares? . Suponga que los pronósticos realizados tienen distribución normal. Construye un intervalo de confianza para la diferencia de los promedios realizados por los ingenieros y los especializadas en finanzas del 95%. Concluya a partir de los resultados. 
 
@@ -136,22 +161,35 @@ A seis ingenieros que trabajan para el estado se les solicito realizar un pronos
 En este caso se trata de una diferencia de medias para grupos independientes, por lo cual es necesario conocer como es la relación entre sus varianzas (iguales o diferentes) y de este modo ajustar el procedimiento.
 
 
-```{r}
-inf.ing=c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
-inf.fin=c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
-par(mfrow = c(1, 2))
-boxplot(inf.ing, las=1, col=c2, ylim=c(3,6)); grid()
-boxplot(inf.fin, las=1, col=c3, ylim=c(3,6)); grid()
+```{r, echo=FALSE}
+inf.ing=c(14.2, 15.1, 13.9, 14.9, 14.8, 15.8)
+inf.fin=c(15.7, 16.1, 15.2, 14.9, 14.6, 14.5, 15.2, 15.5)
 
+par(mfrow = c(1, 2))
+boxplot(inf.ing, las=1, col=c2, ylim=c(13,16))
+boxplot(inf.fin, las=1, col=c3, ylim=c(13,16))
+```
+
+<pre>
 var.test(inf.ing, inf.fin)$conf.int         # variables
+
+[1]  1.324813 47.984900
+attr(,"conf.level")
+[1] 0.95
+
+
 t.test(inf.ing, inf.fin,  paired = FALSE,   # grupos independientes 
 var.equal = TRUE,                    # varianzas iguales
 conf.level = 0.95)$conf.int 
-```
+
+[1] -0.9382534  2.0799200
+attr(,"conf.level")
+[1] 0.95
+</pre>
 
 Al realizar la comparación de las varianzas se puede observar que el intervalo contiene a 1, por lo cual asumiremos que las varianza son iguales (este procedimiento se debe hacer mediante pruebas de hipótesis que ser verán en la Unidad 4.3). Utilizaremos la función de R `var.test(x, ...)` para establecer si las varianzas son iguales o diferentes y luego la función `t.test(x,y, ...)$conf.int` para calcular el intervalo.
 
-La diferencia entre la estimación promedio de la inflación pronosticada por lo ingenieros y la realizada por los especialistas en finanzas, con una confianza del 95%, está entre $(-1.1704541;  0.2454541 )$, lo cual nos indica que sus estimaciones promedio son similares
+La diferencia entre la estimación promedio de la inflación pronosticada por lo ingenieros y la realizada por los especialistas en finanzas, con una confianza del 95%, está entre `(-1.1704541;  0.2454541)`, lo cual nos indica que sus estimaciones promedio son similares.
 
 
 <br/><br/>
@@ -176,31 +214,50 @@ $$v=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{
 
 Supongamos el mismo caso del ejemplo anterior, pero con los siguientes datos :   
 
-* ingenieros :  2.2%, 1.1%, 3.9%, 5.9%, 4.5%, 5.1%    
-* especialistas en finanzas:  3.7%, 2.1%, 2.2%, 3.9%, 3.6%, 3.5%, 3.2%, 3.5% 
+|                            |       |       |        |         |         |      |        |       |
+|:---------------------------|:------|:------|:-------|:--------|:--------|:-----|:-------|-------|
+| ingenieros :               | 12.2%,| 11.1%,| 13.9%, |15.9%,   |14.5%,   |15.1% |        |       |
+| especialistas en finanzas: | 13.7%,| 12.1%,| 12.2%, |13.9%,   |13.6%,   |13.5%,| 13.2%, | 13.5% | 
 
 <br/><br/>
 
-```{r}
-inf.ing=c(2.2, 1.1, 3.9, 5.9, 4.5, 5.1)
-inf.fin=c(3.7, 2.1, 2.2, 3.9, 3.6, 3.5, 3.2, 3.5)
+```{r, echo=FALSE}
+inf.ing=c(12.2, 11.1, 13.9, 15.9, 14.5, 15.1)
+inf.fin=c(13.7, 12.1, 12.2, 13.9, 13.6, 13.5, 13.2, 13.5)
 par(mfrow = c(1, 2))
-boxplot(inf.ing, las=1, col=c2, ylim=c(1,6)); grid()
-boxplot(inf.fin, las=1, col=c3, ylim=c(1,6)); grid()
-
+boxplot(inf.ing, las=1, col=c2, ylim=c(11,16))
+boxplot(inf.fin, las=1, col=c3, ylim=c(11,16))
+```
+<pre>
 var.test(inf.ing, inf.fin)$conf.int
+
+Intervalos de confianza para la razón de varianzas 
+[1]  1.324813 47.984900
+attr(,"conf.level")
+[1] 0.95
+
+
 t.test(inf.ing, inf.fin,  paired = FALSE,   # grupos independientes 
 var.equal = FALSE,                    # varianzas diferentes
-conf.level = 0.95)$conf.int 
+conf.level = 0.95)$conf.int
 
-# resumen pronóstico ingenieros
-summary(inf.ing)
 
-# resumen pronóstico especialistas en finanzas
-summary(inf.fin)
-```
+Intervalos de confianza para la diferencia de medias 
+[1] -1.329604  2.471270
+attr(,"conf.level")
+[1] 0.95
 
-En este caso las varianzas son diferentes, por lo que se debe ajustar la función a : `var.equal = FALSE,`.  Los resultados indican que existen diferencias entre los promedios estimados por los ingenieros y los especialistas en finanzas. Siendo $\mu_{ing} < \mu_{fin}$ 
+
+  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  11.10   12.62   14.20   13.78   14.95   15.90 
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  12.10   12.95   13.50   13.21   13.62   13.90 
+</pre>
+
+
+
+En este caso las varianzas son diferentes, por lo que se debe ajustar la función a : `var.equal = FALSE,`.  Los resultados indican que no existen diferencias estadísticas entre los promedios estimados por los ingenieros y los especialistas en finanzas. Siendo $\mu_{ing} < \mu_{fin}$ 
 
 <br/><br/><br/>
 
@@ -255,12 +312,13 @@ En ambos casos los tamaños de muestra se consideran grandes, permitiendo transf
 
 $$(0.20-0.22) \pm 1.96 \sqrt{\frac{0.20*(1-0.20)}{200}+\frac{0.22*(1-0.22)}{200}}$$
 
-$$(-0.0998 ; -0.0598)$$
+$$(-0.0998 ; 0.0598)$$
 
-El intervalo estimado se lee: La diferencia entre la proporción de clientes que prefieren el tamaño especial de pizza antes de la realizar la campaña publicitaria y la proporción de clientes que prefieren este mismo tamaño, después de realizada la campaña publicitaria esta entre -0.0998 y -0.059, con una confianza del 95%. Estos resultados indican que $p_{1}-p_{2}<0$ o también que $p_{1}<p_{2}$, lo cual quiere decir que la proporción de clientes con esta preferencia aumento después de haber realizado la campaña publicitaria.
+El intervalo estimado se lee: La diferencia entre la proporción de clientes que prefieren el tamaño especial de pizza antes de la realizar la campaña publicitaria y la proporción de clientes que prefieren este mismo tamaño, después de realizada la campaña publicitaria esta entre -0.0998 y 0.0598, con una confianza del 95%. Estos resultados indican que $p_{1}-p_{2} \approx 0$ o también que $p_{1} \approx p_{2}$, lo cual quiere decir que la proporción de clientes con esta preferencia no aumentó después de haber realizado la campaña publicitaria.
 
 
 <br/><br/>
+
 ```{r}
 prop.test(c(40,44),c(200,200))$conf.int
 ```

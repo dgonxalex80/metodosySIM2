@@ -411,7 +411,10 @@ confianza</strong></span></h1>
 </div>
 
 
-<p><img src="img/gic.png" width="40%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<p><img src="img/manos2.png" width="100%" style="display: block; margin: auto;" />
+Tomada de : pixabay.com</p>
+<p><br/></p>
 <p>Un estimador por intervalo de confianza (IC) es una regla que
 especifica como usar las mediciones obtenidas en una muestra para
 calcular dos números que forman los extremos del intervalo que confiamos
@@ -698,25 +701,32 @@ Covid19 en Colombia, con una confianza del 98% y un error de muestreo de
 condiciones?</p>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
-<p>Información: Confianza : 98% (<span
-class="math inline">\(z_{\alpha/2}\)</span>) error de muestro : 3 una
-personas (<span class="math inline">\(|\bar{x}-\mu| &lt; e\)</span>)
-varianza : no tenemos la varianza y por tanto tenemos 3 alternativas
-:(1) mediante un estudio previo similar obtener el valor de la varianza,
-(2) realizar una muestra piloto que puede ser de n=40 y con ella estimar
-la varianza <span class="math inline">\(s^{2}\)</span>, (3) preguntando
-a un experto sobre el valor del mínimo y el máximo de la variable se
-puede estimar la desviación estándar <span
-class="math display">\[s=\frac{\max\{x\}-\min\{x\}}{2}\]</span></p>
+<p>Información:</p>
+<p>Confianza : 98% (<span
+class="math inline">\(z_{\alpha/2}\)</span>)</p>
+<p>error de muestro : 3 una personas (<span
+class="math inline">\(|\bar{x}-\mu| &lt; e\)</span>)</p>
+<p>varianza : no tenemos la varianza y por tanto tenemos 3 alternativas
+:</p>
+<ol style="list-style-type: decimal">
+<li>mediante un estudio previo similar obtener el valor de la
+varianza,<br />
+</li>
+<li>realizar una muestra piloto que puede ser de n=40 y con ella estimar
+la varianza <span class="math inline">\(s^{2}\)</span>,</li>
+<li>preguntando a un experto sobre el valor del mínimo y el máximo de la
+variable se puede estimar la desviación estándar <span
+class="math inline">\(s=\frac{\max\{x\}-\min\{x\}}{4}\)</span></li>
+</ol>
 <pre class="r"><code># varianza
 # s2.nota=var(sample(Colombia$edad, 100))
-s2.nota =352.2395
+s2.nota = 352.2395
 # confianza : 1-a
-a=1-.98
+a = 1 - 0.98
 # error de nuestre
-e=3 # personas 
+e = 3 # personas 
 
-# tamaño de muestra
+# tamaño de muestra utilizando función sizemu de paqueteMET
 n=paqueteMET::sizemu(qnorm(1-a/2),s2.nota,e)
 round(n,0)  # redondeo a entero</code></pre>
 <pre><code>[1] 212</code></pre>

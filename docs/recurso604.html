@@ -418,7 +418,7 @@ carrera de los participantes en la carrera La Luz 2022, para una muestra
 de n=100 competidores</p>
 <pre class="r"><code>x=sample(CarreraLuz22$timerun/60, 100)
 t.test(x,conf.level = 0.95)$conf.int</code></pre>
-<pre><code>[1] 62.75812 67.92455
+<pre><code>[1] 62.84637 68.34163
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p><br/><br/></p>
@@ -455,7 +455,7 @@ ic.var=function(x,a){
 }
 x1=sample(CarreraLuz22$edad, 200)
 ic.var(x1, 0.05)</code></pre>
-<pre><code>[1]  90.92725 134.82908</code></pre>
+<pre><code>[1]  90.26216 133.84287</code></pre>
 </div>
 <div id="intervalo-de-confianza-para-la-comparación-varianzas"
 class="section level2">
@@ -466,7 +466,7 @@ varianzas</strong></h2>
 xF=sample(CarreraLuz22F$timerun/60, 100)
 
 var.test(xM, xF)$conf.int</code></pre>
-<pre><code>[1] 1.043118 2.304133
+<pre><code>[1] 0.460343 1.016847
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>Como el intervalo contiene el valor de uno, nos indica que la
@@ -492,7 +492,7 @@ t.test(xM, xF,                            # variables a comparar
        paired = FALSE,                    # los grupos son independientes (no pareados)
        var.equal = TRUE,                  # las varianzas se asumen iguales 
        conf.level = 0.95 )$conf.int       # nivel de confianza</code></pre>
-<pre><code>[1] -13.192734  -6.350933
+<pre><code>[1] -10.587253  -3.048747
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>El valor <span class="math inline">\((-,-)\)</span> indica que la
@@ -520,7 +520,7 @@ t2=CarreraLuz22M$categoria %&gt;%
 p2=t2[2]/sum(t2)
 
 prop.test(c(p1,p2),c(100,100), conf.level = 0.95)$conf.int</code></pre>
-<pre><code>[1] -0.0174827  0.0270827
+<pre><code>[1] -0.0216701  0.0218701
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>Como el resultado obtenido contiene a cero, indica que las

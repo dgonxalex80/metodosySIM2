@@ -32,7 +32,7 @@ Cuando se extrae una muestra de una población que no es normal y se requiere es
 
 <br/>
 
-El artículo de *In-use Emissions from Heavy Duty Dissel Vehicles (J.Yanowitz, 2001)* presenta las mediciones de eficiencia de combustible en millas/galón de una muestra de siete camiones. Los datos obtenidos son los siguientes: $7.69, 4.97, 4.56, 6.49, 4.34, 6.24$ y $4.45$. Se supone que es una muestra aleatoria de camiones y que se desea construir un intervalo de confianza del 95% para la media  de la eficiencia de combustible de esta población. No se tiene información de la distribución de los datos. El método bootstrap permite construir intervalos de confianza del 95% - 
+El artículo de *In-use Emissions from Heavy Duty Dissel Vehicles (J.Yanowitz, 2001)* presenta las mediciones de eficiencia de combustible en millas/galón de una muestra de siete camiones. Los datos obtenidos son los siguientes: `7.69`, `4.97`, `4.56`, `6.49`, `4.34`, `6.24` y `4.45`. Se supone que es una muestra aleatoria de camiones y que se desea construir un intervalo de confianza del 95% para la media  de la eficiencia de combustible de esta población. No se tiene información de la distribución de los datos. El método bootstrap permite construir intervalos de confianza del 95% - 
 
 Para ilustrar el método suponga que coloca los valores de la muestra en una caja y extrae uno al azar. Este correspondería al primer valor de la muestra bootstrap $X^{∗}_{1}$. Después de anotado el valor se regresa $X^{∗}_{1}$  a la caja y se extrae el valor $X^{∗}_{2}$ , regresandolo nuevamente. Este procedimiento se repite hasta completar una muestra de tamaño $n$, $X^{∗}_{1}$,$X^{∗}_{2}$,$X^{∗}_{2}$,\cdot $X^{∗}_{n}$, conformando la muestra *bootstrap*.
 

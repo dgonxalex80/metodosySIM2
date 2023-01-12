@@ -420,9 +420,9 @@ continuación:</p>
 <p>El artículo de <em>In-use Emissions from Heavy Duty Dissel Vehicles
 (J.Yanowitz, 2001)</em> presenta las mediciones de eficiencia de
 combustible en millas/galón de una muestra de siete camiones. Los datos
-obtenidos son los siguientes: <span class="math inline">\(7.69, 4.97,
-4.56, 6.49, 4.34, 6.24\)</span> y <span
-class="math inline">\(4.45\)</span>. Se supone que es una muestra
+obtenidos son los siguientes: <code>7.69</code>, <code>4.97</code>,
+<code>4.56</code>, <code>6.49</code>, <code>4.34</code>,
+<code>6.24</code> y <code>4.45</code>. Se supone que es una muestra
 aleatoria de camiones y que se desea construir un intervalo de confianza
 del 95% para la media de la eficiencia de combustible de esta población.
 No se tiene información de la distribución de los datos. El método
@@ -480,12 +480,12 @@ mx=apply(b,1,mean)                 # se calculan m medias por fila</code></pre>
 <pre class="r"><code>ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
 ic1</code></pre>
 <pre><code>    2.5%    97.5% 
-4.757143 6.418643 </code></pre>
+4.704286 6.421429 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
 ic2</code></pre>
 <pre><code>   97.5%     2.5% 
-4.666683 6.328183 </code></pre>
+4.622874 6.340017 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot; &quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=&quot;#034A94&quot;)
 abline(v=ic1, col=&quot;#FF7F00&quot;,lwd=2)

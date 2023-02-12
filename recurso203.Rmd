@@ -288,7 +288,7 @@ La cantidad de ácido ($X$) y la cantidad de ácido ($Y$), en litros, que se vie
 $$f(x,y) = \left \{ \begin{matrix} (x+y) & \mbox{ } 0 \leq x \leq 1\\ 
 	& \mbox{ } 0 \leq y \leq 1 \\
 	&\\
-	0 & \mbox{ en otro caso }\end{matrix}\right.  $$
+	0 & \mbox{ en otro caso }\end{matrix}\right.$$
 
 <br/>
 

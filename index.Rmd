@@ -1,5 +1,5 @@
 ---
-title : <span style="color:#000000"> **Experiencia**</span>
+title : <span style="color:#034A94"> **Experiencia**</span>
 author: "Métodos y Simulación Estadística"
 css: style.css
 ---
@@ -38,8 +38,8 @@ Las etapas de la  Metodología Estadística nos permiten ubicar los temas aborda
 #### 5. **Recolección de la información**
 #### 6. **Procesamiento de los datos**
 #### 7. <span style="color:#FF7F00">**Análisis descriptivo o exploratorio de datos**</span>
-####    <span style="color:#999999">**Probabilidad**</span>
-####    <span style="color:#999999">**Variable aleatoria**</span>
+#### $\hspace{.5cm}$    <span style="color:#999999">**Probabilidad**</span>
+#### $\hspace{.5cm}$    <span style="color:#999999">**Variable aleatoria**</span>
 #### 8. <span style="color:#FF7F00">**Inferencia estadística**</span>
 #### 9. **Conclusiones y recomendaciones**
 
@@ -48,7 +48,7 @@ Las etapas de la  Metodología Estadística nos permiten ubicar los temas aborda
 En esta unidad se tratarán los principales conceptos de:
 
 * Probabilidad,
-* Variable aleatoria e
+* Variable aleatoria 
 * Inferencia estadística
   + Estimación : puntual y por intervalos de confianza
   + Pruebas de hipótesis, paramétricas y no paramétricas

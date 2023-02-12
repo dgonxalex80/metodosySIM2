@@ -70,7 +70,7 @@ xMd=c(
 
 **De rachas**
 
-Se desea estraer una muestra aleatoria del grupo de participantes y probar que es aleatoria con respecto al sexo.
+Se desea extraer una muestra aleatoria del grupo de participantes y probar que es aleatoria con respecto al sexo.
 
 |                                       |
 |:--------------------------------------|

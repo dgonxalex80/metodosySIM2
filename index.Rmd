@@ -31,6 +31,8 @@ Las etapas de la  Metodología Estadística nos permiten ubicar los temas aborda
 
 </br></br>
 
+<div class="content-box-blue">
+
 #### 1. **Definición del problema**
 #### 2. **Definición de los objetivos**
 #### 3. **Definición de las variables de interés**
@@ -42,6 +44,8 @@ Las etapas de la  Metodología Estadística nos permiten ubicar los temas aborda
 #### $\hspace{.5cm}$    <span style="color:#999999">**Variable aleatoria**</span>
 #### 8. <span style="color:#FF7F00">**Inferencia estadística**</span>
 #### 9. **Conclusiones y recomendaciones**
+
+</div>
 
 </br>
 

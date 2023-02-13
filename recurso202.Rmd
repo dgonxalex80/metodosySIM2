@@ -23,7 +23,7 @@ La esperanza matemática de una variable aleatoria $X$,  corresponde a un valor 
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Definición Valor Esperado**
 
@@ -41,7 +41,7 @@ En el caso continuo y similarmente para el caso discreto.
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ## **Propiedades del Valor Esperado**
 
@@ -65,7 +65,7 @@ Otra característica importante de las variables aleatorias corresponde a la var
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Definición Momento**
 
@@ -83,7 +83,7 @@ Con este nuevo elemento se define la varianza de una variable aleatorias como la
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Definición Varianza**
 
@@ -93,7 +93,7 @@ $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ## **Propiedades de la varianza**
 
@@ -113,7 +113,7 @@ En el caso se ser X y Y variables aleatorias independientes la igualdad será: $
 
 <br/><br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El valor esperado y la varianza para el número de personas que asisten al restaurante, con la siguiente función de distribución: 
 
@@ -126,6 +126,8 @@ $$f_{_{X}}(x) = \left \{
 $$
 
 
+
+
 $$E(X)=\displaystyle\sum\limits_{x=0}^{20}x_{i} 	\displaystyle\binom{20}{x_{i}}(0.7)^{x_{i}}(0.3)^{20-x_{i}} = 14$$ 
 
 Se puede verificar que $V[X] = E[X^2] - E[X]^2 = 4.199829$
@@ -134,7 +136,7 @@ Este resultado nos indica que en promedio asisten al restaurante 14 personas de 
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el caso continuo retomamos la función: 
 

@@ -23,6 +23,7 @@ Estas caractaristicas ahora en los estimadores se presentan a continuación:
 
 <br/><br/>
 
+<div class="content-box-blue">
 ## **Insesgadez**
 
 <br/>
@@ -30,9 +31,11 @@ Estas caractaristicas ahora en los estimadores se presentan a continuación:
 Un estimador $\widehat{\theta_{3}}$ se considera insesgado si $E[\widehat{\theta_{3}}] = \theta$
 
 Está representado por las figuras 3 y 4 que presentan un comportamiento que en promedio aciertan al centro
+</div>
 
 <br/><br/>
 
+<div class="content-box-blue">
 ## **Eficiente**
 
 <br/>
@@ -41,9 +44,10 @@ Un estimador  $\widehat{\theta_{1}}$ se considera eficiente, cuando dentro de to
 
 $$V[\widehat{\theta_{3}}] < V[\widehat{\theta_{4}}]$$
 
-
+</div>
 <br/><br/>
 
+<div class="content-box-blue">
 ## **Consistente**
 
 <br/>
@@ -53,11 +57,11 @@ Cuando un estimador siendo sesgado, se convierte en un estimador sesgado cuando 
 
 $$\lim_{n \to{+}\infty} E[\widehat{\theta}] = \theta$$
 
-
+</div>
 <br/><br/>
 
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 

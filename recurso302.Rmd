@@ -63,7 +63,7 @@ Nota: Existe una relación entre las distribuciones Poisson y exponencial.Se pod
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -144,7 +144,7 @@ El objetivo del método será encontrar el valor del parámetro que maximice la 
 
 </br></br>
 
-<span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para el caso de la distribución normal cuya función de distribución de probabilidad esta dada por :
 
@@ -374,7 +374,7 @@ $$\text{factor por corrección por población finita : fcpf = } \dfrac{(N-n)}{(N
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -406,7 +406,7 @@ $$V[\hspace{.1cm}\widehat{p}\hspace{.1cm}] =\dfrac{p(1-p)}{n}$$
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -446,6 +446,10 @@ Revisar : Canavos(1988) pp.231
 
 <br/><br/><br/>
 
+
+
+
+<div class="content-box-blue">
 ## **Algunos estimadores**
 
 <br/>
@@ -459,6 +463,7 @@ Revisar : Canavos(1988) pp.231
 |$\mu_{1}-\mu_{2}$  | $\bar{x}_{1}-\bar{x}_{2}$         | $\mu_{1}-\mu_{2}$         |$\dfrac{\sigma^{2}_{1}}{n_{1}}+\dfrac{\sigma^{2}_{2}}{n_{2}}$ |
 |$p_{1}-p_{2}$      | $\widehat{p_{1}}-\widehat{p_{2}}$ | $p_{1}-p_{2}$               |$\dfrac{p_{1}q_{1}}{n_{1}}+\dfrac{p_{2}q_{2}}{n_{2}}$ |
 
+</div>
 
 <br/><br/><br/>
 

@@ -461,8 +461,7 @@ probabilidad de que NO ocurra A ni B</p></li>
 <div id="probabilidad-condicional" class="section level2">
 <h2><strong>Probabilidad condicional</strong></h2>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><strong>Definición</strong></p>
 <p>La probabilidad condicional de <span
 class="math inline">\(B\)</span>, dado <span
@@ -497,7 +496,8 @@ probabilidad conjunta <span class="math inline">\(P(A \cap B)\)</span>
 con la probabilidad de <span class="math inline">\(A\)</span>, <span
 class="math inline">\(P(A)\)</span>.</p>
 <p><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Supongamos que se tiene la siguiente información escrita en una tabla
 de doble entrada o tabla cruzada que contiene dos eventos <span
 class="math inline">\(A\)</span> y <span
@@ -512,6 +512,7 @@ los tres tipos de probabilidad : <br/></p>
 </div>
 </div>
 <p><br/><br/></p>
+</div>
 <div id="probabilidades-simples-o-marginales" class="section level3">
 <h3><strong>Probabilidades simples o marginales</strong></h3>
 <p><br/></p>
@@ -553,8 +554,7 @@ los tres tipos de probabilidad : <br/></p>
 <p>Por despeje se pueden obtener la llanada regla de la multiplicación
 :</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><strong>Definición: Regla de la multiplicación de
 eventos</strong></p>
 <p>La probabilidad de que ocurra A y B asociados a un experimento
@@ -582,8 +582,7 @@ class="math inline">\(P(B|A)= P(B)\)</span> y en este caso la regla
 indica que la probablidad conjunta de los eventos A y B es igual a la
 probabilidad de sus probabilidades marginales :</p>
 <p><br/><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><strong>Definición: Independencia de eventos</strong></p>
 <p>Dos eventos A y B son independientes si y solo si la probabilidad del
 evento B no es afectada por la ocurrencia del evento A o viceversa.</p>
@@ -611,7 +610,8 @@ eventos son independientes. En caso contrario, los eventos no son
 independientes. Una aplicación de este concepto se ilustra con los
 siguientes ejemplos:</p>
 <p><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></p>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Se tiene un circuito formado por dos componentes <span
 class="math inline">\(A_{1}\)</span> y <span
 class="math inline">\(A_{2}\)</span> cada uno con probabilidad de
@@ -633,7 +633,9 @@ independencia tenemos que:</p>
 <p><span class="math display">\[P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2})
 = 0.90 \times  0.95 = 0.855\]</span></p>
 <p><br/><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplos</strong></span></p>
+</div>
+<div id="ejemplo-2" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Ahora supongamos que el circuito anterior está conectado en paralelo.
 Determinar la probabilidad de que el circuito funciones</p>
 <p><img src="img/circuito2.png" width="40%" style="display: block; margin: auto;" /></p>
@@ -652,7 +654,9 @@ cualquier evento <span class="math inline">\(A\)</span>, <span
 class="math inline">\(P(A&#39;)=1-P(A)\)</span></p>
 <p><span class="math display">\[1-0.005 = 0.995\]</span></p>
 <p><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>El departamento de crédito de la universidad, informa que el 30% de
 los pagos realizados en la universidad se efectúan en efectivo, un 40%
 con tarjeta de crédito y el resto con tarjeta débito. En todos los casos
@@ -764,6 +768,7 @@ mil pesos</li>
 </table>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="probabilidad-total" class="section level2">
 <h2><strong>Probabilidad Total</strong></h2>
 <p><br/></p>
@@ -772,9 +777,8 @@ de eventos lo podemos representar como una partición del conjunto <span
 class="math inline">\(S\)</span> así :</p>
 <p><img src="img/particion1_22.png" width="50%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-</div>
-<div id="nota" class="section level2">
-<h2><strong>Nota</strong></h2>
+<div id="nota" class="section level3 content-box-gray">
+<h3><span style="color:#FF7F00"> <strong>Nota</strong></span></h3>
 <p>Una partición de un conjunto de <span
 class="math inline">\(S\)</span> está formada por subconjuntos <span
 class="math inline">\(A_{1}\)</span>, <span
@@ -789,6 +793,7 @@ A_{n}=S\)</span></p></li>
 para todo <span class="math inline">\(i \neq j\)</span></p></li>
 <li><p><span class="math inline">\(A_{i} \neq \phi\)</span></p></li>
 </ul>
+</div>
 <p><br/><br/></p>
 <p>En nuestro caso podemos tener solo cinco particiones para simplificar
 el procedimiento</p>
@@ -815,8 +820,7 @@ P(A_{5})P(B|A_{5})\)</span></p>
 <p><br/></p>
 <p>En general :</p>
 <p><br/><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><strong>Definición: Regla de la probabilidad total</strong></p>
 <p>Dado una serie de eventos que conforman una partición <span
 class="math inline">\(E_{1}\)</span>, <span
@@ -831,7 +835,6 @@ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots
 P(E_{k})P(A|E_{k})\]</span></p>
 </div>
 <p><br/><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>En el caso que en el ejemplo anterior se requiere calcular la
 probabilidad <span class="math inline">\(P(+5)\)</span> utilizamos la
 regla de la probabilidad total:</p>
@@ -870,8 +873,8 @@ href="https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-th
 recomendada</a></p>
 </blockquote>
 <p><br/><br/></p>
-<div id="definición-teorema-de-bayes" class="section level3"
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div id="definición-teorema-de-bayes"
+class="section level3 content-box-blue">
 <h3><strong>Definición: Teorema de Bayes </strong></h3>
 <p>Dado una serie de eventos que conforma una partición <span
 class="math inline">\(E_{1}\)</span>, <span
@@ -893,7 +896,8 @@ A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\displaystyle\sum_{j=1}^{k}
 P(E_{j})P(A|E_{j})} \]</span></p>
 </div>
 <p><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo-4" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p><br/></p>
 <p>Continuando con el ejemplo anterior puede ser necesario calcular la
 probabilidad : <span class="math inline">\(P(E|+5)\)</span> para lo cual
@@ -905,7 +909,6 @@ utilizamos el Teorema de Bayes</p>
 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58}
 = 0.1034\)</span></p>
 <p><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>En una fábrica de artículos para protección biodegradables, cuatro
 operarios colocan etiquetas de caducidad en cada articulo al final de la
 lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 %
@@ -970,6 +973,7 @@ P(S)P(N|S)\]</span> <span class="math display">\[P(N) = 0.40
 <p><span class="math display">\[P(N) =  0.0020 +  0.0030+  0.0017 +
 0.0008 =  0.0075\]</span></p>
 <p><br/><br/></p>
+</div>
 </div>
 <div id="aplicaciones" class="section level2">
 <h2><strong>Aplicaciones</strong></h2>

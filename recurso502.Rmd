@@ -91,7 +91,7 @@ Parámetro $\mu$
 
 <br/><br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para una muestra de $n=50$ de la edad de los participantes de la Carrera La Luz inicialmente se verifica si su distribución es normal con el fin de determinar que prueba utilizar. Cumplido este supuesto y al no tener conocimiento del valor de la varianza utilizaremos una **prueba t** para una media
 
@@ -113,8 +113,12 @@ Para tomar una decisión sobre las hipótesis de acuerdo con los resultados pode
 
 <br/><br/>
 
-**Regla 1** : Si el **EdeP** cae en la **RdeR**, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **EdeP** NO cae en la **RdeR**, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
 
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Regla 1**</span>
+
+Si el **EdeP** cae en la **RdeR**, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **EdeP** NO cae en la **RdeR**, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
+</div>
 
 En este caso es necesario determinar la región de rechazo ($RdeR$) de acuerdo al tipo de hipótesis y a la distribución del estadístico de prueba. En esta caso estamos realizando una prueba de dos colas, para un estadístico de prueba con distribución t-Student con 99 grados de libertad.
 
@@ -147,7 +151,12 @@ p
 
 <br/><br/>
 
-**Regla 2**: Si $\alpha >$ **valor-p** entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  $ **valor-p**, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. 
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Regla 2**</span>
+
+Si $\alpha > \text{valor-p}$ entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  \text{valor-p}$, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. 
+
+</div>
 
 <br/><br/><br/>
 
@@ -165,16 +174,22 @@ El **valor-p** corresponde al área delimitada por el $EdeP$ en el sentido que i
 
 <br/><br/>
 
-**Regla 3** : El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $Ha$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Regla 3**</span>
+
+El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $Ha$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
+
+</div>
 
 <br/>
 
 **Conclusión** : En este caso valoramos si el valor-p (p-value =  0.4496) si es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $Ho$, asumimos que $Ho$ es verdadera, ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
 
-**Nota**:  
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Nota**</span>
+Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de una $RdeR$ para tomar la decisión. Solo con revisar el valor-p entregado por la prueba y aplicar la regla se toma la decisión. En adelante utilizaremos las reglas 2 y 3 dado que al ejecutar las funciones  en R nos suministra información sobre valor-p.
 
-Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de una $RdeR$ para tomar la decisión. Solo con revisar el valor-p entregado por la prueba y aplicar la regla se toma la decisión. En adelante utilizaremos las reglas 2 y 3 dado que al ejecutar las funciones  en R nos suministra información sobre valor-p.|
-
+</div>
 <br/><br/>
 
 
@@ -197,7 +212,7 @@ En este caso debemos tener en cuenta que la muestra sea mayor a 30 con el fin de
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+ ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Una empresa al seleccionar su personal, lo somete a un curso de entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes aprueban el curso. Durante el último proceso, los encargados efectúan cambios al programa de entrenamiento, con el fin de realizar una selección más exigente. Para esta versión se inscriben 40 aspirantes de los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios realizados en el programa de entrenamiento reducen la selección? |
 
@@ -236,7 +251,7 @@ Estadístico de prueba
 
 $$X^{2} =\dfrac{(n-1) s^{2}}{\sigma^{2}_{o}} \sim \chi^{2}_{v: n-1}$$
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Un fabricante de baterías para celulares afirma que el tiempo de duración de sus baterías se distribuyen aproximadamente normal con una desviación estándar de 9 horas. Un comprador antes de realizar un pedido de este producto solicita al fabricante una muestra de 10 baterías para verificar la información que le esta dando. Con este propósito son enviadas al laboratorio y se obtienen los siguientes datos Es cierta la información suministrada por el fabricante? (información: 11.1, 15.6, 11.1, 7.5, 7.9, 14.7, 6.3, 8.5, 8.0 , 7.6)   
 

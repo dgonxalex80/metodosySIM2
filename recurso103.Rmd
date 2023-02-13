@@ -18,7 +18,7 @@ La probabilidad es un número entre cero y uno que se asigna a cada resultado de
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Enfoque clásico**  
 
@@ -45,7 +45,7 @@ Ente este problemas debemos suponer que lo ocurrido en el pasado seguirá pasand
 
 <br/><br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Enfoque Frecuentista**
 
@@ -73,7 +73,7 @@ Para calcular la probabilidad de que un jugador ejecute y convierta un gol de "p
 
 <br/><br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Enfoque subjetivo** 
 
@@ -85,7 +85,7 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, es decir
 
 ## **Axiomas de  probabilidad**
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 + $A_{1}$ : Sea $S$ un espacio muestral  asociado a un experimento. Entonces:
 

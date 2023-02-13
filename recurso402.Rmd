@@ -31,38 +31,57 @@ data("evaluacion")
 
 Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupos se puede tener interés en la diferencia de medias ($\mu_1- \mu_2$), en la diferencia de proporciones ($p_1-p_2$) o en la razón de sus varianzas ($\sigma_1^{2} / \sigma_2^{2}$)
 
+<div class="content-box-blue">
 
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 |$\mu_{1}-\mu_{2}$|$\bar{d} \pm t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}$    |Grupos pareados $d={x}_{1}-x_{2}$,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$| |
 
+</div>
+
 <br/>
+
+<div class="content-box-blue">
 
 |              |                                                                                 |                       |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 |              | $(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2} \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}$ | Grupos independientes,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$, varianzas iguales|
 |                 | donde $s_{p}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$ y $v=n_{1}+n_{2}-2$ | |
 
+
+</div>
+
 <br/>
 
+<div class="content-box-blue">
 |              |                                                                                 |                       |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 |              |$(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2, v^{*}} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$ |Grupos independientes,$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$, varianzas diferentes |
 ||  donde $v^{*}=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}$||
 
+
+</div>
+
 <br/>
 
+<div class="content-box-blue">
 |              |                                                                                 |                       |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 | $p_{1}-p_{2}$|$(\widehat{p_{1}}-\widehat{p_{2}})\pm z_{\alpha/2} \sqrt{\dfrac{\widehat{p_{1}}(1-\widehat{p_{1}})}{n_{1}}+\dfrac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$|$n_{1}>>$, $n_{2}>>$|
 
+
+</div>
+
 <br/>
 
+<div class="content-box-blue">
 |              |                                                                                 |                       |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 | $\dfrac{\sigma^{2}_{1}}{\sigma^{2}_{2}}$ |$\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{1-\alpha/2}(v_{1}v_{2})}; \dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{\alpha/2}(v_{1}v_{2})}\Bigg)$|$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$| 
 
 
+
+</div>
 
 <br/><br/>
 
@@ -78,7 +97,7 @@ Cuando se compraran dos poblaciones se puede estar interesado en la diferencia d
 
 Se consideran muestras pareadas cuando existen una fuerte dependencia entre pares de observaciones de dos poblaciones. Es el caso de experimentos donde se observan individuos en dos momentos diferentes de tiempo, por ejemplo estudiantes a los que se les realiza un examen de entrada y un examen de salida. En este caso se compara la evolución de cada individuo consigo mismo conformando parejas de mediciones.
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 $$IC_{d=\bar{x}_{1}-\bar{x}_{2}}: \bar{d} \pm t_{\alpha/2} \frac{s_{d}}{\sqrt{n}}$$
 
@@ -89,7 +108,7 @@ $d_{i}=x_{1i}-x_{2i}$
 
 <br/><br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Se afirma que una persona podrá reducir su peso en un periodo de dos semanas un promedio de 4.5 kilogramos con una nueva dieta. Los pesos de 7 mujeres de siguieron  esta dieta se registraron antes y después de un periodo de dos semanas.  
 
@@ -120,7 +139,7 @@ Se puede afirmar que la diferencia entre los promedios de los peso antes y despu
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF  ; border-color: #000000;">
+<div class="content-box-blue">
 
 
 **Caso1** :Supone varianzas iguales y desconocidas
@@ -141,7 +160,7 @@ Supuestos:
 
 <br/><br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 A seis ingenieros que trabajan para el estado se les solicito realizar un pronostico la tasa de inflación para el año entrante. La misma petición se le realizo a ocho especialistas en finanzas que trabajan para el sector privado. Los pronósticos entregado fueron: 
 
@@ -194,7 +213,7 @@ La diferencia entre la estimación promedio de la inflación pronosticada por lo
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 
 **Caso2** : Supone varianzas diferentes, pero desconocidas 
@@ -210,7 +229,7 @@ $$v=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{
 
 <br/><br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Supongamos el mismo caso del ejemplo anterior, pero con los siguientes datos :   
 
@@ -261,9 +280,8 @@ En este caso las varianzas son diferentes, por lo que se debe ajustar la funció
 
 <br/><br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Nota**
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Nota**</span>
 
 En cualquiera de los casos los resultados pueden generar que intervalo sea de la forma:
 
@@ -283,7 +301,7 @@ En cualquiera de los casos los resultados pueden generar que intervalo sea de la
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 $$(\widehat{p_{1}}-\widehat{p_{2}}) \pm z_{\alpha/2} \sqrt{\frac{\widehat{p_{1}}(1-\widehat{p_{1}})}{n_{1}}+\frac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$$
 </div>
@@ -327,9 +345,8 @@ El resultado obtenido por R es levemente diferente, debido a ajuste en la formul
 
 <br/><br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px;color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-
-**Nota**
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Nota**</span>
 
 En cualquiera de los casos los resultados pueden generar que intervalo sea de la forma:
 
@@ -353,7 +370,7 @@ La comparación de varianzas se realiza con relación al valor que tome la razó
 El uso de esta comparación esta relacionado con supuestos necesarios para la comparación de medias independientes, análisis de varianza y diseños experimentales.
 En este caso se emplea en su construcción la distribución F de Fischer
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 
 $$\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{1-\alpha/2(v_{1}v_{2})}}; \dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{\alpha/2(v_{1}v_{2})}}\Bigg)$$

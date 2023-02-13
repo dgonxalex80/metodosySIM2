@@ -58,11 +58,16 @@ A continuación se relacionan algunos de estos momentos poblacionales:
 
 <br/>
 
-**Nota**: Existe una relación entre las distribuciones `Poisson` y `exponencial`. Su valores esperados son inversos y e podrían denotar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
+<div class="content-box-gray">
+### **Nota** 
+
+Existe una relación entre las distribuciones `Poisson` y `exponencial`. Su valores esperados son inversos y e podrían denotar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
+
+</div>
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 

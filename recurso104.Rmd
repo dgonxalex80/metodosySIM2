@@ -67,7 +67,7 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 **Definición**
 
@@ -98,7 +98,8 @@ $P(A \cap B)$ con la probabilidad de $A$, $P(A)$.
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Supongamos que se tiene la siguiente información escrita en una tabla de doble entrada o tabla cruzada que contiene dos eventos $A$ y $B$.  En la siguiente tabla se representan los tres tipos de probabilidad :
 <br/>
@@ -119,6 +120,8 @@ knitr::include_graphics("img/tabla4_22.png")
 :::
 
 ::::
+
+
 
 <br/><br/>
 
@@ -178,7 +181,7 @@ Por despeje se pueden obtener la llanada regla de la multiplicación :
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 **Definición: Regla de la multiplicación de eventos**
 
@@ -203,7 +206,7 @@ En el caso que se requiera evaluar si dos eventos son independientes o no, parti
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 **Definición: Independencia de eventos**
 
@@ -242,7 +245,8 @@ En el caso que se cumplan todas las condiciones, diremos que los eventos son ind
 
 <br/><br/>
 
-<span style="color:#FF7F00"> **Ejemplos**</span>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con probabilidad de funcionamiento $P(A_{1}) = 0.90$  y $P(A_{2}) = 0.95$ . Determinar la probabilidad de que el componente funcione.
 
@@ -250,6 +254,8 @@ Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con 
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/circuito1.png")
 ```
+
+
 
 <br/><br/>
 
@@ -263,13 +269,16 @@ $$P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2}) = 0.90 \times  0.95 = 0.855$$
 
 <br/><br/><br/>
 
-<span style="color:#FF7F00"> **Ejemplos**</span>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Ahora supongamos que el circuito anterior está conectado en paralelo. Determinar la probabilidad de que el circuito funciones
 
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/circuito2.png")
 ```
+
+
 
 <br/><br/>
 
@@ -287,13 +296,16 @@ $$1-0.005 = 0.995$$
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El departamento de crédito de la universidad, informa que el 30% de los pagos realizados en la universidad se efectúan en efectivo, un 40% con tarjeta de crédito y el resto con tarjeta débito. En todos los casos estos pagos solo son recibidos en la caja ubicada en la oficina de Registro Académico de la universidad.
 
 También se conoce que 20% de los pagos realizados en efectivo, 70% de los pagos realizados con tarjeta de crédito y el 80% de los pagos realizados con tarjeta débito, corresponden a pagos por valores superiores a $500 mil pesos
 
 Con el fin de mejorar el servicio, se esta diseñando un sistema de turnos que agilice el procedimiento de atención . El ingeniero a cargo del diseño de sistema requiere le ayude a valorar las prioridades para las personas que deben pagar mas de $500 mil pesos, pues el ingeniero sospecha que es más probable que una persona requiere pagar más de $500 mil pesos,  lo haga con efectivo.  Ayude al ingeniero con la información necesaria que le permita reafirmar su sospecha o por el contrario a valorar las diferentes posibilidades
+
+
 
 <br/>
 
@@ -357,7 +369,8 @@ knitr::include_graphics("img/particion1_22.png")
 <br/><br/>
 
 
-##  **Nota**
+<div class="content-box-gray">
+### <span style="color:#FF7F00"> **Nota**</span>
 
 Una partición de un conjunto de $S$ está formada por subconjuntos $A_{1}$, $A_{2}$, $\dots$ , $A_{n}$, que deben cumplir las siguiente propiedades :
 
@@ -366,6 +379,8 @@ Una partición de un conjunto de $S$ está formada por subconjuntos $A_{1}$, $A_
 + $A_{i} \cap A_{j} = \phi$ , para todo $i \neq j$
 
 + $A_{i} \neq \phi$ 
+
+</div>
 
 <br/><br/>
 
@@ -407,7 +422,7 @@ En general :
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 **Definición: Regla de la probabilidad total**
 
@@ -419,8 +434,6 @@ $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k}
 
 
 <br/><br/><br/>
-
- <span style="color:#FF7F00"> **Ejemplo**</span>
 
 En el caso que en el ejemplo anterior se requiere calcular la probabilidad $P(+5)$ utilizamos la regla de la probabilidad total:
 
@@ -457,7 +470,7 @@ knitr::include_graphics("img/Thomas_Bayes.gif")
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 ### **Definición: Teorema de Bayes **
 
@@ -469,7 +482,8 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 <br/>
 
@@ -482,12 +496,14 @@ $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \
 
 <br/><br/>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+
 
 En una fábrica de artículos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada
 articulo al final de la lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no logra ponerla en uno de cada 200 paquetes; Luis, quien coloca en 30 % de los paquetes, no logra colocarla en uno de 100 paquetes; Maria, quien coloca etiquetas en el 15 % de los paquetes, no lo hace una vez en 90 paquetes; y Santiago que fecha 15 % 
 de los paquetes, falla en uno de cada  200 paquetes. Si un cliente se queja de que su paquete no
 muestra la fecha de caducidad. ¿Cuál de los empleados es el más probable culpable de esta omisión?
+
+
 
 **Solución**:
 

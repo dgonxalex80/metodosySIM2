@@ -412,8 +412,10 @@ confianza</strong></span></h1>
 
 
 <p><br/><br/></p>
-<p><img src="img/manos2.png" width="100%" style="display: block; margin: auto;" />
-Tomada de : pixabay.com</p>
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/manos2.png") -->
+<!-- ``` -->
+<!-- Tomada de : pixabay.com -->
 <p><br/></p>
 <p>Un estimador por intervalo de confianza (IC) es una regla que
 especifica como usar las mediciones obtenidas en una muestra para
@@ -575,8 +577,7 @@ z_{\alpha/2}\Bigg)&amp;=&amp;1-\alpha\\
 \end{eqnarray*}\]</span></p>
 <p>el intervalo de confianza para la media poblacional queda determinado
 por:</p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000  ; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><span class="math display">\[IC_{\mu}: \bar{x} \pm z_{\alpha/2}
 \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} \]</span></p>
 <p>Supuestos:</p>
@@ -601,8 +602,7 @@ t_{\alpha/2} \Big)&amp;=&amp;1-\alpha \\
     P\Bigg(\bar{X}-t_{\alpha/2} \dfrac{s}{\sqrt{n}} \leq \mu \leq
 \bar{X}+t_{\alpha/2}\dfrac{s}{\sqrt{n}}\Bigg)&amp;=&amp;1-\alpha \\
 \end{eqnarray*}\]</span></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><span class="math display">\[IC_{\mu}: \bar{x} \pm t_{\alpha/2}
 \hspace{.1cm}\frac{s}{\sqrt{n}} \]</span></p>
 <p>Supuestos:</p>
@@ -616,8 +616,7 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 class="math inline">\(n&gt;30\)</span>) el estadístico T se aproxima a
 la distribución normal estandar, en este caso el intervalo de confianza
 se puede construir a a partir de:</p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 <p><span class="math display">\[IC_{\mu}: \bar{x} \pm z_{\alpha/2}
 \hspace{.1cm}\dfrac{s}{\sqrt{n}} \]</span></p>
 <p>Supuestos:</p>
@@ -627,7 +626,8 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Se registró el tiempo transcurrido entre la facturación y la
 recepción del pago, para una muestra de 100 clientes en una empresa. La
 media y la desviación estándar son respectivamente: 39.1 días y 17.3
@@ -666,6 +666,7 @@ class="math inline">\(\mu\)</span>, que implica un valor del percentil
 empresa está entre 35.7 días y 42.5 días con una confianza del 95%</p>
 <p><br/><br/><br/></p>
 </div>
+</div>
 <div id="tamaño-de-la-muestra-para-estimar-una-media"
 class="section level2">
 <h2><strong>Tamaño de la muestra para estimar una media</strong></h2>
@@ -694,7 +695,8 @@ class="math inline">\((1-\alpha)\%\)</span> de que el error no exceda
 <p><span class="math display">\[n =
 \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}\]</span></p>
 <p><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Se desea estimar la media de las personas que han fallecido por
 Covid19 en Colombia, con una confianza del 98% y un error de muestreo de
 1 persona . ¿Qué tamaño deberá tener la muestra para cumplir con estas
@@ -732,6 +734,7 @@ round(n,0)  # redondeo a entero</code></pre>
 <pre><code>[1] 212</code></pre>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="para-la-proporción" class="section level2">
 <h2><strong>Para la proporción</strong></h2>
 <p>La construcción del intervalo de confianza para una proporción es
@@ -757,7 +760,8 @@ class="math inline">\(n(1-p)&gt;5\)</span></li>
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo-2" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>En una encuesta aleatoria realizada a 500 familias de la ciudad que
 poseen televisión por cable, se encuentra que 340 tienen suscripción a
 HBO. Calcule un intervalo de confianza para la proporción de familias
@@ -773,6 +777,7 @@ attr(,&quot;conf.level&quot;)
 confianza del 95% que entre el 63.7% y el 72.0% de las familias tienen
 una suscripción a HBO</p>
 <p><br/><br/><br/></p>
+</div>
 </div>
 <div id="tamaño-de-muestra-para-la-estimación-de-una-proporción"
 class="section level2">
@@ -794,7 +799,7 @@ representa la tolerancia al erro que tiene el investigador (<span
 class="math inline">\(|\widehat{p}-p|&lt;e\)</span>).</p></li>
 </ul>
 <p><br/><br/><br/></p>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Una empresa requiere realizar un estudio para establecer las
 proporción de fallas diarias que presta la empresa al presentar un
 servicio . El gerente encargado del estudio decide que la tasa de error

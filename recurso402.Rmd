@@ -85,13 +85,13 @@ Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupo
 
 <br/><br/>
 
-### **Estimación de intervalos de confianza para comparación de dos poblaciones**
+### <span style="color:#034a94">**Estimación de intervalos de confianza para comparación de dos poblaciones**</span>
 
 Cuando se compraran dos poblaciones se puede estar interesado en la diferencia de medias, diferencia de proporciones o la razón de varianzas. Es necesario distinguir cuando se trata de diferencia de medias pareadas o diferencia para poblaciones independientes.
 
 <br/><br/><br/>
 
-### **Diferencia de medias - pareadas**
+### <span style="color:#034a94">**Diferencia de medias - pareadas**</span>
 
 <br/>
 
@@ -135,7 +135,7 @@ Se puede afirmar que la diferencia entre los promedios de los peso antes y despu
 
 <br/><br/><br/>
 
-### **Diferencia de medias poblaciones independientes** 
+### <span style="color:#034a94">**Diferencia de medias poblaciones independientes**</span> 
 
 <br/>
 
@@ -175,7 +175,7 @@ A seis ingenieros que trabajan para el estado se les solicito realizar un pronos
 
 <br/><br/>
 
-**Solución**:
+### <span style="color:#686868">**Solución**</span>
 
 En este caso se trata de una diferencia de medias para grupos independientes, por lo cual es necesario conocer como es la relación entre sus varianzas (iguales o diferentes) y de este modo ajustar el procedimiento.
 
@@ -281,7 +281,7 @@ En este caso las varianzas son diferentes, por lo que se debe ajustar la funció
 <br/><br/><br/>
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Nota**</span>
+### <span style="color:#686868"> **Nota**</span>
 
 En cualquiera de los casos los resultados pueden generar que intervalo sea de la forma:
 
@@ -297,7 +297,7 @@ En cualquiera de los casos los resultados pueden generar que intervalo sea de la
 
 <br/><br/><br/>
 
-### **Diferencia de proporciones**
+### <span style="color:#034a94">**Diferencia de proporciones**</span>
 
 <br/>
 
@@ -315,7 +315,7 @@ En una muestra de 200 clientes, el 20% indica preferencia por tamaño especial d
 
 <br/><br/>
 
-**Solución**
+### <span style="color:#686868">**Solución**</span>
 
 En este caso se trata de la comparación de dos proporciones (proporción de clientes que prefieren el tamaño especial dentro de los clientes de la pizzería - $p_{2}$ comparada con la proporción de los clientes de la misma pizzería pero después de realizada la campaña publicitaria - $p_{2}$)
 
@@ -346,7 +346,7 @@ El resultado obtenido por R es levemente diferente, debido a ajuste en la formul
 <br/><br/><br/>
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Nota**</span>
+### <span style="color:#686868"> **Nota**</span>
 
 En cualquiera de los casos los resultados pueden generar que intervalo sea de la forma:
 
@@ -361,7 +361,7 @@ En cualquiera de los casos los resultados pueden generar que intervalo sea de la
 
 <br/><br/><br/>
 
-### **Comparación de varianzas** 
+### <span style="color:#034a94">**Comparación de varianzas**</span> 
 
 <br/>
 

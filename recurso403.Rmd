@@ -82,11 +82,12 @@ ic2
 
 <br/><br/>
 
+<center>
 ```{r}
 hist(mx, las=1, main=" ", ylab = " ", xlab = " ", col="#034A94")
 abline(v=ic1, col="#FF7F00",lwd=2)
 abline(v=ic2, col="#0EB0C6",lwd=2)
 ```
-
+</center>
 Como se puede observar, el segundo estimador corrige el intervalo
 

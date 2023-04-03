@@ -31,10 +31,204 @@ xMd=c(
 
 <br/><br/>
 
-# **Pruebas no paramétricas**
+# <span style="color:#034a94">**Pruebas no paramétricas**</span>
 
 
-## **Resumen**
+
+## <span style="color:#034a94">**Prueba de rachas**</span>
+
+Se desea extraer una muestra aleatoria del grupo de participantes y probar que es aleatoria con respecto al sexo.
+
+|                                       |
+|:--------------------------------------|
+|$Ho$: $X$ es aleatoria                 | 
+|$Ha$: $X$ NO es aleatoria              |
+
+```{r}
+library(randtests)
+x=sample(CarreraLuz22$sex, 100)
+rachas<-as.numeric(x=="Hombre")
+runs.test(rachas,alternative = "left.sided",threshold = 0.5,pvalue = "exact",plot=F)
+
+```
+
+
+<br/><br/><br/>
+
+## <span style="color:#034a94">**Pruebas de normalidad**</span>
+
+Existen varias pruebas de hipótesis para verificar si una variable tiene un comportamiento aproximadamente normal.En todos los casos las hipótesis planteadas son:
+
+<br/>
+
+|                                       |
+|:--------------------------------------|
+|$Ho$: $X$ tiene distribución Normal    | 
+|$Ha$: $X$ no tiene distribución Normal |
+
+<br/>
+
+```{r}
+plot(density(w))
+```
+
+
+
+### <span style="color:#034a94">**Prueba de Shapiro Wilk**</span>
+
+```{r}
+shapiro.test(w)
+```
+Esta prueba no requiere la instalación de paquetes adicionales, está disponible en la configuración básica de R
+
+
+<br/><br/>
+
+### <span style="color:#034a94">**Paquete normtest**</span>
+
+Las siguientes pruebas requieren instalar y cargar el paquete: `normtest`
+
+```{r}
+# install.packages("normtets")
+library(normtest)
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba Jarque-Bera ajustada**
+
+```{r}
+ajb.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Frosini**</span>
+
+```{r}
+frosini.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Geary**</span>
+
+```{r}
+geary.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Hagazy-Green 1**</span>
+
+```{r}
+hegazy1.norm.test(w)	
+```
+
+<br/>
+
+### <span style="color:#034a94">**Prueba de Hagazy-Green 2**</span>
+
+```{r}
+hegazy2.norm.test(w)
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Jarque-Bera**</span>
+
+```{r}
+jb.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de kurtosis**</span>
+
+```{r}
+kurtosis.norm.test(w)
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de sesgo**</span>
+
+```{r}
+skewness.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Spiegelhalter**</span>
+
+```{r}
+spiegelhalter.norm.test(w)	
+```
+
+<br/><br/>
+
+### <span style="color:#034a94">**Prueba de Weisberg-Bingham**</span>
+
+```{r}
+wb.norm.test(w)	
+```
+
+<br/><br/><br/>
+
+## <span style="color:#034a94">**Paquete nortest**</span>
+
+Las siguientes pruebas requieren instalar y cargar el paquete: `nortest`
+
+```{r}
+# install.packages("nortets")
+ library(nortest)
+```
+
+<br/>
+
+### <span style="color:#034a94">**Prueba de Anderson-Darling**</span>
+
+```{r}
+ad.test(w)
+```
+
+<br/>
+
+### <span style="color:#034a94">**Prueba de Cramer-von Mises**</span>
+
+```{r}
+cvm.test(w)
+```
+
+
+<br/>
+
+### <span style="color:#034a94">**Prueba de Lilliefors (Kolmogorov-Smirnov)**</span>
+
+```{r}
+lillie.test(w)
+```
+
+<br/>
+
+### <span style="color:#034a94">**Prueba chi-cuadrado de Pearson**</span>
+
+```{r}
+pearson.test(w)
+```
+
+<br/>
+
+### <span style="color:#034a94">**Prueba de Shapiro-Francia**</span>
+
+```{r}
+sf.test(w)
+```
+
+En todos los casos se presenta un valor-p grande por lo cual no se rechaza $Ho$, asumimos que $Ho$ es verdad. Asumimos que la distribución de la variable $X$ es normal
+
+<div class="content-box-gray">
+## <span style="color:#686868">**Resumen**</span>
 
 |                   |                                                          |
 |:------------------|:---------------------------------------------------------|
@@ -63,208 +257,15 @@ xMd=c(
 |                   |`lillie.test(x)`                                          |
 |                   |`pearson.test(x)`                                         |
 |                   |`sf.test(x)`                                              |
-
-
-
-<br/><br/>
-
-**De rachas**
-
-Se desea extraer una muestra aleatoria del grupo de participantes y probar que es aleatoria con respecto al sexo.
-
-|                                       |
-|:--------------------------------------|
-|$Ho$: $X$ es aleatoria                 | 
-|$Ha$: $X$ NO es aleatoria              |
-
-```{r}
-library(randtests)
-x=sample(CarreraLuz22$sex, 100)
-rachas<-as.numeric(x=="Hombre")
-runs.test(rachas,alternative = "left.sided",threshold = 0.5,pvalue = "exact",plot=F)
-
-```
-
-
-<br/><br/><br/>
-
-**De normalidad**
-
-Existen varias pruebas de hipótesis para verificar si una variable tiene un comportamiento aproximadamente normal.En todos los casos las hipótesis planteadas son:
-
-<br/>
-
-|                                       |
-|:--------------------------------------|
-|$Ho$: $X$ tiene distribución Normal    | 
-|$Ha$: $X$ no tiene distribución Normal |
-
-<br/>
-
-```{r}
-plot(density(w))
-```
-
-
-
-**Shapiro Wilk**
-
-```{r}
-shapiro.test(w)
-```
-Esta prueba no requiere la instalación de paquetes adicionales, está disponible en la configuración básica de R
+</div>
 
 
 <br/><br/>
 
-**Paquete normtest**
 
-Las siguientes pruebas requieren instalar y cargar el paquete: `normtest`
+### <span style="color:#686868">**Referencias**</span>
 
-```{r}
-# install.packages("normtets")
-library(normtest)
-```
-
-<br/><br/>
-
-**Jarque-Bera ajustado**
-
-```{r}
-ajb.norm.test(w)	
-```
-
-<br/><br/>
-
-**Frosini**
-
-```{r}
-frosini.norm.test(w)	
-```
-
-<br/><br/>
-
-**Geary**
-
-```{r}
-geary.norm.test(w)	
-```
-
-<br/><br/>
-
-**Hagazy-Green 1**
-
-```{r}
-hegazy1.norm.test(w)	
-```
-
-<br/>
-
-**Hagazy-Green 2**
-
-```{r}
-hegazy2.norm.test(w)
-```
-
-<br/><br/>
-
-**Jarque-Bera**
-
-```{r}
-jb.norm.test(w)	
-```
-
-<br/><br/>
-
-**de kurtosis**
-
-```{r}
-kurtosis.norm.test(w)
-```
-
-<br/><br/>
-
-**de sesgo**
-
-```{r}
-skewness.norm.test(w)	
-```
-
-<br/><br/>
-
-**Spiegelhalter**
-
-```{r}
-spiegelhalter.norm.test(w)	
-```
-
-<br/><br/>
-
-**Weisberg-Bingham**
-
-```{r}
-wb.norm.test(w)	
-```
-
-<br/><br/><br/>
-
-### **Paquete nortest**
-
-Las siguientes pruebas requieren instalar y cargar el paquete: `nortest`
-
-```{r}
-# install.packages("nortets")
- library(nortest)
-```
-
-<br/>
-
-**Anderson-Darling**
-
-```{r}
-ad.test(w)
-```
-
-<br/>
-
-**Cramer-von Mises**
-
-```{r}
-cvm.test(w)
-```
-
-
-<br/>
-
-**Lilliefors (Kolmogorov-Smirnov)**
-
-```{r}
-lillie.test(w)
-```
-
-<br/>
-
-**chi-cuadrado de Pearson**
-
-```{r}
-pearson.test(w)
-```
-
-<br/>
-
-**Shapiro-Francia**
-
-```{r}
-sf.test(w)
-```
-
-En todos los casos se presenta un valor-p grande por lo cual no se rechaza $Ho$, asumimos que $Ho$ es verdad. Asumimos que la distribución de la variable $X$ es normal
-
-
-
-Referencias :
-
-https://rpubs.com/CJRR/PUJ_DECB_NP
+* https://rpubs.com/CJRR/PUJ_DECB_NP
 
 
 

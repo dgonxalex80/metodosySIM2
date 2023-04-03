@@ -30,32 +30,8 @@ xMd=c(
 
 <br/><br/>
 
-### **Resumen**
 
-|                   |                                                          |
-|:------------------|:---------------------------------------------------------|
-|                   |**Pruebas paramétricas**                                  |
-|Entrada de datos   |                                                          |
-|                   |`x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)`                       |
-|                   |`x2=c(3,7,2,3,6,2,1,0,2)`                                 |  
-|Una población      |                                                          |
-||`z.test(datos,mu=10,stdev=4, conf.level=0.98)`                               |
-||`t.test(datos, mu=10,conf.level=0.98)`                                       |
-||`t.test(datos, mu=10,conf.level=0.98,alternative="greater")`                 |
-||`t.test(datos, mu=10,conf.level=0.98,alternative="less)`                     |
-||`prop.test(x=22,n=100, p=0.20, conf.level=0.98)`                             |
-|Dos poblaciones    |                                                          |
-|                   |`t.test(x1,x2,  paired=TRUE)`                             |    
-|                   |`t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0.95)` |
-|                   |`t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)`|
-|                   |`var.test(x,y)`                                           |
-|                   |`prop.test(c(x1,x2), c(n1,n2))`                           |
-
-
-
-<br/><br/><br/>
-
-## **Para una media**
+## <span style="color:#034a94">**Para una media**</span>
 
 
 Podemos estar interesado en uno de los tres casos siguientes
@@ -74,7 +50,7 @@ Además se presentan tres alernativas para el estadístico de prueba:
 
 <br/>
 
-### **Para una media con varianza conocida**
+## <span style="color:#034a94">**Para una media con varianza conocida**</span>
 
 Supuestos:
 
@@ -91,7 +67,7 @@ BSDA::z.test(w, mu=60, sigma.x = 125)
 ```
 <br/><br/><br/>
 
-### **Para una media**
+## <span style="color:#034a94">**Para una media**</span>
 
 <br/>
 
@@ -120,7 +96,7 @@ t.test(w,mu=70, alternative="less")
 
 <br/><br/>
 
-### **Para una proporción**
+## <span style="color:#034a94">**Para una proporción**</span>
 
 En este caso suponemos que $n$ es grande 
 
@@ -141,7 +117,7 @@ El resultado indica que la mayoria de los participantes son hombres
 
 <br/><br/>
 
-### **Para la comparación de medias en grupos independientes**
+## <span style="color:#034a94">**Para la comparación de medias en grupos independientes**</span>
 
 Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables y la comparación de varianzas:
 
@@ -180,7 +156,7 @@ Los resultado indican :
 <br/><br/><br/>
 
 
-## **Para comparación de proporciones**
+## <span style="color:#034a94">**Para comparación de proporciones**</span>
 
 ```{r}
 #---------------------------------------------------------------------------------
@@ -194,7 +170,7 @@ El resultado indica que existen diferencias entre las proporciones de hombre y m
 <br/><br/>
 
 
-## **Comparación de medias grupos pareados**
+## <span style="color:#034a94">**Comparación de medias grupos pareados**</span>
 
 Ahora supongamos que un grupo de atletas corrió tambien en el 2021 ($xMa$) y repitió su participación en el 2022 ($xMd$), se desea determinar si se presentaron mejoras o no en el rendimiento del grupo
 
@@ -214,3 +190,31 @@ t.test(xMa,xMd,paired = TRUE)
 
 Los reultados indican que los promedios se supomen iguales
 
+
+
+
+
+## <span style="color:#686868">**Resumen**</span>
+
+|                   |                                                          |
+|:------------------|:---------------------------------------------------------|
+|                   |**Pruebas paramétricas**                                  |
+|Entrada de datos   |                                                          |
+|                   |`x1=c(7, 13, 6, 5, 5, 10, 8, 6, 7)`                       |
+|                   |`x2=c(3,7,2,3,6,2,1,0,2)`                                 |  
+|Una población      |                                                          |
+||`z.test(datos,mu=10,stdev=4, conf.level=0.98)`                               |
+||`t.test(datos, mu=10,conf.level=0.98)`                                       |
+||`t.test(datos, mu=10,conf.level=0.98,alternative="greater")`                 |
+||`t.test(datos, mu=10,conf.level=0.98,alternative="less)`                     |
+||`prop.test(x=22,n=100, p=0.20, conf.level=0.98)`                             |
+|Dos poblaciones    |                                                          |
+|                   |`t.test(x1,x2,  paired=TRUE)`                             |    
+|                   |`t.test(x1,x2,  paired=FALSE, var.equal=TRUE, conf.level=0.95)` |
+|                   |`t.test(x1,x2,  paired=FALSE, var.equal=FALSE, conf.level=0.98)`|
+|                   |`var.test(x,y)`                                           |
+|                   |`prop.test(c(x1,x2), c(n1,n2))`                           |
+
+
+
+<br/><br/><br/>

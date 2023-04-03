@@ -24,7 +24,7 @@ Estas caractaristicas ahora en los estimadores se presentan a continuación:
 <br/><br/>
 
 <div class="content-box-blue">
-## **Insesgadez**
+## <span style="color:#034a94">**Insesgadez**</span>
 
 <br/>
 
@@ -36,7 +36,7 @@ Está representado por las figuras 3 y 4 que presentan un comportamiento que en 
 <br/><br/>
 
 <div class="content-box-blue">
-## **Eficiente**
+## <span style="color:#034a94">**Eficiente**</span>
 
 <br/>
 
@@ -48,7 +48,7 @@ $$V[\widehat{\theta_{3}}] < V[\widehat{\theta_{4}}]$$
 <br/><br/>
 
 <div class="content-box-blue">
-## **Consistente**
+## <span style="color:#034a94">**Consistente**</span>
 
 <br/>
 

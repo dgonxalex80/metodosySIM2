@@ -36,7 +36,7 @@ knitr::include_graphics("img/prueba.png")
 <br/><br/>
 
 
-## **Introducción**
+## <span style="color:#034a94">**Introducción**</span>
 
 Actualmente se raalizan pruebas de sangre para determinar su una persona padece de una enfermedad o no, supongamos Covid-19. Para realizar la prueba se toma una muestra de sangre del paciente con la que se realiza un protocolo, despues del cual se concluye o no que el paciente examinado tienen o no el virus. De igual manera la Estadística proporciona los elementos que permiten a partir de los datos recogidos en una muestra establecer el valor de verdad de una afirmación sobre un parámetro poblacional (hipótesis). 
 
@@ -59,23 +59,23 @@ Desde el punto de vista clásico, todas las pruebas de hipótesis trabajan en ba
 
 <br/><br/>
 
-## **Conceptos básicos** 
+## <span style="color:#034a94">**Conceptos básicos**</span> 
 
 <br/>
 
-## **Hipótesis nula (Ho)** 
+## <span style="color:#034a94">**Hipótesis nula (Ho)**</span> 
 
 Es la hipótesis a probar, ésta NO se rechaza si de la muestra no se obtiene suficiente evidencia para rechazarla.
 
 <br/><br/>
 
-## **Hipótesis alterna (Ha)** 
+## <span style="color:#034a94">**Hipótesis alterna (Ha)**</span> 
 
 La hipótesis $Ho$ se contrasta con la hipótesis Ha, y ésta última corresponde a valores alternativos del parámetro planteados en la hipótesis nula. La hipótesis $Ha$ se considera cierta si existe suficiente evidencia para rechazar la hipótesis nula.
 
 <br/><br/>
 
-## **Estadístico de prueba  (EdeP)**  
+## <span style="color:#034a94">**Estadístico de prueba  (EdeP)**</span>  
 
 Es una función de la muestra que contiene información sobre el parámetro de interés, la que nos permite decidir sobre el rechazo de la hipótesis nula, $Ho$ . Es también una variable aleatoria que sigue una función de distribución conocida como por ejemplo:
 
@@ -83,7 +83,7 @@ Para una muestra determinada se obtiene un valor del estadístico de prueba, a p
 
 <br/><br/>
 
-## **Región de rechazo (RdeR)**  
+## <span style="color:#034a94">**Región de rechazo (RdeR)**</span>  
 
 También llamada región crítica (RC), define los valores del estadístico de prueba para los cuales la información muestral contradice la hipótesis nula. Estos valores nos permitirán adoptar una regla de decisión consistente. Una prueba de una hipótesis estadística es un procedimiento que permite, mediante el contraste entre la información muestral y lo propuesto en una hipótesis, decidir sobre
 su rechazo. 
@@ -93,13 +93,13 @@ su rechazo.
 
 <br/><br/>
 
-## **Regla de Decisión (RdeD)**  
+## <span style="color:#034a94">**Regla de Decisión (RdeD)**</span>  
 
 De esta manera, como una regla de decisión, si para una muestra particular el estadístico de prueba (valor calculado) cae dentro de la región crítica, rechazaremos la hipótesis nula $H_{o}$ en favor de la hipótesis alternativa $H_{a}$. En cambio, si el valor calculado no cae dentro de la RC, no podremos rechazar la hipótesis nula y por tanto decimos que la información contenida en la muestra no ofrece suficiente evidencia estadística que nos permita rechazar $Ho$, ASUMIMOS que la hipótesis nula es cierta. 
 
 <br/><br/>
 
-## **Errores asociados**
+## <span style="color:#034a94">**Errores asociados**</span>
 
 Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones descritas en la siguiente tabla:
 
@@ -117,9 +117,13 @@ Existen dos situaciones en las que se comenten errores después de tomar una dec
 
 <br/><br/>
 
-**Error tipo I**: Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como símil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
-$$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
+### <span style="color:#034a94">**Error tipo I**</span>
 
+Cuando se rechazamos una hipótesis nula que en realidad es verdadera. Tomando como símil la situación donde un médico desea determinar si un paciente está sano o enfermo ($Ho$: SANO vs $Ha$: ENFERMO), es posible que concluya que el paciente está enfermo (rechace $Ho$) cuando en verdad esta persona esta sana. En términos de probabilidad este error se debe de representar como:
+
+<div class="content-box-blue">
+$$P(\text{Rechazar } Ho | Ho \text{ es verdadera})= \alpha$$
+</div>
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -128,10 +132,13 @@ Para ilustrar el error tipo I, podemos acudir aun evento ocurrido a una estudian
 
 <br/><br/>
 
-**Error Tipo II**: Cuando no se rechaza una hipótesis nula que en realidad es falsa. Utilizando el ejemplo del médico, diríamos que cuando el medico indica que el paciente esta sano, cuando esta realmente enfermo, incurre en un error frecuente cuando algunos pacientes son asintomáticos y aunque tienen la enfermedad, sus exámenes médicos salen negativos. En este caso la probabilidad se representa como:
+### <span style="color:#034a94">**Error Tipo II**</span> 
 
+Cuando no se rechaza una hipótesis nula que en realidad es falsa. Utilizando el ejemplo del médico, diríamos que cuando el medico indica que el paciente esta sano, cuando esta realmente enfermo, incurre en un error frecuente cuando algunos pacientes son asintomáticos y aunque tienen la enfermedad, sus exámenes médicos salen negativos. En este caso la probabilidad se representa como:
+
+<div class="content-box-blue">
 $$P(\text{No rechazar} Ho | Ho \text{ es falsa}) $$
-
+</div>
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -139,14 +146,14 @@ Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour d
 
 <br/><br/>
 
-## **Nivel de significancia ($\alpha$)**  
+## <span style="color:#034a94">**Nivel de significancia ($\alpha$)**</span>  
 
 No es posible minimizar simultáneamente, las probabilidades de los errores tipo I y II, ya que en la medida que uno disminuye el otro aumenta, como se muestra en la figura siguiente, en la que claramente se ve que la reducción del área $\alpha$ (probabilidad de error tipo I), implica el aumento del área $\beta$ (probabilidad de error tipo II).
 
 <br/><br/>
 
 <div class="content-box-blue">
-## **Tipos de pruebas de hipótesis**
+## <span style="color:#034a94">**Tipos de pruebas de hipótesis**</span>
 
 |                   |                                                                 |
 |:------------------|:----------------------------------------------------------------|

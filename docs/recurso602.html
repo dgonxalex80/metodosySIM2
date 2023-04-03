@@ -14,7 +14,7 @@
 
 <title> Variable aleatoria</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -412,7 +412,8 @@ $(document).ready(function () {
 
 <p><br/><br/></p>
 <div id="variables-discretas" class="section level1">
-<h1><strong>Variables discretas</strong></h1>
+<h1><span style="color:#034a94"><strong>Variables
+discretas</strong></span></h1>
 <p>En el caso de las variables discretas la función de distribución de
 probabilidad <span class="math inline">\(f(x)\)</span> debe cumplir las
 siguientes propiedades</p>
@@ -460,7 +461,8 @@ sum(fw(w))</code></pre>
 <pre><code>[1] 0.8016552</code></pre>
 <p><br/><br/><br/></p>
 <div id="valor-esperado" class="section level3">
-<h3><strong>Valor esperado</strong></h3>
+<h3><span style="color:#034a94"><strong>Valor
+esperado</strong></span></h3>
 <p><br/></p>
 <pre class="r"><code>fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
 w=0:40
@@ -470,7 +472,7 @@ cat(&quot;E[X] = &quot;,Ex)</code></pre>
 <p><br/></p>
 </div>
 <div id="varianza" class="section level3">
-<h3><strong>Varianza</strong></h3>
+<h3><span style="color:#034a94"><strong>Varianza</strong></span></h3>
 <pre class="r"><code>fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
 w=0:40
 Ex=sum(fw(w)*w)
@@ -482,9 +484,10 @@ cat(&quot;V[X] = &quot;,Vx)</code></pre>
 </div>
 </div>
 <div id="variables-continuas" class="section level1">
-<h1><strong>Variables continuas</strong></h1>
+<h1><span style="color:#034a94"><strong>Variables
+continuas</strong></span></h1>
 <div id="integración" class="section level2">
-<h2><strong>Integración</strong></h2>
+<h2><span style="color:#034a94"><strong>Integración</strong></span></h2>
 <p>El concepto de integración se utiliza en probabilidad para determinar
 el área bajo la curva de una función de densidad <span
 class="math inline">\(f(x)\)</span> para una variable aleatoria
@@ -546,7 +549,8 @@ integrate(fx, 0,5)</code></pre>
 <p><br/></p>
 </div>
 <div id="valor-esperado-1" class="section level2">
-<h2><strong>Valor esperado</strong></h2>
+<h2><span style="color:#034a94"><strong>Valor
+esperado</strong></span></h2>
 <p><span class="math display">\[E(X) =
 \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx\]</span> <br/></p>
 <p>En este caso la función se multiplica por <span
@@ -558,7 +562,7 @@ cat(&quot;E[X] = &quot;, Ex$value,&quot;\n&quot;)</code></pre>
 <p><br/></p>
 </div>
 <div id="varianza-1" class="section level2">
-<h2><strong>Varianza</strong></h2>
+<h2><span style="color:#034a94"><strong>Varianza</strong></span></h2>
 <p><span class="math display">\[V[X] = E[X^{2}]-(E[X])^{2}  =
 E[X^{2}]-\mu^{2}\]</span></p>
 <pre class="r"><code>fx=function(x){1/4*exp(-x/4)}
@@ -583,7 +587,8 @@ cat(&quot;E[X] = &quot;, Ex$value,&quot;\n&quot;)</code></pre>
 </div>
 </div>
 <div id="caso-discreto-discreto" class="section level1">
-<h1><strong>Caso Discreto-Discreto</strong></h1>
+<h1><span style="color:#034a94"><strong>Caso
+Discreto-Discreto</strong></span></h1>
 <p><br/></p>
 <p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>El número de veces que falla una máquina <span
@@ -647,7 +652,8 @@ fxy</code></pre>
 <pre><code>[1] 1</code></pre>
 <p><br/></p>
 <div id="funciones-distribución-marginales" class="section level3">
-<h3><strong>Funciones distribución marginales</strong></h3>
+<h3><span style="color:#034a94"><strong>Funciones distribución
+marginales</strong></span></h3>
 <pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
 fxy=addmargins(fxy,c(1,2))
 colnames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;h(y)&quot;)
@@ -661,8 +667,8 @@ g(x) 0.10 0.35 0.55  1.0</code></pre>
 <p><br/></p>
 </div>
 <div id="representación-gráfica-de-fxy" class="section level3">
-<h3><strong>Representación gráfica de <span
-class="math inline">\(f(x,y)\)</span></strong></h3>
+<h3><span style="color:#034a94"><strong>Representación gráfica de <span
+class="math inline">\(f(x,y)\)</span></strong></span></h3>
 <p>Para construir la gráfica de X y Y debemos crear los vectores</p>
 <table>
 <tbody>
@@ -724,7 +730,8 @@ plot3D::scatter3D(x, y, fxy,
 <p><br/></p>
 </div>
 <div id="funciones-de-distribución-marginal" class="section level3">
-<h3><strong>Funciones de distribución marginal</strong></h3>
+<h3><span style="color:#034a94"><strong>Funciones de distribución
+marginal</strong></span></h3>
 <pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
 fxy=addmargins(fxy,c(1,2))
 colnames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;h(y)&quot;)
@@ -738,7 +745,8 @@ g(x) 0.10 0.35 0.55  1.0</code></pre>
 <p><br/></p>
 </div>
 <div id="covarianza-y-correlación" class="section level3">
-<h3><strong>Covarianza y Correlación</strong></h3>
+<h3><span style="color:#034a94"><strong>Covarianza y
+Correlación</strong></span></h3>
 <pre class="r"><code>x=c(0,1,2) 
 y=c(0,1,2)
 fxy=matrix(c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15), ncol=3 )
@@ -780,7 +788,8 @@ Rho=CovXY/sqrt(Vx*Vy)</code></pre>
 </div>
 </div>
 <div id="caso-continuo-continuo" class="section level1">
-<h1><strong>Caso Continuo-continuo</strong></h1>
+<h1><span style="color:#034a94"><strong>Caso
+Continuo-continuo</strong></span></h1>
 <p><br/></p>
 <div id="ejemplo" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
@@ -813,9 +822,12 @@ $functionEvaluations
 
 $returnCode
 [1] 0</code></pre>
-<p>basado en : <a
+<center>
+<sub> basado en : <a
 href="http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf"
-class="uri">http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf</a></p>
+class="uri">http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf</a>
+</sub>
+</center>
 <p><br/></p>
 <p>Ahora su representación gráfica</p>
 <pre class="r"><code>x=seq(0,1,length=10)
@@ -825,10 +837,13 @@ z=outer(x, y, fxy)
 persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = &quot;#FF7F00&quot;,
       xlab = &quot;x&quot;, ylab =&quot;y&quot;, zlab = &quot;f(x,y)&quot;,
       main=&quot; &quot;, col.main=&quot;blue&quot;)</code></pre>
-<p><img src="recurso602_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<p>Nota: basada en : <a
+<img src="recurso602_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+<center>
+<sub> Nota: basada en : <a
 href="https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html"
-class="uri">https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html</a></p>
+class="uri">https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html</a>
+</sub>
+</center>
 <p><br/><br/></p>
 </div>
 </div>

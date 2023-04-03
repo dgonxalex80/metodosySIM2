@@ -34,7 +34,7 @@ Note que la distribución normal esta relacionada con las distribuciones t-stude
 
 <br/><br/>
 
-### **Cuando utilizar pruebas no paramétricas**:
+### <span style="color:#034a94">**Cuando utilizar pruebas no paramétricas**</span>
 
 + Cuando no se cumplen los supuestos como Normalidad
 + Tamaños mínimos de muestra
@@ -48,7 +48,7 @@ Note que la distribución normal esta relacionada con las distribuciones t-stude
 
 <br/><br/>
 
-### **Ventajas de utilizar pruebas no paramétricas**
+### <span style="color:#034a94">**Ventajas de utilizar pruebas no paramétricas**</span>
 
 + Son fáciles de usar (aunque dada la facilidad de los códigos en R ambas se corren con una línea)
 + No se requieren comprobar supuestos
@@ -57,7 +57,7 @@ Note que la distribución normal esta relacionada con las distribuciones t-stude
 
 <br/><br/>
 
-### **Desventajas** 
+### <span style="color:#034a94">**Desventajas**</span> 
 
 + Ignoran información
 + No son tan eficientes como las pruebas paramétricas, tienen menor potencia.
@@ -77,7 +77,7 @@ Entre las principales pruebas no paramétricas están :
 
 <br/><br/>
 
-### **De signos**  
+### <span style="color:#034a94">**Prueba de signos**</span>  
 
 |            |                                           |
 |:---------- |:----------------------------------------------------------------|
@@ -85,8 +85,9 @@ Entre las principales pruebas no paramétricas están :
 | Variable dependiente	 | En escala al menos ordinal                          |	
 | Objetivo               | Esta prueba puede ser utilizada para determinar si la diferencia entre el numero de veces que los datos caen a un lado de la media verdadera es significativamente diferente al número de veces que cae en el otro lado . Determinar si la diferencia entre el numero de veces en que el valor de una variable es mayor que el de la otra y el numero de veces que es menor es estadísticamente significativa. Versión no paramétrica de la prueba t para una muestra o de la prueba  t para muestras pareadas. Esta prueba se realiza sobre la mediana de los datos $Me$. |
 
+<br/>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Carlos y Ángela, Administradoras investigadores de una firma de artículos deportivos tienen la creencia que el deporte afecta la imagen que cada persona tiene de si misma. Para investigar esta posibilidad eligieron a 18 personas de manera aleatoria, para participar en un programa de ejercicios. Antes de empezar el programa las personas respondieron un cuestionario para medir su propia imagen.  Un nivel de 15 puntos en la prueba establece que la persona tiene un concepto indiferente frente a la afirmación, valores menores de 15 que la afecta en forma negativa y valores por encima de 15 que afectan su imagen en forma positiva. Los siguientes son resultados obtenidos : 16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16  |
 
@@ -95,7 +96,7 @@ Carlos y Ángela, Administradoras investigadores de una firma de artículos depo
 x.img=c(16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16 )
 ```
 
-**Solución**:
+### <span style="color:#686868">**Solución**</span>
 
 |                    |                        |
 |-------------------:|:-----------------------|
@@ -117,7 +118,7 @@ M+ = 13
 Regla de Decisión  (Distribución Binomial  p=0.5 n= 17)
 $P(X\leq 13) =  1-0.9755 =  0.0245$  ( valor-p)
 
-**Conclusión**:
+### <span style="color:#686868"> **Conclusión**</span>
 
 Se rechaza la hipótesis nula, se acepta la hipótesis alterna. Se puede   afirmar que las personas tienen la creencia que el deporte afecta positivamente su imagen.
 
@@ -128,7 +129,7 @@ SIGN.test(x.img,md=15,alternative = "greater")
 
 <br/><br/>
 
-### **Chi-cuadrado de bondad de ajuste**
+### <span style="color:#034a94">**Prueba Chi-cuadrado de bondad de ajuste**</span>
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -138,7 +139,7 @@ SIGN.test(x.img,md=15,alternative = "greater")
 
 <br/><br/>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 El dueño de una panadería tiene la posibilidad de controlar los niveles de inventarios de leche para cuatro marcas diferentes. Con el fin de establecer políticas para la realización de nuevos pedidos requiere saber si la demanda de estas marcas son iguales (distribución uniforme). Con este propósito tomo la información de un día: |
 
@@ -148,7 +149,7 @@ El dueño de una panadería tiene la posibilidad de controlar los niveles de inv
 |prob.esperada (esp) | 0.25     |0.25     | 0.25      | 0.25   |
 |de acuerdo a Ho     |          |         |           |        |
 
-**Solución**:
+### <span style="color:#686868">**Solución**</span>
 
 |                    |                                                         |
 |-------------------:|:--------------------------------------------------------|
@@ -194,12 +195,12 @@ chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste
 
 <br/><br/>
 
-### **Chi-cuadrado de independencia**
+### <span style="color:#034a94">**Prueba Chi-cuadrado de independencia**</span>
 
 <br/><br/>
 
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Un investigador desea establecer la relación que puede existir entre la calificación obtenida por un producto por parte de sus consumidores y su ubicación de residencia. Con este fin recoge información de 100 de sus clientes:
 
@@ -216,7 +217,7 @@ Un investigador desea establecer la relación que puede existir entre la calific
 <br/><br/>
 
 
-**Solución**:
+### <span style="color:#686868"> **Solución**</span>
 
 
 |        |                                                                        |
@@ -245,7 +246,7 @@ Como p-value = 0.1543 lo podemos considerar grande, no se rechaza $Ho$, asumimos
 
 <br/><br/><br/>
 
-### **De Wilcoxon**
+### <span style="color:#034a94">**Prueba de Wilcoxon**</span>
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -255,7 +256,7 @@ Objetivo	          | Determinar su la diferencia entre la magnitud de las difere
 
 <br/><br/>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Los siguiente datos se tomaron de un estudio de comparación de adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer grupo está conformado por 15 estudiantes y el segundo grupo por 14 estudiantes y corresponden al consumo diario en calorías. Los datos obtenidos son los siguientes:  
 
@@ -276,7 +277,7 @@ g2=c(39,10,21,29,11,26,7,12,28,32,30,27,50,19,24)
 wilcox.test(g1,g2,paired = FALSE,alternative = "greater")
 ```
 
-**Conclusión** :  
+### <span style="color:#686868"> **Conclusión**</span>  
 
 Se rechaza Ho , se acepta Ha. Se puede concluir que las dos poblaciones son diferentes. por lo tanto las medias son diferentes.
 
@@ -286,7 +287,7 @@ Por lo tanto los estudiantes sanos presentan consumo de calorías menores que lo
 
 <br/><br/>
 
-### **De Kruskal-Wallis**
+### <span style="color:#034a94">**Prueba de Kruskal-Wallis**</span>
 
 |            |                                                                 |
 |:---------- |:----------------------------------------------------------------|
@@ -297,7 +298,7 @@ Objetivo	            |Determinar si las diferencias entre las medias de los rang
 <br/><br/>
 
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para verificar si la memoria cambia con la edad, una investigadora realiza un estudio en el cual hay tres grupos de personas: G1- 60 años de edad, G2: con 50 años de edad, G3: con 40 años de edad. A cada persona se le presenta una serie de palabras. La serie es presentada dos veces y se cuenta el número de palabras que pueden recordar. 
 
@@ -326,9 +327,9 @@ kruskal.test(g1,g2,g3)
 
 <br/><br/>
 
-### **Correlación de Spearman**
+### <span style="color:#034a94">**Correlación de Spearman**</span>
 
- <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Se requiere establecer si existe relación entre el tiempo de estudio dedicado a la preparación de una evaluación y la nota obtenida. Como la nota obtenida representa una variable cualitativa, se debe utilizar una prueba no paramétrica (coeficiente de correlación de Spearman). Los datos obtenidos son los siguientes: 
 
@@ -350,9 +351,9 @@ En este caso se utiliza el coeficiente de correlación de Sperman para valorar l
 
 <br/><br/>
 
-### **De Rachas**
+### <span style="color:#034a94">**Prueba de Rachas**</span>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Para verificar si los números aleatorios generados por Excel son de verdad aleatorios se tomó una muestra de ellos mediante la función =aleatorio.entre(), obteniendo como resultado los siguientes números: 0.738, 0.202, 0.357, 0.561, 0.509, 0.146, 0.746, 0.666, 0.133, 0.430, 0.972, 0.999, 0.499, 0.869, 0.821, 0.732, 0.355, 0.189, 0.478, 0.162 .
 
@@ -368,7 +369,7 @@ y=rnorm(100,120,20)
 runs.test(y)
 ```
 
-**Conclusión**
+### <span style="color:#686868"> **Conclusión**</span>
 
 Como el valor-p (0.3149) es mayor al nivel de significancia, no se rechaza la hipótesis nula, no existe suficiente evidencia en la muestra que permita rechazarla, asumimos que los datos son aleatorios.
 
@@ -376,7 +377,7 @@ Como el valor-p (0.3149) es mayor al nivel de significancia, no se rechaza la hi
 
 <br/><br/>
 
-### **De normalidad**
+### <span style="color:#034a94">**Prueba de normalidad**</span>
 
 Uno de los procedimientos mas utilizados en estadística es la relacionada con la verificación de normalidad de una variable. 
 
@@ -402,7 +403,7 @@ Como el valor-p es superior al nivel de significancia $\alpha$, no se rechaza $H
 
 <br/><br/>
 
-### **Otras pruebas de normalidad utilizadas**
+### <span style="color:#034a94">**Otras pruebas de normalidad utilizadas**</span>
 
 
 ```{r}

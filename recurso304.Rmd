@@ -14,7 +14,7 @@ La construcción de estimadores de parámetros tiene un soporte matemático que 
 A continuación se presentan el método de Momentos y el método de Máxima Verosimiulitud:
 
 
-### **Método de momentos**
+### <span style="color:#034a94">**Método de momentos**</span>
 
 <br/>
 
@@ -24,15 +24,18 @@ Para mostrar este método es necesario definir el concepto de momento.
 
 <br/>
 
-**Momento Poblacional** 
+<div class="content-box-blue">
+### <span style="color:#034a94">**Momento Poblacional**</span> 
 
 
 |  caso variable discreta                         |caso variable continua  |
 |:------------------------------------------------|:------------------------------------------------|
-|$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$ |$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)\:dx $|                                                 
+|$\mu^{k}=E\big[X^{k}\big] = \displaystyle\sum_{R_X} x^{k}p(x)$ |$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)\:dx$|
+
+</div>
 <br/>
 
-**Momentos muestrales**    
+### <span style="color:#034a94">**Momentos muestrales**</span>    
 
 En ambos casos
 
@@ -59,7 +62,7 @@ A continuación se relacionan algunos de estos momentos poblacionales:
 <br/>
 
 <div class="content-box-gray">
-### **Nota** 
+### <span style="color:#686868">**Nota**</span> 
 
 Existe una relación entre las distribuciones `Poisson` y `exponencial`. Su valores esperados son inversos y e podrían denotar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
 

@@ -14,7 +14,7 @@
 
 <title> Modelos discretos</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -414,7 +414,8 @@ $(document).ready(function () {
 <p>A continuación se presentan los principales modelos discretos,
 acompañados de ejemplos resueltos.</p>
 <div id="introducción" class="section level2">
-<h2><strong>Introducción</strong></h2>
+<h2><span
+style="color:#034a94"><strong>Introducción</strong></span></h2>
 <p><br/></p>
 <p>Toda variable aleatoria se puede caracterizar por su función de
 distribución de probabilidad <span class="math inline">\(f(x)\)</span> ,
@@ -473,15 +474,18 @@ contienen la palabras <strong>número de…</strong></p>
 <p><br/><br/></p>
 </div>
 <div id="bernoulli" class="section level2">
-<h2><strong>Bernoulli</strong></h2>
+<h2><span style="color:#034a94"><strong>Bernoulli</strong></span></h2>
 <p><br/></p>
 <p>Empezaremos enunciando el modelo <strong>Bernoulli</strong>, aunque
 algunos autores no lo reconocen como modelo, ayuda en la compresión de
 los modelos siguientes. Toma su nombre del matemático Jacob
 Bernoulli.</p>
 <p><br/><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución Bernoulli</strong></p>
+</div>
+<div id="distribución-bernoulli"
+class="section level2 content-box-blue">
+<h2><span style="color:#034a94"><strong>Distribución
+Bernoulli</strong></span></h2>
 <p>Una variable que se distribuye Bernoulli, procede de un experimento
 Bernoulli, descrito por las siguientes características:</p>
 <ul>
@@ -509,9 +513,8 @@ de distribución de probabilidad $</p>
 <p><span class="math display">\[V[X]= pq\]</span></p>
 </div>
 <p><br/><br/></p>
-</div>
 <div id="binomial" class="section level2">
-<h2><strong>binomial</strong></h2>
+<h2><span style="color:#034a94"><strong>binomial</strong></span></h2>
 <p><br/></p>
 <p>El modelo <strong>binomial</strong>, que puede verse como una
 generalización del modelo Bernoulli, pasando de un ensayo a <span
@@ -520,8 +523,10 @@ por el físico y matemático suizo Jakob Bernoulli en relación con
 problemas presentados en los juegos de azar. Su trabajo fue presentado
 en 1713.</p>
 <p><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución binomial</strong></p>
+</div>
+<div id="distribución-binomial" class="section level2 content-box-blue">
+<h2><span style="color:#034a94"><strong>Distribución
+binomial</strong></span></h2>
 <p>Una variable con distribución binomial es aquella que procede de un
 experimento binomial.</p>
 <p>Ahora un experimento binomial tiene las siguientes
@@ -563,9 +568,8 @@ class="math inline">\(n,p\)</span>)</p></li>
 <p><span class="math inline">\(X \sim binom(x,n=10,p=0.30)\)</span></p>
 <p><img src="recurso204_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p><br/><br/></p>
-</div>
 <div id="poisson" class="section level2">
-<h2><strong>Poisson</strong></h2>
+<h2><span style="color:#034a94"><strong>Poisson</strong></span></h2>
 <p><br/></p>
 <p>El modelo <strong>Poisson</strong> fue plantea por el físico y
 matemático francés Siméon-Denis Poissonen uno de sus trabajos presentado
@@ -583,8 +587,9 @@ class="math inline">\(mm^{3}\)</span> de sangre</p></li>
 class="math inline">\(m^{2}\)</span> de carretera</p></li>
 </ul>
 <p><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución Pisson</strong></p>
+<div id="distribución-pisson" class="section level3 content-box-blue">
+<h3><span style="color:#034a94"><strong>Distribución
+Pisson</strong></span></h3>
 <p>La función de distribución de probabilidad de una variable con
 distribución Poisson esta dada por siguiente la expresión:</p>
 <p><span
@@ -607,13 +612,16 @@ variable de Poisson con media 2.</p>
 <p><br/><br/></p>
 </div>
 <div id="hipergeometrico" class="section level2">
-<h2><strong>hipergeometrico</strong></h2>
+<h2><span
+style="color:#034a94"><strong>hipergeometrico</strong></span></h2>
 <p>Este modelo <strong>hipergeométrico</strong> nace de la necesidad de
 modelar eventos Bernoulli con probabilidad no constante generados en
 elecciones sin repetición.</p>
 <p><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución hipergeometrica</strong></p>
+<div id="distribución-hipergeometrica"
+class="section level3 content-box-blue">
+<h3><span style="color:#034a94"><strong>Distribución
+hipergeometrica</strong></span></h3>
 <p>Se tiene un conjunto de <span class="math inline">\(N\)</span>
 objetos que contiene <span class="math inline">\(K\)</span> objetos
 clasificados como éxitos y <span class="math inline">\(N-K\)</span>
@@ -646,7 +654,8 @@ k=10)\)</span></p>
 <p><br/><br/></p>
 </div>
 <div id="geométrico-o-de-pascal" class="section level2">
-<h2><strong>geométrico o de Pascal</strong></h2>
+<h2><span style="color:#034a94"><strong>geométrico o de
+Pascal</strong></span></h2>
 <p>La distribución <strong>geométrica</strong> también conocida como
 distribución de Pascal, fue esbozada en el escrito El arte de la
 conjetura, escrita por Jakob Bernoulli. Esta distribución modela el
@@ -708,8 +717,10 @@ class="math inline">\(2\)</span>, es decir que la variable con
 distribución geométrica corresponde al <strong>número del evento donde
 ocurre el primer éxito</strong>.</p>
 <p><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución geométrica</strong></p>
+<div id="distribución-geométrica"
+class="section level3 content-box-blue">
+<h3><span style="color:#034a94"><strong>Distribución
+geométrica</strong></span></h3>
 <p><span class="math display">\[\begin{equation*}
     f(x)=\left\lbrace
     \begin{array}{lll}
@@ -729,13 +740,16 @@ necesarios para obtener el primer éxito</strong> <br/><br/></p>
 <p><br/><br/></p>
 </div>
 <div id="binomial-negativo" class="section level2">
-<h2><strong>binomial negativo</strong></h2>
+<h2><span style="color:#034a94"><strong>binomial
+negativo</strong></span></h2>
 <p><br/></p>
 <p>La distribución <strong>binomial negativa</strong> esta relacionada
 con la distribución geométrica</p>
 <p><br/></p>
-<div class="content-box-blue">
-<p><strong>Distribución binomial negativa</strong></p>
+<div id="distribución-binomial-negativa"
+class="section level3 content-box-blue">
+<h3><span style="color:#034a94"><strong>Distribución binomial
+negativa</strong></span></h3>
 <p>El modelo <strong>binomial negativo* se considera una generalización
 de la distribución Geométrica. En este caso la variable objeto de
 estudio corresponde a <span class="math inline">\(X\)</span>:

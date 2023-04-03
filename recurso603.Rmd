@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 <br/><br/>
 
 
-# **Propiedad de los estimadores**
+# <span style="color:#034a94">**Propiedad de los estimadores**</span>
 
 <br/><br/>
 
@@ -97,7 +97,7 @@ Los resutados indican que el mejor estimador de b corresponde a T3. Sin embargo 
 <br/><br/><br/>
 
 
-# **Teorema Central del Límite**
+# <span style="color:#034a94">**Teorema Central del Límite**</span>
 
 Verificación del Teorema Central del Límite para una población exponencial con $\lambda=1$
 

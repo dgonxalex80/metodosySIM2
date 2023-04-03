@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 A continuación se presentan una serie de códigos relacionados el calculo de probabilidades
 
-## **Simulacion del lanzamiento de un dados**
+## <span style="color:#034a94">**Simulacion del lanzamiento de un dados**</span>
 
 Para simular el lanzamiento de un dado utilizaremos la función `sample(x, size, replace = FALSE, prob = NULL)`, con parámetros: `x` : valores del espacio muestral; `size` : tamaño de la muestra y `replace` : para determinar si la selección se realiza con remplazo o sin remplazo.
 
@@ -28,7 +28,7 @@ barplot(td1, las=1)              # gráfico de los resultados
 
 </br></br>
 
-## **Lanzamiento de dos dados**
+## <span style="color:#034a94">**Lanzamiento de dos dados**</span>
 
 
 ```{r}
@@ -43,7 +43,7 @@ barplot(table(suma), las=1,cex.axis=0.7)  # gráfico  de la suma
 </br></br>
 
 
-##  **Extracción de urna** 
+##  <span style="color:#034a94">**Extracción de urna**</span> 
 
 Para simular la extracción de bolas de una urna, se utilizan las funciones `sample()` y `rep()` mostradas en el siguiente ejemplo :
 
@@ -63,7 +63,7 @@ barplot(table(u), las=1)
  
 </br></br>
 
-# **Tablas de contingencia**
+# <span style="color:#034a94">**Tablas de contingencia**</span>
 
 Las tablas de contingencia o tablas cruzadas se basan en las tablas de frecuencia para dos variables cualitativas o cuantitativas con pocos valores. En ellas se representan probabilidades conjuntas, marginales y condicionales
 

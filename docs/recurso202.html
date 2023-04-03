@@ -14,7 +14,7 @@
 
 <title> Valor esperado y Varianza</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -412,7 +412,8 @@ esperado y Varianza</strong></span></h1>
 
 <p><br/><br/><br/></p>
 <div id="valor-esperado" class="section level1">
-<h1><strong>Valor esperado</strong></h1>
+<h1><span style="color:#034a94"><strong>Valor
+esperado</strong></span></h1>
 <p><br/></p>
 <p>El valor esperado o esperanza matemática y la varianza corresponde a
 dos los conceptos principales asociados a una variable aleatoria. El
@@ -427,7 +428,8 @@ también <span class="math inline">\(\mu\)</span></p>
 <p><br/><br/></p>
 <div id="definición-valor-esperado"
 class="section level3 content-box-blue">
-<h3><strong>Definición Valor Esperado</strong></h3>
+<h3><span style="color:#034a94"><strong>Definición Valor
+Esperado</strong></span></h3>
 <p>Sea <span class="math inline">\(X\)</span> una variable aleatoria
 discreta o continua. La esperanza matemática de <span
 class="math inline">\(X\)</span> o valor esperado, <span
@@ -447,7 +449,7 @@ class="math inline">\(\mu\)</span>, se define respectivamente como,</p>
 <tbody>
 <tr class="odd">
 <td align="center"><span
-class="math inline">\(E(X)=\displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})\)</span></td>
+class="math inline">\(E(X)=\displaystyle\sum\limits_{R_X}^{}x_{i}f(x_{i})\)</span></td>
 <td align="center"><span
 class="math inline">\(E(X)=\displaystyle\int\limits_{-\infty}^{+\infty}x
 f(x)dx\)</span></td>
@@ -456,11 +458,12 @@ f(x)dx\)</span></td>
 </table>
 </div>
 <p><br/></p>
-<p>En el caso continuo y similarmente para el caso discreto.</p>
+<p>En el caso continuo y de manera similar para el caso discreto.</p>
 <p><br/></p>
 <div id="propiedades-del-valor-esperado"
 class="section level2 content-box-blue">
-<h2><strong>Propiedades del Valor Esperado</strong></h2>
+<h2><span style="color:#034a94"><strong>Propiedades del Valor
+Esperado</strong></span></h2>
 <ul>
 <li><p><span class="math inline">\(E(k) = k\)</span>, para todo numero
 real <span class="math inline">\(k\)</span>.</p></li>
@@ -480,7 +483,7 @@ independientes</p></li>
 <p><br/><br/></p>
 </div>
 <div id="varianza" class="section level1">
-<h1><strong>Varianza</strong></h1>
+<h1><span style="color:#034a94"><strong>Varianza</strong></span></h1>
 <p>Otra característica importante de las variables aleatorias
 corresponde a la varianza que se denota por <span
 class="math inline">\(V[X]\)</span> o <span
@@ -488,7 +491,8 @@ class="math inline">\(\sigma^{2}\)</span>. Antes de definirla veremos el
 concepto de <strong>momento</strong> de una variable aleatoria</p>
 <p><br/></p>
 <div id="definición-momento" class="section level3 content-box-blue">
-<h3><strong>Definición Momento</strong></h3>
+<h3><span style="color:#034a94"><strong>Definición
+Momento</strong></span></h3>
 <p>Sea <span class="math inline">\(X\)</span> una variable aleatoria
 discreta o continua. El momento de orden <span
 class="math inline">\(k\)</span> se define como:</p>
@@ -506,7 +510,7 @@ class="math inline">\(k\)</span> se define como:</p>
 <tbody>
 <tr class="odd">
 <td align="center"><span
-class="math inline">\(E(X^{k})=\displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})\)</span></td>
+class="math inline">\(E(X^{k})=\displaystyle\sum\limits_{R_X}^{}x_{i}^{k}f(x_{i})\)</span></td>
 <td align="center"><span
 class="math inline">\(E(X^{k})=\displaystyle\int\limits_{-\infty}^{+\infty}x^{k}
 f(x)dx\)</span></td>
@@ -520,14 +524,16 @@ aleatorias como la diferencia entre el segundo momento y el cuadrado del
 primer momento</p>
 <p><br/><br/></p>
 <div id="definición-varianza" class="section level3 content-box-blue">
-<h3><strong>Definición Varianza</strong></h3>
+<h3><span style="color:#034a94"><strong>Definición
+Varianza</strong></span></h3>
 <p><span class="math display">\[V[X] = E[X^{2}]-(E[X])^{2}  =
 E[X^{2}]-\mu^{2}\]</span></p>
 </div>
 <p><br/><br/></p>
 <div id="propiedades-de-la-varianza"
 class="section level2 content-box-blue">
-<h2><strong>Propiedades de la varianza</strong></h2>
+<h2><span style="color:#034a94"><strong>Propiedades de la
+varianza</strong></span></h2>
 <ul>
 <li><p><span class="math inline">\(V[X] \geq 0\)</span></p></li>
 <li><p><span class="math inline">\(V[k] = 0\)</span>, para todo número

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 La estimación se realiza cuando no conocemos el valor de un parámetro poblacional y lo podemos realizar de manera puntual (un solo valor) o mediante un intervalo de confianza.
 
 
-# **Métodos de estimación**
+# <span style="color:#034a94">**Métodos de estimación**</span>
 
 <br/><br/>
 
@@ -24,14 +24,14 @@ Para mostrar este método es necesario definir el concepto de momento.
 
 <br/>
 
-## **Momento Poblacional** 
+## <span style="color:#034a94">**Momento Poblacional**</span> 
 
 | Caso discreto                           |Caso continuo                          |
 |:---------------------------------------:|:-------------------------------------:|
-|$$\mu^{k}=E\big[X^{k}\big]=\sum_{Rx} x^{k}p(x)$$ |$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$ |
+|$$\mu^{k}=E\big[X^{k}\big]=\sum_{R_X} x^{k}p(x)$$ |$$\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x) dx $$ |
 
 
-###  **Momentos muestrales** 
+###  <span style="color:#034a94">**Momentos muestrales**</span> 
 
 En ambos casos 
 
@@ -133,7 +133,7 @@ $$\widehat{\mu}=765$$
 $$\widehat{\sigma^{2}}=8550$$
 
 
-## **Método de Máxima Verosimilitud**
+## <span style="color:#034a94">**Método de Máxima Verosimilitud**</span>
 
 Uno de los mejores métodos para obtener un estimador puntual de un parámetro es el método de **Máxima Verosimilitud** o de máxima probabilidad. Esta técnica fue desarrollada en 1920 por el estadístico britanico Sir R.A. Fisher, afirmando que el estimador será el valor del parámetro que maximice la función de verosimilitud $L(\theta)$. \\ \\
 
@@ -185,11 +185,11 @@ $$\widehat{\sigma^{2}}=\frac{1}{n}\sum_{i=1}^{n} \big(x_{i}-\mu \big)^{2} $$
 <br/><br/><br/>
 
 
-## **Distribuciones muestrales**
+## <span style="color:#034a94">**Distribuciones muestrales**</span>
 
 <br/>
 
-### **Principales distribuciones muestrales**: 
+### <span style="color:#034a94">**Principales distribuciones muestrales**</span> 
 
 + normal
 + Chi-cuadrado, 
@@ -218,7 +218,7 @@ En sintesis, la distribuciones de muestreo básicas, tienen de base la distribuc
 
 <br/><br/>
 
-## **Distribución chi-cuadrado** 
+## <span style="color:#034a94">**Distribución chi-cuadrado**</span> 
 
 <br/>
 
@@ -244,7 +244,7 @@ Esta distribución es un caso especial de la distribución Gamma con parámetros
 
 <br/><br/>
 
-## **Distrución t-student**
+## <span style="color:#034a94">**Distrución t-student**</span>
 
 <br/>
 
@@ -284,7 +284,7 @@ tiene una distribución t-student con $v=n-1$ grados de libertad
 
 <br/><br/>
 
-## **Distribución F-Fisher**
+## <span style="color:#034a94">**Distribución F-Fisher**</span>
 
 <br/>
 
@@ -312,7 +312,7 @@ grid()
 
 <br/><br/>
 
-## **Media muestral**
+## <span style="color:#034a94">**Media muestral**</span>
 
 <br/>
 
@@ -393,7 +393,7 @@ $$\begin{eqnarray*}
 
 <br/><br/><br/><br/>
 
-## **Proporción muestral**
+## <span style="color:#034a94">**Proporción muestral**</span>
 
 <br/>
 
@@ -421,7 +421,7 @@ $$\begin{eqnarray*}
 
 <br/><br/>
 
-## **Varianza muestral**.
+## <span style="color:#034a94">**Varianza muestral**</span>
 
 <br/>
 
@@ -450,7 +450,8 @@ Revisar : Canavos(1988) pp.231
 
 
 <div class="content-box-blue">
-## **Algunos estimadores**
+
+## <span style="color:#034a94">**Algunos estimadores**</span>
 
 <br/>
 

@@ -14,7 +14,7 @@
 
 <title> Estimación puntual</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -415,7 +415,8 @@ $(document).ready(function () {
 poblacional y lo podemos realizar de manera puntual (un solo valor) o
 mediante un intervalo de confianza.</p>
 <div id="métodos-de-estimación" class="section level1">
-<h1><strong>Métodos de estimación</strong></h1>
+<h1><span style="color:#034a94"><strong>Métodos de
+estimación</strong></span></h1>
 <p><br/><br/></p>
 <p>El método de momentos fue propuesto por Karl Pearson al rededor de
 1895, pensado en sus inicios en contexto descriptivo, analizando las
@@ -428,7 +429,8 @@ existen, con los correspondientes momentos muestrales.</p>
 momento.</p>
 <p><br/></p>
 <div id="momento-poblacional" class="section level2">
-<h2><strong>Momento Poblacional</strong></h2>
+<h2><span style="color:#034a94"><strong>Momento
+Poblacional</strong></span></h2>
 <table>
 <colgroup>
 <col width="51%" />
@@ -443,7 +445,7 @@ momento.</p>
 <tbody>
 <tr class="odd">
 <td align="center"><span
-class="math display">\[\mu^{k}=E\big[X^{k}\big]=\sum_{Rx}
+class="math display">\[\mu^{k}=E\big[X^{k}\big]=\sum_{R_X}
 x^{k}p(x)\]</span></td>
 <td align="center"><span
 class="math display">\[\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)
@@ -452,7 +454,8 @@ dx \]</span></td>
 </tbody>
 </table>
 <div id="momentos-muestrales" class="section level3">
-<h3><strong>Momentos muestrales</strong></h3>
+<h3><span style="color:#034a94"><strong>Momentos
+muestrales</strong></span></h3>
 <p>En ambos casos</p>
 <p><span class="math display">\[m^{k}=\frac{1}{n}\sum_{i=1}^{n}
 x_{i}^{k} \]</span></p>
@@ -642,7 +645,8 @@ los parámetros por método de momentos con los siguientes resultados:</p>
 </div>
 </div>
 <div id="método-de-máxima-verosimilitud" class="section level2">
-<h2><strong>Método de Máxima Verosimilitud</strong></h2>
+<h2><span style="color:#034a94"><strong>Método de Máxima
+Verosimilitud</strong></span></h2>
 <p>Uno de los mejores métodos para obtener un estimador puntual de un
 parámetro es el método de <strong>Máxima Verosimilitud</strong> o de
 máxima probabilidad. Esta técnica fue desarrollada en 1920 por el
@@ -722,10 +726,12 @@ class="math display">\[\widehat{\sigma^{2}}=\frac{1}{n}\sum_{i=1}^{n}
 </div>
 </div>
 <div id="distribuciones-muestrales" class="section level2">
-<h2><strong>Distribuciones muestrales</strong></h2>
+<h2><span style="color:#034a94"><strong>Distribuciones
+muestrales</strong></span></h2>
 <p><br/></p>
 <div id="principales-distribuciones-muestrales" class="section level3">
-<h3><strong>Principales distribuciones muestrales</strong>:</h3>
+<h3><span style="color:#034a94"><strong>Principales distribuciones
+muestrales</strong></span></h3>
 <ul>
 <li>normal</li>
 <li>Chi-cuadrado,</li>
@@ -768,7 +774,8 @@ distribución normal.</p>
 </div>
 </div>
 <div id="distribución-chi-cuadrado" class="section level2">
-<h2><strong>Distribución chi-cuadrado</strong></h2>
+<h2><span style="color:#034a94"><strong>Distribución
+chi-cuadrado</strong></span></h2>
 <p><br/></p>
 <p>Si <span class="math inline">\(S^{2}\)</span> es la varianza de la
 muestra aleatoria de tamaño <span class="math inline">\(n\)</span> que
@@ -792,7 +799,8 @@ parámetros <span class="math inline">\(\alpha=\frac{v}{2}\)</span> y
 <p><br/><br/></p>
 </div>
 <div id="distrución-t-student" class="section level2">
-<h2><strong>Distrución t-student</strong></h2>
+<h2><span style="color:#034a94"><strong>Distrución
+t-student</strong></span></h2>
 <p><br/></p>
 <p>Esta función nace de la relación entre una variable con distribución
 normal estándar y la raíz cuadrada de una variable con distribución
@@ -834,7 +842,8 @@ class="math inline">\(v=n-1\)</span> grados de libertad</p>
 <p><br/><br/></p>
 </div>
 <div id="distribución-f-fisher" class="section level2">
-<h2><strong>Distribución F-Fisher</strong></h2>
+<h2><span style="color:#034a94"><strong>Distribución
+F-Fisher</strong></span></h2>
 <p><br/></p>
 <p>Si <span class="math inline">\(S_{1}^{2}\)</span> y <span
 class="math inline">\(S_{2}^{2}\)</span> son las dos varianzas de
@@ -864,7 +873,8 @@ x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma
 <p><br/><br/></p>
 </div>
 <div id="media-muestral" class="section level2">
-<h2><strong>Media muestral</strong></h2>
+<h2><span style="color:#034a94"><strong>Media
+muestral</strong></span></h2>
 <p><br/></p>
 <p><span class="math display">\[ \bar{X}=\frac{1}{n}\sum_{i=1}^{n}
 X_{i}\]</span></p>
@@ -951,7 +961,8 @@ P\Bigg(\dfrac{\bar{x}-\mu}{\sigma/\sqrt{n}} &gt;
 </div>
 </div>
 <div id="proporción-muestral" class="section level2">
-<h2><strong>Proporción muestral</strong></h2>
+<h2><span style="color:#034a94"><strong>Proporción
+muestral</strong></span></h2>
 <p><br/></p>
 <p>Al igual que en la media podemos realizar la verificación las
 características de la proporción</p>
@@ -984,8 +995,9 @@ P\Bigg(\dfrac{\widehat{p}-p}{(p(1-p)/\sqrt{n}} &gt; \dfrac{0.82 -
 <p><br/><br/></p>
 </div>
 </div>
-<div id="varianza-muestral." class="section level2">
-<h2><strong>Varianza muestral</strong>.</h2>
+<div id="varianza-muestral" class="section level2">
+<h2><span style="color:#034a94"><strong>Varianza
+muestral</strong></span></h2>
 <p><br/></p>
 <p>Ahora tenemos interes en estudiar el comportamiento de <span
 class="math inline">\(S^{2}\)</span> llamada cuasivarianza por algunos y
@@ -1004,7 +1016,8 @@ class="math display">\[\widehat{\sigma^{2}}=S^{2}=\dfrac{1}{(n-1)}\sum_{i=1}^{n}
 <p><br/><br/><br/></p>
 </div>
 <div id="algunos-estimadores" class="section level2 content-box-blue">
-<h2><strong>Algunos estimadores</strong></h2>
+<h2><span style="color:#034a94"><strong>Algunos
+estimadores</strong></span></h2>
 <p><br/></p>
 <table>
 <colgroup>

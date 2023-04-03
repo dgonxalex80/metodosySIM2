@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-## **Algunos modelos continuos**
+## <span style="color:#034a94">**Algunos modelos continuos**</span>
 
 Las variables continuas proceden en su mayoría de la medición y se clasifican así debido a que su rango esta formado por un conjunto infinito no numerable. A continuación se presentan los principales modelos continuos.
 
@@ -25,13 +25,13 @@ Las variables continuas proceden en su mayoría de la medición y se clasifican 
 
 <br/><br/>
 
-## **uniforme**
+### <span style="color:#034a94">**uniforme**</span>
 
 <br/>
 
 <div class="content-box-blue">
 
-**Distribución uniforme**
+### <span style="color:#034a94">**Distribución uniforme**</span>
 
 La distribución **uniforme** Se caracteriza porque su función de densidad es constante en su recorrido o dominio de definición (intervalo [a,b])
 
@@ -65,7 +65,7 @@ geom_line(size = 1, color="#FF7F00")
 
 <br/><br/>
 
-## **normal**
+### <span style="color:#034a94">**normal**</span>
 
 La distribución **normal** es uno de los modelos más utilizados en las aplicaciones de la Estadística. Estas aplicaciones están relacionadas con:
 
@@ -125,7 +125,7 @@ Dentro del sin número de posibles curvas que se pueden obtener con los parámet
 
 <div class="content-box-blue">
 
-**Distribución normal estandar N(0,1)**
+### <span style="color:#034a94">**Distribución normal estandar N(0,1)**</span>
 
 Su función de distribución esta dada por :
 
@@ -138,7 +138,7 @@ a este proceso se le llama comúnmente estandarizar.
 </div> 
 
 
-**normal estándar**
+### <span style="color:#034a94">**normal estándar**</span>
 
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggfortify)
@@ -152,7 +152,7 @@ ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = "#FF7F00")
 La propiedad empírica de la distribución normal es de gran ayuda cuando una variable  de interés se  puede aproximar al modelo normal. Ella establece un intervalo formado por la media mas o menos una desviación estándar contiene el 68\% de los datos. Si el intervalo tiene un ancho de 4 desviaciones estándar contendrá el 95\% de los datos y si este intervalo corresponde a los valores de la media mas o menos 3 desviaciones estándar contendrá el 99\% de los datos que se representa en la siguiente gráfica.
 
 
-**Propiedad empírica de la distribución normal estandar**
+### <span style="color:#034a94">**Propiedad empírica de la distribución normal estandar**</span>
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
@@ -162,7 +162,7 @@ knitr::include_graphics("img/norm01.png")
 <br/><br/>
 
 
-## **exponencial** 
+### <span style="color:#034a94">**exponencial**</span> 
 
 El  modelo **exponencial** fue  planteado por el matemático estadístico e ingeniero Agner Kraru Erlang, experto en el trafico de las comunicaciones y la teoría de colas. 
 Distribución utilizada para modelar el tiempo entre dos eventos consecutivos. 
@@ -172,7 +172,7 @@ Distribución utilizada para modelar el tiempo entre dos eventos consecutivos.
 
 <div class="content-box-blue">
 
-**Distribución exponencial**
+### <span style="color:#034a94">**Distribución exponencial**</span>
 
 $$\begin{equation*}
 	f(x)=\left\lbrace
@@ -209,7 +209,7 @@ ggdistribution(dexp, seq(0, 10, 0.1),rate=0.5,colour = "#686868", p=p)
 ```
 
 
-**Distribución exponencial acumulad**
+### <span style="color:#034a94">**Distribución exponencial acumulad**</span>
 
 
 ```{r, echo=FALSE, fig.height=3.5}
@@ -221,7 +221,7 @@ ggdistribution(pexp, seq(0, 10, 0.1),rate=1 ,colour = "#FF7F00")
 
 
 
-## **gamma**
+### <span style="color:#034a94">**gamma**</span>
 
 Para tratar las distribuciones Gamma y Weibull, es necesario definir la función Gamma como:
 
@@ -300,14 +300,14 @@ pgamma(10,3,0.5, lower.tail = FALSE)
 
 <br/><br/>
 
-## **Weibull** 
+### <span style="color:#034a94">**Weibull**</span> 
 
 Esta distribución fue descubierta Maurice Frechet matemático francés y luego trabajada por  Rosin y Rammler quienes en 1933 estudiaron el tamaño de una partícula y posteriormente recibe su nombre del  ingeniero y matemático Waloddi Weibull . Esta distribución se utiliza para modelar el tiempo de vida de algunos componentes. La Weibull tiene dos parámetros $\alpha$ y $\beta$. Su función de distribución y sus principales características son:
 
 
 <div class="content-box-blue">
 
-**Distribución Weibull** 
+### <span style="color:#034a94">**Distribución Weibull**</span> 
 
 $$\begin{equation*}
 f(x)=\left\lbrace
@@ -350,7 +350,7 @@ fig_weibulls.pdf
 
 
 
-**Función de riesgo** 
+### <span style="color:#034a94">**Función de riesgo**</span> 
 
 Se llama así a la tasa de fallas por unidad de tiempo, expresada como la proporción de elementos que no han fallado
 

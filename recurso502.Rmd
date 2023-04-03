@@ -31,39 +31,11 @@ CarreraLuz22_c3 = subset(CarreraLuz22, CarreraLuz22$categoria=="3. Veteranos A")
 
 Se llaman pruebas paramétricas las que están soportadas en supuestos que por lo general corresponden a la distribución de la variable que trabajamos
 
-## **Resumen**
-
-<br/><br/>
-
-|    |                 |**Estadístico de prueba**                                       |
-|:--:|:----------------|:---------------------------------------------------------------|
-|    |Una población    |                                                                |
-|(1) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)$   |
-|(2) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)$       |
-|(3) |                 | $T_{o} = \dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}$   |
-|(4) |                 | $X^{2}_{o} = \dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}$ | 
-|(5) |                 | $Z_{o} =  \dfrac{X-n \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim N(0,1)$ |
-|    |                 | $Z_{o} = \dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim N(0,1)$ |
-
-<br/><br/>
-
-|                 |  **Reglas de decisión**                                        |
-|:----------------|:---------------------------------------------------------------|
-| Regla1:         | Si el $EdeP$ cae en la $RdeR$, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.|
-| Regla2:         | Si $\alpha >$ `valor-p` entonces rechazamos $H_{0}$, se **acepta** $H_{a}$. Si por el contrario $\alpha<$ `valor-p`, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. |
-| Regla3:         | El `valor-p` se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, asumo que $H_{0}$ es verdad.|
-
-
-|Tipos de pruebas   |                                                                 |
-|:------------------|:----------------------------------------------------------------|
-|Dos colas          |$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$  |
-|Cola superior      |$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$  |
-|Cola inferior      |$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$  |
 
 <br/><br/>
 
 
-## **Sobre una media**
+## <span style="color:#034a94">**Sobre una media**</span>
 
 Dependiendo de las condiciones podemos optar por tres diferentes EdeP para la realización de la prueba para una media, aunque tenemos una cuarta posibilidad en el caso de realizarla mediante un método no paramétrico:
 
@@ -115,7 +87,7 @@ Para tomar una decisión sobre las hipótesis de acuerdo con los resultados pode
 
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Regla 1**</span>
+### <span style="color:#034A94"> **Regla 1**</span>
 
 Si el **EdeP** cae en la **RdeR**, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **EdeP** NO cae en la **RdeR**, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
 </div>
@@ -146,13 +118,15 @@ p
 
 <br/>
 
-**Conclusión**: Como el **EdeP** (`t = 0.76215`) NO cae en la **RdeR**, entonces NO rechazamos $Ho$, asumimos $Ho$ es verdadera, es decir ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
+### <span style="color:#686868">**Conclusión**</span> 
+
+Como el **EdeP** (`t = 0.76215`) NO cae en la **RdeR**, entonces NO rechazamos $Ho$, asumimos $Ho$ es verdadera, es decir ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
 
 
 <br/><br/>
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Regla 2**</span>
+### <span style="color:#034A94"> **Regla 2**</span>
 
 Si $\alpha > \text{valor-p}$ entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  \text{valor-p}$, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. 
 
@@ -160,22 +134,24 @@ Si $\alpha > \text{valor-p}$ entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ 
 
 <br/><br/><br/>
 
-### **Valor-p** 
+### <span style="color:#034a94">**Valor-p**</span> 
 
 El **valor-p** corresponde al área delimitada por el $EdeP$ en el sentido que indica la $RdeR$ de la prueba a contrastar. Es decir que corresponde a la probilidad  máxima de cometer error tipo I.
 
 [Gil, Jacky F.; Castañeda, Javier A (2005)](https://www.redalyc.org/pdf/806/80634308.pdf) lo definen como :
 
-*El resultado de la prueba de hipótesis se basa principalmente en el cálculo, en términos de probabilidad, de la fuerza de los hallazgos a favor de la hipótesis nula. Esta probabilidad recibe el nombre de valor-p, y se define como la probabilidad de cometer un falso positivo por efecto del azar, cuando la hipótesis nula es verdadera.*
+>El resultado de la prueba de hipótesis se basa principalmente en el cálculo, en términos de probabilidad, de la fuerza de los hallazgos a favor de la hipótesis nula. Esta probabilidad recibe el nombre de valor-p, y se define como la probabilidad de cometer un falso positivo por efecto del azar, cuando la hipótesis nula es verdadera.
 
 <br/>
 
-**Conclusión** : Como el valor de $\alpha > valor-p$  ($0.05 > p-value = 0.4496$ ) entonces No se rechaza $Ho$, se **asume** que 	$Ho$ es verdad. ASUMIMOS  que $\mu$ de las edades   es igual a 31 años.  
+### <span style="color:#686868">**Conclusión**</span> 
+
+Como el valor de $\alpha > valor-p$  ($0.05 > p-value = 0.4496$ ) entonces No se rechaza $Ho$, se **asume** que 	$Ho$ es verdad. ASUMIMOS  que $\mu$ de las edades   es igual a 31 años.  
 
 <br/><br/>
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Regla 3**</span>
+### <span style="color:#034A94"> **Regla 3**</span>
 
 El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $Ha$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
 
@@ -183,17 +159,19 @@ El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siend
 
 <br/>
 
-**Conclusión** : En este caso valoramos si el valor-p (p-value =  0.4496) si es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $Ho$, asumimos que $Ho$ es verdadera, ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
+### <span style="color:#686868">**Conclusión**</span> 
+
+En este caso valoramos si el valor-p (p-value =  0.4496) si es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $Ho$, asumimos que $Ho$ es verdadera, ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Nota**</span>
+### <span style="color:#686868"> **Nota**</span>
 Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de una $RdeR$ para tomar la decisión. Solo con revisar el valor-p entregado por la prueba y aplicar la regla se toma la decisión. En adelante utilizaremos las reglas 2 y 3 dado que al ejecutar las funciones  en R nos suministra información sobre valor-p.
 
 </div>
 <br/><br/>
 
 
-## **Sobre una proporción**
+## <span style="color:#034a94">**Sobre una proporción**</span>
 
 
 Ho: $p = p_{o}$ <br/>   
@@ -212,7 +190,7 @@ En este caso debemos tener en cuenta que la muestra sea mayor a 30 con el fin de
 
 <br/><br/>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00">**Ejemplo**</span>
 
 Una empresa al seleccionar su personal, lo somete a un curso de entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes aprueban el curso. Durante el último proceso, los encargados efectúan cambios al programa de entrenamiento, con el fin de realizar una selección más exigente. Para esta versión se inscriben 40 aspirantes de los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios realizados en el programa de entrenamiento reducen la selección? |
 
@@ -230,14 +208,14 @@ conf.level = 0.95)
 ```
 <br/><br/>
 
-**Conclusión**
+### <span style="color:#686868">**Conclusión**</span>
 
 Como el valor-p (p-value = 0.01447) es menor que el nivel de significancia ($\alpha=0.05$), rechazamos la hipótesis nula, aceptamos la hipótesis alterna. Podemos afirmar que $p<0.76$ . Tienen razón al afirmar que los cambios realizados en el proceso de selección provocaron una disminución significativa en la proporción de aprobación.
 
 <br/><br/>
 
 
-## **Sobre una varianza**
+## <span style="color:#034a94">**Sobre una varianza**</span>
 
 <br/>
 
@@ -282,7 +260,7 @@ EdeP
 ```
 <br/><br/>
 
-**Conclusión**
+### <span style="color:#686868">**Conclusión**</span>
 
 Como el $EdeP$ (1.135074) caen en la $RdeR$, entonces rechazamos la hipótesis nula, aceptamos la hipótesis alterna como verdadera.
 
@@ -291,3 +269,47 @@ Podemos entonce concluir que $\sigma^{2} \neq 81$
 
 <br/><br/><br/>
 
+## <span style="color:#686868">**Resumen**</span> 
+
+<div class="content-box-gray">
+
+
+<br/><br/>
+
+### <span style="color:#686868">**Estadístico de prueba**</span> 
+|    |                 |                                                                |
+|:--:|:----------------|:---------------------------------------------------------------|
+|    |Una población    |                                                                |
+|(1) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)$   |
+|(2) |                 | $Z_{o} =\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)$       |
+|(3) |                 | $T_{o} = \dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}$   |
+|(4) |                 | $X^{2}_{o} = \dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}$ | 
+|(5) |                 | $Z_{o} =  \dfrac{X-n \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim N(0,1)$ |
+|    |                 | $Z_{o} = \dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim N(0,1)$ |
+
+</div>
+
+<br/>
+
+<div class="content-box-gray">
+
+### <span style="color:#686868">**Reglas de decisión**</span>
+|                 |                                          |
+|:----------------|:---------------------------------------------------------------|
+| Regla1:         | Si el $EdeP$ cae en la $RdeR$, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.|
+| Regla2:         | Si $\alpha >$ `valor-p` entonces rechazamos $H_{0}$, se **acepta** $H_{a}$. Si por el contrario $\alpha<$ `valor-p`, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. |
+| Regla3:         | El `valor-p` se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, asumo que $H_{0}$ es verdad.|
+</div>
+
+</br>
+
+<div class="content-box-gray">
+
+### <span style="color:#686868">**Tipos de pruebas**</span>
+|                   |                                                                 |
+|:------------------|:----------------------------------------------------------------|
+|Dos colas          |$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$  |
+|Cola superior      |$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$  |
+|Cola inferior      |$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$  |
+
+</div>

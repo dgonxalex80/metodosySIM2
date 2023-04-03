@@ -37,7 +37,7 @@ col="#034A94")
 
 <br/>
 
-## **Introducción**
+## <span style="color:#034a94">**Introducción**</span>
 
 Los resultados de un experimento pueden ser causa de múltiples variables como ocurre con el precio de un producto y sus ventas, el tiempo de preparación de un examen y su nota final, la cantidad de arena y de cemento en concreto, la cantidad de abono suministrado a una planta y su producción final. En estos casos se requiere una función de densidad que describa la variación de la probabilidad  de ocurrencia de ambas variables, probabilidad que describe el comportamiento conjunto de las variables. 
 
@@ -47,15 +47,17 @@ En esta guía se presentan los casos : discreta-discreta y el caso continua-cont
 
 <br/><br/>
 
-## **Discreto-Discreto**
+# <span style="color:#034a94">**Discreto-Discreto**</span>
 
 
-### **Función de distribución de probabilidad conjunta**
+### <span style="color:#034a94">**Función de distribución de probabilidad conjunta**</span>
+
 Si se dispone de dos variables aleatorias se puede definir distribuciones bidimensionales de forma semejante al caso unidimensional. Para el caso discreto-discreto se define:
 
 <div class="content-box-blue">
 
-**Función de distribución de probabilidad conjunta**
+### <span style="color:#034a94">**Función de distribución de probabilidad conjunta**</span>
+
 $$f_{_{X,Y}}(x,y)=P(X=x,Y=y)$$
 
 la cual debe cumplir con las siguientes características:
@@ -113,7 +115,7 @@ add_lines=TRUE)
 
 <br/><br/>
 
-### **Probabilidad marginales ** 
+### <span style="color:#034a94">**Probabilidad marginal **</span> 
 
 A partir de la función de distribución conjunta se pueden obtener las distribuciones marginales correspondientes a las variables $X$ y $Y$, denotadas por $g(x)$ y $h(y)$ respectivamente.
 
@@ -156,7 +158,7 @@ hy
 <br/><br/>
 
 
-### **Probabilidad acumulada**
+### <span style="color:#034a94">**Probabilidad acumulada**</span>
 
 
 $$F_{_{X,Y}}(x,y)=\sum_{-\infty}^{x} \sum_{-\infty}^{y} f(x,y)$$
@@ -165,7 +167,17 @@ $$F_{_{X,Y}}(x,y)=\sum_{-\infty}^{x} \sum_{-\infty}^{y} f(x,y)$$
 
 Para el ejemplo se construye la función de distribución acumulada sumando tanto por columna como fila hasta la posición de los valores observados, por ejemplo .
 
-$$F(2,2)= F_{_{X,Y}}(x,y)=\sum_{x=1}^{2} \sum_{y=1}^{2} f(x,y)  = f(1,1) + f(1,2) + f(2,1) + f(2,2) = 0.05 + 0.05 + 0.05 + 0.10 = 0.25$$
+$$
+\begin{equation}
+\begin{array}{rl}
+F(2,2) =  & \sum_{x=1}^{2} \sum_{y=1}^{2} f(x,y)  \\
+      = & f(1,1) + f(1,2) + f(2,1) + f(2,2) \\
+      = &0.05 + 0.05 + 0.05 + 0.10  \\
+      = & 0.25
+\end{array}
+\end{equation}
+$$
+
 
 ```{r}
 fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
@@ -187,19 +199,20 @@ Fxy
 
 <br/><br/><br/>
 
-### **Probabilidad condicional**
+### <span style="color:#034a94">**Probabilidad condicional**</span>
 
-En el caso de la probabilidad condicional se opera de la misma forma que se vió en el Módulo 2, en el cual se definió  como :
+En el caso de la función de probabilidad condicional se opera de la misma forma como se definió  la probabibilidad condicional: 
 
 $$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$$
 
-Para el caso de las funciones de distribución de probabilida se opera de la misma manera :
+Para el caso de las funciones de distribución de probabilidad se opera de la misma manera :
 
 
 <div class="content-box-blue">
 
-### **Función de densidad condicional** 
-<br/><br/>
+### <span style="color:#034a94">**Función de densidad condicional**</span>
+
+<br/>
 
 La función de densidad condicional de $X$ dado que $Y=y_0$ está dada por:
 $$\begin{equation*}
@@ -211,7 +224,9 @@ $$\begin{equation*}
 	\end{array}
 	\right.
 \end{equation*}$$
+
 <br/><br/>
+
 La función de densidad condicional de $Y$ dado que $X=x_0$ está dada por:
 $$\begin{equation*}
 	f_{Y|X}(y|x_{0})=\left\lbrace
@@ -245,22 +260,15 @@ Para ilustrarlo utilizamos la función del Ejemplo 1 para la función condiciona
 |$x|y=2$ |          | $\dfrac{0.05}{0.50}=0.10$| $\dfrac{0.10}{0.50}=0.20$| $\dfrac{0.35}{0.50}=0.70$| 
 
 
-
-
-
-
-
-
 <br/><br/><br/>
 
 
-
-## **Caso Continuo-Continuo**
+# <span style="color:#034a94">**Caso Continuo-Continuo**</span>
 
 
 En el caso de variables continuas se utilizan los mismo conceptos vistos en el caso discreto-discreto, haciendo el cambio de las sumatorias por integrales definidas. 
 
-### **Función de densidad conjunta**
+### <span style="color:#034a94">**Función de densidad conjunta**</span>
 
 En particular para $f_{_{X,Y}}(x,y)$ definida en una región $R$, se cumple que la integral doble de $f_{_{X,Y}}(x,y)$ en la región $R$ proporciona la probabilidad de que las variables $X$ y $Y$ asuman los valores $(x,y)$ en la región $R$. Esta integral puede interpretarse como el volumen bajo la superficie $f_{_{X,Y}}(x,y)$ en la región $R$.
 
@@ -268,7 +276,7 @@ En particular para $f_{_{X,Y}}(x,y)$ definida en una región $R$, se cumple que 
 
 <div class="content-box-blue">
 
-**Función de densidad conjunta**
+### <span style="color:#034a94">**Función de densidad conjunta**</span>
 
 Lafunción de densidad conjunta para las variables $X$ y $Y$ $f(x,y)$ debe cumplir las siguientes condiciones.
 
@@ -324,14 +332,14 @@ knitr::include_graphics("img/Figura318.png")
 
 <br/><br/>
 
-### **Densidad marginales**
+### <span style="color:#034a94">**Densidad marginales**</span>
 
 En el caso continuo- continuo las distribuciones de densidad marginales se pueden encontrar a partir de la función de densidad conjunta 
 
 
 <div class="content-box-blue">
 
-**Función de densidad marginal**
+### <span style="color:#034a94">**Función de densidad marginal**</span>
 
 Si $X$ y $Y$ son dos variables aleatorias continuas, entonces se define:\newline
 
@@ -374,11 +382,11 @@ $$h(y) = \left \{ \begin{matrix} \bigg(y + \dfrac{1}{2} \bigg) & \mbox{ } 0 \leq
 
 <br/><br/>
 
-### **Función de densidad de probabilidad conjunta acumulada**
+### <span style="color:#034a94">**Función de densidad de probabilidad conjunta acumulada**</span>
 
 <div class="content-box-blue">
 
-**Función de densidad conjunta acumulada**
+### <span style="color:#034a94">**Función de densidad conjunta acumulada**</span>
 
 Para $F_{_{X,Y}}(x,y)=P(X\leq x, Y\leq y)$ se tiene en el caso de variables aleatorias continuas
 
@@ -411,12 +419,12 @@ $f_{_{X,Y}}(x,y)=\frac{\partial^{2} F_{_{X,Y}}(x,y)}{\partial x \hspace{.2cm}\pa
 
 
 
-### **Función de densidad condicionales  **
+### <span style="color:#034a94">**Función de densidad condicionales**</span>
 
 
 <div class="content-box-blue">
 
-**Función de densidad condicional**
+### <span style="color:#034a94">**Función de densidad condicional**</span>
 
 La función de densidad condicional de $X$ dado que $Y=y_0$ está dada por:
 
@@ -446,17 +454,17 @@ $$\begin{equation*}
 
 <br/><br/><br/>
 
-## **Covarianza y correlación**
+# <span style="color:#034a94">**Covarianza y correlación**</span>
 
 Para definir el concepto de covarianza se requiere el concepto de valor esperado conjunto:
 
 <div class="content-box-blue">
 
-**Caso Discreta-Discreta**
+#### <span style="color:#034a94">**Caso Discreta-Discreta**</span>
 
 $$E[X,Y]=\displaystyle\sum_{R_{X}}\displaystyle\sum_{R_{Y}} xy f(x,y)$$
 
-**Caso Continua-Continua**
+#### <span style="color:#034a94">**Caso Continua-Continua**</span>
 
 $$E[XY]= \displaystyle\int_{-\infty}^{\infty} \displaystyle\int_{-\infty}^{\infty} x.y.f(x,y) \,dx \,dy$$
 
@@ -466,7 +474,7 @@ $$E[XY]= \displaystyle\int_{-\infty}^{\infty} \displaystyle\int_{-\infty}^{\inft
 
 <div class="content-box-blue">
 
-**Covarianza** entre las variables $X$,$Y$
+## <span style="color:#034a94">**Covarianza entre las variables X,Y** </span>
 
 $$COV[X,Y]=E[XY]-E[X]E[Y]$$
 
@@ -474,14 +482,15 @@ $$COV[X,Y]=E[XY]-E[X]E[Y]$$
 
 <div class="content-box-blue">
 
-**Correlación** entre las variables $X$,$Y$
+## <span style="color:#034a94">**Correlación entre las variables X,Y**
+
 $$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
 La correlación es una medida que mide el grado de asociación lineal entre dos variables. $-1 \leq \rho \leq 1$
 </div>
 
 <br/><br/>
 
-### **Escala para interpretación** : $\rho$ <br/>
+### <span style="color:#034a94">**Escala para interpretación para la correlación**</span>
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rho.png")
@@ -501,11 +510,11 @@ knitr::include_graphics("img/Rho2.png")
 
 <br/><br/><br/>
 
-## **Independencia**
+## <span style="color:#034a94">**Independencia**</span>
 
 <div class="content-box-blue">
 
-**Independencia de variables**
+### <span style="color:#034a94">**Independencia de variables**</span>
 
 Sean $X$ y $Y$ dos variables aleatorias discretas o continuas con función de probabilidad conjunta $f(x,y)$ y funciones de probabilidad marginales $g(x)$ y $h(y)$, respectivas, entonces se dice que las variables X y Y son estadísticamente independientes si:
 

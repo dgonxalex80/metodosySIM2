@@ -16,7 +16,7 @@ Iniciaremos definiendo tres conceptos, a partir de los cuales se construyen la p
 
 <div class="content-box-blue">
 
-**Experimento aleatorio** 
+### <span style="color:#034a94">**Experimento aleatorio**</span> 
 
 Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no se conoce por anticipado.
 
@@ -42,7 +42,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 
 <div class="content-box-blue">
 
-**Espacio muestral** 
+### <span style="color:#034a94">**Espacio muestral**</span> 
 
 Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra con una letra mayúscula $S$ o tambien con **$\Omega$**
 </div>
@@ -87,7 +87,7 @@ Conjunto de todos los posibles valores que puede tomar el experimento aleatorio.
 
 <div class="content-box-blue">
 
-**Evento aleatorio** 
+### <span style="color:#034a94"> **Evento aleatorio**</span> 
 
 Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto se nombra con una letra mayúscula por lo general las primeras letras del alfabeto
 
@@ -109,7 +109,9 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 <br/><br/><br/>
 
-**Resumiendo**:
+<div class="content-box-gray">
+### <span style="color:#686868">**Resumen**</span> 
+
 
 |Experimento aleatorio| Espacio muestral | Evento aleatorio |
 |:--------------------|:-----------------|:-----------------|
@@ -118,5 +120,7 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 |Realizar un examen de estadística y observar el resultado obtenido|  $S_{3}$= $\{ x \in \mathbb{R} | 0 \leq x \leq 5 \}$| Ganar el examen|
 |En una salida de campo, observo si se cumple o no, totalmente el objetivo planteado| $S_{4}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 1 \}$| Cumplir el objetivo de la salida |
 |Observo el número total de ensayos de laboratorio exitosos en  20 intentos realizados| $S_{5}$= $\{ x \in \mathbb{N}| 0 \leq x \leq 20 \}$| Obtener más de 5 ensayos éxitos |
+
+</div>
 
 <br/><br/><br/>

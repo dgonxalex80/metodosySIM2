@@ -14,7 +14,7 @@
 
 <title> Probabilidad</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -414,7 +414,8 @@ $(document).ready(function () {
 <p>A continuación se presentan una serie de códigos relacionados el
 calculo de probabilidades</p>
 <div id="simulacion-del-lanzamiento-de-un-dados" class="section level2">
-<h2><strong>Simulacion del lanzamiento de un dados</strong></h2>
+<h2><span style="color:#034a94"><strong>Simulacion del lanzamiento de un
+dados</strong></span></h2>
 <p>Para simular el lanzamiento de un dado utilizaremos la función
 <code>sample(x, size, replace = FALSE, prob = NULL)</code>, con
 parámetros: <code>x</code> : valores del espacio muestral;
@@ -430,7 +431,8 @@ barplot(td1, las=1)              # gráfico de los resultados</code></pre>
 <p></br></br></p>
 </div>
 <div id="lanzamiento-de-dos-dados" class="section level2">
-<h2><strong>Lanzamiento de dos dados</strong></h2>
+<h2><span style="color:#034a94"><strong>Lanzamiento de dos
+dados</strong></span></h2>
 <pre class="r"><code>n=500                               # tamaño de muestra
 d1=sample(1:6,n, replace = TRUE)    # muestra dado 1
 d2=sample(1:6,n, replace = TRUE)    # muestra dado 2
@@ -441,7 +443,8 @@ barplot(table(suma), las=1,cex.axis=0.7)  # gráfico  de la suma</code></pre>
 <p></br></br></p>
 </div>
 <div id="extracción-de-urna" class="section level2">
-<h2><strong>Extracción de urna</strong></h2>
+<h2><span style="color:#034a94"><strong>Extracción de
+urna</strong></span></h2>
 <p>Para simular la extracción de bolas de una urna, se utilizan las
 funciones <code>sample()</code> y <code>rep()</code> mostradas en el
 siguiente ejemplo :</p>
@@ -462,7 +465,8 @@ barplot(table(u), las=1)</code></pre>
 <p></br></br></p>
 </div>
 <div id="tablas-de-contingencia" class="section level1">
-<h1><strong>Tablas de contingencia</strong></h1>
+<h1><span style="color:#034a94"><strong>Tablas de
+contingencia</strong></span></h1>
 <p>Las tablas de contingencia o tablas cruzadas se basan en las tablas
 de frecuencia para dos variables cualitativas o cuantitativas con pocos
 valores. En ellas se representan probabilidades conjuntas, marginales y

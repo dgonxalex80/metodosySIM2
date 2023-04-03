@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-# **Variables discretas**
+# <span style="color:#034a94">**Variables discretas**</span>
 
 En el caso de las variables discretas la función de distribución de probabilidad $f(x)$ debe cumplir las siguientes propiedades
 
@@ -69,7 +69,7 @@ sum(fw(20:30))
 
 <br/><br/><br/>
 
-### **Valor esperado**
+### <span style="color:#034a94">**Valor esperado**</span>
 
 <br/>
 
@@ -83,7 +83,7 @@ cat("E[X] = ",Ex)
 
 <br/>
 
-### **Varianza**
+### <span style="color:#034a94">**Varianza**</span>
 
 ```{r}
 
@@ -98,9 +98,9 @@ cat("V[X] = ",Vx)
 
 <br/><br/>
 
-# **Variables continuas**
+# <span style="color:#034a94">**Variables continuas**</span>
 
-## **Integración** 
+## <span style="color:#034a94">**Integración**</span> 
 
 El concepto de integración se utiliza en probabilidad para determinar el área bajo la curva de una función de densidad $f(x)$ para una variable aleatoria continua.
 
@@ -171,7 +171,7 @@ integrate(fx, 0,5)
 
 <br/>
 
-## **Valor esperado**
+## <span style="color:#034a94">**Valor esperado**</span>
 
 $$E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$$
 <br/>
@@ -186,7 +186,7 @@ cat("E[X] = ", Ex$value,"\n")
 
 <br/>
 
-## **Varianza**
+## <span style="color:#034a94">**Varianza**</span>
 
 $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$ 
 
@@ -216,7 +216,7 @@ cat("V[X] = ", Ex2$value-Ex$value^2)
 <br/><br/>
 
 
-# **Caso Discreto-Discreto** 
+# <span style="color:#034a94">**Caso Discreto-Discreto**</span> 
 
 <br/>
 
@@ -243,7 +243,7 @@ sum(fxy)
 
 <br/>
 
-### **Funciones distribución marginales**
+### <span style="color:#034a94">**Funciones distribución marginales**</span>
 
 ```{r}
 fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
@@ -255,7 +255,7 @@ fxy
 
 <br/>
 
-### **Representación gráfica de $f(x,y)$**
+### <span style="color:#034a94">**Representación gráfica de $f(x,y)$**</span>
 
 Para construir la gráfica de X y Y debemos crear los vectores
 
@@ -290,7 +290,7 @@ plot3D::scatter3D(x, y, fxy,
 
 <br/>
 
-### **Funciones de distribución marginal**
+### <span style="color:#034a94">**Funciones de distribución marginal**</span>
 
 ```{r}
 fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
@@ -302,7 +302,7 @@ fxy
 
 <br/>
 
-### **Covarianza y Correlación**
+### <span style="color:#034a94">**Covarianza y Correlación**</span>
 
 ```{r, warning=FALSE, message=FALSE}
 x=c(0,1,2) 
@@ -356,7 +356,7 @@ cat("Rho     = ", Rho, "\n")
 
 <br/><br/><br/>
 
-# **Caso Continuo-continuo**  
+# <span style="color:#034a94">**Caso Continuo-continuo**</span>  
 
 <br/>
 
@@ -383,8 +383,11 @@ fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} #
 adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))
 ```
 
+<center>
+<sub>
 basado en : http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf
-
+</sub>
+</center>
 
 <br/>
 
@@ -400,9 +403,11 @@ persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = "#FF7F00",
       main=" ", col.main="blue")
 
 ```
-
+<center>
+<sub>
 Nota: basada en : https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html
-
+</sub>
+</center>
 <br/><br/>
 
 

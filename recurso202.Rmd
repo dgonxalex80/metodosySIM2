@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 <br/><br/><br/>
 
 
-# **Valor esperado**
+# <span style="color:#034a94">**Valor esperado**</span>
 
 <br/>
 
@@ -25,25 +25,25 @@ La esperanza matemática de una variable aleatoria $X$,  corresponde a un valor 
 
 <div class="content-box-blue">
 
-### **Definición Valor Esperado**
+### <span style="color:#034a94">**Definición Valor Esperado**</span>
 
 Sea $X$ una variable aleatoria discreta o continua. La esperanza matemática de $X$ o valor esperado, $E(X)$ o bien $\mu$, se define respectivamente como,
 
 | Caso discreto                           |Caso continuo                          |
 |:---------------------------------------:|:-------------------------------------:|
-| $E(X)=\displaystyle\sum\limits_{x}^{}x_{i}f(x_{i})$ | $E(X)=\displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$ |
+| $E(X)=\displaystyle\sum\limits_{R_X}^{}x_{i}f(x_{i})$ | $E(X)=\displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$ |
 
 </div> 
 
 <br/>
 
-En el caso continuo y similarmente para el caso discreto.
+En el caso continuo y de manera similar para el caso discreto.
 
 <br/>
 
 <div class="content-box-blue">
 
-## **Propiedades del Valor Esperado**
+## <span style="color:#034a94">**Propiedades del Valor Esperado**</span>
 
 + $E(k) = k$, para todo numero real $k$.
 
@@ -59,7 +59,7 @@ En el caso continuo y similarmente para el caso discreto.
 <br/><br/>
 
 
-# **Varianza**
+# <span style="color:#034a94">**Varianza**</span>
 
 Otra característica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de **momento** de una variable aleatoria
 
@@ -67,13 +67,13 @@ Otra característica importante de las variables aleatorias corresponde a la var
 
 <div class="content-box-blue">
 
-### **Definición Momento**
+### <span style="color:#034a94">**Definición Momento**</span>
 
 Sea $X$ una variable aleatoria discreta o continua. El momento de orden $k$ se define como:
 
 | Caso discreto                           |Caso continuo                          |
 |:---------------------------------------:|:-------------------------------------:|
-|$E(X^{k})=\displaystyle\sum\limits_{x}^{}x_{i}^{k}f(x_{i})$|$E(X^{k})=\displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx$|
+|$E(X^{k})=\displaystyle\sum\limits_{R_X}^{}x_{i}^{k}f(x_{i})$|$E(X^{k})=\displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx$|
 
 </div> 
 
@@ -85,7 +85,7 @@ Con este nuevo elemento se define la varianza de una variable aleatorias como la
 
 <div class="content-box-blue">
 
-### **Definición Varianza**
+### <span style="color:#034a94">**Definición Varianza**</span>
 
 $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$ 
 
@@ -95,7 +95,7 @@ $$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$
 
 <div class="content-box-blue">
 
-## **Propiedades de la varianza**
+## <span style="color:#034a94">**Propiedades de la varianza**</span>
 
 + $V[X] \geq 0$
 

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-# **Introducción**
+# <span style="color:#034a94">**Introducción**</span>
 
 El concepto de variable aleatoria constituye uno de los principales pilares de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica según J.A. Alberth & B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatoria como función de números reales y  el espacio para el sustento matemático. 
 
@@ -42,7 +42,7 @@ En esta unidad se tratará el  caso univariado discreto, luego el caso continuo,
 
 <div class="content-box-blue">
 
-### **Definición Variable aleatoria**
+### <span style="color:#034a94">**Definición Variable aleatoria**</span>
 
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un número . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable $X$, ($R_{_{X}}$) 
 
@@ -57,7 +57,7 @@ Las variables aleatorias se clasifican teniendo en cuenta las características d
 
 <div class="content-box-blue">
 
-### **Tipos de variables**
+### <span style="color:#034a94">**Tipos de variables**</span>
 
 + Una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores.
 
@@ -105,7 +105,7 @@ $$f_{_{X}}(2) = P(X=2)=\frac{3}{8}\hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(3) =P(X=
 <br/><br/>
 
 
-# **Variables discretas** 
+# <span style="color:#034a94">**Variables discretas**</span> 
 
 Como se mencionó anteriormente una variable aleatoria se considera como **DISCRETA** cuando el conjunto de posibles valores que puede tomar la variables es un conjunto finito o infinito numerable. En la gran mayoria de los casos este conjunto corresponde a los números enteros.
 
@@ -116,7 +116,7 @@ Para catacterizar la variable se define  la función de distribución de probabi
 
 <div class="content-box-blue">
 
-### **Función de distribución de probabilidad**
+### <span style="color:#034a94">**Función de distribución de probabilidad**</span>
 
 Para $X$ un variable aleatoria discreta, su función de distribución de probabilidad estará dada por $f(x)$, la cual proporciona las probabilidades asociadas a todos los valores de su rango $R_{X}$ . Esta función debe cumplir las siguientes propiedades:
 
@@ -159,7 +159,7 @@ Como complemento de $f(x)$ y debido a que puede resultar más interesante calcul
 
 <div class="content-box-blue">
 
-### **Función de probabilidad acumulada**
+### <span style="color:#034a94">**Función de probabilidad acumulada**</span>
 
 Sea $X$ una variable aleatoria continua con función de densidad $f_{X}(x)$, se define la  función de distribución acumulada, $F_{X}(x)$, como:
 
@@ -230,7 +230,7 @@ $P(X > 15) = 1 - P(X \leq 14) = 0.4164$
 
 <br/><br/><br/><br/>
 
-# **Variables continuas**
+# <span style="color:#034a94">**Variables continuas**</span>
 
 Como se mencionó se considera una variable como continua cuando el conjunto de valores que puede tomar es un conjunto infinito no numerable, es decir que siempre podrá haber un valor entre dos valores de ella.
 
@@ -263,7 +263,7 @@ En el caso de las **variables aleatorias continuas** por lo general proceden de 
 <div class="content-box-blue">
 
 
-### **Función de densidad de probabilidad** 
+### <span style="color:#034a94">**Función de densidad de probabilidad**</span> 
 
 La función de densidad de probablidad se define como $f(x)$, tal que cumpla las siguientes condiciones:
 
@@ -284,7 +284,7 @@ Para el caso continuo la función de distribución de probabilidad corresponde a
 
 <div class="content-box-blue">
 
-### **Función de probabilidad acumulada**
+### <span style="color:#034a94">**Función de probabilidad acumulada**</span>
 
 $F_{_X}(x)=P(X \leq x)=\displaystyle\int \limits_{-\infty}^{x}f_{_X}(t)\:dt$
 

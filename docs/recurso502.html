@@ -14,7 +14,7 @@
 
 <title> Pruebas de hipótesis para una población</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -414,154 +414,10 @@ $(document).ready(function () {
 <p>Se llaman pruebas paramétricas las que están soportadas en supuestos
 que por lo general corresponden a la distribución de la variable que
 trabajamos</p>
-<div id="resumen" class="section level2">
-<h2><strong>Resumen</strong></h2>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="20%" />
-<col width="75%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"></th>
-<th align="left"></th>
-<th align="left"><strong>Estadístico de prueba</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"></td>
-<td align="left">Una población</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="center">(1)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o}
-=\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(2)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o}
-=\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(3)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(T_{o} =
-\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center">(4)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(X^{2}_{o} =
-\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td align="center">(5)</td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} = \dfrac{X-n
-\hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim
-N(0,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} =
-\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim
-N(0,1)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-<table>
-<colgroup>
-<col width="20%" />
-<col width="79%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left"><strong>Reglas de decisión</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Regla1:</td>
-<td align="left">Si el <span class="math inline">\(EdeP\)</span> cae en
-la <span class="math inline">\(RdeR\)</span>, entonce se rechaza la
-<span class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong>
-<span class="math inline">\(H_{a}\)</span> como verdadera. Si por el
-contrario el <span class="math inline">\(EdeP\)</span> NO cae en la
-<span class="math inline">\(RdeR\)</span>, entonces NO se rechaza <span
-class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
-para rechazarla, <strong>asumimos</strong> que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
-</tr>
-<tr class="even">
-<td align="left">Regla2:</td>
-<td align="left">Si <span class="math inline">\(\alpha &gt;\)</span>
-<code>valor-p</code> entonces rechazamos <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
-class="math inline">\(H_{a}\)</span>. Si por el contrario <span
-class="math inline">\(\alpha&lt;\)</span> <code>valor-p</code>, no
-rechazamos <span class="math inline">\(H_{0}\)</span>,
-<strong>asumimos</strong> que <span class="math inline">\(H_{0}\)</span>
-es verdad.</td>
-</tr>
-<tr class="odd">
-<td align="left">Regla3:</td>
-<td align="left">El <code>valor-p</code> se interpreta como el error que
-puedo cometer al rechazar <span class="math inline">\(H_{0}\)</span>,
-siendo esta verdadera (cometer error tipo I). Si este valor es
-considerado como pequeño, rechazo <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
-class="math inline">\(H_{a}\)</span>. Si por el contrario se considera
-este valor grande, entonce no rechazo <span
-class="math inline">\(H_{0}\)</span>, asumo que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<colgroup>
-<col width="22%" />
-<col width="77%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tipos de pruebas</th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Dos colas</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta =
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
-\theta_{o}\)</span></td>
-</tr>
-<tr class="even">
-<td align="left">Cola superior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \leq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
-\theta_{o}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left">Cola inferior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \geq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
-\theta_{o}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><br/><br/></p>
-</div>
 <div id="sobre-una-media" class="section level2">
-<h2><strong>Sobre una media</strong></h2>
+<h2><span style="color:#034a94"><strong>Sobre una
+media</strong></span></h2>
 <p>Dependiendo de las condiciones podemos optar por tres diferentes EdeP
 para la realización de la prueba para una media, aunque tenemos una
 cuarta posibilidad en el caso de realizarla mediante un método no
@@ -665,7 +521,7 @@ resultados podemos utilizar tres reglas:</p>
 <p><br/><br/></p>
 </div>
 <div id="regla-1" class="section level3 content-box-gray">
-<h3><span style="color:#FF7F00"> <strong>Regla 1</strong></span></h3>
+<h3><span style="color:#034A94"> <strong>Regla 1</strong></span></h3>
 <p>Si el <strong>EdeP</strong> cae en la <strong>RdeR</strong>, entonce
 se rechaza la <span class="math inline">\(H_{0}\)</span> y se
 <strong>acepta</strong> <span class="math inline">\(H_{a}\)</span> como
@@ -699,15 +555,18 @@ p=ggdistribution(dt, seq(qt(0.975,99),+3, 0.1), df = 99, colour = &#39;blue&#39;
 ggtitle(&quot;Región de rechazo : (-Inf, -1.984217)  (1.984217, +Inf)&quot;)
 p</code></pre>
 <p><br/></p>
-<p><strong>Conclusión</strong>: Como el <strong>EdeP</strong>
-(<code>t = 0.76215</code>) NO cae en la <strong>RdeR</strong>, entonces
-NO rechazamos <span class="math inline">\(Ho\)</span>, asumimos <span
+<div id="conclusión" class="section level3">
+<h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
+<p>Como el <strong>EdeP</strong> (<code>t = 0.76215</code>) NO cae en la
+<strong>RdeR</strong>, entonces NO rechazamos <span
+class="math inline">\(Ho\)</span>, asumimos <span
 class="math inline">\(Ho\)</span> es verdadera, es decir ASUMIMOS que
 <span class="math inline">\(\mu\)</span> de las edades es igual a 31
 años.</p>
 <p><br/><br/></p>
+</div>
 <div id="regla-2" class="section level3 content-box-gray">
-<h3><span style="color:#FF7F00"> <strong>Regla 2</strong></span></h3>
+<h3><span style="color:#034A94"> <strong>Regla 2</strong></span></h3>
 <p>Si <span class="math inline">\(\alpha &gt; \text{valor-p}\)</span>
 entonces rechazamos <span class="math inline">\(H_{0}\)</span>, se
 <strong>acepta</strong> <span class="math inline">\(H_{a}\)</span> como
@@ -718,7 +577,7 @@ class="math inline">\(H_{0}\)</span>, <strong>asumimos</strong> que
 </div>
 <p><br/><br/><br/></p>
 <div id="valor-p" class="section level3">
-<h3><strong>Valor-p</strong></h3>
+<h3><span style="color:#034a94"><strong>Valor-p</strong></span></h3>
 <p>El <strong>valor-p</strong> corresponde al área delimitada por el
 <span class="math inline">\(EdeP\)</span> en el sentido que indica la
 <span class="math inline">\(RdeR\)</span> de la prueba a contrastar. Es
@@ -726,23 +585,27 @@ decir que corresponde a la probilidad máxima de cometer error tipo
 I.</p>
 <p><a href="https://www.redalyc.org/pdf/806/80634308.pdf">Gil, Jacky F.;
 Castañeda, Javier A (2005)</a> lo definen como :</p>
-<p><em>El resultado de la prueba de hipótesis se basa principalmente en
-el cálculo, en términos de probabilidad, de la fuerza de los hallazgos a
+<blockquote>
+<p>El resultado de la prueba de hipótesis se basa principalmente en el
+cálculo, en términos de probabilidad, de la fuerza de los hallazgos a
 favor de la hipótesis nula. Esta probabilidad recibe el nombre de
 valor-p, y se define como la probabilidad de cometer un falso positivo
-por efecto del azar, cuando la hipótesis nula es verdadera.</em></p>
+por efecto del azar, cuando la hipótesis nula es verdadera.</p>
+</blockquote>
 <p><br/></p>
-<p><strong>Conclusión</strong> : Como el valor de <span
-class="math inline">\(\alpha &gt; valor-p\)</span> (<span
-class="math inline">\(0.05 &gt; p-value = 0.4496\)</span> ) entonces No
-se rechaza <span class="math inline">\(Ho\)</span>, se
-<strong>asume</strong> que <span class="math inline">\(Ho\)</span> es
-verdad. ASUMIMOS que <span class="math inline">\(\mu\)</span> de las
-edades es igual a 31 años.</p>
+</div>
+<div id="conclusión-1" class="section level3">
+<h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
+<p>Como el valor de <span class="math inline">\(\alpha &gt;
+valor-p\)</span> (<span class="math inline">\(0.05 &gt; p-value =
+0.4496\)</span> ) entonces No se rechaza <span
+class="math inline">\(Ho\)</span>, se <strong>asume</strong> que <span
+class="math inline">\(Ho\)</span> es verdad. ASUMIMOS que <span
+class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
 <p><br/><br/></p>
 </div>
 <div id="regla-3" class="section level3 content-box-gray">
-<h3><span style="color:#FF7F00"> <strong>Regla 3</strong></span></h3>
+<h3><span style="color:#034A94"> <strong>Regla 3</strong></span></h3>
 <p>El valor-p se interpreta como el error que puedo cometer al rechazar
 <span class="math inline">\(Ho\)</span>, siendo esta verdadera (cometer
 error tipo I). Si este valor es considerado como pequeño, rechazo <span
@@ -753,14 +616,17 @@ class="math inline">\(Ho\)</span>, asumo que <span
 class="math inline">\(Ho\)</span> es verdad.</p>
 </div>
 <p><br/></p>
-<p><strong>Conclusión</strong> : En este caso valoramos si el valor-p
-(p-value = 0.4496) si es grande o pequeño. En esta caso se puede
-considerar que su valor es muy grande y por lo tanto no nos atrevemos a
-rechazar <span class="math inline">\(Ho\)</span>, asumimos que <span
+<div id="conclusión-2" class="section level3">
+<h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
+<p>En este caso valoramos si el valor-p (p-value = 0.4496) si es grande
+o pequeño. En esta caso se puede considerar que su valor es muy grande y
+por lo tanto no nos atrevemos a rechazar <span
+class="math inline">\(Ho\)</span>, asumimos que <span
 class="math inline">\(Ho\)</span> es verdadera, ASUMIMOS que <span
 class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
+</div>
 <div id="nota" class="section level3 content-box-gray">
-<h3><span style="color:#FF7F00"> <strong>Nota</strong></span></h3>
+<h3><span style="color:#686868"> <strong>Nota</strong></span></h3>
 <p>Al aplicar las últimas dos reglas (2 y 3) no se requiere la
 construcción de una <span class="math inline">\(RdeR\)</span> para tomar
 la decisión. Solo con revisar el valor-p entregado por la prueba y
@@ -771,7 +637,8 @@ información sobre valor-p.</p>
 <p><br/><br/></p>
 </div>
 <div id="sobre-una-proporción" class="section level2">
-<h2><strong>Sobre una proporción</strong></h2>
+<h2><span style="color:#034a94"><strong>Sobre una
+proporción</strong></span></h2>
 <p>Ho: <span class="math inline">\(p = p_{o}\)</span> <br/><br />
 Ha :<span class="math inline">\(p \leq p_{o}\)</span></p>
 <p><br/></p>
@@ -783,7 +650,8 @@ Ha :<span class="math inline">\(p \leq p_{o}\)</span></p>
 con el fin de tener estimaciones mas robustas para estimar la proporción
 poblacional.</p>
 <p><br/><br/></p>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"><strong>Ejemplo</strong></span></h3>
 <p>Una empresa al seleccionar su personal, lo somete a un curso de
 entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes
 aprueban el curso. Durante el último proceso, los encargados efectúan
@@ -812,7 +680,9 @@ sample estimates:
   p 
 0.6 </code></pre>
 <p><br/><br/></p>
-<p><strong>Conclusión</strong></p>
+</div>
+<div id="conclusión-3" class="section level3">
+<h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
 <p>Como el valor-p (p-value = 0.01447) es menor que el nivel de
 significancia (<span class="math inline">\(\alpha=0.05\)</span>),
 rechazamos la hipótesis nula, aceptamos la hipótesis alterna. Podemos
@@ -822,8 +692,10 @@ provocaron una disminución significativa en la proporción de
 aprobación.</p>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="sobre-una-varianza" class="section level2">
-<h2><strong>Sobre una varianza</strong></h2>
+<h2><span style="color:#034a94"><strong>Sobre una
+varianza</strong></span></h2>
 <p><br/></p>
 <p>Ho: <span class="math inline">\(\sigma^{2} =
 \sigma^{2}_{o}\)</span></p>
@@ -833,7 +705,7 @@ aprobación.</p>
 <p>Estadístico de prueba</p>
 <p><span class="math display">\[X^{2} =\dfrac{(n-1)
 s^{2}}{\sigma^{2}_{o}} \sim \chi^{2}_{v: n-1}\]</span></p>
-<div id="ejemplo-1" class="section level3">
+<div id="ejemplo-2" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Un fabricante de baterías para celulares afirma que el tiempo de
 duración de sus baterías se distribuyen aproximadamente normal con una
@@ -858,13 +730,156 @@ EdeP=(length(t)-1)*varx/81
 EdeP</code></pre>
 <pre><code>[1] 1.135074</code></pre>
 <p><br/><br/></p>
-<p><strong>Conclusión</strong></p>
+</div>
+<div id="conclusión-4" class="section level3">
+<h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
 <p>Como el <span class="math inline">\(EdeP\)</span> (1.135074) caen en
 la <span class="math inline">\(RdeR\)</span>, entonces rechazamos la
 hipótesis nula, aceptamos la hipótesis alterna como verdadera.</p>
 <p>Podemos entonce concluir que <span class="math inline">\(\sigma^{2}
 \neq 81\)</span></p>
 <p><br/><br/><br/></p>
+</div>
+</div>
+<div id="resumen" class="section level2">
+<h2><span style="color:#686868"><strong>Resumen</strong></span></h2>
+<div class="content-box-gray">
+<p><br/><br/></p>
+<div id="estadístico-de-prueba" class="section level3">
+<h3><span style="color:#686868"><strong>Estadístico de
+prueba</strong></span></h3>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="20%" />
+<col width="75%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="left">Una población</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">(1)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o}
+=\dfrac{\bar{X}-\mu_{o}}{\sigma/\sqrt{n}}\sim N(0,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">(2)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o}
+=\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim N(0,1)\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">(3)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(T_{o} =
+\dfrac{\bar{X}-\mu_{o}}{s/\sqrt{n}} \sim t_{v=n-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">(4)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(X^{2}_{o} =
+\dfrac{(n-1)S^{2}}{\sigma_{o}^{2}} \sim \chi^{2}_{v=n-1}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">(5)</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o} = \dfrac{X-n
+\hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim
+N(0,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(Z_{o} =
+\dfrac{\widehat{p}-p_{0}}{\sqrt{p_{o}(1-p_{o})/n}} \sim
+N(0,1)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><br/></p>
+<div id="reglas-de-decisión" class="section level3 content-box-gray">
+<h3><span style="color:#686868"><strong>Reglas de
+decisión</strong></span></h3>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="79%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">Regla1:</td>
+<td align="left">Si el <span class="math inline">\(EdeP\)</span> cae en
+la <span class="math inline">\(RdeR\)</span>, entonce se rechaza la
+<span class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong>
+<span class="math inline">\(H_{a}\)</span> como verdadera. Si por el
+contrario el <span class="math inline">\(EdeP\)</span> NO cae en la
+<span class="math inline">\(RdeR\)</span>, entonces NO se rechaza <span
+class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
+para rechazarla, <strong>asumimos</strong> que <span
+class="math inline">\(H_{0}\)</span> es verdad.</td>
+</tr>
+<tr class="even">
+<td align="left">Regla2:</td>
+<td align="left">Si <span class="math inline">\(\alpha &gt;\)</span>
+<code>valor-p</code> entonces rechazamos <span
+class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span>. Si por el contrario <span
+class="math inline">\(\alpha&lt;\)</span> <code>valor-p</code>, no
+rechazamos <span class="math inline">\(H_{0}\)</span>,
+<strong>asumimos</strong> que <span class="math inline">\(H_{0}\)</span>
+es verdad.</td>
+</tr>
+<tr class="odd">
+<td align="left">Regla3:</td>
+<td align="left">El <code>valor-p</code> se interpreta como el error que
+puedo cometer al rechazar <span class="math inline">\(H_{0}\)</span>,
+siendo esta verdadera (cometer error tipo I). Si este valor es
+considerado como pequeño, rechazo <span
+class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span>. Si por el contrario se considera
+este valor grande, entonce no rechazo <span
+class="math inline">\(H_{0}\)</span>, asumo que <span
+class="math inline">\(H_{0}\)</span> es verdad.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></br></p>
+<div id="tipos-de-pruebas" class="section level3 content-box-gray">
+<h3><span style="color:#686868"><strong>Tipos de
+pruebas</strong></span></h3>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="77%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">Dos colas</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta =
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
+\theta_{o}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Cola superior</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta \leq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
+\theta_{o}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Cola inferior</td>
+<td align="left"><span class="math inline">\(H_{0}: \theta \geq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
+\theta_{o}\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

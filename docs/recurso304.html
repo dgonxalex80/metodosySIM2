@@ -14,7 +14,7 @@
 
 <title> Métodos de estimación</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -418,7 +418,8 @@ unos de otros.</p>
 <p>A continuación se presentan el método de Momentos y el método de
 Máxima Verosimiulitud:</p>
 <div id="método-de-momentos" class="section level3">
-<h3><strong>Método de momentos</strong></h3>
+<h3><span style="color:#034a94"><strong>Método de
+momentos</strong></span></h3>
 <p><br/></p>
 <p>El método de momentos fue propuesto por Karl Pearson al rededor de
 1895, pensado en sus inicios en contexto descriptivo, analizando las
@@ -430,7 +431,10 @@ existen, con los correspondientes momentos muestrales.</p>
 <p>Para mostrar este método es necesario definir el concepto de
 momento.</p>
 <p><br/></p>
-<p><strong>Momento Poblacional</strong></p>
+</div>
+<div id="momento-poblacional" class="section level3 content-box-blue">
+<h3><span style="color:#034a94"><strong>Momento
+Poblacional</strong></span></h3>
 <table>
 <colgroup>
 <col width="50%" />
@@ -444,15 +448,18 @@ momento.</p>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><span class="math inline">\(\mu^{k}=E\big[X^{k}\big] =
+\displaystyle\sum_{R_X} x^{k}p(x)\)</span></td>
 <td align="left"><span
-class="math inline">\(\mu^{k}=E\big[X^{k}\big]=\sum_{Rx}
-x^{k}p(x)\)</span></td>
-<td align="left">$^{k}=E=_{-}<sup>{}x</sup>{k}f(x):dx $</td>
+class="math inline">\(\mu^{k}=E\big[X^{k}\big]=\int_{-\infty}^{\infty}x^{k}f(x)\:dx\)</span></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
-<p><strong>Momentos muestrales</strong></p>
+<div id="momentos-muestrales" class="section level3">
+<h3><span style="color:#034a94"><strong>Momentos
+muestrales</strong></span></h3>
 <p>En ambos casos</p>
 <p><span class="math display">\[m^{k}=\frac{1}{n}\sum_{i=1}^{n}
 x_{i}^{k} \]</span></p>
@@ -527,7 +534,7 @@ class="math inline">\(\displaystyle\frac{(b-a)^{2}}{12}\)</span></td>
 <p><br/></p>
 </div>
 <div id="nota" class="section level3 content-box-gray">
-<h3><strong>Nota</strong></h3>
+<h3><span style="color:#686868"><strong>Nota</strong></span></h3>
 <p>Existe una relación entre las distribuciones <code>Poisson</code> y
 <code>exponencial</code>. Su valores esperados son inversos y e podrían
 denotar en función de <span class="math inline">\(\lambda\)</span>,

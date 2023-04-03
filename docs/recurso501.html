@@ -14,7 +14,7 @@
 
 <title> Prueba de hipótesis</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -414,7 +414,8 @@ de hipótesis</strong></span></h1>
 <p><img src="img/prueba.png" width="100%" style="display: block; margin: auto;" />
 <br/><br/></p>
 <div id="introducción" class="section level2">
-<h2><strong>Introducción</strong></h2>
+<h2><span
+style="color:#034a94"><strong>Introducción</strong></span></h2>
 <p>Actualmente se raalizan pruebas de sangre para determinar su una
 persona padece de una enfermedad o no, supongamos Covid-19. Para
 realizar la prueba se toma una muestra de sangre del paciente con la que
@@ -447,17 +448,20 @@ trabajan en base a ciertos principios que consideran:</p>
 <p><br/><br/></p>
 </div>
 <div id="conceptos-básicos" class="section level2">
-<h2><strong>Conceptos básicos</strong></h2>
+<h2><span style="color:#034a94"><strong>Conceptos
+básicos</strong></span></h2>
 <p><br/></p>
 </div>
 <div id="hipótesis-nula-ho" class="section level2">
-<h2><strong>Hipótesis nula (Ho)</strong></h2>
+<h2><span style="color:#034a94"><strong>Hipótesis nula
+(Ho)</strong></span></h2>
 <p>Es la hipótesis a probar, ésta NO se rechaza si de la muestra no se
 obtiene suficiente evidencia para rechazarla.</p>
 <p><br/><br/></p>
 </div>
 <div id="hipótesis-alterna-ha" class="section level2">
-<h2><strong>Hipótesis alterna (Ha)</strong></h2>
+<h2><span style="color:#034a94"><strong>Hipótesis alterna
+(Ha)</strong></span></h2>
 <p>La hipótesis <span class="math inline">\(Ho\)</span> se contrasta con
 la hipótesis Ha, y ésta última corresponde a valores alternativos del
 parámetro planteados en la hipótesis nula. La hipótesis <span
@@ -466,7 +470,8 @@ suficiente evidencia para rechazar la hipótesis nula.</p>
 <p><br/><br/></p>
 </div>
 <div id="estadístico-de-prueba-edep" class="section level2">
-<h2><strong>Estadístico de prueba (EdeP)</strong></h2>
+<h2><span style="color:#034a94"><strong>Estadístico de prueba
+(EdeP)</strong></span></h2>
 <p>Es una función de la muestra que contiene información sobre el
 parámetro de interés, la que nos permite decidir sobre el rechazo de la
 hipótesis nula, <span class="math inline">\(Ho\)</span> . Es también una
@@ -478,7 +483,8 @@ hipótesis nula.</p>
 <p><br/><br/></p>
 </div>
 <div id="región-de-rechazo-rder" class="section level2">
-<h2><strong>Región de rechazo (RdeR)</strong></h2>
+<h2><span style="color:#034a94"><strong>Región de rechazo
+(RdeR)</strong></span></h2>
 <p>También llamada región crítica (RC), define los valores del
 estadístico de prueba para los cuales la información muestral contradice
 la hipótesis nula. Estos valores nos permitirán adoptar una regla de
@@ -491,7 +497,8 @@ propuesto en una hipótesis, decidir sobre su rechazo.</p>
 <p><br/><br/></p>
 </div>
 <div id="regla-de-decisión-rded" class="section level2">
-<h2><strong>Regla de Decisión (RdeD)</strong></h2>
+<h2><span style="color:#034a94"><strong>Regla de Decisión
+(RdeD)</strong></span></h2>
 <p>De esta manera, como una regla de decisión, si para una muestra
 particular el estadístico de prueba (valor calculado) cae dentro de la
 región crítica, rechazaremos la hipótesis nula <span
@@ -505,7 +512,8 @@ hipótesis nula es cierta.</p>
 <p><br/><br/></p>
 </div>
 <div id="errores-asociados" class="section level2">
-<h2><strong>Errores asociados</strong></h2>
+<h2><span style="color:#034a94"><strong>Errores
+asociados</strong></span></h2>
 <p>Cuando se decide ya sea en favor o en contra de una determinada
 prueba de hipótesis, es posible estar en una de las cuatro situaciones
 descritas en la siguiente tabla:</p>
@@ -562,16 +570,22 @@ class="math inline">\(\beta\)</span></td>
 <p>Existen dos situaciones en las que se comenten errores después de
 tomar una decisión:</p>
 <p><br/><br/></p>
-<p><strong>Error tipo I</strong>: Cuando se rechazamos una hipótesis
-nula que en realidad es verdadera. Tomando como símil la situación donde
-un médico desea determinar si un paciente está sano o enfermo (<span
-class="math inline">\(Ho\)</span>: SANO vs <span
-class="math inline">\(Ha\)</span>: ENFERMO), es posible que concluya que
-el paciente está enfermo (rechace <span
+<div id="error-tipo-i" class="section level3">
+<h3><span style="color:#034a94"><strong>Error tipo
+I</strong></span></h3>
+<p>Cuando se rechazamos una hipótesis nula que en realidad es verdadera.
+Tomando como símil la situación donde un médico desea determinar si un
+paciente está sano o enfermo (<span class="math inline">\(Ho\)</span>:
+SANO vs <span class="math inline">\(Ha\)</span>: ENFERMO), es posible
+que concluya que el paciente está enfermo (rechace <span
 class="math inline">\(Ho\)</span>) cuando en verdad esta persona esta
 sana. En términos de probabilidad este error se debe de representar
-como: <span class="math display">\[P(\text{Rechazar } Ho | Ho \text{ es
+como:</p>
+<div class="content-box-blue">
+<p><span class="math display">\[P(\text{Rechazar } Ho | Ho \text{ es
 verdadera})= \alpha\]</span></p>
+</div>
+</div>
 <div id="ejemplo" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Para ilustrar el error tipo I, podemos acudir aun evento ocurrido a
@@ -584,15 +598,20 @@ diagnostico inicial. Las segundas pruebas evidenciaron que se trataba de
 un error. Este caso constituye un caso de falso positivo (Se diagnostica
 como enferma, cuando en verdad esta sana)</p>
 <p><br/><br/></p>
-<p><strong>Error Tipo II</strong>: Cuando no se rechaza una hipótesis
-nula que en realidad es falsa. Utilizando el ejemplo del médico,
-diríamos que cuando el medico indica que el paciente esta sano, cuando
-esta realmente enfermo, incurre en un error frecuente cuando algunos
-pacientes son asintomáticos y aunque tienen la enfermedad, sus exámenes
-médicos salen negativos. En este caso la probabilidad se representa
-como:</p>
+</div>
+<div id="error-tipo-ii" class="section level3">
+<h3><span style="color:#034a94"><strong>Error Tipo
+II</strong></span></h3>
+<p>Cuando no se rechaza una hipótesis nula que en realidad es falsa.
+Utilizando el ejemplo del médico, diríamos que cuando el medico indica
+que el paciente esta sano, cuando esta realmente enfermo, incurre en un
+error frecuente cuando algunos pacientes son asintomáticos y aunque
+tienen la enfermedad, sus exámenes médicos salen negativos. En este caso
+la probabilidad se representa como:</p>
+<div class="content-box-blue">
 <p><span class="math display">\[P(\text{No rechazar} Ho | Ho \text{ es
 falsa}) \]</span></p>
+</div>
 </div>
 <div id="ejemplo-1" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
@@ -607,8 +626,8 @@ Este caso se cataloga como falso negativo.</p>
 </div>
 </div>
 <div id="nivel-de-significancia-alpha" class="section level2">
-<h2><strong>Nivel de significancia (<span
-class="math inline">\(\alpha\)</span>)</strong></h2>
+<h2><span style="color:#034a94"><strong>Nivel de significancia (<span
+class="math inline">\(\alpha\)</span>)</strong></span></h2>
 <p>No es posible minimizar simultáneamente, las probabilidades de los
 errores tipo I y II, ya que en la medida que uno disminuye el otro
 aumenta, como se muestra en la figura siguiente, en la que claramente se
@@ -620,7 +639,8 @@ II).</p>
 </div>
 <div id="tipos-de-pruebas-de-hipótesis"
 class="section level2 content-box-blue">
-<h2><strong>Tipos de pruebas de hipótesis</strong></h2>
+<h2><span style="color:#034a94"><strong>Tipos de pruebas de
+hipótesis</strong></span></h2>
 <table>
 <colgroup>
 <col width="22%" />

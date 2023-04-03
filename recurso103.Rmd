@@ -20,7 +20,7 @@ La probabilidad es un número entre cero y uno que se asigna a cada resultado de
 
 <div class="content-box-blue">
 
-### **Enfoque clásico**  
+## <span style="color:#034a94">**Enfoque clásico**</span>  
 
 Es el enfoque más antiguo de probabilidad y está basado en el supuesto de eventos individuales igualmente probables. La probabilidad bajo ese enfoque para el evento $A$ se calcula como la fracción entre el número de elementos del conjunto $A$, $n(A)$ y el número de elementos del espacio muestral $n(S)$: 
 
@@ -47,7 +47,7 @@ Ente este problemas debemos suponer que lo ocurrido en el pasado seguirá pasand
 
 <div class="content-box-blue">
 
-### **Enfoque Frecuentista**
+## <span style="color:#034a94">**Enfoque Frecuentista**</span>
 
 Este enfoque se basa en la frecuencia con que ocurre un evento $A$ y el tamaño de muestra $n$, permitiendo calcular la probabilidad como una proporción de veces que ocurre un resultado sobre las veces en que se repite el experimento.  Cuanto mayor sea el tamaño de muestra mayor será su proximidad al valor de  probabilidad.
 
@@ -75,7 +75,7 @@ Para calcular la probabilidad de que un jugador ejecute y convierta un gol de "p
 
 <div class="content-box-blue">
 
-### **Enfoque subjetivo** 
+## <span style="color:#034a94">**Enfoque subjetivo**</span> 
 
 En este caso la probabilidad es valorada y asignada por un **EXPERTO**, es decir que el valor de probabilidad es asignado a juicio de una persona de acuerdo con su experiencia  como:  un médico, un ingeniero, un abogado, un economista, un biólogo, un científico de datos ......
 
@@ -83,7 +83,7 @@ En este caso la probabilidad es valorada y asignada por un **EXPERTO**, es decir
 
 <br/><br/><br/>
 
-## **Axiomas de  probabilidad**
+## <span style="color:#034a94">**Axiomas de  probabilidad**</span>
 
 <div class="content-box-blue">
 

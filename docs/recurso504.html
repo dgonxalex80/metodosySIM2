@@ -14,7 +14,7 @@
 
 <title> Pruebas no paramétricas</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -420,7 +420,8 @@ distribuciones t-student, chi-cuadrado y F entre otras.</p>
 <p><br/><br/></p>
 <div id="cuando-utilizar-pruebas-no-paramétricas"
 class="section level3">
-<h3><strong>Cuando utilizar pruebas no paramétricas</strong>:</h3>
+<h3><span style="color:#034a94"><strong>Cuando utilizar pruebas no
+paramétricas</strong></span></h3>
 <ul>
 <li><p>Cuando no se cumplen los supuestos como Normalidad</p></li>
 <li><p>Tamaños mínimos de muestra</p></li>
@@ -438,7 +439,8 @@ gustos, satisfacción, nivel de necesidad etc.</p></li>
 </div>
 <div id="ventajas-de-utilizar-pruebas-no-paramétricas"
 class="section level3">
-<h3><strong>Ventajas de utilizar pruebas no paramétricas</strong></h3>
+<h3><span style="color:#034a94"><strong>Ventajas de utilizar pruebas no
+paramétricas</strong></span></h3>
 <ul>
 <li>Son fáciles de usar (aunque dada la facilidad de los códigos en R
 ambas se corren con una línea)</li>
@@ -449,7 +451,7 @@ ambas se corren con una línea)</li>
 <p><br/><br/></p>
 </div>
 <div id="desventajas" class="section level3">
-<h3><strong>Desventajas</strong></h3>
+<h3><span style="color:#034a94"><strong>Desventajas</strong></span></h3>
 <ul>
 <li>Ignoran información</li>
 <li>No son tan eficientes como las pruebas paramétricas, tienen menor
@@ -470,8 +472,9 @@ rechazar Ho falsa)</li>
 </ul>
 <p><br/><br/></p>
 </div>
-<div id="de-signos" class="section level3">
-<h3><strong>De signos</strong></h3>
+<div id="prueba-de-signos" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba de
+signos</strong></span></h3>
 <table>
 <colgroup>
 <col width="14%" />
@@ -500,7 +503,10 @@ muestras pareadas. Esta prueba se realiza sobre la mediana de los datos
 </tr>
 </tbody>
 </table>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<p><br/></p>
+</div>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Carlos y Ángela, Administradoras investigadores de una firma de
 artículos deportivos tienen la creencia que el deporte afecta la imagen
 que cada persona tiene de si misma. Para investigar esta posibilidad
@@ -513,7 +519,9 @@ en forma negativa y valores por encima de 15 que afectan su imagen en
 forma positiva. Los siguientes son resultados obtenidos : 16, 15, 12,
 17, 18, 14, 16, 14, 16, 17, 19, 16, 14, 21, 20, 16, 16, 16 |</p>
 <pre class="r"><code>x.img=c(16, 15, 12, 17, 18, 14, 16, 14, 16,  17, 19, 16,  14, 21, 20, 16, 16, 16 )</code></pre>
-<p><strong>Solución</strong>:</p>
+</div>
+<div id="solución" class="section level3">
+<h3><span style="color:#686868"><strong>Solución</strong></span></h3>
 <table>
 <tbody>
 <tr class="odd">
@@ -601,7 +609,9 @@ Numero de signos positivos</p>
 <p>M+ = 13 Regla de Decisión (Distribución Binomial p=0.5 n= 17) <span
 class="math inline">\(P(X\leq 13) = 1-0.9755 = 0.0245\)</span> (
 valor-p)</p>
-<p><strong>Conclusión</strong>:</p>
+</div>
+<div id="conclusión" class="section level3">
+<h3><span style="color:#686868"> <strong>Conclusión</strong></span></h3>
 <p>Se rechaza la hipótesis nula, se acepta la hipótesis alterna. Se
 puede afirmar que las personas tienen la creencia que el deporte afecta
 positivamente su imagen.</p>
@@ -627,8 +637,10 @@ Interpolated CI       0.9500     16    Inf
 Upper Achieved CI     0.9519     16    Inf</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="chi-cuadrado-de-bondad-de-ajuste" class="section level3">
-<h3><strong>Chi-cuadrado de bondad de ajuste</strong></h3>
+<div id="prueba-chi-cuadrado-de-bondad-de-ajuste"
+class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba Chi-cuadrado de bondad de
+ajuste</strong></span></h3>
 <table>
 <colgroup>
 <col width="14%" />
@@ -654,7 +666,9 @@ el supuesto de normalidad, o de otras distribuciones.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+</div>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>El dueño de una panadería tiene la posibilidad de controlar los
 niveles de inventarios de leche para cuatro marcas diferentes. Con el
 fin de establecer políticas para la realización de nuevos pedidos
@@ -694,7 +708,9 @@ uniforme). Con este propósito tomo la información de un día: |</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Solución</strong>:</p>
+</div>
+<div id="solución-1" class="section level3">
+<h3><span style="color:#686868"><strong>Solución</strong></span></h3>
 <table>
 <colgroup>
 <col width="25%" />
@@ -724,7 +740,7 @@ data:  obs
 X-squared = 3.6, df = 3, p-value = 0.308</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="ejemplo" class="section level3">
+<div id="ejemplo-2" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Un profesor desea establecer si los resultados obtenidos por sus
 estudiantes tienen una distribución normal con media 3.5 y desviación
@@ -763,10 +779,13 @@ data:  obs.nf
 X-squared = 2.8988, df = 5, p-value = 0.7156</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="chi-cuadrado-de-independencia" class="section level3">
-<h3><strong>Chi-cuadrado de independencia</strong></h3>
+<div id="prueba-chi-cuadrado-de-independencia" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba Chi-cuadrado de
+independencia</strong></span></h3>
 <p><br/><br/></p>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Un investigador desea establecer la relación que puede existir entre
 la calificación obtenida por un producto por parte de sus consumidores y
 su ubicación de residencia. Con este fin recoge información de 100 de
@@ -815,7 +834,9 @@ sus clientes:</p>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><strong>Solución</strong>:</p>
+</div>
+<div id="solución-2" class="section level3">
+<h3><span style="color:#686868"> <strong>Solución</strong></span></h3>
 <table>
 <colgroup>
 <col width="10%" />
@@ -864,8 +885,9 @@ la calificación dada por las personas entrevistadas no está relacionada
 con su calificación.</p>
 <p><br/><br/><br/></p>
 </div>
-<div id="de-wilcoxon" class="section level3">
-<h3><strong>De Wilcoxon</strong></h3>
+<div id="prueba-de-wilcoxon" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba de
+Wilcoxon</strong></span></h3>
 <table>
 <colgroup>
 <col width="14%" />
@@ -891,7 +913,9 @@ pareadas</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+</div>
+<div id="ejemplo-4" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Los siguiente datos se tomaron de un estudio de comparación de
 adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer
 grupo está conformado por 15 estudiantes y el segundo grupo por 14
@@ -926,7 +950,9 @@ wilcox.test(g1,g2,paired = FALSE,alternative = &quot;greater&quot;)</code></pre>
 data:  g1 and g2
 W = 178, p-value = 0.0007714
 alternative hypothesis: true location shift is greater than 0</code></pre>
-<p><strong>Conclusión</strong> :</p>
+</div>
+<div id="conclusión-1" class="section level3">
+<h3><span style="color:#686868"> <strong>Conclusión</strong></span></h3>
 <p>Se rechaza Ho , se acepta Ha. Se puede concluir que las dos
 poblaciones son diferentes. por lo tanto las medias son diferentes.</p>
 <p>Para analizar cual de los grupos presenta un mayor consumo de
@@ -937,8 +963,9 @@ Grupo I tienen valores menores en que los del Grupo II</p>
 menores que los estudiantes que padecen de bulimia.</p>
 <p><br/><br/></p>
 </div>
-<div id="de-kruskal-wallis" class="section level3">
-<h3><strong>De Kruskal-Wallis</strong></h3>
+<div id="prueba-de-kruskal-wallis" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba de
+Kruskal-Wallis</strong></span></h3>
 <table>
 <colgroup>
 <col width="14%" />
@@ -962,7 +989,9 @@ estadísticamente significativas. Versión no parametrica del ANOVA.</td>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+</div>
+<div id="ejemplo-5" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Para verificar si la memoria cambia con la edad, una investigadora
 realiza un estudio en el cual hay tres grupos de personas: G1- 60 años
 de edad, G2: con 50 años de edad, G3: con 40 años de edad. A cada
@@ -1029,8 +1058,11 @@ Kruskal-Wallis chi-squared = 5, df = 5, p-value = 0.4159</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="correlación-de-spearman" class="section level3">
-<h3><strong>Correlación de Spearman</strong></h3>
-<p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<h3><span style="color:#034a94"><strong>Correlación de
+Spearman</strong></span></h3>
+</div>
+<div id="ejemplo-6" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Se requiere establecer si existe relación entre el tiempo de estudio
 dedicado a la preparación de una evaluación y la nota obtenida. Como la
 nota obtenida representa una variable cualitativa, se debe utilizar una
@@ -1099,9 +1131,12 @@ variable que podríamos llamar cualitativa, operacionalizada cuntitativa
 con una nota.</p>
 <p><br/><br/></p>
 </div>
-<div id="de-rachas" class="section level3">
-<h3><strong>De Rachas</strong></h3>
-<p>### <span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
+<div id="prueba-de-rachas" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba de
+Rachas</strong></span></h3>
+</div>
+<div id="ejemplo-7" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
 <p>Para verificar si los números aleatorios generados por Excel son de
 verdad aleatorios se tomó una muestra de ellos mediante la función
 =aleatorio.entre(), obteniendo como resultado los siguientes números:
@@ -1130,14 +1165,17 @@ data:  y
 statistic = 0.40204, runs = 53, n1 = 50, n2 = 50, n = 100, p-value =
 0.6877
 alternative hypothesis: nonrandomness</code></pre>
-<p><strong>Conclusión</strong></p>
+</div>
+<div id="conclusión-2" class="section level3">
+<h3><span style="color:#686868"> <strong>Conclusión</strong></span></h3>
 <p>Como el valor-p (0.3149) es mayor al nivel de significancia, no se
 rechaza la hipótesis nula, no existe suficiente evidencia en la muestra
 que permita rechazarla, asumimos que los datos son aleatorios.</p>
 <p><br/><br/></p>
 </div>
-<div id="de-normalidad" class="section level3">
-<h3><strong>De normalidad</strong></h3>
+<div id="prueba-de-normalidad" class="section level3">
+<h3><span style="color:#034a94"><strong>Prueba de
+normalidad</strong></span></h3>
 <p>Uno de los procedimientos mas utilizados en estadística es la
 relacionada con la verificación de normalidad de una variable.</p>
 <table>
@@ -1175,7 +1213,8 @@ variable es normal.</p>
 <p><br/><br/></p>
 </div>
 <div id="otras-pruebas-de-normalidad-utilizadas" class="section level3">
-<h3><strong>Otras pruebas de normalidad utilizadas</strong></h3>
+<h3><span style="color:#034a94"><strong>Otras pruebas de normalidad
+utilizadas</strong></span></h3>
 <pre class="r"><code># install.packages(&quot;normtets&quot;)
 library(normtest)
 

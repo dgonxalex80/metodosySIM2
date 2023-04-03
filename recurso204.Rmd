@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 A continuación se presentan los principales modelos discretos, acompañados de ejemplos resueltos. 
 
-## **Introducción**
+## <span style="color:#034a94">**Introducción**</span>
 
 <br/>
 
@@ -39,7 +39,7 @@ A continuación se presentan los principales modelos discretos.
 
 <br/><br/>
 
-## **Bernoulli**
+## <span style="color:#034a94">**Bernoulli**</span>
 
 <br/>
 
@@ -49,7 +49,7 @@ Empezaremos  enunciando el modelo **Bernoulli**, aunque algunos autores no lo re
 
 <div class="content-box-blue">
 
-**Distribución Bernoulli**
+## <span style="color:#034a94">**Distribución Bernoulli**</span>
 
 Una variable que se distribuye Bernoulli, procede de un experimento Bernoulli, descrito por las siguientes características:
 
@@ -82,7 +82,7 @@ $$V[X]= pq$$
 <br/><br/>
 
 
-## **binomial** 
+## <span style="color:#034a94">**binomial**</span> 
 
 <br/>
 
@@ -92,7 +92,7 @@ El modelo **binomial**, que puede verse como una generalización del modelo Bern
 
 <div class="content-box-blue">
 
-**Distribución binomial**
+## <span style="color:#034a94">**Distribución binomial**</span>
 
 Una variable con distribución binomial es aquella que procede de un experimento binomial. 
 
@@ -138,7 +138,7 @@ fx=dbinom(x,10,0.30)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 2) +
 scale_x_continuous(limits = c(0, 10),
 breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
 labels = c('0','1','2','3','4','5','6','7','8','9','10'))
@@ -147,7 +147,7 @@ labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 <br/><br/>
 
 
-## **Poisson**
+## <span style="color:#034a94">**Poisson**</span>
 
 <br/>
 
@@ -165,7 +165,7 @@ El modelo **Poisson** fue plantea por el físico y matemático francés Siméon-
 
 <div class="content-box-blue">
 
-**Distribución Pisson**
+### <span style="color:#034a94">**Distribución Pisson**</span>
 
 La función de distribución de probabilidad de una variable con distribución Poisson esta dada por siguiente la expresión:
 
@@ -199,7 +199,7 @@ fx=dpois(x,2)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour = "#FF7F00", size = 2) +
 scale_x_continuous(limits = c(0, 10),
 breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
 labels = c('0','1','2','3','4','5','6','7','8','9','10'))
@@ -208,7 +208,7 @@ labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 <br/><br/>
 
 
-## **hipergeometrico**
+## <span style="color:#034a94">**hipergeometrico**</span>
 
 Este modelo **hipergeométrico** nace de la necesidad de modelar eventos Bernoulli con probabilidad no constante generados en elecciones sin repetición. 
 
@@ -216,7 +216,7 @@ Este modelo **hipergeométrico** nace de la necesidad de modelar eventos Bernoul
 
 <div class="content-box-blue">
 
-**Distribución hipergeometrica** 
+### <span style="color:#034a94">**Distribución hipergeometrica**</span> 
 
 Se tiene un conjunto de $N$ objetos que contiene $K$ objetos clasificados como éxitos y $N-K$ objetos clasificados como fracasos. Una muestra de tamaño $n$ objetos es seleccionada al azar (sin reemplazo) de la población de $N$ objetos, donde $K \leq N$ y $n \leq N $. La variable de interés $X$ corresponde al **número de éxitos obtenidos en la muestra**. 
 
@@ -248,7 +248,7 @@ fx=dhyper(x,95,5,10)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 2) +
 scale_x_continuous(limits = c(5, 10),
 breaks = c(5,6,7,8,9,10), 
 labels = c('5','6','7','8','9','10'))
@@ -257,7 +257,7 @@ labels = c('5','6','7','8','9','10'))
 <br/><br/>
 
 
-## **geométrico o de Pascal**
+## <span style="color:#034a94">**geométrico o de Pascal**</span>
 
 La distribución **geométrica** también conocida como distribución de Pascal, fue esbozada en el escrito El arte de la conjetura, escrita por Jakob Bernoulli. Esta distribución modela el número de ensayos Bernoulli necesarios para obtener el primer éxito. Los valores que puede tomar esta variable son:
 
@@ -281,7 +281,7 @@ La variable $X$ toma el valor de $1$ cuando el éxito ocurre en el primer intent
 
 <div class="content-box-blue">
 
-**Distribución geométrica**
+### <span style="color:#034a94">**Distribución geométrica**</span>
 
 $$\begin{equation*}
 	f(x)=\left\lbrace
@@ -315,7 +315,7 @@ fx=dgeom(x,0.5)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 2) +
 scale_x_continuous(limits = c(1, 10),
 breaks = c(1,2,3,4,5,6,7,8,9,10), 
 labels = c('1','2','3','4','5','6','7','8','9','10'))
@@ -324,7 +324,7 @@ labels = c('1','2','3','4','5','6','7','8','9','10'))
 
 <br/><br/>
 
-## **binomial negativo**
+## <span style="color:#034a94">**binomial negativo**</span>
 
 <br/>
 
@@ -334,7 +334,7 @@ La distribución **binomial negativa** esta relacionada con la distribución geo
 
 <div class="content-box-blue">
 
-**Distribución binomial negativa**
+### <span style="color:#034a94">**Distribución binomial negativa**</span>
 
 El modelo **binomial negativo* se considera una generalización de la distribución Geométrica. En este caso la variable objeto de estudio corresponde a $X$: **número de ensayos requeridos para obtener $r$ éxitos**. Esta variable se obtiene al sumar $r$ variables con distribución Geométrica con igual parámetro $p$.
 
@@ -371,7 +371,7 @@ fx=dnbinom(x,2,0.50)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 3) +
+ggplot(dat) + geom_point(aes(x, fx),colour =  "#FF7F00", size = 2) +
 scale_x_continuous(limits = c(2, 10),
 breaks = c(2,3,4,5,6,7,8,9,10), 
 labels = c('2','3','4','5','6','7','8','9','10'))

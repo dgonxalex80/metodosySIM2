@@ -34,7 +34,7 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 <br/><br/>
 
-## **Probabilidad simple o marginal**
+## <span style="color:#034a94">**Probabilidad simple o marginal**</span>
 
 <br/>
 
@@ -48,7 +48,7 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 <br/><br/>
 
-## **Probabilidad conjunta** 
+## <span style="color:#034a94">**Probabilidad conjunta**</span> 
 
 <br/>
 
@@ -63,7 +63,7 @@ knitr::include_graphics("img/diagrama5_22.png")
 <br/><br/>
 
 
-## **Probabilidad condicional**
+## <span style="color:#034a94">**Probabilidad condicional**</span>
 
 <br/>
 
@@ -125,7 +125,7 @@ knitr::include_graphics("img/tabla4_22.png")
 
 <br/><br/>
 
-### **Probabilidades simples o marginales**
+### <span style="color:#034a94">**Probabilidades simples o marginales**</span>
 
 <br/>
 
@@ -140,7 +140,7 @@ knitr::include_graphics("img/tabla4_22.png")
 <br/><br/>
 
 
-### **Probabilidad conjunta** 
+### <span style="color:#034a94">**Probabilidad conjunta**</span> 
 
 <br/>
 
@@ -183,7 +183,8 @@ Por despeje se pueden obtener la llanada regla de la multiplicación :
 
 <div class="content-box-blue">
 
-**Definición: Regla de la multiplicación de eventos**
+<span style="color:#034a94">**Definición: Regla de la multiplicación de eventos**</span>
+
 
 La probabilidad de que ocurra A y B asociados a un experimento aleatorio es :
 
@@ -198,7 +199,7 @@ $$P(A \cap B) = P(A) P(B)$$
 
 <br/><br/>
 
-##  **Eventos independientes**
+##  <span style="color:#034a94">**Eventos independientes**</span>
 
 <br/>
 
@@ -208,7 +209,7 @@ En el caso que se requiera evaluar si dos eventos son independientes o no, parti
 
 <div class="content-box-blue">
 
-**Definición: Independencia de eventos**
+## <span style="color:#034a94">**Definición: Independencia de eventos**</span>
 
 Dos eventos A y B son independientes si y solo si la probabilidad del evento B no es afectada por la ocurrencia del evento A o viceversa.
 
@@ -259,7 +260,7 @@ knitr::include_graphics("img/circuito1.png")
 
 <br/><br/>
 
-**Solución:**
+### <span style="color:#686868">**Solución:**</span>
 
 Inicialmente se supone que los componentes $A_{1}$ y $A_{2}$ funcionan de manera independiente. Esto implica que $P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2})$
 
@@ -282,7 +283,7 @@ knitr::include_graphics("img/circuito2.png")
 
 <br/><br/>
 
-**Solución:**
+### <span style="color:#686868">**Solución:**</span>
 
 En este caso solo hay una manera como el circuito no funciona y es cuando ambos componentes no funcionan. Esto implica que la probabilidad de que no funcione bajo el supuesto que los dos componentes son independientes es:
 
@@ -309,7 +310,7 @@ Con el fin de mejorar el servicio, se esta diseñando un sistema de turnos que a
 
 <br/>
 
-**Solución:**
+### <span style="color:#686868">**Solución:**</span>
 
 <br/>
 
@@ -356,7 +357,7 @@ knitr::include_graphics("img/diagrama6_22.png")
 <br/><br/>
 
 
-##  **Probabilidad Total**
+##  <span style="color:#034a94">**Probabilidad Total**</span>
 
 <br/>
 
@@ -370,7 +371,7 @@ knitr::include_graphics("img/particion1_22.png")
 
 
 <div class="content-box-gray">
-### <span style="color:#FF7F00"> **Nota**</span>
+### <span style="color:#686868"> **Nota**</span>
 
 Una partición de un conjunto de $S$ está formada por subconjuntos $A_{1}$, $A_{2}$, $\dots$ , $A_{n}$, que deben cumplir las siguiente propiedades :
 
@@ -424,9 +425,9 @@ En general :
 
 <div class="content-box-blue">
 
-**Definición: Regla de la probabilidad total**
+### <span style="color:#034a94">**Definición: Regla de la probabilidad total**</span>
 
-Dado una serie de eventos que conforman una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$, que son mutuamente excluyentes y exaustivos y un evento A, la probabilidad del evento A se expresa como :
+Dado una serie de eventos que conforman una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$, que son mutuamente excluyentes y exhaustivos y un evento A, la probabilidad del evento A se expresa como :
 
 $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k})P(A|E_{k})$$
 
@@ -448,7 +449,7 @@ $P(+5) = 0.06 + 0.28 +0.24 = 0.58$
 
 <br/><br/>
 
-##  **Teorema de Bayes**
+##  <span style="color:#034a94">**Teorema de Bayes**</span>
 
 <br/>
 
@@ -463,16 +464,19 @@ knitr::include_graphics("img/Thomas_Bayes.gif")
 
 <br/><br/> 
 
+<div class="content-box-gray">
+
 >El teorema de Bayes, que lleva el nombre del matemático británico del siglo XVIII **Thomas Bayes**, es una fórmula matemática para determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El teorema de Bayes proporciona una forma de revisar las predicciones o teorías existentes (actualizar las probabilidades) dada la evidencia nueva o adicional. En finanzas, el teorema de Bayes se puede utilizar para calificar el riesgo de prestar dinero a posibles prestatarios.
 >Tomado de  :[investopedia](https://www.investopedia.com/terms/b/bayes-theorem.asp) <br/> 
 >[Lectura recomendada](https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/)
 
+</div>
 
 <br/><br/>
 
 <div class="content-box-blue">
 
-### **Definición: Teorema de Bayes **
+### <span style="color:#034a94">**Definición: Teorema de Bayes **</span>
 
 Dado una serie de eventos que conforma una partición $E_{1}$, $E_{2}$, $E_{3}$, $\dots$, $E_{k}$ , que son mutuamente excluyentes y exhautivos, con probabilidad a priori $P(E_{1})$, $P(E_{2})$ $P(E_{3})$, $\dots$, $P(E_{k})$. Si ocurre un evento $A$, la probabilidad a posteriori de $E_{i}$ dados $A$, es la probabilidad condicional :
 
@@ -505,7 +509,7 @@ muestra la fecha de caducidad. ¿Cuál de los empleados es el más probable culp
 
 
 
-**Solución**:
+### <span style="color:#686868">**Solución**</span>
 
 Información
 
@@ -530,9 +534,9 @@ $$P(N) =  0.0020 +  0.0030+  0.0017 + 0.0008 =  0.0075$$
 <br/><br/>
 
 
-## **Aplicaciones**
+## <span style="color:#034a94">**Aplicaciones**</span>
 
-### **Árboles de decisión**
+### <span style="color:#034a94">**Árboles de decisión**</span>
 
 <br/>
 
@@ -555,15 +559,20 @@ method = "class")
 fancyRpartPlot(arbol)
 ```
 <br/>
+
+<center>
+<sub>
 Código basado en: https://www.youtube.com/watch?v=t0lmtrm_aa0
+</sub>
+</center>
 
 <br/><br/>
 
-**Resultados del árbol**
+### <span style="color:#034a94">**Resultados del árbol**</span>
 
 <br/>
 
-**Eventos** : 
+### <span style="color:#034a94">**Eventos**</span>  
 
 + $S$ : sobrevive
 + $S'$ : no sobrevive
@@ -572,7 +581,7 @@ Código basado en: https://www.youtube.com/watch?v=t0lmtrm_aa0
 
 <br/><br/>
 
-**Probabilidades:**
+### <span style="color:#034a94">**Probabilidades**</span>
 
 + $P(S') = 0.62$
 + $P(S) = 0.28$

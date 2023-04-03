@@ -36,7 +36,7 @@ Inicialmente se revisan los conceptos de **confianza** y **grados de libertad** 
 
 <br/><br/>
 
-## **Confianza**
+## <span style="color:#034a94">**Confianza**</span>
 
 Para explicar el concepto de confianza se simula 100 intervalos para la estimación de una media con valor de $\mu=100$, como se ve en la gráfica no todos los intervalos (representados por una línea) contienen el valor del parámetro, solo de color negro lo contiene.
 
@@ -51,7 +51,7 @@ Este valor se integra al concepto de intervalo de confianza mediante el término
 
 <br/><br/><br/>
 
-## **Grados de libertad**
+## <span style="color:#034a94">**Grados de libertad**</span>
 
 Una definicion de grados de libertad encontrada: [¿Qué son los llamados “grados de libertad”?](https://psicologiaexperimental.files.wordpress.com/2010/04/grados-de-libertad.pdf) escrito por : Roberto Behar y Pere Grima, los define como el número de dimensiones en los que se puede mover un valor por asignar. En el caso de una variable X, solo tenemos un grado de libertad para asignar este valor. En el caso de tener una variable bidimensional (X,Y), al momento de asignar valores a esta variable tenemos dos dimensiones = dos grados de libertad. Sin embargo que colocamos la restricción de que X+Y=10, perdemos un grado de libertad, dado que al colocar el primero, el segundo queda asignado por la restricción.
 
@@ -63,7 +63,7 @@ Como ejemplo supongamos que tenemos una muestras de datos formado por : $X_{1}$,
 
 
 
-## **Para una población**
+## <span style="color:#034a94">**Para una población**</span>
 
 
 Para una población puede ser de interés estimar el intervalo de confianza para su media ($\mu$), proporción ($p$) o su varianza ($\sigma^{2}$)
@@ -71,7 +71,7 @@ Para una población puede ser de interés estimar el intervalo de confianza para
 
 <br/><br/><br/>
 
-## **Para la media, con varianza conocida** 
+## <span style="color:#034a94">**Para la media, con varianza conocida**</span> 
 
 Partimos de dos valores que contiene el parámetro $\theta$
 
@@ -97,7 +97,7 @@ el intervalo de confianza para la media poblacional queda determinado por:
 
 <div class="content-box-blue">
 
-$$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}} $$
+$$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}}$$
 
 Supuestos:
 
@@ -108,7 +108,7 @@ Supuestos:
 
 <br/><br/><br/>
 
-## **Para la media, con varianza desconocida**
+## <span style="color:#034a94">**Para la media, con varianza desconocida**</span>
 
 En este caso se utiliza la distribución t-Student que presenta como parámetro n-1 grados de libertad
 
@@ -158,7 +158,7 @@ Este caso también se utiliza cuando se desconoce la distribución de la variabl
 
 <br/><br/>
 
-**Solución** 
+### <span style="color:#686868">**Solución**</span> 
 
 La estimación del tiempo que demora el pago de una factura es un valor de importancia tanto para empresarios como para proveedores, pues esta información se utiliza para la programación de gastos e ingresos. El problema nos suministra la siguiente información:
 
@@ -179,7 +179,7 @@ El tiempo promedio transcurrido entre la facturación y el pago en la empresa es
 
 <br/><br/><br/>
 
-## **Tamaño de la muestra para estimar una media**
+## <span style="color:#034a94">**Tamaño de la muestra para estimar una media**</span>
 
 Uno de los problemas más frecuentes a los que nos enfrentamos es la determinación del tamaño de la muestra para realizar una estimación de la media que garantice una confianza del $(1-\alpha)\%$
 
@@ -195,8 +195,10 @@ Entonce podemos tener la confianza del $(1-\alpha)\%$ de que el error no exceda 
 $$e= z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$$
 
 $$e^{2}= z_{\alpha/2}^{2} \frac{\sigma^{2}}{n}$$
+<div class="content-box-blue">
 
 $$n = \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}$$
+</div>
 
 <br/><br/>
 
@@ -206,7 +208,7 @@ Se desea estimar la media de las personas que han fallecido por Covid19 en Colom
 
 <br/><br/>
 
-**Solución**
+### <span style="color:#686868">**Solución**</span>
 
 Información:
 
@@ -239,7 +241,7 @@ round(n,0)  # redondeo a entero
 
 <br/><br/>
 
-## **Para la proporción** 
+## <span style="color:#034a94">**Para la proporción**</span> 
 
 La construcción del intervalo de confianza para una proporción es similar al proceso realizado en la construcción de la media, bajo el supuesto de $np>10$ que permite la aproximación a una distribución normal
 
@@ -247,9 +249,9 @@ $$\widehat{p} \sim N\Bigg(p, \frac{p(1-p)}{n}\Bigg)$$
 
 por tanto
 
-$$\Bigg[ \hspace{.3cm} ^\widehat{p}-z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.2cm};\hspace{.2cm} \widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.3cm} \Bigg] $$
+$$\Bigg[ \hspace{.3cm}\widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.2cm};\hspace{.2cm} \widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.3cm} \Bigg] $$
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 $$IC_{p}: \widehat{p} \pm z_{\alpha/2} \hspace{.1cm}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$$
 
@@ -268,7 +270,7 @@ En una encuesta aleatoria realizada a 500 familias de la ciudad que poseen telev
 
 <br/><br/>
 
-**Solución** 
+### <span style="color:#034a94">**Solución**</span> 
 
 ```{r}
 prop.test(340,500)$conf.int
@@ -281,7 +283,9 @@ De acuerdo con el resultado anterior, se puede afirmar con una confianza del 95%
 <br/><br/><br/>
 
 
-## **Tamaño de muestra para la estimación de una proporción**
+## <span style="color:#034a94">**Tamaño de muestra para la estimación de una proporción**</span>
+
+<div class="content-box-blue">
 
 $$n=\dfrac{z_{\alpha/2}^{2}\hspace{.3cm} p(1-p)}{e^{2}}$$
 Donde :
@@ -292,6 +296,8 @@ Donde :
 
 + $e$ : el error de muestreo que representa la tolerancia al erro que tiene el investigador ($|\widehat{p}-p|<e$).
 
+</div>
+
 <br/><br/><br/>
 
  ### <span style="color:#FF7F00"> **Ejemplo**</span>
@@ -300,7 +306,7 @@ Una empresa requiere realizar un estudio para establecer las proporción de fall
 
 <br/><br/>
 
-**Solución**
+### <span style="color:#686868">**Solución**</span>
 
 Información de la solicitud: 
 
@@ -321,7 +327,7 @@ De acuerdo con la información sumunistrada por la empresa, el tamaño de muestr
 
 <br/><br/><br/>
 
-## **Para una varianza** 
+## <span style="color:#034a94">**Para una varianza**</span> 
 
 En el caso del intervalo de confianza para la varianza se parte de la premisa de que la variable $ X^{2}$ sigue una distribución chi-cuadrado con $(n-a)$ grados de libertad
 
@@ -339,7 +345,7 @@ finalmente tenemos
 
 $$P\Bigg( \frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2}} \leq \sigma^{2} \leq \frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2}} \Bigg)=1-\alpha$$
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
+<div class="content-box-blue">
 
 
 $$IC_{\sigma^{2}}: \Bigg( \displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{1-\alpha/2 ; v=n-1}} ;\displaystyle\frac{(n-1)S^{2}}{\chi^{2}_{\alpha/2; v=n-1}} \Bigg)$$

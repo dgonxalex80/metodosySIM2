@@ -39,10 +39,10 @@ Las etapas de la  Metodología Estadística nos permiten ubicar los temas aborda
 #### 4. **Diseño del experimento**
 #### 5. **Recolección de la información**
 #### 6. **Procesamiento de los datos**
-#### 7. <span style="color:#FF7F00">**Análisis descriptivo o exploratorio de datos**</span>
+#### 7. <span style="color:#034A94">**Análisis descriptivo o exploratorio de datos**</span>
 #### $\hspace{.5cm}$    <span style="color:#999999">**Probabilidad**</span>
 #### $\hspace{.5cm}$    <span style="color:#999999">**Variable aleatoria**</span>
-#### 8. <span style="color:#FF7F00">**Inferencia estadística**</span>
+#### 8. <span style="color:#034A94">**Inferencia estadística**</span>
 #### 9. **Conclusiones y recomendaciones**
 
 </div>

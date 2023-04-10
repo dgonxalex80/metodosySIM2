@@ -58,13 +58,16 @@ $$\lim_{n \to{+}\infty} P(A)=\Bigg[ \dfrac{\text{número de veces que ocurre A}}
 
 <br/><br/>
 
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/penalti.gif")
+<center>
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/arco.png")
 ```
+<sub>
+Tomada de iStock.com
+</sub>
+</cente>
 
-
-Si observamos el cobro de un "penalti" en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 6 : parte baja derecha, parte alta derecha, parte baja al centro, parte alta central, parte baja izquierda y parte alta izquierda. Por su parte el arquero piensa también es estos lugrares para evitar que el disparo termine en gol. Ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.
+Si observamos el cobro de un "penalti" en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 9 : (1) parte baja a su izquierda, (2) baja al centro, (3) baja a su derecha, (4) parte media a su izquierda, (5) media al medio, (6)  parte centro a laderecha  y finalmente (7) parte superior a su izquierda, (8) parte superior al centro y (9) parte superior a su derecha . Por su parte el arquero piensa también es estos lugrares para evitar que el disparo termine en gol. Ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.
 
 <br/>
 

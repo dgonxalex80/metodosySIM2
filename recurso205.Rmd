@@ -49,8 +49,8 @@ $$\begin{equation*}
 
 <br/><br/>
 
-$X \sim unif(x, a=0 , b=1)$
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 # uniforme
 library(ggplot2)
@@ -62,7 +62,8 @@ scale_y_continuous(limits=c(0,1.2))+
 geom_line(size = 1, color="#FF7F00") 
 ```
 
-
+**Figura 2.23** Función de densidad uniforme - $X \sim unif(x, a=0 , b=1)$
+</center>
 <br/><br/>
 
 ### <span style="color:#034a94">**normal**</span>
@@ -106,7 +107,10 @@ $$V[X]=\sigma^{2}$$
 
 En la siguente gráfica se muestra el efecto en la curva normal, producto de cambios en la media o en la varianza. A mayor valor de la media la curva se desplaza a la derecha, mientras que a menor varianza la curva se vuelve mas angosta o puntiaguda 
 
-Distribuciones normales : <span style="color:#034A94">$X \sim N(0,1)$</span>, <span style="color:#FF7F00"> $X \sim N(0,1.5)$</span> y <span style="color:#686868"> $X \sim N(2,1.5)$</span>
+
+
+
+<center>
 
 ```{r, echo=FALSE, fig.height=3.5}
 # Distribucion normal
@@ -117,8 +121,11 @@ p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1.5,colour = "#FF7F00", 
 ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = "#686868", p=p)
 ```
 
+**Figura 2.24** Función de densidad normal : <span style="color:#034A94">$X \sim N(0,1)$</span>, <span style="color:#FF7F00"> $X \sim N(0,1.5)$</span> y <span style="color:#686868"> $X \sim N(2,1.5)$</span>
 
+</center>
 
+<br/>
 
 Dentro del sin número de posibles curvas que se pueden obtener con los parámetros $\mu$ y $\sigma^{2}$, existe una muy especial. Normal estándar ($N(0,1)$) con $\mu=0$ y $\sigma^{2}=1$.  La gran mayoría de libros de Estadística poseen tablas de la función de distribución acumulada de la normal estándar.\\
 
@@ -138,26 +145,31 @@ a este proceso se le llama comúnmente estandarizar.
 </div> 
 
 
-### <span style="color:#034a94">**normal estándar**</span>
+<center>
 
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggfortify)
 ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = "#FF7F00")
 ```
 
+**Figura 2.25** Función de densidad normal estandar $Z \sim N(0,1)$
+</center>
+
 <br/><br/>
 
-
+### <span style="color:#034a94">**Propiedad empírica de la distribución normal estandar**</span>
 
 La propiedad empírica de la distribución normal es de gran ayuda cuando una variable  de interés se  puede aproximar al modelo normal. Ella establece un intervalo formado por la media mas o menos una desviación estándar contiene el 68\% de los datos. Si el intervalo tiene un ancho de 4 desviaciones estándar contendrá el 95\% de los datos y si este intervalo corresponde a los valores de la media mas o menos 3 desviaciones estándar contendrá el 99\% de los datos que se representa en la siguiente gráfica.
 
 
-### <span style="color:#034a94">**Propiedad empírica de la distribución normal estandar**</span>
 
 
+<center>
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/norm01.png")
 ```
+**Figura 2.26** Propiedades empiricas de la distribución normal estandar
+
 
 <br/><br/>
 
@@ -198,7 +210,7 @@ $$F(x)=P(X \leq x)=1-e^{-\lambda x} \hspace{1cm} x > 0$$
 <br/><br/>
 
 
-Distribuciones exponenciales : <span style="color:#FF7F00"> $X\sim exp(x,\lambda=1)$</span>, <span style="color:#034A94"> $X\sim exp(x,\lambda=2)$</span> y <span style="color:#686868"> $X\sim exp(x,\lambda=5)$</span>
+<center>
 
 ```{r, echo=FALSE, fig.height=3.5}
 #exponencial
@@ -207,15 +219,22 @@ p=ggdistribution(dexp, seq(0, 10, 0.1),rate=1 ,colour = "#FF7F00")
 p=ggdistribution(dexp, seq(0, 10, 0.1),rate=2 ,colour ="#034A94", p=p)
 ggdistribution(dexp, seq(0, 10, 0.1),rate=0.5,colour = "#686868", p=p)
 ```
+<br/>
+**Figura 2.27** Función de densidad exponencial <br/> <span style="color:#FF7F00"> $X\sim exp(x,\lambda=1)$</span>, <span style="color:#034A94"> $X\sim exp(x,\lambda=2)$</span> y <span style="color:#686868"> $X\sim exp(x,\lambda=5)$</span>
+</center>
+
+<br/><br/>
 
 
-### <span style="color:#034a94">**Distribución exponencial acumulad**</span>
 
-
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggfortify)
 ggdistribution(pexp, seq(0, 10, 0.1),rate=1 ,colour = "#FF7F00")
 ```
+
+**Figura 2.28** Distribución exponencial acumulada
+</center>
 
 <br/><br/>
 
@@ -280,7 +299,7 @@ $$V[X]= \dfrac{r}{\lambda^{2}}$$
 
 <br/><br/>
 
-Distribuciones : <span style="color:#FF7F00">$X\sim gamma(x, \alpha=3,\beta=1)$</span>, <span style="color:#034A94">$X\sim gamma(x, \alpha=2,\beta=1)$</span> y <span style="color:#686868">$X\sim gamma(x, \alpha=5,\beta=1)$</span>
+<center>
 
 ```{r, echo=FALSE, fig.height=3.5}
 # gamma
@@ -290,8 +309,10 @@ p=ggdistribution(dgamma, seq(0, 15, 0.1),shape=2,rate=1 ,colour = "#034A94", p=p
 ggdistribution(dgamma, seq(0, 15, 0.1),shape=5,rate=1,colour = "#686868", p=p)
 
 ```
+<br/>
+**Figura 2.29** Función de densidad gamma <span style="color:#FF7F00">$X\sim gamma(x, \alpha=3,\beta=1)$</span>, <br/> <span style="color:#034A94">$X\sim gamma(x, \alpha=2,\beta=1)$</span> y <span style="color:#686868">$X\sim gamma(x, \alpha=5,\beta=1)$</span>
 
-
+</center>
 
 
 ```{r}
@@ -327,7 +348,7 @@ $$F(x)=1-\exp{\Big\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Big\}} $$
 
 </div> 
 
-Distribuciones : <span style="color:#FF7F00">$X \sim Weibull(0.8, 1)$</span>, <span style="color:#034A94"> $X \sim Weibul(2,1)$</span> y <span style="color:#686868"> $X \sim Weibull(2,2)$</span>
+<center>
 
 ```{r, echo=FALSE, fig.height=3.5}
 # weibull
@@ -336,9 +357,10 @@ p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=0.8,scale=1 ,colour = "#FF7F00"
 p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=1 ,colour = "#034A94", p=p)
 ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=2,colour = "#686868", p=p)
 ```
+<br/>
+**Figura 2.30** Función de densidad Weibull - <span style="color:#FF7F00">$X \sim Weibull(0.8, 1)$</span>, <br/> <span style="color:#034A94"> $X \sim Weibul(2,1)$</span> y <span style="color:#686868"> $X \sim Weibull(2,2)$</span>
 
-
-
+</center>
 <br/><br/>
 
 

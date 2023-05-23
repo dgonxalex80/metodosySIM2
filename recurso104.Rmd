@@ -13,11 +13,13 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 Las probabilidade puede definirse para eventos simples ($A$, $B$,...) o compuestos ($(A \cup B)$, $(A \cap B)$, $(B|A)$ ) que incluyen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
 
+<center>
 <br/><br/>
 
 :::: {style="display: flex;"}
 ::: {}
 
+**Tabla 2.1** Distribución de probabilidades 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/tabla1_22.png")
 ```
@@ -25,13 +27,16 @@ knitr::include_graphics("img/tabla1_22.png")
 :::
 ::: {}
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/diagrama5_22.png")
 ```
-:::
+**Figura 2.2** Diagrama de Venn
 
+:::
 ::::
 
+</center>
 <br/><br/>
 
 ## <span style="color:#034a94">**Probabilidad simple o marginal**</span>
@@ -104,9 +109,11 @@ $P(A \cap B)$ con la probabilidad de $A$, $P(A)$.
 Supongamos que se tiene la siguiente información escrita en una tabla de doble entrada o tabla cruzada que contiene dos eventos $A$ y $B$.  En la siguiente tabla se representan los tres tipos de probabilidad :
 <br/>
 
+<center>
 :::: {style="display: flex;"}
 ::: {}
 
+**Tabla2.2** Distribución frecuencias absolutas
 ```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/tabla2_22.png")
 ```
@@ -114,14 +121,16 @@ knitr::include_graphics("img/tabla2_22.png")
 :::
 ::: {}
 
+**Tabla 2.3**  Frecuencias relativas
 ```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/tabla4_22.png")
 ```
+
 :::
 
 ::::
 
-
+</center>
 
 <br/><br/>
 
@@ -160,9 +169,12 @@ Esta información tambien se puede representar como un diagrama de árbol
 
 <br/>
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/arbol1_22.png")
 ```
+**Figura 2.3**  Diagrama de árbol de probabilidades
+</center>
 
 <br/><br/>
 
@@ -170,9 +182,12 @@ O también como un diagrama de Venn:
 
 <br/>
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/diagrama5_22.png")
 ```
+**Figura 2.4** Diagrama de Venn de probabilidades
+</center>
 
 <br/><br/>
 
@@ -232,10 +247,13 @@ $$P(A' \cap B') = P(A') P(B')$$
 :::
 :::{} 
 
+<center>
+**Tabla 2.4** Probabilidades conjuntas y marginales
+
 ```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 knitr::include_graphics("img/tabla1_22.png")
 ```
-
+</center>
 
 :::
 ::::
@@ -252,11 +270,13 @@ En el caso que se cumplan todas las condiciones, diremos que los eventos son ind
 Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con probabilidad de funcionamiento $P(A_{1}) = 0.90$  y $P(A_{2}) = 0.95$ . Determinar la probabilidad de que el componente funcione.
 
 
+<center>
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/circuito1.png")
 ```
 
-
+**Figura 2.5** Dispocisión de compomentes en serie
+</center>
 
 <br/><br/>
 
@@ -275,10 +295,13 @@ $$P(A_{1} \cap A_{2}) = P(A_{1}) P(A_{2}) = 0.90 \times  0.95 = 0.855$$
 
 Ahora supongamos que el circuito anterior está conectado en paralelo. Determinar la probabilidad de que el circuito funciones
 
+<center>
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/circuito2.png")
 ```
 
+**Figura 2.6** Dispocisión de compomentes en paralelo
+</center>
 
 
 <br/><br/>
@@ -336,9 +359,13 @@ Definimos los siguientes eventos :
 
 <br/><br/>
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/diagrama6_22.png")
 ```
+**Figura 2.7** Árbol de probabilidades margiles y condicionales
+</center>
+
 
 <br/>
 
@@ -363,9 +390,13 @@ knitr::include_graphics("img/diagrama6_22.png")
 
 Ahora supongamos que el espacio muestral esta formado por un conjunto de eventos lo podemos representar como una partición del conjunto $S$ así :
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/particion1_22.png")
 ```
+
+**Figura 2.8** Partición del espacion muestral
+</center>
 
 <br/><br/>
 
@@ -389,17 +420,24 @@ En nuestro caso podemos tener solo cinco particiones para simplificar el procedi
 
 <br/>
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/particion2_22.png")
 ```
+**Figura 2.9** Partición del espacio muestral con evento B 
+</center>
 
 <br/><br/>
 
 Pdemos reasaltar los conjuntos que conforman a $B$ :
 
+<center>
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/particion3_22.png")
 ```
+
+**Figura 2.10** Evento B representado por subconjuntos 
+</center>
 
 <br/><br/>
 
@@ -453,10 +491,12 @@ $P(+5) = 0.06 + 0.28 +0.24 = 0.58$
 
 <br/>
 
-
+<center>
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
 knitr::include_graphics("img/Thomas_Bayes.gif")
 ```
+**Figura 2.11** Tomas Bayes (1701-1761) 
+</center>
 
 <br/>
 
@@ -540,6 +580,7 @@ $$P(N) =  0.0020 +  0.0030+  0.0017 + 0.0008 =  0.0075$$
 
 <br/>
 
+
 ```{r}
 #  install.packages("titanic")  # instalar paquete titatic
 library(titanic) #  cargar paquete
@@ -561,6 +602,9 @@ fancyRpartPlot(arbol)
 <br/>
 
 <center>
+**Figura 2.12** Árbol de probabilidades Titanic 
+</center>
+
 <sub>
 Código basado en: https://www.youtube.com/watch?v=t0lmtrm_aa0
 </sub>

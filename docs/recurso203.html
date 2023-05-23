@@ -414,7 +414,10 @@ $(document).ready(function () {
 aleatoria bivariada <span class="math inline">\((X,Y)\)</span> que se
 define en un rango formado en un plano y cuyo valor de probabilidad
 genera un volumen como se muestra en la siguiente figura:</p>
-<p><img src="recurso203_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<center>
+<img src="recurso203_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+<br/> <strong>Figura 2.15</strong> Distribución normal bivariada
+</center>
 <p><br/></p>
 <div id="introducción" class="section level2">
 <h2><span
@@ -470,6 +473,9 @@ arreglo esta dado por <span class="math inline">\(Y\)</span> con <span
 class="math inline">\(R_{Y}=\{1,2,3\}\)</span>. Su función de
 probabilidad conjunta para <span class="math inline">\(X,Y\)</span> está
 dada por :</p>
+<p><br/></p>
+<center>
+<p><strong>Tabla 2.5</strong> Distribución conjunta de X,Y</p>
 <table>
 <thead>
 <tr class="header">
@@ -511,6 +517,7 @@ dada por :</p>
 </tr>
 </tbody>
 </table>
+</center>
 <p>Para verificar que <span class="math inline">\(f(xy)\)</span>
 conforme una función de distribución de probabilidad conjunta
 verificamos que la suma de todas las probabilidades de 1</p>
@@ -524,7 +531,10 @@ fxy</code></pre>
 <pre><code>[1] 1</code></pre>
 <p>El gráfico de la función de distribución conjunta se puede realizar
 de la siguiente forma:</p>
+<center>
 <p><img src="recurso203_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<strong>Figura 2.16</strong> Distribución conjunta discreta-discreta
+</center>
 <p><br/><br/></p>
 </div>
 <div id="probabilidad-marginal" class="section level3">
@@ -551,6 +561,7 @@ class="math inline">\(Y\)</span> al margen de <span
 class="math inline">\(X\)</span>) como <span
 class="math display">\[h(y)=f_{_{Y}}(y)=\sum_{x=x_{(1)}}^{x_{(n)}}f_{_{X,Y}}(x,y)\]</span></p>
 </div>
+<p><br/></p>
 </div>
 <div id="ejemplo-1" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
@@ -806,7 +817,12 @@ Ifxy$integral</code></pre>
 <p><br/><br/></p>
 <p>Su representación gráfica</p>
 <p><br/><br/></p>
-<p><img src="img/Figura318.png" width="50%" style="display: block; margin: auto;" /></p>
+<img src="img/Figura318.png" width="50%" style="display: block; margin: auto;" />
+<strong>Figura 2.17</strong> Distribución conjunta <span
+class="math inline">\(f(x,y)= x+y\)</span> para <span
+class="math inline">\(0 \leq x \leq 1\)</span> y <span
+class="math inline">\(0 \leq y \leq 1\)</span>
+</center>
 <p><br/><br/></p>
 </div>
 <div id="densidad-marginales" class="section level3">
@@ -963,16 +979,41 @@ lineal entre dos variables. <span class="math inline">\(-1 \leq \rho
 \leq 1\)</span></p>
 </div>
 <p><br/><br/></p>
-<div id="escala-para-interpretación-para-la-correlación"
-class="section level3">
-<h3><span style="color:#034a94"><strong>Escala para interpretación para
-la correlación</strong></span></h3>
+<center>
+<p><strong>Tabla 2.5</strong> Escala para interpretación para la
+correlación</p>
 <p><img src="img/Rho.png" width="100%" style="display: block; margin: auto;" /></p>
+</center>
 <p><br/><br/></p>
-<p><img src="img/Rho1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="img/Rho2.png" width="100%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="img/Rho1.png" width="100%" style="display: block; margin: auto;" />
+<strong>Figura 2. 16</strong> Correlaciones negativas (a) <span
+class="math inline">\(\rho = -1.0\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span> (b) <span
+class="math inline">\(\rho = -0.90\)</span>. <br/> (c) <span
+class="math inline">\(\rho = -0.75\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span>(d) <span
+class="math inline">\(\rho = -0.50\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span> (e) <span
+class="math inline">\(\rho = -0.25\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span> (f) <span
+class="math inline">\(\rho = 0.0\)</span>.
+</center>
+<center>
+<img src="img/Rho2.png" width="100%" style="display: block; margin: auto;" />
+<strong>Figura 2. 17</strong> Correlaciones positivas (a) <span
+class="math inline">\(\rho = 0.10\)</span>.<span
+class="math inline">\(\hspace{.5cm}\)</span> (b) <span
+class="math inline">\(\rho = 0.25\)</span>. <br/> (c) <span
+class="math inline">\(\rho = 0.50\)</span>.<span
+class="math inline">\(\hspace{.5cm}\)</span> (d) <span
+class="math inline">\(\rho = 0.75\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span> (e) <span
+class="math inline">\(\rho = 0.90\)</span>. <span
+class="math inline">\(\hspace{.5cm}\)</span> (f) <span
+class="math inline">\(\rho = 1.0\)</span>.
+</center>
 <p><br/><br/><br/></p>
-</div>
 <div id="independencia" class="section level2">
 <h2><span
 style="color:#034a94"><strong>Independencia</strong></span></h2>
@@ -989,13 +1030,15 @@ class="math inline">\(h(y)\)</span>, respectivas, entonces se dice que
 las variables X y Y son estadísticamente independientes si:</p>
 <p><span class="math display">\[f(x,y)= g(x) h(y) \]</span></p>
 </div>
+<p><br/><br/></p>
 <div id="ejemplo-6" class="section level3">
 <h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></h3>
-<p><span class="math display">\[\bigg(x+\dfrac{1}{2}\bigg) \bigg(y +
-\dfrac{1}{2}\bigg) = xy + \dfrac{x}{2} + \dfrac{y}{2} + \dfrac{1}{4}
-\neq (x+y)  \]</span> Por tal razón las variables <span
-class="math inline">\(X\)</span> y <span
-class="math inline">\(Y\)</span> no son independientes.</p>
+<p><span class="math display">\[(x+y) \neq  \bigg(x+\dfrac{1}{2}\bigg)
+\bigg(y + \dfrac{1}{2}\bigg) = xy + \dfrac{x}{2} + \dfrac{y}{2} +
+\dfrac{1}{4} \]</span> <br/></p>
+<p><span class="math display">\[f(x,y) \neq  g(x) h(y) \]</span></p>
+<p>Por tal razón las variables <span class="math inline">\(X\)</span> y
+<span class="math inline">\(Y\)</span> no son independientes.</p>
 <p><br/><br/><br/></p>
 </div>
 </div>

@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 Cuando se estudian dos variables al tiempo se conforma una variable aleatoria bivariada $(X,Y)$ que se define en un rango formado en un plano y cuyo valor de probabilidad genera un volumen como se muestra en la siguiente figura: 
 
+<center>
+
 ```{r, echo=FALSE}
 # tomada de:
 # http://pj.freefaculty.org/R/WorkingExamples/plot-3d-MVNormal-1.R
@@ -34,6 +36,9 @@ expand=.4,
 axes=TRUE,
 col="#034A94")
 ```
+<br/>
+**Figura 2.15** Distribución normal bivariada
+</center>
 
 <br/>
 
@@ -74,6 +79,11 @@ la cual debe cumplir con las siguientes características:
 
 El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un día y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por $Y$ con $R_{Y}=\{1,2,3\}$. Su función de probabilidad conjunta para $X,Y$ está dada por : 
 
+<br/>
+
+<center>
+**Tabla 2.5** Distribución conjunta de X,Y 
+
 |    |        |       |  $x$ |      |
 |:--:|:------:|:-----:|:----:|:----:|
 |    |$f(x,y)$| 1     |  2   |  3   |
@@ -81,6 +91,7 @@ El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un 
 |    |  2     | 0.05 | 0.10 | 0.35  |
 |    |  3     | 0     | 0.20 | 0.10 |
 
+</center>
 
 Para verificar que $f(xy)$ conforme una función de distribución de probabilidad conjunta verificamos que la suma de todas las probabilidades de 1
 
@@ -92,7 +103,7 @@ sum(fxy)
 
 El gráfico de la función de distribución conjunta se puede realizar de la siguiente forma:
 
-
+<center>
 ```{r, echo=FALSE}
 x=c(0,0,0,1,1,1,2,2,2)
 y=c(0,1,2,0,1,2,0,1,2)
@@ -110,7 +121,8 @@ col.grid = "darkblue",
 add_lines=TRUE)
 ```
 
-
+**Figura 2.16** Distribución conjunta discreta-discreta 
+</center>
 
 
 <br/><br/>
@@ -130,6 +142,7 @@ $$h(y)=f_{_{Y}}(y)=\sum_{x=x_{(1)}}^{x_{(n)}}f_{_{X,Y}}(x,y)$$
 
 </div> 
 
+<br/>
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
@@ -329,6 +342,8 @@ Su representación gráfica
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/Figura318.png")
 ```
+**Figura 2.17** Distribución conjunta $f(x,y)= x+y$ para $0 \leq x \leq 1$ y $0 \leq y \leq 1$
+</center>
 
 <br/><br/>
 
@@ -490,23 +505,31 @@ La correlación es una medida que mide el grado de asociación lineal entre dos 
 
 <br/><br/>
 
-### <span style="color:#034a94">**Escala para interpretación para la correlación**</span>
+<center>
+**Tabla 2.5** Escala para interpretación para la correlación
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rho.png")
 ```
 
+</center>
+
 <br/><br/>
 
-
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rho1.png")
 ```
+**Figura 2. 16**  Correlaciones negativas (a) $\rho = -1.0$. $\hspace{.5cm}$ (b) $\rho = -0.90$. <br/> (c) $\rho = -0.75$.  $\hspace{.5cm}$(d) $\rho = -0.50$. $\hspace{.5cm}$ (e) $\rho = -0.25$. $\hspace{.5cm}$ (f) $\rho = 0.0$.
+</center>
 
+
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/Rho2.png")
 ```
-
+**Figura 2. 17**  Correlaciones positivas  (a) $\rho = 0.10$.$\hspace{.5cm}$ (b) $\rho = 0.25$.  <br/> (c) $\rho = 0.50$.$\hspace{.5cm}$  (d) $\rho = 0.75$. $\hspace{.5cm}$ (e) $\rho = 0.90$. $\hspace{.5cm}$ (f) $\rho = 1.0$.
+</center>
 
 <br/><br/><br/>
 
@@ -521,10 +544,16 @@ Sean $X$ y $Y$ dos variables aleatorias discretas o continuas con función de pr
 $$f(x,y)= g(x) h(y) $$
 </div> 
 
+<br/><br/>
+
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 
-$$\bigg(x+\dfrac{1}{2}\bigg) \bigg(y + \dfrac{1}{2}\bigg) = xy + \dfrac{x}{2} + \dfrac{y}{2} + \dfrac{1}{4} \neq (x+y)  $$
+$$(x+y) \neq  \bigg(x+\dfrac{1}{2}\bigg) \bigg(y + \dfrac{1}{2}\bigg) = xy + \dfrac{x}{2} + \dfrac{y}{2} + \dfrac{1}{4} $$
+<br/>
+
+$$f(x,y) \neq  g(x) h(y) $$
+
 Por tal razón las variables $X$ y $Y$ no son independientes.
 
 

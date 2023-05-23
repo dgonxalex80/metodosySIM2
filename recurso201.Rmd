@@ -75,10 +75,11 @@ $$S =\{(s,s,s),(s,s,c),(s,c,s),(s,c,c),(c,s,s),(c,s,c),(c,c,s),(c,c,c)\} $$
 
 
 
+<center>
 
 ![](img/Figura301.png){width=60%}<br/>
-
-
+**Figura 2.13** Relación espacio muestral, rango, variable aleatoria
+</center>
 <br/>
 
 Donde :
@@ -199,7 +200,11 @@ scale_x_continuous(limits = c(0, 20),
        x= "x",
        y= "f(x)")
 ```
+
+**Figura 2.14** Distribución binomial $n=20$, $p=0.70$
 </center>
+
+<br/>
 
 <center>
 ```{r, echo=FALSE, fig.height=3.5}
@@ -215,6 +220,8 @@ ggplot() +
        x= "x",
        y= "F(x)")
 ```
+<br/>
+**Figura 2.14** Distribución acumulada binomial $n=20$, $p=0.70$
 </center>
 
 <br/>
@@ -320,6 +327,12 @@ ggplot() +
                 lwd = 1,
                 linetype = 1)
 ```
+<br/>
+**Figura 2.14** Distribución exponencial $\lambda = 1/4$
+</center>
+
+<br/>
+
 </center>
 
 Para tener la seguridad que $f(x)$ puede ser una función de densidad de probabilidad se debe verificar

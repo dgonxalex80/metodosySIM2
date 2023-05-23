@@ -128,8 +128,9 @@ $$V[X]= np(1-p) $$
 
 </div> 
 
-$X \sim binom(x,n=10,p=0.30)$
+<br/></br>
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggplot2)
 # modelo binomial  ok
@@ -143,6 +144,9 @@ scale_x_continuous(limits = c(0, 10),
 breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
 labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 ```
+
+**Figura 2.18**  Función de distribución binomial $X \sim binom(x,n=10,p=0.30)$
+</center>
 
 <br/><br/>
 
@@ -189,8 +193,8 @@ La variable objeto de estudio $X$ es el **número de eventos que ocurren por uni
 </div> 
 La siguiente gráfica representa la distribución de masa de una variable de Poisson con media 2.
 
-$X \sim poiss(x,\lambda=2)$
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 # poiss ok
 library(ggplot2)
@@ -204,8 +208,13 @@ scale_x_continuous(limits = c(0, 10),
 breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
 labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 ```
+<br/>
+**Figura 2.19**  Función de distribución Poisson $X \sim poiss(x,\lambda=2)$
+</center>
 
 <br/><br/>
+
+
 
 
 ## <span style="color:#034a94">**hipergeometrico**</span>
@@ -238,8 +247,8 @@ $$V[X]=n\Bigg(\frac{K}{N}\Bigg) \Bigg(1-\dfrac{K}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}
 
 </div> 
 
-$X \sim hyperg(x, m=95, n=5, k=10)$
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 # hyper ok
 library(ggplot2)
@@ -253,6 +262,9 @@ scale_x_continuous(limits = c(5, 10),
 breaks = c(5,6,7,8,9,10), 
 labels = c('5','6','7','8','9','10'))
 ```
+<br/>
+**Figura 2.20** Función de distribución hipergeometrica $X \sim hyperg(x, m=95, n=5, k=10)$
+</center>
 
 <br/><br/>
 
@@ -305,8 +317,8 @@ Nota: En R la variable corresponde al **número de fracasos necesarios para obte
 
 
 
-$X \sim geom(x,p=0.5)$
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 # geom 
 library(ggplot2)
@@ -320,8 +332,9 @@ scale_x_continuous(limits = c(1, 10),
 breaks = c(1,2,3,4,5,6,7,8,9,10), 
 labels = c('1','2','3','4','5','6','7','8','9','10'))
 ```
-
-
+<br/>
+**Figura 2.21** Función de distribución geométrica o de Pascal - $X \sim geom(x,p=0.5)$
+</center>
 <br/><br/>
 
 ## <span style="color:#034a94">**binomial negativo**</span>
@@ -360,9 +373,9 @@ $$V[X]=\dfrac{r(1-p)}{p^{2}}$$
 <br/><br/>
 
 
-$X \sim nbiom(x,k=2, p=0.50)$
 
 
+<center>
 ```{r, echo=FALSE, fig.height=3.5}
 # nbiom
 library(ggplot2)
@@ -376,7 +389,8 @@ scale_x_continuous(limits = c(2, 10),
 breaks = c(2,3,4,5,6,7,8,9,10), 
 labels = c('2','3','4','5','6','7','8','9','10'))
 ```
-
-
+<br/>
+**Figura 2.22** Función de distribución binomial negativa - $X \sim nbiom(x,k=2, p=0.50)$
+</center>
 <br/><br/>
 

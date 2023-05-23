@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 ```
 
-<br/><br/><br/>
+<br/><br/>
 
 
 # <span style="color:#034a94">**Valor esperado**</span>
@@ -128,9 +128,15 @@ $$
 
 
 
+<br/>
+
 $$E(X)=\displaystyle\sum\limits_{x=0}^{20}x_{i} 	\displaystyle\binom{20}{x_{i}}(0.7)^{x_{i}}(0.3)^{20-x_{i}} = 14$$ 
+<br/>
 
 Se puede verificar que $V[X] = E[X^2] - E[X]^2 = 4.199829$
+
+<br/>
+
 
 Este resultado nos indica que en promedio asisten al restaurante 14 personas de las veinte reservas aceptadas, con una varianza de 4.2 de la cual podemos obtener la desviación estándar y el coeficiente de variación
 

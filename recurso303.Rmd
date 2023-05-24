@@ -10,14 +10,19 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-Los estimadores son variables aleatorias que toman su valor de los datos obtenidos en una muestra y que siguen una distribución conocida (distribuciones muestrales), pero además poseen propiedades deseables como son : insesgadez, eficiencia, consistencia entre otras. Con la siguiente figura se representa de manera figurativa lo que pueden ser estas propiedades 
+Los estimadores son variables aleatorias que toman su valor de los datos obtenidos en una muestra y que siguen una distribución conocida (distribuciones muestrales), pero además poseen propiedades deseables como son : insesgadez, eficiencia, consistencia entre otras. Con la figura 2.36 se representa de manera figurativa lo que pueden ser estas propiedades 
 
+<br/>
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+<center>
+
+```{r, echo=FALSE, out.width="90%", fig.align = "center"}
 knitr::include_graphics("img/estimador.png")
 ```
+**Figura 2.36** Caracteristicas de los estimadores (a) baja varianza con sesgo   (b) alta varianza con sesgo  <br/> (c) baja varianza sin sesgo (d) alta varianza sin sesgo.
+</center>
 
-En el centro se ubica el parámetro desconocido y que tratamos de estimar utilizando para ello el estimador apropiado (figurativamente el arma que utilizamos).  En la figura 1 tenemos el resultado de un arma (estimador 1) que aunque tiene una alta precisión  ( poca varianza), presenta un desvío del centro  (sesgo). En la segunda figura se presenta el resultado de otra arma (estimador 2) que al igual que la primera que presenta un desvío del centro (sesgo), presenta una mayor varianza. La figura 3 representa el arma ideal (no tiene sesgo y poca varianza) y por último la figura 4 que en promedio diríamos que está centrada (no sesgo), presenta una variación alta.
+En el centro se ubica el parámetro desconocido (punto blanco) y que tratamos de estimar utilizando para ello el estimador apropiado (figurativamente el arma que utilizamos).  En la figura ($a$) tenemos el resultado de un arma (estimador 1) que aunque tiene una alta precisión  ( poca varianza), presenta un desvío del centro  (sesgo). En la figura ($b$) se presenta el resultado de otra arma (estimador 2) que al igual que la primera que presenta un desvío del centro (sesgo), presenta una mayor varianza. La figura ($c$) representa el arma ideal (no tiene sesgo y poca varianza) y por último la figura ($d$)  que en promedio diríamos que está centrada (no sesgo), presenta una variación alta.
 
 Estas caractaristicas ahora en los estimadores se presentan a continuación:
 
@@ -78,7 +83,7 @@ Para una muestra obtenida de una población exponencial con parámetro $\beta$ (
 + $\widehat{\theta}_{3} = \dfrac{1}{4}(X_{1} + X_{2} + X_{3} + X_{4})$
 
 
-Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente
+<!-- Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente -->
 
 <br/><br/><br/><br/>
 
@@ -124,6 +129,33 @@ Se puede verificar que :
 
 Los resultados indican que el estimador insesgado y eficiente es $\widehat{\theta_{3}}$
 
+<br/>
+
+<center>
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/estimadores123.png")
+```
+
+<!-- ```{r} -->
+<!-- n=50 -->
+<!-- m=1000 -->
+<!-- x=rexp(n*m,1/4) -->
+<!-- m=matrix(x,nrow = m) -->
+
+<!-- T1=1/6*(m[,1]+m[,2])+1/3*(m[,3]+m[,4]) -->
+<!-- T2=1/10*(m[,1]+2*m[,2]+3*m[,3]+ 4*m[,4]) -->
+<!-- T3=1/4*(m[,1]+m[,2]+m[,3]+m[,4]) -->
+<!-- T123 = data.frame(T1,T2,T3)  -->
+<!-- boxplot(T123)   -->
+<!-- abline(h=4,col="red") -->
+<!-- apply(T123,2,mean) -->
 
 
+<!-- ``` -->
 
+**Figura 2.37** Resultados de simulación de estimadores con distribución exponencial $\lambda = 1/4$
+</center>
+
+<br/>
+
+Como se muestra en la figura 2.37 las mejores propiedades las tiene el estimador $\widehat{\theta_{3}}$, posee una valor medio muy proximo a 4 y la menor varianza entre los tres estimadores

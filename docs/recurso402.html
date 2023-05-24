@@ -418,7 +418,11 @@ class="math inline">\(\mu_1- \mu_2\)</span>), en la diferencia de
 proporciones (<span class="math inline">\(p_1-p_2\)</span>) o en la
 razón de sus varianzas (<span class="math inline">\(\sigma_1^{2} /
 \sigma_2^{2}\)</span>)</p>
-<div class="content-box-blue">
+<p><br/></p>
+<center>
+<strong>Tabla 2.9</strong> Intervalos de confianza para parámetros de
+dos poblaciones
+</center>
 <table>
 <colgroup>
 <col width="11%" />
@@ -440,81 +444,47 @@ class="math inline">\(\mu_{1}-\mu_{2}\)</span></td>
 t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}\)</span></td>
 <td align="center">Grupos pareados <span
 class="math inline">\(d={x}_{1}-x_{2}\)</span>,<span
-class="math inline">\(X_{1}\sim norm(\mu_{1},
+class="math inline">\(X_{1}\sim N(\mu_{1},
 \sigma^{2}_{1})\)</span>,<span class="math inline">\(X_{2}\sim
-norm(\mu_{2}, \sigma^{2}_{2})\)</span></td>
+N(\mu_{2}, \sigma^{2}_{2})\)</span></td>
 </tr>
-</tbody>
-</table>
-</div>
-<p><br/></p>
-<div class="content-box-blue">
-<table>
-<colgroup>
-<col width="11%" />
-<col width="68%" />
-<col width="19%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"></td>
+<tr class="even">
+<td align="center"><span
+class="math inline">\(\mu_{1}-\mu_{2}\)</span></td>
 <td align="center"><span
 class="math inline">\((\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2}
 \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}\)</span></td>
 <td align="center">Grupos independientes,<span
-class="math inline">\(X_{1}\sim norm(\mu_{1},
+class="math inline">\(X_{1}\sim N(\mu_{1},
 \sigma^{2}_{1})\)</span>,<span class="math inline">\(X_{2}\sim
-norm(\mu_{2}, \sigma^{2}_{2})\)</span>, varianzas iguales</td>
+N(\mu_{2}, \sigma^{2}_{2})\)</span>, varianzas iguales</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center"></td>
 <td align="center">donde <span
 class="math inline">\(s_{p}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}\)</span>
 y <span class="math inline">\(v=n_{1}+n_{2}-2\)</span></td>
 <td align="center"></td>
 </tr>
-</tbody>
-</table>
-</div>
-<p><br/></p>
-<div class="content-box-blue">
-<table>
-<colgroup>
-<col width="11%" />
-<col width="68%" />
-<col width="19%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"></td>
+<tr class="even">
+<td align="center"><span
+class="math inline">\(\mu_{1}-\mu_{2}\)</span></td>
 <td align="center"><span
 class="math inline">\((\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2, v^{*}}
 \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}\)</span></td>
 <td align="center">Grupos independientes,<span
-class="math inline">\(X_{1}\sim norm(\mu_{1}\)</span>, <span
+class="math inline">\(X_{1}\sim N(\mu_{1}\)</span>, <span
 class="math inline">\(\sigma^{2}_{1})\)</span>, <span
-class="math inline">\(X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})\)</span>,
+class="math inline">\(X_{2}\sim N(\mu_{2}, \sigma_{2}^{2})\)</span>,
 varianzas diferentes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center"></td>
 <td align="center">donde <span
 class="math inline">\(v^{*}=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}\)</span></td>
 <td align="center"></td>
 </tr>
-</tbody>
-</table>
-</div>
-<p><br/></p>
-<div class="content-box-blue">
-<table>
-<colgroup>
-<col width="11%" />
-<col width="68%" />
-<col width="19%" />
-</colgroup>
-<tbody>
-<tr class="odd">
+<tr class="even">
 <td align="center"><span class="math inline">\(p_{1}-p_{2}\)</span></td>
 <td align="center"><span
 class="math inline">\((\widehat{p_{1}}-\widehat{p_{2}})\pm z_{\alpha/2}
@@ -522,18 +492,6 @@ class="math inline">\((\widehat{p_{1}}-\widehat{p_{2}})\pm z_{\alpha/2}
 <td align="center"><span class="math inline">\(n_{1}&gt;&gt;\)</span>,
 <span class="math inline">\(n_{2}&gt;&gt;\)</span></td>
 </tr>
-</tbody>
-</table>
-</div>
-<p><br/></p>
-<div class="content-box-blue">
-<table>
-<colgroup>
-<col width="11%" />
-<col width="68%" />
-<col width="19%" />
-</colgroup>
-<tbody>
 <tr class="odd">
 <td align="center"><span
 class="math inline">\(\dfrac{\sigma^{2}_{1}}{\sigma^{2}_{2}}\)</span></td>
@@ -542,14 +500,17 @@ class="math inline">\(\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}}
 \dfrac{1}{f_{1-\alpha/2}(v_{1}v_{2})}; \dfrac{s^{2}_{1}}{s^{2}_{2}}
 \dfrac{1}{f_{\alpha/2}(v_{1}v_{2})}\Bigg)\)</span></td>
 <td align="center"><span class="math inline">\(X_{1}\sim
-norm(\mu_{1}\)</span>, <span
+N(\mu_{1}\)</span>, <span
 class="math inline">\(\sigma^{2}_{1})\)</span>, <span
-class="math inline">\(X_{2}\sim norm(\mu_{2},
-\sigma_{2}^{2})\)</span></td>
+class="math inline">\(X_{2}\sim N(\mu_{2}, \sigma_{2}^{2})\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-</div>
 <p><br/><br/></p>
 <div
 id="estimación-de-intervalos-de-confianza-para-comparación-de-dos-poblaciones"

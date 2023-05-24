@@ -415,19 +415,28 @@ $(document).ready(function () {
 datos obtenidos en una muestra y que siguen una distribución conocida
 (distribuciones muestrales), pero además poseen propiedades deseables
 como son : insesgadez, eficiencia, consistencia entre otras. Con la
-siguiente figura se representa de manera figurativa lo que pueden ser
-estas propiedades</p>
-<p><img src="img/estimador.png" width="70%" style="display: block; margin: auto;" /></p>
-<p>En el centro se ubica el parámetro desconocido y que tratamos de
-estimar utilizando para ello el estimador apropiado (figurativamente el
-arma que utilizamos). En la figura 1 tenemos el resultado de un arma
+figura 2.36 se representa de manera figurativa lo que pueden ser estas
+propiedades</p>
+<p><br/></p>
+<center>
+<img src="img/estimador.png" width="90%" style="display: block; margin: auto;" />
+<strong>Figura 2.36</strong> Caracteristicas de los estimadores (a) baja
+varianza con sesgo (b) alta varianza con sesgo <br/> (c) baja varianza
+sin sesgo (d) alta varianza sin sesgo.
+</center>
+<p>En el centro se ubica el parámetro desconocido (punto blanco) y que
+tratamos de estimar utilizando para ello el estimador apropiado
+(figurativamente el arma que utilizamos). En la figura (<span
+class="math inline">\(a\)</span>) tenemos el resultado de un arma
 (estimador 1) que aunque tiene una alta precisión ( poca varianza),
-presenta un desvío del centro (sesgo). En la segunda figura se presenta
-el resultado de otra arma (estimador 2) que al igual que la primera que
-presenta un desvío del centro (sesgo), presenta una mayor varianza. La
-figura 3 representa el arma ideal (no tiene sesgo y poca varianza) y por
-último la figura 4 que en promedio diríamos que está centrada (no
-sesgo), presenta una variación alta.</p>
+presenta un desvío del centro (sesgo). En la figura (<span
+class="math inline">\(b\)</span>) se presenta el resultado de otra arma
+(estimador 2) que al igual que la primera que presenta un desvío del
+centro (sesgo), presenta una mayor varianza. La figura (<span
+class="math inline">\(c\)</span>) representa el arma ideal (no tiene
+sesgo y poca varianza) y por último la figura (<span
+class="math inline">\(d\)</span>) que en promedio diríamos que está
+centrada (no sesgo), presenta una variación alta.</p>
 <p>Estas caractaristicas ahora en los estimadores se presentan a
 continuación:</p>
 <p><br/><br/></p>
@@ -489,9 +498,7 @@ class="math inline">\(X_{4}\)</span>)</p>
 <li><span class="math inline">\(\widehat{\theta}_{3} =
 \dfrac{1}{4}(X_{1} + X_{2} + X_{3} + X_{4})\)</span></li>
 </ul>
-<p>Como se puede verificar <span
-class="math inline">\(\widehat{\theta}_{3}\)</span> es el mejor
-estimador de los tres, siendo insesgado y eficiente</p>
+<!-- Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente -->
 <p><br/><br/><br/><br/></p>
 <p>Primero verifiquemos cuales de los estimadores son insesgados, para
 ello debemos obtener sus valores esperados:</p>
@@ -542,6 +549,31 @@ V\big[(X_{3}\big]+V\big[X_{4}\big]\bigg]\\
 </ul>
 <p>Los resultados indican que el estimador insesgado y eficiente es
 <span class="math inline">\(\widehat{\theta_{3}}\)</span></p>
+<p><br/></p>
+<center>
+<p><img src="img/estimadores123.png" width="100%" style="display: block; margin: auto;" /></p>
+<!-- ```{r} -->
+<!-- n=50 -->
+<!-- m=1000 -->
+<!-- x=rexp(n*m,1/4) -->
+<!-- m=matrix(x,nrow = m) -->
+<!-- T1=1/6*(m[,1]+m[,2])+1/3*(m[,3]+m[,4]) -->
+<!-- T2=1/10*(m[,1]+2*m[,2]+3*m[,3]+ 4*m[,4]) -->
+<!-- T3=1/4*(m[,1]+m[,2]+m[,3]+m[,4]) -->
+<!-- T123 = data.frame(T1,T2,T3)  -->
+<!-- boxplot(T123)   -->
+<!-- abline(h=4,col="red") -->
+<!-- apply(T123,2,mean) -->
+<!-- ``` -->
+<strong>Figura 2.37</strong> Resultados de simulación de estimadores con
+distribución exponencial <span class="math inline">\(\lambda =
+1/4\)</span>
+</center>
+<p><br/></p>
+<p>Como se muestra en la figura 2.37 las mejores propiedades las tiene
+el estimador <span class="math inline">\(\widehat{\theta_{3}}\)</span>,
+posee una valor medio muy proximo a 4 y la menor varianza entre los tres
+estimadores</p>
 </div>
 
 

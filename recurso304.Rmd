@@ -45,7 +45,11 @@ El método de momentos supone que los momentos tanto poblacionales como muestral
 
 A continuación se relacionan algunos de estos momentos poblacionales:
 
-<br/>
+<br
+
+<center>
+
+**Tabla 2.7**  Valor esperado y varianza de los principales modelos de probabilidad
 
 | Distribución | $E[X]$               | $V[X]=E[X^{2}]-E[X]^{2}$        |
 |:-------------|:---------------------|:--------------------------------|
@@ -58,6 +62,7 @@ A continuación se relacionan algunos de estos momentos poblacionales:
 | uniforme     | $\displaystyle\frac{a+b}{2}$| $\displaystyle\frac{(b-a)^{2}}{12}$ |
 | normal       | $\mu$                |$\sigma^{2}$                     |
 
+</center>
 
 <br/>
 

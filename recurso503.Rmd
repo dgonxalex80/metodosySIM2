@@ -90,6 +90,7 @@ Una empresa desarrolla un curso de entrenamiento para sus empleados, formando do
 |Grupo 2 | 8.8, 8.5, 8.4, 8.5, 7.6, 8.7, 8.0, 7.9, 8.2, 8.0, 7.8, 8.6, 8.5, 7.9, 8.5, 8.3, 8.4, 8.2, 8.3, 7.9, 8.2, 7.7, 7.8, 7.7, 8.1, 8.0, 8.3, 8.2, 8.1, 8.3, 8.1, 8.8, 7.7, 9.1, 7.6, 8.4, 8.2, 8.3, 8.1, 8.7  | 
 
 
+
 ```{r}
 grupo1=c(6.8, 6.1, 5.8, 5.9, 5.8, 6.4, 5.7, 6.0, 5.9, 6.4, 6.0, 5.7, 6.5, 6.5, 6.0, 5.9, 5.7, 5.8, 5.9, 5.8, 6.0, 6.0, 5.8, 5.7, 6.1, 5.9, 5.2, 6.3, 5.4, 6.5, 5.5, 5.9, 7.0, 6.4, 5.1, 6.3)
 grupo2=c(8.8, 8.5, 8.4, 8.5, 7.6, 8.7, 8.0, 7.9, 8.2, 8.0, 7.8, 8.6, 8.5, 7.9, 8.5, 8.3, 8.4, 8.2, 8.3, 7.9, 8.2, 7.7, 7.8, 7.7, 8.1, 8.0, 8.3, 8.2, 8.1, 8.3, 8.1, 8.8, 7.7, 9.1, 7.6, 8.4, 8.2, 8.3, 8.1, 8.7)
@@ -98,6 +99,10 @@ par(mfrow = c(1, 2))
 boxplot(grupo1, las=1, col=c2, ylim=c(5,10))
 boxplot(grupo2, las=1, col=c3, ylim=c(5,10))
 ```
+<center>
+**Figura 2.45** Comparación de resultados evaluaciones Grupo 1 y Grupo 2
+</center>
+<br/>
 
 Iniciaremos con una prueba de hipótesis para la comparación de varianzas:
 
@@ -149,6 +154,7 @@ Supongamos que la empresa del ejemplo 5, desea comparar los resultados obtenidos
 
 <br/>
 
+
 ```{r}
 
 
@@ -158,7 +164,10 @@ par(mfrow = c(1, 2))
 boxplot(grupo3, las=1, col=c2, ylim=c(5,10))
 boxplot(grupo2, las=1, col=c3, ylim=c(5,10))
 ```
-
+<center>
+**Figura 2.46** Comparación de resultados evaluaciones Grupo 2y Grupo 3
+</center>
+<br/>
 ```{r}
 var.test(grupo3,grupo2)
 t.test(grupo3, grupo2,
@@ -216,6 +225,9 @@ Como el valor-p ( 0.4896) es mayor al nivel de significancia, no se rechaza la h
 
 ## <span style="color:#686868">**Resumen**</span>
 
+<center>
+**Tabla 2.9** Pruebas de hipótesis para dos poblaciones
+</center>
 
 | parámetro       |  prueba de dos colas    | prueba de cola inferior| prueba de cola superior|
 |:----------------|:------------------------|:-----------------------|:-----------------------|
@@ -231,7 +243,7 @@ Como el valor-p ( 0.4896) es mayor al nivel de significancia, no se rechaza la h
 |:----------------|:------------------------|:-----------------------|:-----------------------|
 |$\sigma_{1}^{2}/\sigma_{2}^{2}$ |$Ho: \sigma_{1}^{2} = \sigma^{2}_{2}$   |$Ho: \sigma_{1}^{2} \geq \sigma_{2}^{2}$ |$Ho: \sigma_{1}^{2} \leq \sigma_{2}^{2}$|
 |                                |$Ha: \sigma_{1}^{2} \neq \sigma^{2}_{2}$|$Ha: \sigma_{1}^{2} < \sigma_{2}^{2}$    |$Ha: \sigma_{1}^{2} > \sigma_{2}^{2}$  |
-
+|||||
 
 <br/>
 

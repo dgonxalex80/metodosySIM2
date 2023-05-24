@@ -21,17 +21,23 @@ library(paqueteMET)
 
 Un estimador por intervalo de confianza (IC) es una regla que especifica como usar las mediciones obtenidas en una muestra para calcular dos números que forman los extremos del intervalo que confiamos contenga al parámetro de interés $\theta$. Dependiendo del parámetro se utiliza en la construcción del IC las distribuciones muestrales:  `normal estándar` , `t-Student`, `chi-cuadrado` o `F-Fisher`
 
+<br/>
+
+<center>
+**Tabla 2.8** Intervalos de confianza para parámetros de una población
+</center>
+
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-| $\mu$         |$\bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}}$                 |$X\sim norm(\mu, \sigma^{2})$,$\sigma^{2}$ conocida           |
+| $\mu$         |$\bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{\sigma}{\sqrt{n}}$                 |$X\sim N(\mu, \sigma^{2})$,$\sigma^{2}$ conocida           |
 |               |$\bar{x} \pm z_{\alpha/2} \hspace{.1cm}\dfrac{s}{\sqrt{n}}$                      |$n>>$, TCL|
-|              |$\bar{x} \pm t_{\frac{\alpha}{2};v=n-1} \hspace{.1cm}\dfrac{s}{\sqrt{n}}$        |$X\sim norm(\mu, \sigma^{2})$, $\sigma^{2}$ desconocida|
+|              |$\bar{x} \pm t_{\frac{\alpha}{2};v=n-1} \hspace{.1cm}\dfrac{s}{\sqrt{n}}$        |$X\sim N(\mu, \sigma^{2})$, $\sigma^{2}$ desconocida|
 |$p$           |$\widehat{p}\pm z_{\frac{\alpha}{2}} \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$| $n>>$|
-|$\sigma^{2}$  |$\Bigg( \dfrac{(n-1)s^{2}}{\chi^{2}_{1-\alpha/2}} ;\dfrac{(n-1)s^{2}}{\chi^{2}_{\alpha/2}} \Bigg)$ | $X\sim norm(\mu, \sigma^{2})$|
+|$\sigma^{2}$  |$\Bigg( \dfrac{(n-1)s^{2}}{\chi^{2}_{1-\alpha/2}} ;\dfrac{(n-1)s^{2}}{\chi^{2}_{\alpha/2}} \Bigg)$ | $X\sim N(\mu, \sigma^{2})$|
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
-Inicialmente se revisan los conceptos de **confianza** y **grados de libertad** :
+## <span style="color:#034a94">**Conceptos básicos**</span>
 
 
 <br/><br/>
@@ -43,10 +49,15 @@ Para explicar el concepto de confianza se simula 100 intervalos para la estimaci
 Al contarlos se encuentra que 2 no lo contienen (de color naranja), mientras que  98 lo contiene, por tanto este procedimiento tiene una confianza del 98% de contener el valor de $\mu$.
 
 
-
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/RplotConfianza.png")
 ```
+
+**Figura 2.42** Representación de la confianza mediante la simulación de intervalos
+</center>
+
+
 Este valor se integra al concepto de intervalo de confianza mediante el término $1-\alpha$, por defecto los programas utilizan un nivel de confianza del 95% ( $1-\alpha =0.95$) y se de nota por : $IC_{\mu; 1-\alpha=0.95}$ 
 
 <br/><br/><br/>
@@ -66,10 +77,10 @@ Como ejemplo supongamos que tenemos una muestras de datos formado por : $X_{1}$,
 ## <span style="color:#034a94">**Para una población**</span>
 
 
-Para una población puede ser de interés estimar el intervalo de confianza para su media ($\mu$), proporción ($p$) o su varianza ($\sigma^{2}$)
+Para una población puede ser de interés estimar el intervalo de confianza para su media ($\mu$), para una proporción ($p$) o una varianza ($\sigma^{2}$)
 
 
-<br/><br/><br/>
+<br/>
 
 ## <span style="color:#034a94">**Para la media, con varianza conocida**</span> 
 
@@ -300,7 +311,7 @@ Donde :
 
 <br/><br/><br/>
 
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 
 Una empresa requiere realizar un estudio para establecer las proporción de fallas diarias que presta la empresa al presentar un servicio . El gerente encargado del estudio decide que la tasa de error máximo tolerable debe ser del 5% y el nivel de confianza del 99% . Con esta información una firma de consultora presenta una propuesta a la empresa por valor de \$ 110.2 millones para realizar el estudio y justifica su costo así: Por costos administrativos y de logística corresponde un valor de \$ 55.4 millones y cada encuesta realizada tiene un valor de $50 mil pesos. El Director de la empresa le encarga a usted revisar la información darle un concepto sobre la propuesta realizada por la firma de auditores a la mayor brevedad
 

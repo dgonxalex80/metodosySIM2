@@ -97,6 +97,9 @@ Como ejemplo podemos utilizar uno de los estimadores que estudiaremos :  $\wideh
 El papel principal de la estadística está relacionado con el análisis de información que permita tomar decisiones con respecto a una población. Es posible que se pueda estudiar la totalidad de elementos  que determinan la población, en este caso estaremos realizando un censo. Sin embargo no siempre podemos estudiar la totalidad de la población por lo cual debemos seleccionar una pequeña parte de ella. A este subconjunto lo podemos llamar muestra.
 
 <br/>
+<center>
+**Tabla 2.6** Comparación Muestreo  Censo
+</center>
 
 |                                      | **Muestra**     | **Censo**          |
 |:-------------------------------------|:----------------|:-------------------|
@@ -106,12 +109,13 @@ El papel principal de la estadística está relacionado con el análisis de info
 |Varianza de la característica         |grande           | pequeña            |
 |Costos de los errores de muestreo     |bajos            | altos              |
 |Costos de los errores que no son de muestreo            | alto   | bajo      |
-|Naturaleza de la prueba               |destructiva     |no destructiva      |
+|Naturaleza de la prueba               |destructiva     |no destructiva       |
 |Atención a casos individuales         |si               |no                  |
 ||||
 
+<center>
 <font size="-1">Tomado de Malhotra(2004)</font>
-
+</center>
 <br/>
 
 Un diseño de muestreo es una estrategia para obtener una muestra, genera algunas preguntas asociadas al proceso de muestreo: ¿cómo seleccionar de una manera óptima la muestra?, ¿Qué característica medir en las unidades observadas? y ¿cómo estimar las características poblacionales a partir de la información muestral?. El proceso de obtención de las muestras por su parte, requiere la definición de algunos aspectos como, ¿cuál es el tamaño óptimo para el cumplimiento de los objetivos?, o  ¿mediante qué procedimiento de aleatorización realizar el proceso de selección?, ¿qué tipo de método observacional utilizar y qué medidas tomar?. En el muestreo, uno tiene la oportunidad de seleccionar deliberadamente la  muestra, para evitar  inducir por ejemplo, a seleccionar por conveniencia algún individuo en particular, situación que pudiera conducir a sesgos en los resultados finales de la investigación.
@@ -197,7 +201,7 @@ $$n= \dfrac{154 \times 200}{154 + 200 -1} =87.2 \approxeq 88$$
 	
 <br/><br/>
 	
- ### <span style="color:#FF7F00"> **Ejemplo**</span>
+### <span style="color:#FF7F00"> **Ejemplo**</span>
 	
 **Caso de una proporción** 
 
@@ -211,12 +215,15 @@ En caso de poder realizar una prueba piloto (observación de una muestra, digamo
 <br/><br/><br/>
 	
 ## <span style="color:#034a94">**Tipos de muestreo**</span> 
-	
+
+
+<center>	
 ```{r, echo=FALSE, out.width="80%", fig.align = "center"}
 	knitr::include_graphics("img/muestreos.png")
 ```
-	
-<center>Fuente: construcción propia</center>
+<br/>
+**Figura 2.31** Tipos de muestreo 
+</center>
 
 <br/><br/>
 

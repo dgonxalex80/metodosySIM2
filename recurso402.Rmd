@@ -31,57 +31,23 @@ data("evaluacion")
 
 Cuando se desea comparar los resultados obtenidos en dos poblaciones o dos grupos se puede tener interés en la diferencia de medias ($\mu_1- \mu_2$), en la diferencia de proporciones ($p_1-p_2$) o en la razón de sus varianzas ($\sigma_1^{2} / \sigma_2^{2}$)
 
-<div class="content-box-blue">
+<br/>
+
+<center>
+**Tabla 2.9** Intervalos de confianza para parámetros de dos poblaciones
+</center>
 
 |**parámetro** |**Estimador por IC **                                                            | **Supuestos** |
 |:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-|$\mu_{1}-\mu_{2}$|$\bar{d} \pm t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}$    |Grupos pareados $d={x}_{1}-x_{2}$,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$| |
-
-</div>
-
-<br/>
-
-<div class="content-box-blue">
-
-|              |                                                                                 |                       |
-|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-|              | $(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2} \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}$ | Grupos independientes,$X_{1}\sim norm(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim norm(\mu_{2}, \sigma^{2}_{2})$, varianzas iguales|
+|$\mu_{1}-\mu_{2}$|$\bar{d} \pm t_{\alpha/2}\dfrac{s_{d}}{\sqrt{n}}$    |Grupos pareados $d={x}_{1}-x_{2}$,$X_{1}\sim N(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim N(\mu_{2}, \sigma^{2}_{2})$| |
+|$\mu_{1}-\mu_{2}$| $(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2} \hspace{.2cm}s_{p} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}$ | Grupos independientes,$X_{1}\sim N(\mu_{1}, \sigma^{2}_{1})$,$X_{2}\sim N(\mu_{2}, \sigma^{2}_{2})$, varianzas iguales|
 |                 | donde $s_{p}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$ y $v=n_{1}+n_{2}-2$ | |
-
-
-</div>
-
-<br/>
-
-<div class="content-box-blue">
-|              |                                                                                 |                       |
-|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-|              |$(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2, v^{*}} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$ |Grupos independientes,$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$, varianzas diferentes |
+|$\mu_{1}-\mu_{2}$|$(\bar{x_{1}}-\bar{x_{2}})\pm t_{\alpha/2, v^{*}} \sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$ |Grupos independientes,$X_{1}\sim N(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim N(\mu_{2}, \sigma_{2}^{2})$, varianzas diferentes |
 ||  donde $v^{*}=\frac{(s_{1}^{2}/n_{1}+s_{2}^{2}/n_{2})^{2}}{\Big[(s_{1}^{2}/n_{1})^{2}/(n_{1}-1)\Big]+\Big[(s_{2}^{2}/n_{2})^{2}/(n_{2}-1)\Big]}$||
-
-
-</div>
-
-<br/>
-
-<div class="content-box-blue">
-|              |                                                                                 |                       |
-|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
 | $p_{1}-p_{2}$|$(\widehat{p_{1}}-\widehat{p_{2}})\pm z_{\alpha/2} \sqrt{\dfrac{\widehat{p_{1}}(1-\widehat{p_{1}})}{n_{1}}+\dfrac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$|$n_{1}>>$, $n_{2}>>$|
-
-
-</div>
-
-<br/>
-
-<div class="content-box-blue">
+| $\dfrac{\sigma^{2}_{1}}{\sigma^{2}_{2}}$ |$\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{1-\alpha/2}(v_{1}v_{2})}; \dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{\alpha/2}(v_{1}v_{2})}\Bigg)$|$X_{1}\sim N(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim N(\mu_{2}, \sigma_{2}^{2})$| 
 |              |                                                                                 |                       |
-|:------------:|:-------------------------------------------------------------------------------:|:---------------------:|
-| $\dfrac{\sigma^{2}_{1}}{\sigma^{2}_{2}}$ |$\Bigg(\dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{1-\alpha/2}(v_{1}v_{2})}; \dfrac{s^{2}_{1}}{s^{2}_{2}} \dfrac{1}{f_{\alpha/2}(v_{1}v_{2})}\Bigg)$|$X_{1}\sim norm(\mu_{1}$, $\sigma^{2}_{1})$, $X_{2}\sim norm(\mu_{2}, \sigma_{2}^{2})$| 
 
-
-
-</div>
 
 <br/><br/>
 

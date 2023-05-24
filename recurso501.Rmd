@@ -29,10 +29,14 @@ data("evaluacion")
 <br/><br/>
 
 
-
+<center>
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/prueba.png")
 ```
+
+**Figura 4.44**  Prueba clínica
+</center>
+
 <br/><br/>
 
 
@@ -103,7 +107,9 @@ De esta manera, como una regla de decisión, si para una muestra particular el e
 
 Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones descritas en la siguiente tabla:
 
-
+<center>
+**Tabla 2.8** Tipos de errores presentes en una prueba de hipótesis
+</center>
 |                   |  **Estado de la naturaleza**    |                                 |
 |:------------------|:--------------------------------|:--------------------------------|
 | **Decisión sobre la hipótesis**|                    |                                 |

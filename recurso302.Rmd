@@ -44,6 +44,9 @@ El método de momentos supone que los momentos tanto poblacionales como muestral
 A continuación se relacionan algunos de estos momentos poblacionales:
 
 <br/>
+<center>
+**Tabla 2.7** Valor esperado y varianza de algunos modelos de probabilidad
+</center>
 
 | Distribución | $E[X]$               | $V[X]=E[X^{2}]-E[X]^{2}$        |
 |:-------------|:---------------------|:--------------------------------|
@@ -55,8 +58,7 @@ A continuación se relacionan algunos de estos momentos poblacionales:
 | exponencial  | $\beta$              | $\beta^{2}$                     | 
 | uniforme     | $\displaystyle\frac{a+b}{2}$| $\displaystyle\frac{(b-a)^{2}}{12}$ |
 | normal       | $\mu$                |$\sigma^{2}$                     |
-
-
+|              |                      |                                 |
 <br/>
 
 Nota: Existe una relación entre las distribuciones Poisson y exponencial.Se podrían dar en función de $\lambda$, haciendo $\beta=\dfrac{1}{\lambda}$  
@@ -205,11 +207,12 @@ Existe una relación importante entre ellas con la Distribución normal, las cua
 
 <br/>
 
-
+<center>
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/Distribuciones.png")
 ```
 
+**Figura 2.32** Relación de los modelos de probabilidad muestrales 
 </br></br>
 
 Si una variable **X** se distribuye **normal** con parámetros $\mu$ y $\sigma^{2}$, entonces a partir de su transformación se puede obtener una variable **Z** que tenga distribución **normal estándar** $N(0,1)$, que tiene media cero y varianza uno. Varias normales estándar al cuadrado conforman una variable con distribución **chi-cuadrado** y a su vez esta variable tiene la propiedad tal que la suma de $n$ variables aleatorias $\chi^{2}$ con $n-1$ grados de libertad. La razón de una variable con distribución normal estándar y la raíz cuadrada de una variable chi-cuadrado, dividida por sus grados de libertad originan una variable con distribución **t-student**. Por último la razón de dos variables con distribución chi-cuadrado, divididas cada una por sus respectivos grados de libertad, generan una variable con distribución  **F-Fisher**. 
@@ -232,6 +235,8 @@ Nota: Esta función fue creada por Karl Pearson científico inglés (1857-1936) 
 $$f(x)=\frac{1}{2^{(v/2)}\Gamma(v/2)}x^{(v/2)-1}\exp\{-x/2\} ,\hspace{.3cm} x>0$$
 <br/><br/>
 
+<center>
+
 ```{r, echo=FALSE}
 curve(dchisq(x, df=7), lwd=3, las=1,xlim = c(0,30), ylim=c(0,.13), ylab='Densidad', col="#FF7F00",axes = FALSE)
 curve(dchisq(x, df=9), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="#034A94")
@@ -239,6 +244,11 @@ curve(dchisq(x, df=11), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE,
 abline(h=0)
 grid()
 ```
+<br/>
+**Figura 2.33** Función de densidad chi-cuadrado
+</center>
+
+<br/>
 
 Esta distribución es un caso especial de la distribución Gamma con parámetros $\alpha=\frac{v}{2}$ y $\beta=2$ 
 
@@ -260,6 +270,8 @@ La función de probabilidad de distribución t-student y su representación grá
 
 $$f(x)=\frac{\Gamma[(v+1)/2]}{\Gamma[v/2]\sqrt{\pi v}}\Bigg(1+\frac{x^{2}}{v} \Bigg)^{-(v+1)/2}, \hspace{.3cm} -\infty< x<\infty $$
 
+<center>
+
 ```{r, echo=FALSE}
 curve(dt(x, df=1), lwd=3, las=1,xlim = c(-4,4), ylim=c(0,0.4), ylab='Densidad', col="#FF7F00",axes = FALSE)
 curve(dt(x, df=5), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="#034A94")
@@ -267,6 +279,11 @@ curve(dt(x, df=20), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col
 abline(h=0)
 grid()
 ```
+<br/>
+**Figura 2.34** Función de densidad t-Student
+</center>
+
+<br/>
 
 La gráfica de la distribución t-student es similar a la de la distribución normal, salvo que sus colas son más pesadas.
 
@@ -300,7 +317,7 @@ Nota: Ronald Aylmer Fisher (1890-1962) científico, matemático, estadístico, b
 $$f(x)=\displaystyle\frac{\Gamma \Bigg[\displaystyle\frac{v_{1}+v_{2}}{2}\Bigg]\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)^{v_{1}/2} x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma \Bigg[\displaystyle\frac{v_{2}}{2}\Bigg]
 	\Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}}, \hspace{.3cm} x>0 $$
 
-
+<center>
 ```{r, echo=FALSE}
 curve(df(x, df1=5, df2=10), lwd=3, las=1,xlim = c(0,5), ylim=c(0,1), ylab='Densidad', col="#FF7F00",axes = FALSE)
 curve(df(x, df1=10, df2=25), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="#034A94")
@@ -309,6 +326,11 @@ abline(h=0)
 grid()
 ```
 
+<br/>
+**Figura 2.35** Función de densidad F de Fisher
+</center>
+
+<br/>
 
 <br/><br/>
 
@@ -454,6 +476,8 @@ Revisar : Canavos(1988) pp.231
 ## <span style="color:#034a94">**Algunos estimadores**</span>
 
 <br/>
+<center>
+**Tabla 2.7** Principales caracteristicas de algunos estimadores  
 
 | Parámetro         |  Estimador                        | Valor esperado              | Varianza                                              |
 |:-----------------:|:---------------------------------:|:---------------------------:|:-----------------------------------------------------:|
@@ -464,6 +488,7 @@ Revisar : Canavos(1988) pp.231
 |$\mu_{1}-\mu_{2}$  | $\bar{x}_{1}-\bar{x}_{2}$         | $\mu_{1}-\mu_{2}$         |$\dfrac{\sigma^{2}_{1}}{n_{1}}+\dfrac{\sigma^{2}_{2}}{n_{2}}$ |
 |$p_{1}-p_{2}$      | $\widehat{p_{1}}-\widehat{p_{2}}$ | $p_{1}-p_{2}$               |$\dfrac{p_{1}q_{1}}{n_{1}}+\dfrac{p_{2}q_{2}}{n_{2}}$ |
 
+</center>
 </div>
 
 <br/><br/><br/>

@@ -411,11 +411,10 @@ $(document).ready(function () {
 
 
 <p><br/><br/></p>
-<p><br/><br/></p>
 <div id="funciones-modelos" class="section level1">
 <h1><span style="color:#034a94"><strong>Funciones
 modelos</strong></span></h1>
-<p><br/><br/></p>
+<p><br/></p>
 <p>Existe un grupo de modelos identificados para las variables
 aleatorias tanto discretas como continuas que son utilizadas con
 frecuencia en diferentes contextos. A continuación se relacionan los
@@ -672,7 +671,7 @@ Fx=round(Fx,4)             # redondea a 4 decimales</code></pre>
 <li>Generar 15 números aleatorios a partir de esta distribución</li>
 </ol>
 <pre class="r"><code>rbinom(15,20,0.30)</code></pre>
-<pre><code> [1]  4  6 10  5  4  7  6  7  8  6  4  6  7  7  6</code></pre>
+<pre><code> [1]  2  6  7 10  7  7  8  6  3  5  4  8  4  6  7</code></pre>
 <p><br/></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Construir la gráfica de la función de distribución de probabilidad
@@ -742,8 +741,8 @@ class="math inline">\(P(X&gt;70)\)</span></li>
 class="math inline">\(X\)</span></li>
 </ol>
 <pre class="r"><code>rnorm(10,70,sqrt(100))</code></pre>
-<pre><code> [1] 61.02528 71.43612 71.66496 80.80603 64.28423 64.81299 42.01116 89.59717
- [9] 71.74891 54.44247</code></pre>
+<pre><code> [1] 73.10336 66.40060 62.31138 66.40429 66.24031 64.26297 64.36926 68.70426
+ [9] 67.02796 83.80438</code></pre>
 <p><br/></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Generar la gráfica de la función de densidad de la variable <span
@@ -832,19 +831,19 @@ N: 1000
 
                       value
 ----------------- ---------
-             Mean      5.97
-          Std.Dev      0.48
-              Min      4.70
+             Mean      5.98
+          Std.Dev      0.50
+              Min      4.61
                Q1      5.65
-           Median      5.94
-               Q3      6.30
-              Max      7.60
-              MAD      0.48
-              IQR      0.66
+           Median      5.95
+               Q3      6.32
+              Max      7.37
+              MAD      0.50
+              IQR      0.67
                CV      0.08
-         Skewness      0.22
+         Skewness      0.14
       SE.Skewness      0.08
-         Kurtosis     -0.19
+         Kurtosis     -0.18
           N.Valid   1000.00
         Pct.Valid    100.00</code></pre>
 </div>

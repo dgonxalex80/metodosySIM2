@@ -411,13 +411,22 @@ $(document).ready(function () {
 
 
 <p><br/><br/><br/></p>
-<p>Hasta el momento nos hemos dedicado a la estadística paramétrica, que
-exige la estimación de parámetros y de la comprobación de supuestos
+<p>Hasta el momento se han presentado pruebas de hipótesis paramétricas,
+que exige la estimación de parámetros y de la comprobación de supuestos
 sobre las distribuciones de las variables, como por ejemplo que se
-distribuyan normal.</p>
-<p>Note que la distribución normal esta relacionada con las
+distribuyan normal, distribución que esta relacionada con las
 distribuciones t-student, chi-cuadrado y F entre otras.</p>
-<p><br/><br/></p>
+<p><br/></p>
+<center>
+<strong>Tabla 2.9</strong> Relación entre pruebas paramétricas y no
+paramétricas
+<img src="img/pruebas.png" width="80%" style="display: block; margin: auto;" />
+</center>
+<p>En algunos casos es necesario recurir a las pruebas no paramétricas
+para el estudio de una media o para la diferendcia de medias tanto de
+grupos pareados como de grupos independientes debido al incumplimiento
+de supuestos como se tratará mas adelante.</p>
+<p><br/></p>
 <div id="cuando-utilizar-pruebas-no-paramétricas"
 class="section level3">
 <h3><span style="color:#034a94"><strong>Cuando utilizar pruebas no
@@ -673,7 +682,7 @@ el supuesto de normalidad, o de otras distribuciones.</td>
 niveles de inventarios de leche para cuatro marcas diferentes. Con el
 fin de establecer políticas para la realización de nuevos pedidos
 requiere saber si la demanda de estas marcas son iguales (distribución
-uniforme). Con este propósito tomo la información de un día: |</p>
+uniforme). Con este propósito tomo la información de un día:</p>
 <table>
 <thead>
 <tr class="header">
@@ -718,15 +727,15 @@ uniforme). Con este propósito tomo la información de un día: |</p>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="right">Hipótesis Nula</td>
-<td align="left"><span class="math inline">\(Ho\)</span> : Las ventas se
-distribuyen de manera uniforme (cantidad demandada es igual para todas
-las marcas)</td>
+<td align="left">Hipótesis Nula <span class="math inline">\(Ho\)</span>
+:</td>
+<td align="left">Las ventas se distribuyen de manera uniforme (cantidad
+demandada es igual para todas las marcas)</td>
 </tr>
 <tr class="even">
-<td align="right">Hipótesis Alterna</td>
-<td align="left"><span class="math inline">\(Ha\)</span> : Las ventas no
-tienen una distribución uniforme</td>
+<td align="left">Hipótesis Alterna <span
+class="math inline">\(Ha\)</span> :</td>
+<td align="left">Las ventas no tienen una distribución uniforme</td>
 </tr>
 </tbody>
 </table>
@@ -738,6 +747,11 @@ chisq.test(x=obs,p=esp)</code></pre>
 
 data:  obs
 X-squared = 3.6, df = 3, p-value = 0.308</code></pre>
+<p>Como el <span class="math inline">\(valor-p\)</span> es grande, no se
+rechaza la hipótesis nula, no existe suficiente evidencia en la muestra
+que permita su rechazo, asimimos que Ho es verdad, la demanda del
+producto se puede asumir como uniforme. Se puede indicar al encargado de
+las compras que solicite igual cantidad de producto para cada marca.</p>
 <p><br/><br/></p>
 </div>
 <div id="ejemplo-2" class="section level3">
@@ -748,12 +762,12 @@ estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="right">Hipótesis Nula</td>
+<td align="left">Hipótesis Nula</td>
 <td align="left"><span class="math inline">\(Ho: X \sim
 normal\)</span></td>
 </tr>
 <tr class="even">
-<td align="right">Hipótesis Alterna</td>
+<td align="left">Hipótesis Alterna</td>
 <td align="left"><span class="math inline">\(Ha: X \hspace{.1cm}\text{
 No} \sim normal\)</span></td>
 </tr>
@@ -762,7 +776,7 @@ No} \sim normal\)</span></td>
 <pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=&quot; &quot;, xlab=&quot; &quot;, ylab=&quot; &quot;)</code></pre>
-<p><img src="recurso504_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="recurso504_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <pre class="r"><code>lim.nf=h$breaks               # cortes de los intervalos
 obs.nf=h$counts               # valores observados 
 mx=mean(nf)                   # media
@@ -777,7 +791,10 @@ chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste</code></pre>
 
 data:  obs.nf
 X-squared = 2.8988, df = 5, p-value = 0.7156</code></pre>
-<p><br/><br/></p>
+<p>Como el <span class="math inline">\(valor-p\)</span> es grande, no
+existe suficiente evidencia en los datos que permita el rechazo de Ho,
+asumimos que Ho es verdad, es decir que la distribución de las notas se
+asume normal <br/><br/></p>
 </div>
 <div id="prueba-chi-cuadrado-de-independencia" class="section level3">
 <h3><span style="color:#034a94"><strong>Prueba Chi-cuadrado de
@@ -791,48 +808,18 @@ la calificación obtenida por un producto por parte de sus consumidores y
 su ubicación de residencia. Con este fin recoge información de 100 de
 sus clientes:</p>
 <p><br/></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Urbano</th>
-<th align="right">Rural</th>
-<th align="right">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Calificación</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="left">Bueno</td>
-<td align="right">20</td>
-<td align="right">11</td>
-<td align="right">31</td>
-</tr>
-<tr class="odd">
-<td align="left">Regular</td>
-<td align="right">40</td>
-<td align="right">8</td>
-<td align="right">18</td>
-</tr>
-<tr class="even">
-<td align="left">Malo</td>
-<td align="right">15</td>
-<td align="right">6</td>
-<td align="right">21</td>
-</tr>
-<tr class="odd">
-<td align="left">Total</td>
-<td align="right">75</td>
-<td align="right">25</td>
-<td align="right">100</td>
-</tr>
-</tbody>
-</table>
+<center>
+<strong>Tabla 2.10</strong> Distribución de la calificación por
+residencia
+<img src="img/tabla_chi.png" width="60%" style="display: block; margin: auto;" />
+</center>
+<!-- |                |Urbano    |Rural   | Total | -->
+<!-- |:--------------|----------:|-------:|------:| -->
+<!-- |Calificación   |           |        |       | -->
+<!-- |Bueno          |20         |11      |31     | -->
+<!-- |Regular        |40         | 8      |18     | -->
+<!-- |Malo           |15         | 6      |21     | -->
+<!-- |Total          |75         |25      |100    |    -->
 <p><br/><br/></p>
 </div>
 <div id="solución-2" class="section level3">
@@ -921,20 +908,25 @@ adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer
 grupo está conformado por 15 estudiantes y el segundo grupo por 14
 estudiantes y corresponden al consumo diario en calorías. Los datos
 obtenidos son los siguientes:</p>
-<p>Nota: antes de realizar la comparación de medias, se debe realizar
-una prueba de bondad de ajuste para establecer si los datos siguen una
+</div>
+<div id="nota" class="section level3 content-box-gray">
+<h3><span style="color:#686868"><strong>Nota</strong></span></h3>
+<p>Antes de realizar la comparación de medias, se debe realizar una
+prueba de bondad de ajuste para establecer si los datos siguen una
 distribución normal o no. En caso de que los datos no tengan
 distribución normal, entonces se debe realizar una prueba no
 paramétrica.</p>
+</div>
+<p><br/></p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="right"><span class="math inline">\(Ho\)</span> : <span
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
 class="math inline">\(Me_{g1} \leq Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="right"><span class="math inline">\(Ha\)</span> : <span
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
 class="math inline">\(Me_{g1} &gt; Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
@@ -950,7 +942,7 @@ wilcox.test(g1,g2,paired = FALSE,alternative = &quot;greater&quot;)</code></pre>
 data:  g1 and g2
 W = 178, p-value = 0.0007714
 alternative hypothesis: true location shift is greater than 0</code></pre>
-</div>
+<p></br></p>
 <div id="conclusión-1" class="section level3">
 <h3><span style="color:#686868"> <strong>Conclusión</strong></span></h3>
 <p>Se rechaza Ho , se acepta Ha. Se puede concluir que las dos
@@ -1114,7 +1106,7 @@ datos obtenidos son los siguientes:</p>
 <pre class="r"><code>x=c(21,18,15,17,18,25,18,4,6,5)
 y=c(4,4,4,3,3,5,3,1,1,2)
 plot(x,y, las=1, pch=19, col=c4)</code></pre>
-<p><img src="recurso504_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="recurso504_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <pre class="r"><code>cor.test(x,y, method = &quot;spearman&quot;,continuity = FALSE,conf.level = 0.95)</code></pre>
 <pre><code>
     Spearman&#39;s rank correlation rho
@@ -1162,8 +1154,8 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 0.40204, runs = 53, n1 = 50, n2 = 50, n = 100, p-value =
-0.6877
+statistic = -1.4071, runs = 44, n1 = 50, n2 = 50, n = 100, p-value =
+0.1594
 alternative hypothesis: nonrandomness</code></pre>
 </div>
 <div id="conclusión-2" class="section level3">
@@ -1197,13 +1189,13 @@ continuación relacionamos algunas de ellas</p>
 <pre class="r"><code># se genera una variable aleatoria normal
 x=rnorm(200,1000,50)
 plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &quot;, col=c3, lwd=4)</code></pre>
-<p><img src="recurso504_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="recurso504_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <pre class="r"><code>shapiro.test(x)</code></pre>
 <pre><code>
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.995, p-value = 0.7504</code></pre>
+W = 0.99415, p-value = 0.6223</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el valor-p es superior al nivel de significancia <span
@@ -1223,19 +1215,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 1.6411, p-value = 0.4015</code></pre>
+JB = 2.3622, p-value = 0.253</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 2.5759, p-value = 0.186</code></pre>
+T = 3.3387, p-value = 0.3105</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = -0.065314, p-value = 0.7025</code></pre>
+T = -0.2054, p-value = 0.2325</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -1244,13 +1236,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.038726, p-value = 0.6571</code></pre>
+D = 0.055722, p-value = 0.1356</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 9.27, p-value = 0.8134</code></pre>
+P = 10.97, p-value = 0.6884</code></pre>
 <p><br/><br/><br/><br/></p>
 </div>
 

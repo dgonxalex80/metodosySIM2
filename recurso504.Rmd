@@ -28,11 +28,21 @@ data("evaluacion")
 
 <br/><br/><br/>
 
-Hasta el momento nos hemos dedicado a la estadística paramétrica, que exige la estimación de parámetros y de la comprobación de supuestos sobre las distribuciones de las variables, como por ejemplo que se distribuyan normal.
+Hasta el momento se han presentado pruebas de hipótesis paramétricas, que exige la estimación de parámetros y de la comprobación de supuestos sobre las distribuciones de las variables, como por ejemplo que se distribuyan normal, distribución que esta relacionada con las distribuciones t-student, chi-cuadrado y F entre otras.
 
-Note que la distribución normal esta relacionada con las distribuciones t-student, chi-cuadrado y F entre otras.
+<br/>
 
-<br/><br/>
+<center>
+**Tabla 2.9** Relación entre pruebas paramétricas y no paramétricas
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+knitr::include_graphics("img/pruebas.png")
+```
+</center>
+
+En algunos casos es necesario recurir a las pruebas no paramétricas para el estudio de una media o para la diferendcia de medias tanto de grupos pareados como de grupos independientes debido al incumplimiento de supuestos como se tratará mas adelante.
+
+<br/>
+
 
 ### <span style="color:#034a94">**Cuando utilizar pruebas no paramétricas**</span>
 
@@ -141,7 +151,7 @@ SIGN.test(x.img,md=15,alternative = "greater")
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
-El dueño de una panadería tiene la posibilidad de controlar los niveles de inventarios de leche para cuatro marcas diferentes. Con el fin de establecer políticas para la realización de nuevos pedidos requiere saber si la demanda de estas marcas son iguales (distribución uniforme). Con este propósito tomo la información de un día: |
+El dueño de una panadería tiene la posibilidad de controlar los niveles de inventarios de leche para cuatro marcas diferentes. Con el fin de establecer políticas para la realización de nuevos pedidos requiere saber si la demanda de estas marcas son iguales (distribución uniforme). Con este propósito tomo la información de un día:
 
 |Producto            | Marca 1  | Marca 2 | Marca 3   | Marca 4| 
 |-------------------:|:--------:|:-------:|:---------:|:------:|
@@ -152,9 +162,9 @@ El dueño de una panadería tiene la posibilidad de controlar los niveles de inv
 ### <span style="color:#686868">**Solución**</span>
 
 |                    |                                                         |
-|-------------------:|:--------------------------------------------------------|
-|Hipótesis Nula	     |$Ho$ : Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) | 
-|Hipótesis Alterna   |$Ha$ : Las ventas no tienen una distribución uniforme    |
+|:-------------------|:--------------------------------------------------------|
+|Hipótesis Nula	     $Ho$ : | Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) | 
+|Hipótesis Alterna   $Ha$ : | Las ventas no tienen una distribución uniforme    |
  
 
 
@@ -164,6 +174,7 @@ esp=c(0.25,0.25,0.25,0.25)
 chisq.test(x=obs,p=esp)
 ```
 
+Como el $valor-p$ es grande, no se rechaza la hipótesis nula, no existe suficiente evidencia en la muestra que permita su rechazo, asimimos que Ho es verdad, la demanda del producto se puede asumir como uniforme. Se puede indicar al encargado de las compras que solicite igual cantidad de producto para cada marca.
 
 <br/><br/>
 
@@ -172,7 +183,7 @@ chisq.test(x=obs,p=esp)
 Un profesor desea establecer si los resultados obtenidos por sus estudiantes tienen una distribución normal con media 3.5 y desviación estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:  
 
 |                    |                        |
-|-------------------:|:-----------------------|
+|:-------------------|:-----------------------|
 |Hipótesis Nula	     |$Ho: X \sim  normal$    | 
 |Hipótesis Alterna   |$Ha: X \hspace{.1cm}\text{ No} \sim normal$  |
 
@@ -193,6 +204,7 @@ chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste
 ```
 
 
+Como el $valor-p$ es grande, no existe suficiente evidencia en los datos que permita el rechazo de Ho, asumimos que Ho es verdad, es decir que la distribución de las notas se asume  normal
 <br/><br/>
 
 ### <span style="color:#034a94">**Prueba Chi-cuadrado de independencia**</span>
@@ -206,13 +218,20 @@ Un investigador desea establecer la relación que puede existir entre la calific
 
 <br/>
 
-|                |Urbano    |Rural   | Total |
-|:--------------|----------:|-------:|------:|
-|Calificación   |           |        |       |
-|Bueno          |20         |11      |31     |
-|Regular        |40         | 8      |18     |
-|Malo           |15         | 6      |21     |
-|Total          |75         |25      |100    |   
+<center>
+**Tabla 2.10** Distribución de la calificación por residencia
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/tabla_chi.png")
+```
+</center>
+
+<!-- |                |Urbano    |Rural   | Total | -->
+<!-- |:--------------|----------:|-------:|------:| -->
+<!-- |Calificación   |           |        |       | -->
+<!-- |Bueno          |20         |11      |31     | -->
+<!-- |Regular        |40         | 8      |18     | -->
+<!-- |Malo           |15         | 6      |21     | -->
+<!-- |Total          |75         |25      |100    |    -->
 
 <br/><br/>
 
@@ -260,12 +279,16 @@ Objetivo	          | Determinar su la diferencia entre la magnitud de las difere
 
 Los siguiente datos se tomaron de un estudio de comparación de adolescentes sanos (G1) y de adolescentes con bulimia (G2). El primer grupo está conformado por 15 estudiantes y el segundo grupo por 14 estudiantes y corresponden al consumo diario en calorías. Los datos obtenidos son los siguientes:  
 
-Nota: antes de realizar la comparación de medias, se debe realizar una prueba de bondad de ajuste para establecer si los datos siguen una distribución normal o no. En caso de que los datos no tengan distribución normal, entonces se debe realizar una prueba no paramétrica.
+<div class="content-box-gray">
+### <span style="color:#686868">**Nota**</span> 
 
+Antes de realizar la comparación de medias, se debe realizar una prueba de bondad de ajuste para establecer si los datos siguen una distribución normal o no. En caso de que los datos no tengan distribución normal, entonces se debe realizar una prueba no paramétrica.
+</div>
 
+<br/>
 
 |       |                         |
-|------:|:------------------------|
+|:------|:------------------------|
 |$Ho$ : $Me_{g1} \leq   Me_{g2}$  |
 |$Ha$ : $Me_{g1} >  Me_{g2}$      |
 
@@ -276,6 +299,9 @@ g2=c(39,10,21,29,11,26,7,12,28,32,30,27,50,19,24)
 # independent 2-group Mann-Whitney U Test 
 wilcox.test(g1,g2,paired = FALSE,alternative = "greater")
 ```
+
+
+</br>
 
 ### <span style="color:#686868"> **Conclusión**</span>  
 

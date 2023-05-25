@@ -17,13 +17,13 @@ A continuación se presentan una serie de códigos relacionados el calculo de pr
 
 Para simular el lanzamiento de un dado utilizaremos la función `sample(x, size, replace = FALSE, prob = NULL)`, con parámetros: `x` : valores del espacio muestral; `size` : tamaño de la muestra y `replace` : para determinar si la selección se realiza con remplazo o sin remplazo.
 
-`sample(1:6,200, replace = TRUE)`, da un resultado una muestra de 200 valores enteros entre 1 y 6, con repetición.
+`sample(1:6,2000, replace = TRUE)`, da un resultado una muestra de 2000 valores enteros entre 1 y 6, con repetición.
 
 ```{r}
-n=200                            # tamaño de la muestra
+n=20000                            # tamaño de la muestra
 x=sample(1:6,n, replace = TRUE)  # extracción de la muestra 
 td1=prop.table(table(x))         # tabla de los resultados
-barplot(td1, las=1)              # gráfico de los resultados
+barplot(td1, las=1, ylim = c(0,0.2))              # gráfico de los resultados
 ```
 
 </br></br>
@@ -32,12 +32,12 @@ barplot(td1, las=1)              # gráfico de los resultados
 
 
 ```{r}
-n=500                               # tamaño de muestra
+n=5000                               # tamaño de muestra
 d1=sample(1:6,n, replace = TRUE)    # muestra dado 1
 d2=sample(1:6,n, replace = TRUE)    # muestra dado 2
 dados=data.frame(d1,d2)             #  creación de data.frame 
 suma=apply(dados, 1, sum)           # obtención de la suma de los dos datos
-barplot(table(suma), las=1,cex.axis=0.7)  # gráfico  de la suma
+barplot(table(suma), las=1,cex.axis=0.7, ylim = c(0,1000))  # gráfico  de la suma
 ```
 
 </br></br>

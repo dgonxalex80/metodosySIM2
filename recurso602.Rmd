@@ -261,9 +261,9 @@ Para construir la gráfica de X y Y debemos crear los vectores
 
 |      |      |      |      |      |      |      |      |      |      |
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|x     | 1    |     1|     1|     2|     2|     2|     3|     3|     3|
-|y     | 1    |     2|     3|     1|     2|     3|     1|     2|     3|
-|fxy   |  0.15|  0.05|     0|     0|  0.20|  0.35|     0|  0.10|  0.15|
+|$x$   | 1    |     1|     1|     2|     2|     2|     3|     3|     3|
+|$y$   | 1    |     2|     3|     1|     2|     3|     1|     2|     3|
+|$f(x,y)$|  0.15|  0.05|     0|     0|  0.20|  0.35|     0|  0.10|  0.15|
 
 
 
@@ -338,19 +338,31 @@ Rho=CovXY/sqrt(Vx*Vy)
 
 <br/>
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+<pre>
+E(X)    =  1.35 
+E(X2)   =  2.35 
+V(X)    =  0.5275 
+E(Y)    =  1.05 
+E(Y2)   =  1.55 
+V(Y)    =  0.4475 
+E(XY)   =  1.7 
+Cov(XY) =  0.2825 
+Rho     =  0.5814478 
+</pre>
 
-cat("E(X)    = ", Ex, "\n")
-cat("E(X2)   = ", Ex2, "\n")
-cat("V(X)    = ", Vx, "\n")
-cat("E(Y)    = ", Ey, "\n")
-cat("E(Y2)   = ", Ey2, "\n")
-cat("V(Y)    = ", Vy, "\n")
+<!-- ```{r, warning=FALSE, message=FALSE, echo=FALSE} -->
 
-cat("E(XY)   = ", Exy, "\n")
-cat("Cov(XY) = ", CovXY, "\n")
-cat("Rho     = ", Rho, "\n")
-```
+<!-- cat("E(X)    = ", Ex, "\n") -->
+<!-- cat("E(X2)   = ", Ex2, "\n") -->
+<!-- cat("V(X)    = ", Vx, "\n") -->
+<!-- cat("E(Y)    = ", Ey, "\n") -->
+<!-- cat("E(Y2)   = ", Ey2, "\n") -->
+<!-- cat("V(Y)    = ", Vy, "\n") -->
+
+<!-- cat("E(XY)   = ", Exy, "\n") -->
+<!-- cat("Cov(XY) = ", CovXY, "\n") -->
+<!-- cat("Rho     = ", Rho, "\n") -->
+<!-- ``` -->
 
 
 
@@ -394,11 +406,11 @@ basado en : http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf
 Ahora su representación gráfica
 
 ```{r}
-x=seq(0,1,length=10)
-y=seq(0,1,length=10)
+x=seq(0,1,length=30)
+y=seq(0,1,length=30)
 fxy=function(x,y){3/2*(x^2+y^2)}
 z=outer(x, y, fxy)
-persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = "#FF7F00",
+persp(x,y,z,theta = 40, phi = 10,expand=0.5, col = "#FF7F00",
       xlab = "x", ylab ="y", zlab = "f(x,y)",
       main=" ", col.main="blue")
 

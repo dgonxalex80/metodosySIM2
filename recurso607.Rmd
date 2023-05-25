@@ -11,11 +11,9 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-<br/><br/>
-
 # <span style="color:#034a94">**Funciones modelos**</span>
 
-<br/><br/>
+<br/>
 
 Existe un grupo de modelos identificados para las variables aleatorias tanto discretas como continuas que son utilizadas con frecuencia en diferentes contextos. A continuación se relacionan los principales modelos:
 

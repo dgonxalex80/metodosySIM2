@@ -670,10 +670,22 @@ g(x) 0.10 0.35 0.55  1.0</code></pre>
 <h3><span style="color:#034a94"><strong>Representación gráfica de <span
 class="math inline">\(f(x,y)\)</span></strong></span></h3>
 <p>Para construir la gráfica de X y Y debemos crear los vectores</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
 <tbody>
 <tr class="odd">
-<td align="center">x</td>
+<td align="center"><span class="math inline">\(x\)</span></td>
 <td align="center">1</td>
 <td align="center">1</td>
 <td align="center">1</td>
@@ -685,7 +697,7 @@ class="math inline">\(f(x,y)\)</span></strong></span></h3>
 <td align="center">3</td>
 </tr>
 <tr class="even">
-<td align="center">y</td>
+<td align="center"><span class="math inline">\(y\)</span></td>
 <td align="center">1</td>
 <td align="center">2</td>
 <td align="center">3</td>
@@ -697,7 +709,7 @@ class="math inline">\(f(x,y)\)</span></strong></span></h3>
 <td align="center">3</td>
 </tr>
 <tr class="odd">
-<td align="center">fxy</td>
+<td align="center"><span class="math inline">\(f(x,y)\)</span></td>
 <td align="center">0.15</td>
 <td align="center">0.05</td>
 <td align="center">0</td>
@@ -775,15 +787,28 @@ Exy=sum(x*y*fxy)
 CovXY=Exy-Ex*Ey
 Rho=CovXY/sqrt(Vx*Vy)</code></pre>
 <p><br/></p>
-<pre><code>E(X)    =  1.35 </code></pre>
-<pre><code>E(X2)   =  2.35 </code></pre>
-<pre><code>V(X)    =  0.5275 </code></pre>
-<pre><code>E(Y)    =  1.05 </code></pre>
-<pre><code>E(Y2)   =  1.55 </code></pre>
-<pre><code>V(Y)    =  0.4475 </code></pre>
-<pre><code>E(XY)   =  1.7 </code></pre>
-<pre><code>Cov(XY) =  0.2825 </code></pre>
-<pre><code>Rho     =  0.5814478 </code></pre>
+<pre>
+E(X)    =  1.35 
+E(X2)   =  2.35 
+V(X)    =  0.5275 
+E(Y)    =  1.05 
+E(Y2)   =  1.55 
+V(Y)    =  0.4475 
+E(XY)   =  1.7 
+Cov(XY) =  0.2825 
+Rho     =  0.5814478 
+</pre>
+<!-- ```{r, warning=FALSE, message=FALSE, echo=FALSE} -->
+<!-- cat("E(X)    = ", Ex, "\n") -->
+<!-- cat("E(X2)   = ", Ex2, "\n") -->
+<!-- cat("V(X)    = ", Vx, "\n") -->
+<!-- cat("E(Y)    = ", Ey, "\n") -->
+<!-- cat("E(Y2)   = ", Ey2, "\n") -->
+<!-- cat("V(Y)    = ", Vy, "\n") -->
+<!-- cat("E(XY)   = ", Exy, "\n") -->
+<!-- cat("Cov(XY) = ", CovXY, "\n") -->
+<!-- cat("Rho     = ", Rho, "\n") -->
+<!-- ``` -->
 <p><br/><br/><br/></p>
 </div>
 </div>
@@ -830,14 +855,14 @@ class="uri">http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf
 </center>
 <p><br/></p>
 <p>Ahora su representación gráfica</p>
-<pre class="r"><code>x=seq(0,1,length=10)
-y=seq(0,1,length=10)
+<pre class="r"><code>x=seq(0,1,length=30)
+y=seq(0,1,length=30)
 fxy=function(x,y){3/2*(x^2+y^2)}
 z=outer(x, y, fxy)
-persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = &quot;#FF7F00&quot;,
+persp(x,y,z,theta = 40, phi = 10,expand=0.5, col = &quot;#FF7F00&quot;,
       xlab = &quot;x&quot;, ylab =&quot;y&quot;, zlab = &quot;f(x,y)&quot;,
       main=&quot; &quot;, col.main=&quot;blue&quot;)</code></pre>
-<img src="recurso602_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+<img src="recurso602_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 <center>
 <sub> Nota: basada en : <a
 href="https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html"

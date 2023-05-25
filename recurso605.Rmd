@@ -59,13 +59,13 @@ Supuestos:
 | X \sim normal                   |
 | Varianza conocida ($\sigma^{2}=4$)|
 
-<br/><br/>
+<br/>
 
 ```{r}
 BSDA::z.test(w, mu=60, sigma.x = 125)
 
 ```
-<br/><br/><br/>
+<br/>
 
 ## <span style="color:#034a94">**Para una media**</span>
 
@@ -78,14 +78,14 @@ Supuestos:
 | X \sim normal                   |
 | Varianza desconocida            |
 
-<br/><br/>
+<br/>
 
 |                                 | 
 |:--------------------------------|
 | $Ho$ : $\mu \geq 70$            |
 | $Ha$ : $\mu < 70$               |
 
-<br/><br/>
+<br/>
 
 
 ```{r}
@@ -119,21 +119,29 @@ El resultado indica que la mayoria de los participantes son hombres
 
 ## <span style="color:#034a94">**Para la comparación de medias en grupos independientes**</span>
 
-Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables y la comparación de varianzas:
+Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables, en caso de asumir que las variables tienen distribución nomral, se procede a comparar las varianzas de los dos grupos  y dependiendo el resultado obtenido se procede a realizar la comparación de medias. en caso de no obtener normalidad o de que las variables procedan de mediciones a través de test en escalas de intercalo (caso de mediciones de clima laboral, nivel de estres, percepcines, entre otros) o de poseer pocos datos se recomienda emplear métodos no paramétricos.
 
-|                                           | 
-|:------------------------------------------|
-| $Ho$ : $X_{_{M}} \sim normal$             |
-| $Ha$ : $X_{_{M}} \sim \text{ No } normal$ |
-|                                           |
-| $Ho$ : $X_{_{F}} \sim normal$             |
-| $Ha$ : $X_{_{F}} \sim \text{ No } normal$ |
-|                                           |
-| $Ho$ : $\sigma^{2}_{_{M}} = \sigma^{2}_{_{F}}$    |
-| $Ha$ : $\sigma^{2}_{_{M}}  \neq \sigma^{2}_{_{F}}$|
-|                                           |
-| $Ho$ : $\mu_{_{M}} \geq \mu_{_{F}}$       |
-| $Ha$ : $\mu_{_{M}} < \mu_{_{F}}$          |
+
+
+
+<center>
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/pruebas_medias.png")
+```
+
+**Figura 4.47**  Secuencia para la realización de una prueba de comparación de medias, grupos independientes
+</center>
+
+<!-- |                                           |  -->
+<!-- |:------------------------------------------| -->
+<!-- | $Ho$ : $X_{_{M}} \sim normal$             | -->
+<!-- | $Ha$ : $X_{_{M}} \sim \text{ No } normal$ | -->
+<!-- | $Ho$ : $X_{_{F}} \sim normal$             | -->
+<!-- | $Ha$ : $X_{_{F}} \sim \text{ No } normal$ | -->
+<!-- | $Ho$ : $\sigma^{2}_{_{M}} = \sigma^{2}_{_{F}}$    | -->
+<!-- | $Ha$ : $\sigma^{2}_{_{M}}  \neq \sigma^{2}_{_{F}}$| -->
+<!-- | $Ho$ : $\mu_{_{M}} \geq \mu_{_{F}}$       | -->
+<!-- | $Ha$ : $\mu_{_{M}} < \mu_{_{F}}$          | -->
 
 <br/>
 

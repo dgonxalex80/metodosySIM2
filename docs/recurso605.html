@@ -466,7 +466,7 @@ class="math inline">\(\sigma^{2}=4\)</span>)</td>
 </tr>
 </tbody>
 </table>
-<p><br/><br/></p>
+<p><br/></p>
 <pre class="r"><code>BSDA::z.test(w, mu=60, sigma.x = 125)</code></pre>
 <pre><code>
     One-sample z-Test
@@ -479,7 +479,7 @@ alternative hypothesis: true mean is not equal to 60
 sample estimates:
 mean of x 
  70.32417 </code></pre>
-<p><br/><br/><br/></p>
+<p><br/></p>
 </div>
 <div id="para-una-media-1" class="section level2">
 <h2><span style="color:#034a94"><strong>Para una
@@ -496,7 +496,7 @@ media</strong></span></h2>
 </tr>
 </tbody>
 </table>
-<p><br/><br/></p>
+<p><br/></p>
 <table>
 <tbody>
 <tr class="odd">
@@ -509,7 +509,7 @@ class="math inline">\(\mu &lt; 70\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><br/><br/></p>
+<p><br/></p>
 <pre class="r"><code>#-------------------------------------------------------------------------------
 # Problema 2
 t.test(w,mu=70, alternative=&quot;less&quot;)</code></pre>
@@ -568,55 +568,29 @@ class="section level2">
 <h2><span style="color:#034a94"><strong>Para la comparación de medias en
 grupos independientes</strong></span></h2>
 <p>Previamente a realizar la comparación de medias se deben realizar las
-pruebas de normalidad para cada una de las variables y la comparación de
-varianzas:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(X_{_{M}} \sim normal\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(X_{_{M}} \sim \text{ No } normal\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(X_{_{F}} \sim normal\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(X_{_{F}} \sim \text{ No } normal\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\sigma^{2}_{_{M}} =
-\sigma^{2}_{_{F}}\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\sigma^{2}_{_{M}} \neq
-\sigma^{2}_{_{F}}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
-class="math inline">\(\mu_{_{M}} \geq \mu_{_{F}}\)</span></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
-class="math inline">\(\mu_{_{M}} &lt; \mu_{_{F}}\)</span></td>
-</tr>
-</tbody>
-</table>
+pruebas de normalidad para cada una de las variables, en caso de asumir
+que las variables tienen distribución nomral, se procede a comparar las
+varianzas de los dos grupos y dependiendo el resultado obtenido se
+procede a realizar la comparación de medias. en caso de no obtener
+normalidad o de que las variables procedan de mediciones a través de
+test en escalas de intercalo (caso de mediciones de clima laboral, nivel
+de estres, percepcines, entre otros) o de poseer pocos datos se
+recomienda emplear métodos no paramétricos.</p>
+<center>
+<p><img src="img/pruebas_medias.png" width="100%" style="display: block; margin: auto;" /></p>
+<strong>Figura 4.47</strong> Secuencia para la realización de una prueba
+de comparación de medias, grupos independientes
+</center>
+<!-- |                                           |  -->
+<!-- |:------------------------------------------| -->
+<!-- | $Ho$ : $X_{_{M}} \sim normal$             | -->
+<!-- | $Ha$ : $X_{_{M}} \sim \text{ No } normal$ | -->
+<!-- | $Ho$ : $X_{_{F}} \sim normal$             | -->
+<!-- | $Ha$ : $X_{_{F}} \sim \text{ No } normal$ | -->
+<!-- | $Ho$ : $\sigma^{2}_{_{M}} = \sigma^{2}_{_{F}}$    | -->
+<!-- | $Ha$ : $\sigma^{2}_{_{M}}  \neq \sigma^{2}_{_{F}}$| -->
+<!-- | $Ho$ : $\mu_{_{M}} \geq \mu_{_{F}}$       | -->
+<!-- | $Ha$ : $\mu_{_{M}} < \mu_{_{F}}$          | -->
 <p><br/></p>
 <pre class="r"><code># xM1=sample(CarreraLuz22M$timerun/60, 100)
 # xF1=sample(CarreraLuz22F$timerun/60, 100)

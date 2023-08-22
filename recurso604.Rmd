@@ -6,7 +6,7 @@ css: style.css
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 CarreraLuz22M = subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
 CarreraLuz22F = subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")
@@ -101,7 +101,7 @@ El valor $(-,-)$ indica que la diferencia de medias siempre es negativa indicand
 ## <span style="color:#034a94">**Intervalos de confianza para la comparación proporciones**</span>
 
 
-Para el ejemplo se toma una muestra de tamaño 1000 y se compara las proporciones de personas contagiadas y con estado grave y con estado moderado
+Para el ejemplo se toma una muestra de tamaño 100 y se compara las proporciones de atletas mujeres vs proporción atletas hombre en la categoría abierta
 
 ```{r}
 library(tidyverse)
@@ -119,7 +119,7 @@ p2=t2[2]/sum(t2)
 prop.test(c(p1,p2),c(100,100), conf.level = 0.95)$conf.int
 ```
 
-Como el resultado obtenido contiene a cero,  indica que  las proporciones son similares
+Como el resultado obtenido contiene a cero, lo que indica que  las proporciones son similares. Para concluir que las proporciones se asumen como iguales debemos realizar una prueba de hipótesis para diferencia de proporciones.
 
 
 

@@ -14,7 +14,7 @@
 
 <title> Intervalos de confianza</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -507,9 +507,9 @@ class="math inline">\(\mu_{_{M}} &lt; \mu_{_{F}}\)</span></p>
 class="section level2">
 <h2><span style="color:#034a94"><strong>Intervalos de confianza para la
 comparación proporciones</strong></span></h2>
-<p>Para el ejemplo se toma una muestra de tamaño 1000 y se compara las
-proporciones de personas contagiadas y con estado grave y con estado
-moderado</p>
+<p>Para el ejemplo se toma una muestra de tamaño 100 y se compara las
+proporciones de atletas mujeres vs proporción atletas hombre en la
+categoría abierta</p>
 <pre class="r"><code>library(tidyverse)
 t1=CarreraLuz22F$categoria %&gt;% 
        sample(.,100) %&gt;% 
@@ -526,8 +526,10 @@ prop.test(c(p1,p2),c(100,100), conf.level = 0.95)$conf.int</code></pre>
 <pre><code>[1] -0.02477854  0.01737854
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
-<p>Como el resultado obtenido contiene a cero, indica que las
-proporciones son similares</p>
+<p>Como el resultado obtenido contiene a cero, lo que indica que las
+proporciones son similares. Para concluir que las proporciones se asumen
+como iguales debemos realizar una prueba de hipótesis para diferencia de
+proporciones.</p>
 </div>
 
 

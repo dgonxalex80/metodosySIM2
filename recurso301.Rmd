@@ -80,7 +80,7 @@ $$\widehat{\sigma^{2}}=\frac{1}{n-1}\sum_{i=1}^{n}\big(x_{i}-\bar{x}\big)^{2} = 
 
 <br/><br/>
 
-###<span style="color:#034a94">**Estimación**</span> 
+### <span style="color:#034a94">**Estimación**</span> 
 
 Es la evaluación o generación del estimador para una muestra determinada. 
 

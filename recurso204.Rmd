@@ -282,8 +282,8 @@ La distribución **geométrica** también conocida como distribución de Pascal,
 |	$3$   |  $FFE$           | $p(1-p)^{2}$  |
 |	$4$   |  $FFFE$          | $p(1-p)^{3}$  |
 |	$5$   |  $FFFFE$         | $p(1-b)^{4}$  |
-|       |                  |               |
-|	$x$   |  $FFFF \ldots FE | $p(1-p)^{x-1}$| 
+| $\vdots$|$\vdots$        | $\vdots$      |
+|	$x$   |  $FFFF \ldots FE$ | $p(1-p)^{x-1}$| 
 
 <br/>
 

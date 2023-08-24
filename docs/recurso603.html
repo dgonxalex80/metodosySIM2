@@ -33,8 +33,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -415,6 +415,12 @@ $(document).ready(function () {
 <h1><span style="color:#034a94"><strong>Propiedad de los
 estimadores</strong></span></h1>
 <p><br/><br/></p>
+<p>El siguiete problema tiene como objetivo visualizar las principales
+propiedades de los estimadores : insesgadez, eficiencia y suficiencia.
+Con este propósito se realizará la simulación de una muestra aleatoria
+proveniente de una distribución unifirme.</p>
+<p><br/><br/></p>
+<p><strong>Problema :</strong></p>
 <p>Para una variable con distribución uniforme <span
 class="math inline">\(X \sim unif(x,a=0, b=20)\)</span> se desea
 determinar las propiedades de los siguientes estimadores del parámetro
@@ -456,10 +462,10 @@ abline(h=20,  col=&quot;red&quot;)                                       # líne
 <p><img src="recurso603_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)                                             # valores de las medias</code></pre>
 <pre><code>      T1       T2       T3 
-20.04716 18.14789 19.96268 </code></pre>
+19.97891 18.22164 20.04381 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)                                             # valores de la desviaciones estándar</code></pre>
 <pre><code>      T1       T2       T3 
-3.595773 1.726970 1.899667 </code></pre>
+3.624642 1.606142 1.766756 </code></pre>
 <p>Para un tamaño de muestra n=10 se observa que los mejores resultados
 se obtienen con T3. Este estimador se puede clasificar como INSESGADO y
 EFICIENTE, pues ademas que su promedio está muy cerca de 20, tiene la
@@ -479,21 +485,53 @@ abline(h=20,  col=&quot;red&quot;)</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)</code></pre>
 <pre><code>      T1       T2       T3 
-19.98220 19.80486 20.00291 </code></pre>
+20.04272 19.79734 19.99531 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)  </code></pre>
 <pre><code>       T1        T2        T3 
-1.2007787 0.1839018 0.1857408 </code></pre>
+1.1834828 0.2014654 0.2034800 </code></pre>
 <p>Los resutados indican que el mejor estimador de b corresponde a T3.
 Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de
 la muestra pasando de n=10 a n=100 se observa que su promedio se acerca
 mas a 20 que corresponde al valor del parametro</p>
 <p><br/><br/><br/></p>
 </div>
-<div id="teorema-central-del-límite" class="section level1">
-<h1><span style="color:#034a94"><strong>Teorema Central del
-Límite</strong></span></h1>
-<p>Verificación del Teorema Central del Límite para una población
-exponencial con <span class="math inline">\(\lambda=1\)</span></p>
+<div id="teorema-del-límite-central" class="section level1">
+<h1><span style="color:#034a94"><strong>Teorema del Límite
+Central</strong></span></h1>
+<p>El <strong>Teorema del Límite Central</strong> (TLC) es un concepto
+fundamental en la teoría de probabilidad y estadísticas. Describe el
+comportamiento de las <strong>sumas</strong> o
+<strong>promedios</strong> de un gran número de variables aleatorias
+independientes e idénticamente distribuidas (IID) cuando el número de
+variables aumenta. En otras palabras, el teorema establece que, bajo
+ciertas condiciones, la distribución de la suma o el promedio de muchas
+variables aleatorias tiende a aproximarse a una distribución normal,
+independientemente de la distribución original de las variables.</p>
+<p><br/></p>
+<p>El <strong>Teorema del Límite Central</strong> es importante porque
+permite inferir propiedades sobre la distribución de una muestra,
+incluso si la distribución original de los datos no es normal. Esto es
+especialmente relevante en la estadística, ya que muchos métodos y
+pruebas estadísticas asumen una distribución normal para funcionar de
+manera efectiva. El TLC ofrece una justificación teórica para esta
+suposición en situaciones en las que se cumplan las condiciones
+necesarias.</p>
+<p><br/></p>
+<p>Las condiciones para que el <strong>Teorema del Límite
+Central</strong> se aplique incluyen:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Independencia</strong>: Las variables aleatorias deben ser
+independientes entre sí.</li>
+<li><strong>Identidad</strong>: Las variables aleatorias deben tener la
+misma distribución.</li>
+<li><strong>Tamaño de muestra suficientemente grande</strong>: A medida
+que el tamaño de la muestra aumenta, la aproximación a la distribución
+normal mejora.</li>
+</ol>
+<p><br/></p>
+<p>Verificación del <strong>Teorema del Límite Central</strong> para una
+población exponencial con <span
+class="math inline">\(\lambda=1\)</span></p>
 <p>Con este fin se siguen los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
 <li>Se construye una matriz de dimensión <span

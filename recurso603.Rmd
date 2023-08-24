@@ -16,6 +16,12 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
+El siguiete problema tiene como objetivo visualizar las principales propiedades de los estimadores : insesgadez, eficiencia y suficiencia.  Con este propósito se realizará la simulación de una muestra aleatoria proveniente de una distribución unifirme.
+
+<br/><br/>
+
+**Problema :**
+
 Para una variable con distribución uniforme $X \sim unif(x,a=0, b=20)$ se desea determinar las propiedades de los siguientes  estimadores del parámetro $b$
 
 
@@ -97,9 +103,25 @@ Los resutados indican que el mejor estimador de b corresponde a T3. Sin embargo 
 <br/><br/><br/>
 
 
-# <span style="color:#034a94">**Teorema Central del Límite**</span>
+# <span style="color:#034a94">**Teorema del Límite Central**</span>
 
-Verificación del Teorema Central del Límite para una población exponencial con $\lambda=1$
+El **Teorema del Límite Central** (TLC) es un concepto fundamental en la teoría de probabilidad y estadísticas. Describe el comportamiento de las **sumas** o **promedios** de un gran número de variables aleatorias independientes e idénticamente distribuidas (IID) cuando el número de variables aumenta. En otras palabras, el teorema establece que, bajo ciertas condiciones, la distribución de la suma o el promedio de muchas variables aleatorias tiende a aproximarse a una distribución normal, independientemente de la distribución original de las variables.
+
+<br/>
+
+El **Teorema del Límite Central** es importante porque permite inferir propiedades sobre la distribución de una muestra, incluso si la distribución original de los datos no es normal. Esto es especialmente relevante en la estadística, ya que muchos métodos y pruebas estadísticas asumen una distribución normal para funcionar de manera efectiva. El TLC ofrece una justificación teórica para esta suposición en situaciones en las que se cumplan las condiciones necesarias.
+
+<br/>
+
+Las condiciones para que el **Teorema del Límite Central** se aplique incluyen:
+
+1. **Independencia**: Las variables aleatorias deben ser independientes entre sí.
+2. **Identidad**: Las variables aleatorias deben tener la misma distribución.
+3. **Tamaño de muestra suficientemente grande**: A medida que el tamaño de la muestra aumenta, la aproximación a la distribución normal mejora.
+
+<br/>
+
+Verificación del **Teorema del Límite Central** para una población exponencial con $\lambda=1$
 
 Con este fin se siguen los siguientes pasos:
 
@@ -178,4 +200,3 @@ qqnorm(Mx1000) ; qqline(Mx1000, col="red")
 Se puede observar la convergencia de la distribución de la media muestral a una distribución normal al aumentarse el tamaño de la muestra
 
 <br/><br/>
-

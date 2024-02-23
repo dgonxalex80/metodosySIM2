@@ -86,7 +86,7 @@ Usos de la distribución normal
 
 * Aproximadamente el 99.7\% de la población se encuentra en el intervalo centrado $$(\mu - 3\sigma ; \mu + 3\sigma)$$
 
-Su distribución fué planteada por el matemático francés del siglo 18, Abraham de Moivre, quien a partir de la distribución Binomial, con $n=2$ empezó a aumentar su tamaño hasta observar que se formaba una distribución en forma de campana. Este mismo comportamiento fué detectado por Galileo en el siglo 17, al observar los errores producto de sus mediciones en astronomía. El modelo como se conoce actualmente fue propuesto de manera simultánea por los cientificos Robert Adrain y Carl Friedrich Gauss, quien finalmente le dió el nombre.
+Su distribución fue planteada por el matemático francés del siglo 18, Abraham de Moivre, quien a partir de la distribución Binomial, con $n=2$ empezó a aumentar su tamaño hasta observar que se formaba una distribución en forma de campana. Este mismo comportamiento fue detectado por Galileo en el siglo 17, al observar los errores producto de sus mediciones en astronomía. El modelo como se conoce actualmente fue propuesto de manera simultánea por los científicos Robert Adrain y Carl Friedrich Gauss, quien finalmente le dio el nombre.
 
 Su función de densidad esta dada por:
 
@@ -105,7 +105,7 @@ $$V[X]=\sigma^{2}$$
 
 <br/><br/>
 
-En la siguente gráfica se muestra el efecto en la curva normal, producto de cambios en la media o en la varianza. A mayor valor de la media la curva se desplaza a la derecha, mientras que a menor varianza la curva se vuelve mas angosta o puntiaguda 
+En la siguiente gráfica se muestra el efecto en la curva normal, producto de cambios en la media o en la varianza. A mayor valor de la media la curva se desplaza a la derecha, mientras que a menor varianza la curva se vuelve mas angosta o puntiaguda 
 
 
 
@@ -132,7 +132,7 @@ Dentro del sin número de posibles curvas que se pueden obtener con los parámet
 
 <div class="content-box-blue">
 
-### <span style="color:#034a94">**Distribución normal estandar N(0,1)**</span>
+### <span style="color:#034a94">**Distribución normal estándar N(0,1)**</span>
 
 Su función de distribución esta dada por :
 
@@ -157,7 +157,7 @@ ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = "#FF7F00")
 
 <br/><br/>
 
-### <span style="color:#034a94">**Propiedad empírica de la distribución normal estandar**</span>
+### <span style="color:#034a94">**Propiedad empírica de la distribución normal estándar**</span>
 
 La propiedad empírica de la distribución normal es de gran ayuda cuando una variable  de interés se  puede aproximar al modelo normal. Ella establece un intervalo formado por la media mas o menos una desviación estándar contiene el 68\% de los datos. Si el intervalo tiene un ancho de 4 desviaciones estándar contendrá el 95\% de los datos y si este intervalo corresponde a los valores de la media mas o menos 3 desviaciones estándar contendrá el 99\% de los datos que se representa en la siguiente gráfica.
 
@@ -168,7 +168,7 @@ La propiedad empírica de la distribución normal es de gran ayuda cuando una va
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 knitr::include_graphics("img/norm01.png")
 ```
-**Figura 2.26** Propiedades empiricas de la distribución normal estandar
+**Figura 2.26** Propiedades empiricas de la distribución normal estándar
 
 
 <br/><br/>

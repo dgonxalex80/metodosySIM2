@@ -312,7 +312,9 @@ $$F=\frac{S_{1}^{2}/\sigma_{1}^{2}}{S_{2}^{2}/\sigma_{1}^{2}}=\frac{\sigma_{2}^{
 tiene una distribución F con grados de libertad $v_{1}=n_{1}-1$ y $v_{2}=n_{2}-1$\\
 
 
-Nota: Ronald Aylmer Fisher (1890-1962) científico, matemático, estadístico, biólogo evolutivo y genetista inglés fue el creador de la distribución F. Su función de distribución y su representación gráfica están dadas por:
+### **NOTA**: 
+
+Ronald Aylmer Fisher (1890-1962) científico, matemático, estadístico, biólogo evolutivo y genetista inglés fue el creador de la distribución F. Su función de distribución y su representación gráfica están dadas por:
 
 $$f(x)=\displaystyle\frac{\Gamma \Bigg[\displaystyle\frac{v_{1}+v_{2}}{2}\Bigg]\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)^{v_{1}/2} x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma \Bigg[\displaystyle\frac{v_{2}}{2}\Bigg]
 	\Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}}, \hspace{.3cm} x>0 $$
@@ -447,7 +449,7 @@ $$\begin{eqnarray*}
 
 <br/>
 
-Ahora tenemos interes en estudiar el comportamiento de $S^{2}$ llamada cuasivarianza por algunos y definida por:
+Ahora tenemos interés en estudiar el comportamiento de $S^{2}$ llamada cuasivarianza por algunos y definida por:
 
 $$\widehat{\sigma^{2}}=S^{2}=\dfrac{1}{(n-1)}\sum_{i=1}^{n}\big(x_{i}-\bar{x}\big)^{2}$$
 
@@ -477,7 +479,7 @@ Revisar : Canavos(1988) pp.231
 
 <br/>
 <center>
-**Tabla 2.7** Principales caracteristicas de algunos estimadores  
+**Tabla 2.7** Principales características de algunos estimadores  
 
 | Parámetro         |  Estimador                        | Valor esperado              | Varianza                                              |
 |:-----------------:|:---------------------------------:|:---------------------------:|:-----------------------------------------------------:|

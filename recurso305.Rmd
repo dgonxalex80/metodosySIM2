@@ -36,7 +36,7 @@ knitr::include_graphics("img/TLC2.png")
 
 <br/>
 
-Como se muestra en la figura 2.38, sin importar la distribución de los datos, la distribución de la media se va transformando en una distribución simétrica, hasta converger en la distgribución normal. Esta aproximación se hace mayor cuanto mas grande sea el tamaño de la muestra  
+Como se muestra en la figura 2.38, sin importar la distribución de los datos, la distribución de la media se va transformando en una distribución simétrica, hasta converger en la distribución normal. Esta aproximación se hace mayor cuanto mas grande sea el tamaño de la muestra  
 
 <br/>
 
@@ -197,12 +197,12 @@ qqnorm(Mx1000, main="n=1000") ; qqline(Mx1000, col="red")
 knitr::include_graphics("img/tcl_qqnorm.png")
 ```
 
-**Figura 2.41** Comparación graficos de normalidas de la media nuestral para $n = 1$, $2$, $10$, $20$, $30$, $50$, $100$ y $1000$
+**Figura 2.41** Comparación gráficos de normalidad de la media nuestral para $n = 1$, $2$, $10$, $20$, $30$, $50$, $100$ y $1000$
 
 </center>
 
 
-Los resultados muestras desde un gráfico de valores no normales hasta un gráfico de puntos completamente aliniados con la recta diagonal que representa la conincidencia entre los percentiles teóricos normales con los percentiles muestrales, indicando así una convergencia a la distribución normal.
+Los resultados muestras desde un gráfico de valores no normales hasta un gráfico de puntos completamente alineados con la recta diagonal que representa la coincidencia entre los percentiles teóricos normales con los percentiles muestrales, indicando así una convergencia a la distribución normal.
 
 
 

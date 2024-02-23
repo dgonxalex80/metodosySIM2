@@ -14,7 +14,7 @@
 
 <title> Estimación</title>
 
-<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -462,10 +462,10 @@ abline(h=20,  col=&quot;red&quot;)                                       # líne
 <p><img src="recurso603_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)                                             # valores de las medias</code></pre>
 <pre><code>      T1       T2       T3 
-19.97891 18.22164 20.04381 </code></pre>
+20.04430 18.21046 20.03151 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)                                             # valores de la desviaciones estándar</code></pre>
 <pre><code>      T1       T2       T3 
-3.624642 1.606142 1.766756 </code></pre>
+3.635552 1.663675 1.830042 </code></pre>
 <p>Para un tamaño de muestra n=10 se observa que los mejores resultados
 se obtienen con T3. Este estimador se puede clasificar como INSESGADO y
 EFICIENTE, pues ademas que su promedio está muy cerca de 20, tiene la
@@ -485,10 +485,10 @@ abline(h=20,  col=&quot;red&quot;)</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)</code></pre>
 <pre><code>      T1       T2       T3 
-20.04272 19.79734 19.99531 </code></pre>
+19.95421 19.79739 19.99536 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)  </code></pre>
 <pre><code>       T1        T2        T3 
-1.1834828 0.2014654 0.2034800 </code></pre>
+1.1385848 0.1980603 0.2000409 </code></pre>
 <p>Los resutados indican que el mejor estimador de b corresponde a T3.
 Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de
 la muestra pasando de n=10 a n=100 se observa que su promedio se acerca

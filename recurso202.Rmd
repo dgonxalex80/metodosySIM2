@@ -61,7 +61,7 @@ En el caso continuo y de manera similar para el caso discreto.
 
 # <span style="color:#034a94">**Varianza**</span>
 
-Otra característica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de **momento** de una variable aleatoria
+Otra característica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definir este parámetro, veremos el concepto de **momento** de una variable aleatoria
 
 <br/>
 

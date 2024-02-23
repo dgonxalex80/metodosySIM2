@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 <br/>
 
 
-Las probabilidade puede definirse para eventos simples ($A$, $B$,...) o compuestos ($(A \cup B)$, $(A \cap B)$, $(B|A)$ ) que incluyen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
+Las probabilidad se puede definir para eventos simples ($A$, $B$,...) o compuestos ($(A \cup B)$, $(A \cap B)$, $(B|A)$ ) que incluyen varios eventos.   Dependiendo el tipo de evento puede tomar los siguientes nombres: 
 
 <center>
 <br/><br/>
@@ -275,7 +275,7 @@ Se tiene un circuito formado por dos componentes $A_{1}$ y $A_{2}$ cada uno con 
 knitr::include_graphics("img/circuito1.png")
 ```
 
-**Figura 2.5** Dispocisión de compomentes en serie
+**Figura 2.5** Disposición de componentes en serie
 </center>
 
 <br/><br/>
@@ -300,7 +300,7 @@ Ahora supongamos que el circuito anterior está conectado en paralelo. Determina
 knitr::include_graphics("img/circuito2.png")
 ```
 
-**Figura 2.6** Dispocisión de compomentes en paralelo
+**Figura 2.6** Disposición de componentes en paralelo
 </center>
 
 
@@ -363,7 +363,7 @@ Definimos los siguientes eventos :
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
 knitr::include_graphics("img/diagrama6_22.png")
 ```
-**Figura 2.7** Árbol de probabilidades margiles y condicionales
+**Figura 2.7** Árbol de probabilidades marginales y condicionales
 </center>
 
 
@@ -542,8 +542,7 @@ $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \
 
 
 
-En una fábrica de artículos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada
-articulo al final de la lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no logra ponerla en uno de cada 200 paquetes; Luis, quien coloca en 30 % de los paquetes, no logra colocarla en uno de 100 paquetes; Maria, quien coloca etiquetas en el 15 % de los paquetes, no lo hace una vez en 90 paquetes; y Santiago que fecha 15 % 
+En una fábrica de artículos para protección biodegradables, cuatro operarios colocan etiquetas de caducidad en cada articulo al final de la lı́nea de producción. Juan, quien coloca la fecha de caducidad en un 40 % de los paquetes no logra ponerla en uno de cada 200 paquetes; Luis, quien coloca en 30 % de los paquetes, no logra colocarla en uno de 100 paquetes; Maria, quien coloca etiquetas en el 15 % de los paquetes, no lo hace una vez en 90 paquetes; y Santiago que fecha 15 % 
 de los paquetes, falla en uno de cada  200 paquetes. Si un cliente se queja de que su paquete no
 muestra la fecha de caducidad. ¿Cuál de los empleados es el más probable culpable de esta omisión?
 

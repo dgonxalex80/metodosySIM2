@@ -44,7 +44,7 @@ Acción que puede ser replicada bajo las  mismas condiciones y cuyo resultado no
 
 ### <span style="color:#034a94">**Espacio muestral**</span> 
 
-Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra con una letra mayúscula $S$ o tambien con **$\Omega$**
+Conjunto de todos los posibles valores que puede tomar el experimento aleatorio. Este conjunto se nombra con una letra mayúscula $S$ o también con **$\Omega$**
 </div>
 
 <br/>

@@ -245,7 +245,7 @@ knitr::include_graphics("img/tabla_chi.png")
 | $Ha$ : |Las variables lugar de residencia y calificación no son independientes  |
 |                                                                                |
 
-El siguiente código da solución a la constrastación de las hipótesis
+El siguiente código da solución al constraste de las hipótesis
 
 ```{r}
 m=c(20,40,15,11,8,6)
@@ -434,11 +434,11 @@ Como el valor-p es superior al nivel de significancia $\alpha$, no se rechaza $H
 
 ```{r}
 # install.packages("normtets")
-library(normtest)
+# library(normtest)
 
-jb.norm.test(x)	 # Test de normalidad de Jarque-Bera
-kurtosis.norm.test(x)
-skewness.norm.test(x)	
+# jb.norm.test(x)	 # Test de normalidad de Jarque-Bera
+# kurtosis.norm.test(x)
+# skewness.norm.test(x)	
 ```
 
 

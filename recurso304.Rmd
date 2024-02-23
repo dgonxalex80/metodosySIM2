@@ -11,14 +11,14 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 La construcción de estimadores de parámetros tiene un soporte matemático que está basado en  el valor esperado y las funciones de probabilidad revisadas anteriormente. También supone que las muestras son tomadas aleatoriamente y que valores obtenidos son independiente unos de otros. 
 
-A continuación se presentan el método de Momentos y el método de Máxima Verosimiulitud:
+A continuación se presentan el método de Momentos y el **método de Máxima Verosimilitud**:
 
 
 ### <span style="color:#034a94">**Método de momentos**</span>
 
 <br/>
 
-El método de momentos fue propuesto por Karl Pearson al rededor de 1895, pensado en sus inicios en contexto descriptivo, analizando las distribuciones de probabilidad y aproximándolas al sistema de curvas que llevan su nombre. Posteriormente este concepto fue modificado por R.A. Fisher en 1920. El método consiste en estimar un parámetro de una distribución igualando sus momentos teóricos o poblacionales, si existen, con los correspondientes momentos muestrales.
+El **método de momentos** fue propuesto por Karl Pearson al rededor de 1895, pensado en sus inicios en contexto descriptivo, analizando las distribuciones de probabilidad y aproximándolas al sistema de curvas que llevan su nombre. Posteriormente este concepto fue modificado por R.A. Fisher en 1920. El método consiste en estimar un parámetro de una distribución igualando sus momentos teóricos o poblacionales, si existen, con los correspondientes momentos muestrales.
 
 Para mostrar este método es necesario definir el concepto de momento.
 

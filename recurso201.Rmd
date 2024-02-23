@@ -108,7 +108,8 @@ $$f_{_{X}}(2) = P(X=2)=\frac{3}{8}\hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(3) =P(X=
 
 # <span style="color:#034a94">**Variables discretas**</span> 
 
-Como se mencionó anteriormente una variable aleatoria se considera como **DISCRETA** cuando el conjunto de posibles valores que puede tomar la variables es un conjunto finito o infinito numerable. En la gran mayoria de los casos este conjunto corresponde a los números enteros.
+Como se mencionó anteriormente una variable aleatoria se considera como **DISCRETA** cuando el conjunto de posibles valores que puede tomar la variables es un conjunto finito o infinito numerable. En la gran mayor
+ia de los casos este conjunto corresponde a los números enteros.
 
 Para catacterizar la variable se define  la función de distribución de probabilidad que modela la asignación de las probabilidades
 
@@ -251,7 +252,7 @@ En el caso de las **variables aleatorias continuas** por lo general proceden de 
 
 + T: Tiempo que tarda un estudiante en responder un examen
 
-+ P: Peso de un bebe recien nacido
++ P: Peso de un bebe recién nacido
 
 + E: Edad de una persona
 

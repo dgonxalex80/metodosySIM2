@@ -118,7 +118,7 @@ El papel principal de la estadística está relacionado con el análisis de info
 </center>
 <br/>
 
-Un diseño de muestreo es una estrategia para obtener una muestra, genera algunas preguntas asociadas al proceso de muestreo: ¿cómo seleccionar de una manera óptima la muestra?, ¿Qué característica medir en las unidades observadas? y ¿cómo estimar las características poblacionales a partir de la información muestral?. El proceso de obtención de las muestras por su parte, requiere la definición de algunos aspectos como, ¿cuál es el tamaño óptimo para el cumplimiento de los objetivos?, o  ¿mediante qué procedimiento de aleatorización realizar el proceso de selección?, ¿qué tipo de método observacional utilizar y qué medidas tomar?. En el muestreo, uno tiene la oportunidad de seleccionar deliberadamente la  muestra, para evitar  inducir por ejemplo, a seleccionar por conveniencia algún individuo en particular, situación que pudiera conducir a sesgos en los resultados finales de la investigación.
+Un diseño de muestreo es una estrategia para obtener una muestra, genera algunas preguntas asociadas al proceso de muestreo: ¿cómo seleccionar de una manera óptima la muestra?, ¿Qué característica medir en las unidades observadas? y ¿cómo estimar las características poblacionales a partir de la información muestral?. El proceso de obtención de las muestras por su parte, requiere la definición de algunos aspectos como, ¿cuál es el tamaño óptimo para el cumplimiento de los objetivos?, o  ¿mediante qué procedimiento aleatorio se  realiza el proceso de selección?, ¿qué tipo de método observacional utilizar y qué medidas tomar?. En el muestreo, uno tiene la oportunidad de seleccionar deliberadamente la  muestra, para evitar  inducir por ejemplo, a seleccionar por conveniencia algún individuo en particular, situación que pudiera conducir a sesgos en los resultados finales de la investigación.
 
 <br/>
 
@@ -133,7 +133,7 @@ c.El conocimiento de los procesos que generan los verdaderos valores de las unid
 
 ### <span style="color:#034a94">**Diseños Muestrales**</span>
 
-Un diseño muestral es una estrategia de selección de unidades muestrales, mediante un proceso de aleatorización definido previamente (plan de muestreo). De acuerdo con esta definición, son tres los elementos esenciales de un diseño muestral:
+Un diseño muestral es una estrategia de selección de unidades muestrales, mediante un proceso de aleatorio definido previamente (plan de muestreo). De acuerdo con esta definición, son tres los elementos esenciales de un diseño muestral:
 
 <br/><br/>
 
@@ -145,7 +145,7 @@ Constituye la unidad básica a partir de la cual se obtiene la información, pud
 
 ### <span style="color:#034a94">**Proceso de aleatorización**</span>
 
-Aun cuando la unidad muestral esté claramente definida, existen algunos elementos adicionales que pueden afectar el proceso de muestreo, alterando la calidad de la información. En este caso no es la definición, sino la selección de la unidad muestral, la que puede estar sesgada por la naturaleza de la medición, así por ejemplo, si deseamos encuestar a personas para averiguar su tendencia política o su nivel socio económico, pudiéramos sentirnos tentados a seleccionar sus nombres desde una listado de telefónos, lo que dejaría fuera de la encuesta a todas aquellas personas  que no  se encuentran en el listado, constituyéndose ello en una fuente de sesgo.  En  otros casos, la naturaleza del muestreo tiene que ver con el entrenamiento de los encuestadores, es el caso, por ejemplo, de las muestras para identificar fallas en un equipo, en que la experiencia de la persona que recoge la información juega un papel importante en la identificación de los mismos.
+Aun cuando la unidad muestral esté claramente definida, existen algunos elementos adicionales que pueden afectar el proceso de muestreo, alterando la calidad de la información. En este caso no es la definición, sino la selección de la unidad muestral, la que puede estar sesgada por la naturaleza de la medición, así por ejemplo, si deseamos encuestar a personas para averiguar su tendencia política o su nivel socio económico, pudiéramos sentirnos tentados a seleccionar sus nombres desde una listado de teléfonos, lo que dejaría fuera de la encuesta a todas aquellas personas  que no  se encuentran en el listado, constituyéndose ello en una fuente de sesgo.  En  otros casos, la naturaleza del muestreo tiene que ver con el entrenamiento de los encuestadores, es el caso, por ejemplo, de las muestras para identificar fallas en un equipo, en que la experiencia de la persona que recoge la información juega un papel importante en la identificación de los mismos.
 
 Lo anterior significa que, en términos prácticos, la aleatoriedad debe garantizar que **cada individuo de la población debe tener las misma posibilidad de ser seleccionado como representante de la población** (aleatoriedad). Adicionalmente, exigimos que la elección de un individuo, no esté condicionada a la selección de otro (independencia). Estas dos condiciones, en apariencia sencillas, pueden provocar algunas  dificultades.
 

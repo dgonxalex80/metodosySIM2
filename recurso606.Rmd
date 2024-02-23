@@ -90,7 +90,7 @@ Las siguientes pruebas requieren instalar y cargar el paquete: `normtest`
 
 ```{r}
 # install.packages("normtets")
-library(normtest)
+# library(normtest)
 ```
 
 <br/><br/>
@@ -98,7 +98,7 @@ library(normtest)
 ### <span style="color:#034a94">**Prueba Jarque-Bera ajustada**
 
 ```{r}
-ajb.norm.test(w)	
+# ajb.norm.test(w)	
 ```
 
 <br/><br/>
@@ -106,7 +106,7 @@ ajb.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Frosini**</span>
 
 ```{r}
-frosini.norm.test(w)	
+# frosini.norm.test(w)	
 ```
 
 <br/><br/>
@@ -114,7 +114,7 @@ frosini.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Geary**</span>
 
 ```{r}
-geary.norm.test(w)	
+# geary.norm.test(w)	
 ```
 
 <br/><br/>
@@ -122,7 +122,7 @@ geary.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Hagazy-Green 1**</span>
 
 ```{r}
-hegazy1.norm.test(w)	
+# hegazy1.norm.test(w)	
 ```
 
 <br/>
@@ -130,7 +130,7 @@ hegazy1.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Hagazy-Green 2**</span>
 
 ```{r}
-hegazy2.norm.test(w)
+# hegazy2.norm.test(w)
 ```
 
 <br/><br/>
@@ -138,7 +138,7 @@ hegazy2.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Jarque-Bera**</span>
 
 ```{r}
-jb.norm.test(w)	
+# jb.norm.test(w)	
 ```
 
 <br/><br/>
@@ -146,7 +146,7 @@ jb.norm.test(w)
 ### <span style="color:#034a94">**Prueba de kurtosis**</span>
 
 ```{r}
-kurtosis.norm.test(w)
+# kurtosis.norm.test(w)
 ```
 
 <br/><br/>
@@ -154,7 +154,7 @@ kurtosis.norm.test(w)
 ### <span style="color:#034a94">**Prueba de sesgo**</span>
 
 ```{r}
-skewness.norm.test(w)	
+#skewness.norm.test(w)	
 ```
 
 <br/><br/>
@@ -162,7 +162,7 @@ skewness.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Spiegelhalter**</span>
 
 ```{r}
-spiegelhalter.norm.test(w)	
+#spiegelhalter.norm.test(w)	
 ```
 
 <br/><br/>
@@ -170,7 +170,7 @@ spiegelhalter.norm.test(w)
 ### <span style="color:#034a94">**Prueba de Weisberg-Bingham**</span>
 
 ```{r}
-wb.norm.test(w)	
+#wb.norm.test(w)	
 ```
 
 <br/><br/><br/>

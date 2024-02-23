@@ -6,7 +6,7 @@ css: style.css
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
-library(paqueteMET)
+# library(paqueteMETODOS)
 
 ```
 
@@ -88,7 +88,7 @@ Partimos de dos valores que contiene el parámetro $\theta$
 
 $$L_{I} \leq \theta \leq L_{S} $$
 
-bajo el supuesto de que Z sigue una distribución normal estandar
+bajo el supuesto de que Z sigue una distribución normal estándar
 
 $$Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)$$
 
@@ -146,7 +146,7 @@ Supuestos:
 
 <br/><br/>
 
-Cuando el tamaño de la muestra se considera grande (usualmente $n>30$) el estadístico T se aproxima a la distribución normal estandar, en este caso el intervalo de confianza se puede construir a a partir de:
+Cuando el tamaño de la muestra se considera grande (usualmente $n>30$) el estadístico T se aproxima a la distribución normal estándar, en este caso el intervalo de confianza se puede construir a a partir de:
 
 <div class="content-box-blue">
 
@@ -244,8 +244,8 @@ a = 1 - 0.98
 e = 3 # personas 
 
 # tamaño de muestra utilizando función sizemu de paqueteMET
-n=paqueteMET::sizemu(qnorm(1-a/2),s2.nota,e)
-round(n,0)  # redondeo a entero
+# n=paqueteMETODOS::sizemu(qnorm(1-a/2),s2.nota,e)
+# round(n,0)  # redondeo a entero
 
 
 ```
@@ -330,8 +330,8 @@ Información de la solicitud:
 + error de muestreo 0.05
 
 ```{r}
-library(paqueteDEG)
-paqueteDEG::sizep(qnorm(0.995),0.5,0.05)
+# library(paqueteMETODOS)
+#paqueteMETODOS::sizep(qnorm(0.995),0.5,0.05)
 ```
 
 De acuerdo con la información sumunistrada por la empresa, el tamaño de muestra apropiado para la estimación de la proporción, suponiendo varianza máxima es de $n=664$, por tal razón la propuesta realiza por la empresa consultora excede en   432 encuesta que presentan un sobre costo de \$21.6 millones
@@ -376,12 +376,12 @@ Se quiere estimar un intervalo de confianza del 95% para la desviación estandar
 <br/><br/>
 
 ```{r}
-# install.packages("paqueteMET")
-library(paqueteMET)
+# install.packages("paqueteMETODOS")
+# library(paqueteMETODOS)
 ecopetrol=c(2810, 2810,	2825, 2769, 2734, 2706,	2699, 2671, 2550, 2590,	2570, 2529,	2520, 2566,	2615, 2620, 2550, 2572,	2553, 2570,	2593, 2606)	
 
-cat("IC_var : ", paqueteMET::intervalo.var(ecopetrol),"\n")  # intervalo de confianza para la varianza
-cat("IC_sd  : ",sqrt(paqueteMET::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar
+# cat("IC_var : ", paqueteMETODOS::intervalo.var(ecopetrol),"\n")  # intervalo de confianza para la varianza
+# cat("IC_sd  : ",sqrt(paqueteMETODOS::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estándar
 ```
 <br/><br/>
 

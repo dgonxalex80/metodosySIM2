@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -220,6 +221,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -401,6 +405,14 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
@@ -431,21 +443,28 @@ paramétrico:</p>
 <col width="33%" />
 <col width="36%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="center">dos colas</th>
+<th align="center">cola inferior</th>
+<th align="center">cola superior</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="center"><span class="math inline">\(Ho : \mu =
+<td align="center"><span class="math inline">\(H_o : \mu =
 \mu_{o}\)</span></td>
-<td align="center"><span class="math inline">\(Ho : \mu \geq
+<td align="center"><span class="math inline">\(H_o : \mu \geq
 \mu_{o}\)</span></td>
-<td align="center"><span class="math inline">\(Ho : \mu \leq
+<td align="center"><span class="math inline">\(H_o : \mu \leq
 \mu_{o}\)</span></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\(Ho : \mu \neq
+<td align="center"><span class="math inline">\(H_a : \mu \neq
 \mu_{o}\)</span></td>
-<td align="center"><span class="math inline">\(Ho : \mu &lt;
+<td align="center"><span class="math inline">\(H_a : \mu &lt;
 \mu_{o}\)</span></td>
-<td align="center"><span class="math inline">\(Ho : \mu &gt;
+<td align="center"><span class="math inline">\(H_a : \mu &gt;
 \mu_{o}\)</span></td>
 </tr>
 </tbody>
@@ -522,25 +541,26 @@ resultados podemos utilizar tres reglas:</p>
 </div>
 <div id="regla-1" class="section level3 content-box-gray">
 <h3><span style="color:#034A94"> <strong>Regla 1</strong></span></h3>
-<p>Si el <strong>EdeP</strong> cae en la <strong>RdeR</strong>, entonce
-se rechaza la <span class="math inline">\(H_{0}\)</span> y se
-<strong>acepta</strong> <span class="math inline">\(H_{a}\)</span> como
-verdadera. Si por el contrario el <strong>EdeP</strong> NO cae en la
-<strong>RdeR</strong>, entonces NO se rechaza <span
-class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
+<p>Si el <strong>Estadístico de Prueba</strong> cae en la <strong>Región
+de Rechazo</strong>, entonce se rechaza la <span
+class="math inline">\(H_{o}\)</span> y se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span> como verdadera. Si por el contrario
+el <strong>Estadístico de Prueba</strong> NO cae en la <strong>Región de
+Rechazo</strong>, entonces NO se rechaza <span
+class="math inline">\(H_{o}\)</span>, no existe suficiente evidencia
 para rechazarla, <strong>asumimos</strong> que <span
-class="math inline">\(H_{0}\)</span> es verdad.</p>
+class="math inline">\(H_{o}\)</span> es verdad.</p>
 </div>
-<p>En este caso es necesario determinar la región de rechazo (<span
+<p>En este caso es necesario determinar la Región de Rechazo (<span
 class="math inline">\(RdeR\)</span>) de acuerdo al tipo de hipótesis y a
 la distribución del estadístico de prueba. En esta caso estamos
 realizando una prueba de dos colas, para un estadístico de prueba con
 distribución t-Student con 99 grados de libertad.</p>
 <p><br/><br/></p>
 <p><strong>Región de Rechazo</strong></p>
-<p>Para determinar la <span class="math inline">\(RdeR\)</span>, a a
-prtir del nivel de significancia asumido, se buscan los percentiles
-<span class="math inline">\(t_{0.025; v=59}\)</span> y <span
+<p>Para determinar la <strong>Región de Rechazo</strong>, a a prtir del
+nivel de significancia asumido, se buscan los percentiles <span
+class="math inline">\(t_{0.025; v=59}\)</span> y <span
 class="math inline">\(t_{0.975;v=59}\)</span> para la distribución
 t-Student.</p>
 <pre class="r"><code># t = 0.76215, df = 49, p-value = 0.4496    # resultado 
@@ -557,8 +577,9 @@ p</code></pre>
 <p><br/></p>
 <div id="conclusión" class="section level3">
 <h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
-<p>Como el <strong>EdeP</strong> (<code>t = 0.76215</code>) NO cae en la
-<strong>RdeR</strong>, entonces NO rechazamos <span
+<p>Como el <strong>Estadístico de Prueba</strong>
+(<code>t = 0.76215</code>) NO cae en la <strong>Región de
+Rechazo</strong>, entonces NO rechazamos <span
 class="math inline">\(Ho\)</span>, asumimos <span
 class="math inline">\(Ho\)</span> es verdadera, es decir ASUMIMOS que
 <span class="math inline">\(\mu\)</span> de las edades es igual a 31
@@ -568,12 +589,12 @@ años.</p>
 <div id="regla-2" class="section level3 content-box-gray">
 <h3><span style="color:#034A94"> <strong>Regla 2</strong></span></h3>
 <p>Si <span class="math inline">\(\alpha &gt; \text{valor-p}\)</span>
-entonces rechazamos <span class="math inline">\(H_{0}\)</span>, se
+entonces rechazamos <span class="math inline">\(H_{o}\)</span>, se
 <strong>acepta</strong> <span class="math inline">\(H_{a}\)</span> como
 verdadera. Si por el contrario <span class="math inline">\(\alpha &lt;
 \text{valor-p}\)</span>, no rechazamos <span
-class="math inline">\(H_{0}\)</span>, <strong>asumimos</strong> que
-<span class="math inline">\(H_{0}\)</span> es verdad.</p>
+class="math inline">\(H_{o}\)</span>, <strong>asumimos</strong> que
+<span class="math inline">\(H_{o}\)</span> es verdad.</p>
 </div>
 <p><br/><br/><br/></p>
 <div id="valor-p" class="section level3">
@@ -599,7 +620,7 @@ por efecto del azar, cuando la hipótesis nula es verdadera.</p>
 <p>Como el valor de <span class="math inline">\(\alpha &gt;
 valor-p\)</span> (<span class="math inline">\(0.05 &gt; p-value =
 0.4496\)</span> ) entonces No se rechaza <span
-class="math inline">\(Ho\)</span>, se <strong>asume</strong> que <span
+class="math inline">\(H_o\)</span>, se <strong>asume</strong> que <span
 class="math inline">\(Ho\)</span> es verdad. ASUMIMOS que <span
 class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
 <p><br/><br/></p>
@@ -608,25 +629,25 @@ class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
 <h3><span style="color:#034A94"> <strong>Regla 3</strong></span></h3>
 <p>El valor-p se interpreta como el error que puedo cometer al rechazar
 <span class="math inline">\(Ho\)</span>, siendo esta verdadera (cometer
-error tipo I). Si este valor es considerado como pequeño, rechazo <span
-class="math inline">\(Ho\)</span>, se <strong>acepta</strong> <span
-class="math inline">\(Ha\)</span>. Si por el contrario se considera este
-valor grande, entonce no rechazo <span
+<em>error tipo I</em>). Si este valor es considerado como pequeño,
+rechazo <span class="math inline">\(Ho\)</span>, se
+<strong>acepta</strong> <span class="math inline">\(H_a\)</span>. Si por
+el contrario se considera este valor grande, entonce no rechazo <span
 class="math inline">\(Ho\)</span>, asumo que <span
 class="math inline">\(Ho\)</span> es verdad.</p>
 </div>
 <p><br/></p>
 <div id="conclusión-2" class="section level3">
 <h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
-<p>En este caso valoramos si el valor-p (p-value = 0.4496) si es grande
-o pequeño. En esta caso se puede considerar que su valor es muy grande y
-por lo tanto no nos atrevemos a rechazar <span
-class="math inline">\(Ho\)</span>, asumimos que <span
-class="math inline">\(Ho\)</span> es verdadera, ASUMIMOS que <span
+<p>En este caso valoramos si el <strong>valor-p</strong> (p-value =
+0.4496) si es grande o pequeño. En esta caso se puede considerar que su
+valor es muy grande y por lo tanto no nos atrevemos a rechazar <span
+class="math inline">\(H_o\)</span>, asumimos que <span
+class="math inline">\(H_o\)</span> es verdadera, ASUMIMOS que <span
 class="math inline">\(\mu\)</span> de las edades es igual a 31 años.</p>
 </div>
 <div id="nota" class="section level3 content-box-gray">
-<h3><span style="color:#686868"> <strong>Nota</strong></span></h3>
+<h3><span style="color:#686868"> <strong>NOTA</strong></span></h3>
 <p>Al aplicar las últimas dos reglas (2 y 3) no se requiere la
 construcción de una <span class="math inline">\(RdeR\)</span> para tomar
 la decisión. Solo con revisar el valor-p entregado por la prueba y
@@ -662,8 +683,8 @@ realizados en el programa de entrenamiento reducen la selección? |</p>
 <p>Debemos realizar una prueba de cola inferior debido al sentido que
 tienen la afirmación que queremos verificar <em>los cambios realizados
 en el programa de entrenamiento reducen la selección</em>.</p>
-<p>Ho: <span class="math inline">\(p \geq 0.76\)</span> <br/><br />
-Ha :<span class="math inline">\(p &lt; 0.76\)</span> <br/></p>
+<p><span class="math inline">\(H_o: p \geq 0.76\)</span> <br/><br />
+<span class="math inline">\(H_a: p &lt; 0.76\)</span> <br/></p>
 <p><br/><br/></p>
 <pre class="r"><code>prop.test(24, 40, p = 0.76,
 alternative = &quot;less&quot;,
@@ -697,9 +718,9 @@ aprobación.</p>
 <h2><span style="color:#034a94"><strong>Sobre una
 varianza</strong></span></h2>
 <p><br/></p>
-<p>Ho: <span class="math inline">\(\sigma^{2} =
+<p><span class="math inline">\(H_o: \sigma^{2} =
 \sigma^{2}_{o}\)</span></p>
-<p>Ha :<span class="math inline">\(\sigma^{2} \neq
+<p><span class="math inline">\(H_a: \sigma^{2} \neq
 \sigma^{2}_{o}\)</span></p>
 <p><br/><br/></p>
 <p>Estadístico de prueba</p>
@@ -733,9 +754,9 @@ EdeP</code></pre>
 </div>
 <div id="conclusión-4" class="section level3">
 <h3><span style="color:#686868"><strong>Conclusión</strong></span></h3>
-<p>Como el <span class="math inline">\(EdeP\)</span> (1.135074) caen en
-la <span class="math inline">\(RdeR\)</span>, entonces rechazamos la
-hipótesis nula, aceptamos la hipótesis alterna como verdadera.</p>
+<p>Como el <strong>Estadístico de Prueba</strong> (1.135074) caen en la
+<strong>Región de Rechazo</strong>, entonces rechazamos la hipótesis
+nula, aceptamos la hipótesis alterna como verdadera.</p>
 <p>Podemos entonce concluir que <span class="math inline">\(\sigma^{2}
 \neq 81\)</span></p>
 <p><br/><br/><br/></p>
@@ -814,38 +835,38 @@ decisión</strong></span></h3>
 <tbody>
 <tr class="odd">
 <td align="left">Regla1:</td>
-<td align="left">Si el <span class="math inline">\(EdeP\)</span> cae en
-la <span class="math inline">\(RdeR\)</span>, entonce se rechaza la
-<span class="math inline">\(H_{0}\)</span> y se <strong>acepta</strong>
-<span class="math inline">\(H_{a}\)</span> como verdadera. Si por el
-contrario el <span class="math inline">\(EdeP\)</span> NO cae en la
-<span class="math inline">\(RdeR\)</span>, entonces NO se rechaza <span
-class="math inline">\(H_{0}\)</span>, no existe suficiente evidencia
+<td align="left">Si el <strong>Estadístico de Prueba</strong> cae en la
+<strong>Región de Rechazo</strong>, entonce se rechaza la <span
+class="math inline">\(H_{o}\)</span> y se <strong>acepta</strong> <span
+class="math inline">\(H_{a}\)</span> como verdadera. Si por el contrario
+el <strong>Estadístico de Prueba</strong> NO cae en la <strong>Región de
+Rechazo</strong>, entonces NO se rechaza <span
+class="math inline">\(H_{o}\)</span>, no existe suficiente evidencia
 para rechazarla, <strong>asumimos</strong> que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
+class="math inline">\(H_{o}\)</span> es verdad.</td>
 </tr>
 <tr class="even">
 <td align="left">Regla2:</td>
 <td align="left">Si <span class="math inline">\(\alpha &gt;\)</span>
-<code>valor-p</code> entonces rechazamos <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+<strong>valor-p</strong> entonces rechazamos <span
+class="math inline">\(H_{o}\)</span>, se <strong>acepta</strong> <span
 class="math inline">\(H_{a}\)</span>. Si por el contrario <span
 class="math inline">\(\alpha&lt;\)</span> <code>valor-p</code>, no
-rechazamos <span class="math inline">\(H_{0}\)</span>,
-<strong>asumimos</strong> que <span class="math inline">\(H_{0}\)</span>
+rechazamos <span class="math inline">\(H_{o}\)</span>,
+<strong>asumimos</strong> que <span class="math inline">\(H_{o}\)</span>
 es verdad.</td>
 </tr>
 <tr class="odd">
 <td align="left">Regla3:</td>
-<td align="left">El <code>valor-p</code> se interpreta como el error que
-puedo cometer al rechazar <span class="math inline">\(H_{0}\)</span>,
-siendo esta verdadera (cometer error tipo I). Si este valor es
-considerado como pequeño, rechazo <span
-class="math inline">\(H_{0}\)</span>, se <strong>acepta</strong> <span
+<td align="left">El <strong>valor-p</strong> se interpreta como el error
+que puedo cometer al rechazar <span
+class="math inline">\(H_{o}\)</span>, siendo esta verdadera (cometer
+error tipo I). Si este valor es considerado como pequeño, rechazo <span
+class="math inline">\(H_{o}\)</span>, se <strong>acepta</strong> <span
 class="math inline">\(H_{a}\)</span>. Si por el contrario se considera
 este valor grande, entonce no rechazo <span
-class="math inline">\(H_{0}\)</span>, asumo que <span
-class="math inline">\(H_{0}\)</span> es verdad.</td>
+class="math inline">\(H_{o}\)</span>, asumo que <span
+class="math inline">\(H_{o}\)</span> es verdad.</td>
 </tr>
 </tbody>
 </table>
@@ -862,20 +883,20 @@ pruebas</strong></span></h3>
 <tbody>
 <tr class="odd">
 <td align="left">Dos colas</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta =
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
+<td align="left"><span class="math inline">\(H_{o}: \theta =
+\theta_{o}\)</span> vs <span class="math inline">\(H_{o}: \theta \neq
 \theta_{o}\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">Cola superior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \leq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
+<td align="left"><span class="math inline">\(H_{o}: \theta \leq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{o}: \theta &gt;
 \theta_{o}\)</span></td>
 </tr>
 <tr class="odd">
 <td align="left">Cola inferior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \geq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
+<td align="left"><span class="math inline">\(H_{o}: \theta \geq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{o}: \theta &lt;
 \theta_{o}\)</span></td>
 </tr>
 </tbody>
@@ -916,6 +937,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

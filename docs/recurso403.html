@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -220,6 +221,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -401,6 +405,14 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
@@ -483,12 +495,12 @@ mx=apply(b,1,mean)                 # se calculan m medias por fila</code></pre>
 <pre class="r"><code>ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
 ic1</code></pre>
 <pre><code>    2.5%    97.5% 
-4.690000 6.490393 </code></pre>
+4.717107 6.454571 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
 ic2</code></pre>
 <pre><code>   97.5%     2.5% 
-4.586593 6.386986 </code></pre>
+4.623651 6.361116 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot; &quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=&quot;#034A94&quot;)
 abline(v=ic1, col=&quot;#FF7F00&quot;,lwd=2)
@@ -534,6 +546,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

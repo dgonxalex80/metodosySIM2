@@ -47,8 +47,8 @@ El director de un gimnasio requiere determinar si contrata o no a un instructor 
 |pdes | 98  |85.5 |85   |103.5|88.5 |95   |79.5 |90   |82   |76   |89.5 |81   | 99.5| 86.5|115.5| 70  |
 
 
-Ho: $\mu_{ant} \geq \mu_{des}$ <br/>
-Ha: $\mu_{ant} < \mu_{des}$ <br/>
+$Ho: \mu_{ant} \geq \mu_{des}$ <br/>
+$Ha: \mu_{ant} < \mu_{des}$ <br/>
 
 
 ```{r}
@@ -106,9 +106,9 @@ boxplot(grupo2, las=1, col=c3, ylim=c(5,10))
 
 Iniciaremos con una prueba de hipótesis para la comparación de varianzas:
 
-Ho:$\sigma^{2}_{1} = \sigma^{2}_{2}$<br/>
+$H_o: \sigma^{2}_{1} = \sigma^{2}_{2}$<br/>
 
-Ha:$\sigma^{2}_{1} \neq \sigma^{2}_{2}$<br/>
+$H_a: \sigma^{2}_{1} \neq \sigma^{2}_{2}$<br/>
 
 
 
@@ -123,8 +123,8 @@ Como el valor-p (0.4282) es mayor al nivel de significancia ($\alpha=0.05$), no 
 
 <br/><br/>
 
-Ho: $\mu_{1} \geq \mu_{2}$ <br/>
-Ha: $\mu_{1} < \mu_{2}$ <br/>
+$H_o: \mu_{1} \geq \mu_{2}$ <br/>
+$H_a: \mu_{1} < \mu_{2}$ <br/>
 
 <br/>
 
@@ -202,8 +202,8 @@ Una encuesta realizada a 100 usuarios de una tarjeta de crédito seleccionados a
 
 <br/><br/>
 
-Ho: $p_{1} \geq p_{2}$ <br/>
-Ha: $p_{1} < p_{2}$ <br/>
+$Ho: p_{1} \geq p_{2}$ <br/>
+$Ha: p_{1} < p_{2}$ <br/>
 
 <br/>
 
@@ -231,18 +231,18 @@ Como el valor-p ( 0.4896) es mayor al nivel de significancia, no se rechaza la h
 
 | parámetro       |  prueba de dos colas    | prueba de cola inferior| prueba de cola superior|
 |:----------------|:------------------------|:-----------------------|:-----------------------|
-|$\mu_{1}-\mu_{2}$|$Ho: \mu_{1}-\mu_{2}=\Delta_{o}$|$Ho: \mu_{1}-\mu_{2} \geq=\Delta_{o}$  |$Ho: \mu_{1}-\mu_{2}\leq\Delta_{o}$  |
-|                 |$Ha: \mu_{1}-\mu_{2} \neq \Delta_{o}$|$Ha: \mu_{1}-\mu_{2} <\Delta_{o}$ |$Ha: \mu_{1}-\mu_{2} > \Delta_{o}$   |
+|$\mu_{1}-\mu_{2}$|$H_o: \mu_{1}-\mu_{2}=\Delta_{o}$|$H_o: \mu_{1}-\mu_{2} \geq=\Delta_{o}$  |$H_o: \mu_{1}-\mu_{2}\leq\Delta_{o}$  |
+|                 |$H_a: \mu_{1}-\mu_{2} \neq \Delta_{o}$|$H_a: \mu_{1}-\mu_{2} <\Delta_{o}$ |$H_a: \mu_{1}-\mu_{2} > \Delta_{o}$   |
 
 |                 |                         |                        |                        |
 |:----------------|:------------------------|:-----------------------|:-----------------------|
-|$p_{1}-p_{2}$    |$Ho: p_{1}-p_{2} = \Delta_{o}$    |$Ho: p_{1}-p_{2} \geq\Delta_{o}$      |$Ho: p_{1}-p_{2} \leq \Delta_{o}$      |
-|                 |$Ha: p_{1}-p_{2} \neq \Delta_{o}$ |$Ha: p_{1}-p_{2} < \Delta_{o}$        |$Ha: p_{1}-p_{2} > \Delta_{o}$      |
+|$p_{1}-p_{2}$    |$H_o: p_{1}-p_{2} = \Delta_{o}$    |$H_o: p_{1}-p_{2} \geq\Delta_{o}$      |$H_o: p_{1}-p_{2} \leq \Delta_{o}$      |
+|                 |$H_a: p_{1}-p_{2} \neq \Delta_{o}$ |$H_a: p_{1}-p_{2} < \Delta_{o}$        |$H_a: p_{1}-p_{2} > \Delta_{o}$      |
 
 |                 |                         |                        |                        |
 |:----------------|:------------------------|:-----------------------|:-----------------------|
-|$\sigma_{1}^{2}/\sigma_{2}^{2}$ |$Ho: \sigma_{1}^{2} = \sigma^{2}_{2}$   |$Ho: \sigma_{1}^{2} \geq \sigma_{2}^{2}$ |$Ho: \sigma_{1}^{2} \leq \sigma_{2}^{2}$|
-|                                |$Ha: \sigma_{1}^{2} \neq \sigma^{2}_{2}$|$Ha: \sigma_{1}^{2} < \sigma_{2}^{2}$    |$Ha: \sigma_{1}^{2} > \sigma_{2}^{2}$  |
+|$\sigma_{1}^{2}/\sigma_{2}^{2}$ |$H_o: \sigma_{1}^{2} = \sigma^{2}_{2}$   |$H_o: \sigma_{1}^{2} \geq \sigma_{2}^{2}$ |$H_o: \sigma_{1}^{2} \leq \sigma_{2}^{2}$|
+|                                |$H_a: \sigma_{1}^{2} \neq \sigma^{2}_{2}$|$H_a: \sigma_{1}^{2} < \sigma_{2}^{2}$    |$H_a: \sigma_{1}^{2} > \sigma_{2}^{2}$  |
 |||||
 
 <br/>

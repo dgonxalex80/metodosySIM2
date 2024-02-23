@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -220,6 +221,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -400,6 +404,14 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
 
@@ -727,14 +739,14 @@ uniforme). Con este propósito tomo la información de un día:</p>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">Hipótesis Nula <span class="math inline">\(Ho\)</span>
+<td align="left">Hipótesis Nula <span class="math inline">\(H_o\)</span>
 :</td>
 <td align="left">Las ventas se distribuyen de manera uniforme (cantidad
 demandada es igual para todas las marcas)</td>
 </tr>
 <tr class="even">
 <td align="left">Hipótesis Alterna <span
-class="math inline">\(Ha\)</span> :</td>
+class="math inline">\(H_a\)</span> :</td>
 <td align="left">Las ventas no tienen una distribución uniforme</td>
 </tr>
 </tbody>
@@ -763,12 +775,12 @@ estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:</p>
 <tbody>
 <tr class="odd">
 <td align="left">Hipótesis Nula</td>
-<td align="left"><span class="math inline">\(Ho: X \sim
+<td align="left"><span class="math inline">\(H_o: X \sim
 normal\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">Hipótesis Alterna</td>
-<td align="left"><span class="math inline">\(Ha: X \hspace{.1cm}\text{
+<td align="left"><span class="math inline">\(H_a: X \hspace{.1cm}\text{
 No} \sim normal\)</span></td>
 </tr>
 </tbody>
@@ -920,12 +932,12 @@ paramétrica.</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(Ho\)</span> : <span
+<td align="left"><span class="math inline">\(H_o\)</span> : <span
 class="math inline">\(Me_{g1} \leq Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><span class="math inline">\(Ha\)</span> : <span
+<td align="left"><span class="math inline">\(H_a\)</span> : <span
 class="math inline">\(Me_{g1} &gt; Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
@@ -1153,7 +1165,8 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 0, runs = 51, n1 = 50, n2 = 50, n = 100, p-value = 1
+statistic = 1.0051, runs = 56, n1 = 50, n2 = 50, n = 100, p-value =
+0.3149
 alternative hypothesis: nonrandomness</code></pre>
 </div>
 <div id="conclusión-2" class="section level3">
@@ -1171,12 +1184,12 @@ relacionada con la verificación de normalidad de una variable.</p>
 <table>
 <tbody>
 <tr class="odd">
-<td align="right"><span class="math inline">\(Ho\)</span>:</td>
+<td align="right"><span class="math inline">\(H_o\)</span>:</td>
 <td align="left"><span class="math inline">\(X\)</span> tiene
 distribución Normal</td>
 </tr>
 <tr class="even">
-<td align="right"><span class="math inline">\(Ha\)</span>:</td>
+<td align="right"><span class="math inline">\(H_a\)</span>:</td>
 <td align="left"><span class="math inline">\(X\)</span> no tiene
 distribución Normal</td>
 </tr>
@@ -1193,7 +1206,7 @@ plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &q
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.99545, p-value = 0.8132</code></pre>
+W = 0.99455, p-value = 0.6825</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el valor-p es superior al nivel de significancia <span
@@ -1219,13 +1232,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.04606, p-value = 0.3783</code></pre>
+D = 0.030058, p-value = 0.9305</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 22.19, p-value = 0.07479</code></pre>
+P = 8.08, p-value = 0.8851</code></pre>
 <p><br/><br/><br/><br/></p>
 </div>
 
@@ -1262,6 +1275,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

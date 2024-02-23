@@ -1,7 +1,13 @@
 ---
 title : <span style="color:#034a94"> **Pruebas de hipótesis para una población**</span>
 author: "Métodos y Simulación Estadística"
-css: style.css
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -45,10 +51,10 @@ Parámetro $\mu$
 
 **Hipótesis**
 
-|                                    |                                        |                                           |
+|    dos colas                       |    cola inferior                       | cola superior                             |
 |:----------------------------------:|:--------------------------------------:|:-----------------------------------------:|              
-|   $Ho : \mu = \mu_{o}$             |   $Ho : \mu \geq \mu_{o}$              | $Ho : \mu \leq \mu_{o}$                   |
-|   $Ho : \mu \neq \mu_{o}$          |   $Ho : \mu <  \mu_{o}$                |  $Ho : \mu > \mu_{o}$                     |
+|   $H_o : \mu = \mu_{o}$             |   $H_o : \mu \geq \mu_{o}$              | $H_o : \mu \leq \mu_{o}$                   |
+|   $H_a : \mu \neq \mu_{o}$          |   $H_a : \mu <  \mu_{o}$                | $H_a : \mu > \mu_{o}$                      |
 
 
 **Estadísticos de prueba**
@@ -89,16 +95,16 @@ Para tomar una decisión sobre las hipótesis de acuerdo con los resultados pode
 <div class="content-box-gray">
 ### <span style="color:#034A94"> **Regla 1**</span>
 
-Si el **EdeP** cae en la **RdeR**, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **EdeP** NO cae en la **RdeR**, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.
+Si el **Estadístico de Prueba** cae en la **Región de Rechazo**, entonce se rechaza la $H_{o}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **Estadístico de Prueba** NO cae en la **Región de Rechazo**, entonces NO se rechaza $H_{o}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{o}$ es verdad.
 </div>
 
-En este caso es necesario determinar la región de rechazo ($RdeR$) de acuerdo al tipo de hipótesis y a la distribución del estadístico de prueba. En esta caso estamos realizando una prueba de dos colas, para un estadístico de prueba con distribución t-Student con 99 grados de libertad.
+En este caso es necesario determinar la Región de Rechazo ($RdeR$) de acuerdo al tipo de hipótesis y a la distribución del estadístico de prueba. En esta caso estamos realizando una prueba de dos colas, para un estadístico de prueba con distribución t-Student con 99 grados de libertad.
 
 <br/><br/>
 
 **Región de Rechazo** 
 
-Para determinar la $RdeR$, a a prtir del nivel de significancia asumido, se buscan los percentiles $t_{0.025; v=59}$ y $t_{0.975;v=59}$ para la distribución t-Student.
+Para determinar la **Región de Rechazo**, a a prtir del nivel de significancia asumido, se buscan los percentiles $t_{0.025; v=59}$ y $t_{0.975;v=59}$ para la distribución t-Student.
 
 ```{r}
 # t = 0.76215, df = 49, p-value = 0.4496    # resultado 
@@ -120,7 +126,7 @@ p
 
 ### <span style="color:#686868">**Conclusión**</span> 
 
-Como el **EdeP** (`t = 0.76215`) NO cae en la **RdeR**, entonces NO rechazamos $Ho$, asumimos $Ho$ es verdadera, es decir ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
+Como el **Estadístico de Prueba** (`t = 0.76215`) NO cae en la **Región de Rechazo**, entonces NO rechazamos $Ho$, asumimos $Ho$ es verdadera, es decir ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
 
 
 <br/><br/>
@@ -128,7 +134,7 @@ Como el **EdeP** (`t = 0.76215`) NO cae en la **RdeR**, entonces NO rechazamos $
 <div class="content-box-gray">
 ### <span style="color:#034A94"> **Regla 2**</span>
 
-Si $\alpha > \text{valor-p}$ entonces rechazamos $H_{0}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  \text{valor-p}$, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. 
+Si $\alpha > \text{valor-p}$ entonces rechazamos $H_{o}$, se **acepta** $H_{a}$ como verdadera. Si por el contrario $\alpha <  \text{valor-p}$, no rechazamos $H_{o}$, **asumimos** 	que $H_{o}$ es verdad. 
 
 </div>
 
@@ -146,14 +152,14 @@ El **valor-p** corresponde al área delimitada por el $EdeP$ en el sentido que i
 
 ### <span style="color:#686868">**Conclusión**</span> 
 
-Como el valor de $\alpha > valor-p$  ($0.05 > p-value = 0.4496$ ) entonces No se rechaza $Ho$, se **asume** que 	$Ho$ es verdad. ASUMIMOS  que $\mu$ de las edades   es igual a 31 años.  
+Como el valor de $\alpha > valor-p$  ($0.05 > p-value = 0.4496$ ) entonces No se rechaza $H_o$, se **asume** que 	$Ho$ es verdad. ASUMIMOS  que $\mu$ de las edades   es igual a 31 años.  
 
 <br/><br/>
 
 <div class="content-box-gray">
 ### <span style="color:#034A94"> **Regla 3**</span>
 
-El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $Ha$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
+El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siendo esta verdadera (cometer *error tipo I*). Si este valor es considerado como pequeño, rechazo $Ho$, se **acepta** $H_a$. Si por el contrario se considera este valor grande, entonce no rechazo $Ho$, asumo que $Ho$ es verdad.
 
 </div>
 
@@ -161,13 +167,15 @@ El valor-p se interpreta como el error que puedo cometer al rechazar $Ho$, siend
 
 ### <span style="color:#686868">**Conclusión**</span> 
 
-En este caso valoramos si el valor-p (p-value =  0.4496) si es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $Ho$, asumimos que $Ho$ es verdadera, ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
+En este caso valoramos si el **valor-p** (p-value =  0.4496) si es grande o pequeño. En esta caso se puede considerar que su valor es muy grande y por lo tanto no nos atrevemos a rechazar $H_o$, asumimos que $H_o$ es verdadera, ASUMIMOS  que $\mu$ de las edades   es igual a 31 años. 
 
 <div class="content-box-gray">
-### <span style="color:#686868"> **Nota**</span>
+### <span style="color:#686868"> **NOTA**</span>
+
 Al aplicar las últimas dos reglas (2 y 3) no se requiere la construcción de una $RdeR$ para tomar la decisión. Solo con revisar el valor-p entregado por la prueba y aplicar la regla se toma la decisión. En adelante utilizaremos las reglas 2 y 3 dado que al ejecutar las funciones  en R nos suministra información sobre valor-p.
 
 </div>
+
 <br/><br/>
 
 
@@ -196,8 +204,8 @@ Una empresa al seleccionar su personal, lo somete a un curso de entrenamiento. P
 
 Debemos realizar una prueba de cola inferior debido al sentido que tienen la afirmación que queremos verificar *los cambios realizados en el programa de entrenamiento reducen la selección*. 
 
-Ho: $p \geq 0.76$ <br/>   
-Ha :$p < 0.76$   <br/>
+$H_o: p \geq 0.76$ <br/>   
+$H_a: p < 0.76$   <br/>
 
 <br/><br/>
 
@@ -219,9 +227,9 @@ Como el valor-p (p-value = 0.01447) es menor que el nivel de significancia ($\al
 
 <br/>
 
-Ho: $\sigma^{2} = \sigma^{2}_{o}$
+$H_o: \sigma^{2} = \sigma^{2}_{o}$
 
-Ha :$\sigma^{2} \neq \sigma^{2}_{o}$ 
+$H_a: \sigma^{2} \neq \sigma^{2}_{o}$ 
 
 <br/><br/>
 
@@ -262,7 +270,7 @@ EdeP
 
 ### <span style="color:#686868">**Conclusión**</span>
 
-Como el $EdeP$ (1.135074) caen en la $RdeR$, entonces rechazamos la hipótesis nula, aceptamos la hipótesis alterna como verdadera.
+Como el **Estadístico de Prueba** (1.135074) caen en la **Región de Rechazo**, entonces rechazamos la hipótesis nula, aceptamos la hipótesis alterna como verdadera.
 
 Podemos entonce concluir que $\sigma^{2} \neq 81$
 
@@ -296,9 +304,9 @@ Podemos entonce concluir que $\sigma^{2} \neq 81$
 ### <span style="color:#686868">**Reglas de decisión**</span>
 |                 |                                          |
 |:----------------|:---------------------------------------------------------------|
-| Regla1:         | Si el $EdeP$ cae en la $RdeR$, entonce se rechaza la $H_{0}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el $EdeP$ NO cae en la $RdeR$, entonces NO se rechaza $H_{0}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{0}$ es verdad.|
-| Regla2:         | Si $\alpha >$ `valor-p` entonces rechazamos $H_{0}$, se **acepta** $H_{a}$. Si por el contrario $\alpha<$ `valor-p`, no rechazamos $H_{0}$, **asumimos** 	que $H_{0}$ es verdad. |
-| Regla3:         | El `valor-p` se interpreta como el error que puedo cometer al rechazar $H_{0}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{0}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{0}$, asumo que $H_{0}$ es verdad.|
+| Regla1:         | Si el **Estadístico de Prueba** cae en la **Región de Rechazo**, entonce se rechaza la $H_{o}$ y se **acepta** $H_{a}$ como verdadera. Si por el contrario el **Estadístico de Prueba**  NO cae en la **Región de Rechazo**, entonces NO se rechaza $H_{o}$, no existe suficiente evidencia para rechazarla, **asumimos** que $H_{o}$ es verdad.|
+| Regla2:         | Si $\alpha >$ **valor-p** entonces rechazamos $H_{o}$, se **acepta** $H_{a}$. Si por el contrario $\alpha<$ `valor-p`, no rechazamos $H_{o}$, **asumimos** 	que $H_{o}$ es verdad. |
+| Regla3:         | El **valor-p** se interpreta como el error que puedo cometer al rechazar $H_{o}$, siendo esta verdadera (cometer error tipo I). Si este valor es considerado como pequeño, rechazo $H_{o}$, se **acepta** $H_{a}$. Si por el contrario se considera este valor grande, entonce no rechazo $H_{o}$, asumo que $H_{o}$ es verdad.|
 </div>
 
 </br>
@@ -308,8 +316,8 @@ Podemos entonce concluir que $\sigma^{2} \neq 81$
 ### <span style="color:#686868">**Tipos de pruebas**</span>
 |                   |                                                                 |
 |:------------------|:----------------------------------------------------------------|
-|Dos colas          |$H_{0}: \theta = \theta_{o}$ vs $H_{0}: \theta \neq \theta_{o}$  |
-|Cola superior      |$H_{0}: \theta \leq \theta_{o}$ vs $H_{0}: \theta > \theta_{o}$  |
-|Cola inferior      |$H_{0}: \theta \geq \theta_{o}$ vs $H_{0}: \theta < \theta_{o}$  |
+|Dos colas          |$H_{o}: \theta = \theta_{o}$ vs $H_{o}: \theta \neq \theta_{o}$  |
+|Cola superior      |$H_{o}: \theta \leq \theta_{o}$ vs $H_{o}: \theta > \theta_{o}$  |
+|Cola inferior      |$H_{o}: \theta \geq \theta_{o}$ vs $H_{o}: \theta < \theta_{o}$  |
 
 </div>

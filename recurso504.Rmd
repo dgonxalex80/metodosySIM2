@@ -1,7 +1,13 @@
 ---
 title : <span style="color:#034a94"> **Pruebas no paramétricas**</span>
 author: "Métodos y Simulación Estadística"
-css: style.css
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -163,8 +169,8 @@ El dueño de una panadería tiene la posibilidad de controlar los niveles de inv
 
 |                    |                                                         |
 |:-------------------|:--------------------------------------------------------|
-|Hipótesis Nula	     $Ho$ : | Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) | 
-|Hipótesis Alterna   $Ha$ : | Las ventas no tienen una distribución uniforme    |
+|Hipótesis Nula	     $H_o$ : | Las ventas se distribuyen de manera uniforme (cantidad demandada es igual para todas las marcas) | 
+|Hipótesis Alterna   $H_a$ : | Las ventas no tienen una distribución uniforme    |
  
 
 
@@ -184,8 +190,8 @@ Un profesor desea establecer si los resultados obtenidos por sus estudiantes tie
 
 |                    |                        |
 |:-------------------|:-----------------------|
-|Hipótesis Nula	     |$Ho: X \sim  normal$    | 
-|Hipótesis Alterna   |$Ha: X \hspace{.1cm}\text{ No} \sim normal$  |
+|Hipótesis Nula	     |$H_o: X \sim  normal$    | 
+|Hipótesis Alterna   |$H_a: X \hspace{.1cm}\text{ No} \sim normal$  |
 
 ```{r}
 nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
@@ -289,8 +295,8 @@ Antes de realizar la comparación de medias, se debe realizar una prueba de bond
 
 |       |                         |
 |:------|:------------------------|
-|$Ho$ : $Me_{g1} \leq   Me_{g2}$  |
-|$Ha$ : $Me_{g1} >  Me_{g2}$      |
+|$H_o$ : $Me_{g1} \leq   Me_{g2}$  |
+|$H_a$ : $Me_{g1} >  Me_{g2}$      |
 
 
 ```{r}
@@ -409,8 +415,8 @@ Uno de los procedimientos mas utilizados en estadística es la relacionada con l
 
 |        |                                 |
 |-------:|:--------------------------------|
-| $Ho$:  |$X$ tiene distribución Normal    |
-| $Ha$:  |$X$ no tiene distribución Normal |
+| $H_o$:  |$X$ tiene distribución Normal    |
+| $H_a$:  |$X$ no tiene distribución Normal |
 
 Existen muchas pruebas que nos ayudan en este propósito, a continuación relacionamos algunas de ellas 
 ```{r}

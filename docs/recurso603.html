@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -220,6 +221,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -401,6 +405,14 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94">
@@ -462,10 +474,10 @@ abline(h=20,  col=&quot;red&quot;)                                       # líne
 <p><img src="recurso603_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)                                             # valores de las medias</code></pre>
 <pre><code>      T1       T2       T3 
-20.04430 18.21046 20.03151 </code></pre>
+20.08992 18.20307 20.02338 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)                                             # valores de la desviaciones estándar</code></pre>
 <pre><code>      T1       T2       T3 
-3.635552 1.663675 1.830042 </code></pre>
+3.561698 1.635945 1.799540 </code></pre>
 <p>Para un tamaño de muestra n=10 se observa que los mejores resultados
 se obtienen con T3. Este estimador se puede clasificar como INSESGADO y
 EFICIENTE, pues ademas que su promedio está muy cerca de 20, tiene la
@@ -485,10 +497,10 @@ abline(h=20,  col=&quot;red&quot;)</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)</code></pre>
 <pre><code>      T1       T2       T3 
-19.95421 19.79739 19.99536 </code></pre>
+19.99116 19.79634 19.99431 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)  </code></pre>
 <pre><code>       T1        T2        T3 
-1.1385848 0.1980603 0.2000409 </code></pre>
+1.1685949 0.2131947 0.2153267 </code></pre>
 <p>Los resutados indican que el mejor estimador de b corresponde a T3.
 Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de
 la muestra pasando de n=10 a n=100 se observa que su promedio se acerca
@@ -654,6 +666,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

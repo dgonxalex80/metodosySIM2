@@ -31,6 +31,7 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
@@ -220,6 +221,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -401,6 +405,14 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore"><span style="color:#034a94"> <strong>Prueba
@@ -477,9 +489,9 @@ suficiente evidencia para rechazar la hipótesis nula.</p>
 (EdeP)</strong></span></h2>
 <p>Es una función de la muestra que contiene información sobre el
 parámetro de interés, la que nos permite decidir sobre el rechazo de la
-hipótesis nula, <span class="math inline">\(Ho\)</span> . Es también una
-variable aleatoria que sigue una función de distribución conocida como
-por ejemplo:</p>
+hipótesis nula, <span class="math inline">\(H_o\)</span> . Es también
+una variable aleatoria que sigue una función de distribución conocida
+como por ejemplo:</p>
 <p>Para una muestra determinada se obtiene un valor del estadístico de
 prueba, a partir del cálculo y se determina el rechazo o no, de la
 hipótesis nula.</p>
@@ -510,7 +522,7 @@ alternativa <span class="math inline">\(H_{a}\)</span>. En cambio, si el
 valor calculado no cae dentro de la RC, no podremos rechazar la
 hipótesis nula y por tanto decimos que la información contenida en la
 muestra no ofrece suficiente evidencia estadística que nos permita
-rechazar <span class="math inline">\(Ho\)</span>, ASUMIMOS que la
+rechazar <span class="math inline">\(H_o\)</span>, ASUMIMOS que la
 hipótesis nula es cierta.</p>
 <p><br/><br/></p>
 </div>
@@ -524,56 +536,16 @@ descritas en la siguiente tabla:</p>
 <strong>Tabla 2.8</strong> Tipos de errores presentes en una prueba de
 hipótesis
 </center>
-<table>
-<colgroup>
-<col width="22%" />
-<col width="38%" />
-<col width="38%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left"><strong>Estado de la naturaleza</strong></th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>Decisión sobre la hipótesis</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Rechazar <span class="math inline">\(Ho\)</span></td>
-<td align="left"><strong>Error tipo I</strong></td>
-<td align="left"><strong>Decisión correcta</strong></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">P(Error tipo I) = <span
-class="math inline">\(\alpha\)</span></td>
-<td align="left"><span class="math inline">\(1-\beta\)</span> :
-Potencia</td>
-</tr>
-<tr class="even">
-<td align="left">No rechazar <span
-class="math inline">\(Ho\)</span></td>
-<td align="left"><strong>Decisión correcta</strong></td>
-<td align="left"><strong>Error tipo II</strong></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">P(Eror tipo II) =<span
-class="math inline">\(\beta\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+<p><img src="img/errores.png" width="80%" style="display: block; margin: auto;" />
+<!-- |                   |  **Estado de la naturaleza**    |                                 | -->
+<!-- |:------------------|:--------------------------------|:--------------------------------| -->
+<!-- |                   |      **Ho es V**                |  **Ha es F**                    | -->
+<!-- | **Decisión sobre la hipótesis**|                    |                                 | -->
+<!-- |Rechazar $Ho$      | **Error tipo I**                | **Decisión correcta**           | -->
+<!-- |                   | P(Error tipo I) = $\alpha$      | $1-\beta$ : Potencia            | -->
+<!-- |No rechazar $Ho$   | **Decisión correcta**           | **Error tipo II**               | -->
+<!-- |                   |                                 | P(Eror tipo II) =$\beta$        | -->
+<!-- |                   |                                 |                                 | --></p>
 <p>Existen dos situaciones en las que se comenten errores después de
 tomar una decisión:</p>
 <p><br/><br/></p>
@@ -582,14 +554,14 @@ tomar una decisión:</p>
 I</strong></span></h3>
 <p>Cuando se rechazamos una hipótesis nula que en realidad es verdadera.
 Tomando como símil la situación donde un médico desea determinar si un
-paciente está sano o enfermo (<span class="math inline">\(Ho\)</span>:
-SANO vs <span class="math inline">\(Ha\)</span>: ENFERMO), es posible
+paciente está sano o enfermo (<span class="math inline">\(H_o\)</span>:
+SANO vs <span class="math inline">\(H_a\)</span>: ENFERMO), es posible
 que concluya que el paciente está enfermo (rechace <span
-class="math inline">\(Ho\)</span>) cuando en verdad esta persona esta
+class="math inline">\(H_o\)</span>) cuando en verdad esta persona esta
 sana. En términos de probabilidad este error se debe de representar
 como:</p>
 <div class="content-box-blue">
-<p><span class="math display">\[P(\text{Rechazar } Ho | Ho \text{ es
+<p><span class="math display">\[P(\text{Rechazar } H_o | H_o \text{ es
 verdadera})= \alpha\]</span></p>
 </div>
 </div>
@@ -616,8 +588,8 @@ error frecuente cuando algunos pacientes son asintomáticos y aunque
 tienen la enfermedad, sus exámenes médicos salen negativos. En este caso
 la probabilidad se representa como:</p>
 <div class="content-box-blue">
-<p><span class="math display">\[P(\text{No rechazar} Ho | Ho \text{ es
-falsa}) \]</span></p>
+<p><span class="math display">\[P(\text{No rechazar } H_o | H_o \text{
+es falsa}) \]</span></p>
 </div>
 </div>
 <div id="ejemplo-1" class="section level3">
@@ -656,20 +628,20 @@ hipótesis</strong></span></h2>
 <tbody>
 <tr class="odd">
 <td align="left">Dos colas</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta =
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta \neq
+<td align="left"><span class="math inline">\(H_{o}: \theta =
+\theta_{o}\)</span> vs <span class="math inline">\(H_{a}: \theta \neq
 \theta_{o}\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">Cola superior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \leq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &gt;
+<td align="left"><span class="math inline">\(H_{o}: \theta \leq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{a}: \theta &gt;
 \theta_{o}\)</span></td>
 </tr>
 <tr class="odd">
 <td align="left">Cola inferior</td>
-<td align="left"><span class="math inline">\(H_{0}: \theta \geq
-\theta_{o}\)</span> vs <span class="math inline">\(H_{0}: \theta &lt;
+<td align="left"><span class="math inline">\(H_{o}: \theta \geq
+\theta_{o}\)</span> vs <span class="math inline">\(H_{a}: \theta &lt;
 \theta_{o}\)</span></td>
 </tr>
 </tbody>
@@ -710,6 +682,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

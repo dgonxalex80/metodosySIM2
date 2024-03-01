@@ -12,7 +12,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
-library(paqueteMET)
+library(paqueteMETODOS)
 data("CarreraLuz22")
 CarreraLuz22M = subset(CarreraLuz22, CarreraLuz22$sex=="Hombre")
 CarreraLuz22F = subset(CarreraLuz22, CarreraLuz22$sex=="Mujer")

@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 library(gtools)
 library(TeachingSampling)
 library(readr)
-library(paqueteMET)
+library(paqueteMETODOS)
 
 c1="#FF7F00"
 c2="#034A94"

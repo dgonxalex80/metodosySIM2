@@ -15,12 +15,15 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 # install.packages('gtools')
 # install.packages("TeachingSampling")
+#install.packages("devtools") # solo una vez
+#devtools::install_github("dgonxalex80/paqueteMETODOS")
+
 
 #load library
 library(gtools)
 library(TeachingSampling)
 library(readr)
-library(paqueteMET)
+library(paqueteMETODOS)
 
 c1="#FF7F00"
 c2="#034A94"

@@ -88,3 +88,14 @@ body {
     --segundo-color:#E4660E;
     --tercer-color: #EFC3A5;
 }
+
+/* custom.css */
+.code-folding-show:focus::after,
+.code-folding-show:active::after {
+  content: "Mostrar";
+}
+
+.code-folding-hide:focus::after,
+.code-folding-hide:active::after {
+  content: "Ocultar";
+}
